@@ -1,0 +1,15 @@
+# /pages/user-guide/expressions — directory listing
+
+- [Aggregation - Polars user guide](/pages/user-guide/expressions/aggregation.md)
+- [Basic operations - Polars user guide](/pages/user-guide/expressions/basic-operations.md)
+- [Casting - Polars user guide](/pages/user-guide/expressions/casting.md)
+- [Categorical data and enums - Polars user guide](/pages/user-guide/expressions/categorical-data-and-enums.md)
+- [Expression expansion - Polars user guide](/pages/user-guide/expressions/expression-expansion.md)
+- [Folds - Polars user guide](/pages/user-guide/expressions/folds.md)
+- [Lists and arrays - Polars user guide](/pages/user-guide/expressions/lists-and-arrays.md)
+- [Missing data - Polars user guide](/pages/user-guide/expressions/missing-data.md)
+- [Numpy functions - Polars user guide](/pages/user-guide/expressions/numpy-functions.md)
+- [Strings - Polars user guide](/pages/user-guide/expressions/strings.md)
+- [Structs - Polars user guide](/pages/user-guide/expressions/structs.md)
+- [User-defined Python functions - Polars user guide](/pages/user-guide/expressions/user-defined-python-functions.md)
+- [Window functions - Polars user guide](/pages/user-guide/expressions/window-functions.md)

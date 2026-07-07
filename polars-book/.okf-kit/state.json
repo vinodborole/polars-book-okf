@@ -1,0 +1,1166 @@
+{
+  "generator": "okf-kit",
+  "okf_version": "0.1",
+  "root_url": "https://docs.pola.rs/",
+  "updated_at": "2026-07-07T12:26:19.504211+00:00",
+  "config": {
+    "max_depth": 3,
+    "max_pages": 90,
+    "fetcher": "http",
+    "respect_robots": true,
+    "path_prefix": "/"
+  },
+  "page_count": 90,
+  "pages": [
+    {
+      "path": "pages/api/python/stable/reference/dataframe/home.md",
+      "url": "https://docs.pola.rs/api/python/stable/reference/dataframe/index.html",
+      "title": "DataFrame — Polars  documentation",
+      "hash": "be86a637ab1ee32fffab10973a22eb6f4477011993bc14eaccaf225cc33c0f71"
+    },
+    {
+      "path": "pages/api/reference.md",
+      "url": "https://docs.pola.rs/api/reference",
+      "title": "Reference guide - Polars user guide",
+      "hash": "9eb53a1b01f3e0e1dc16cc97ccb51b739a54925aee50558f310d635a72f50a2c"
+    },
+    {
+      "path": "pages/development/contributing.md",
+      "url": "https://docs.pola.rs/development/contributing",
+      "title": "Overview - Polars user guide",
+      "hash": "b9b8d1a773ec150f850b5d8c4781a3546749114d20cc34f6ed305e220d92c475"
+    },
+    {
+      "path": "pages/development/contributing/ci.md",
+      "url": "https://docs.pola.rs/development/contributing/ci",
+      "title": "Continuous integration - Polars user guide",
+      "hash": "f15f6cad60401a7252ade3ee8a6739d36078255443d3b063765eb1f38c682e8a"
+    },
+    {
+      "path": "pages/development/contributing/code-style.md",
+      "url": "https://docs.pola.rs/development/contributing/code-style",
+      "title": "Code style - Polars user guide",
+      "hash": "b775e55b4f2bc65b68afe66e3a3add1b32beb8a7dcadf2d9620f7b572f6807ef"
+    },
+    {
+      "path": "pages/development/contributing/ide.md",
+      "url": "https://docs.pola.rs/development/contributing/ide",
+      "title": "IDE configuration - Polars user guide",
+      "hash": "bc586b39770e59c18ed883aef0be2acc002ddf8686f526300719e7bd1bb9f4d1"
+    },
+    {
+      "path": "pages/development/contributing/test.md",
+      "url": "https://docs.pola.rs/development/contributing/test",
+      "title": "Test suite - Polars user guide",
+      "hash": "7061d52d27e99307e4875a81f0d0127a4dad456c4718c3f07dbd65f7974f8bb9"
+    },
+    {
+      "path": "pages/development/versioning.md",
+      "url": "https://docs.pola.rs/development/versioning",
+      "title": "Versioning - Polars user guide",
+      "hash": "d67f157dd5378008b2ad7edbcea15c479cc240971f8fa55c41a9655049441bbf"
+    },
+    {
+      "path": "pages/home.md",
+      "url": "https://docs.pola.rs/",
+      "title": "Index - Polars user guide",
+      "hash": "b2b39f86d5549b41a3e42395369b671899cd050f0b1e34575a6b9e6d5dc687b1"
+    },
+    {
+      "path": "pages/polars-cloud.md",
+      "url": "https://docs.pola.rs/polars-cloud",
+      "title": "Index - Polars user guide",
+      "hash": "e794d749b4334c45b28af1154b562109243a6f2eb4280873644cd432d396a2da"
+    },
+    {
+      "path": "pages/polars-cloud/connect-cloud.md",
+      "url": "https://docs.pola.rs/polars-cloud/connect-cloud",
+      "title": "Connect to your cloud - Polars user guide",
+      "hash": "adb5935aae9279956c8c568a953d815db0aa138172898351ed2e249e0e80fc3b"
+    },
+    {
+      "path": "pages/polars-cloud/quickstart.md",
+      "url": "https://docs.pola.rs/polars-cloud/quickstart",
+      "title": "Getting started - Polars user guide",
+      "hash": "d64a8a7abda0a4abac59903b803e20ba9d69bf02311fec2a37b9ec8b0e925694"
+    },
+    {
+      "path": "pages/polars-cloud/run/distributed-engine.md",
+      "url": "https://docs.pola.rs/polars-cloud/run/distributed-engine",
+      "title": "Distributed queries - Polars user guide",
+      "hash": "f1cbcb32b5e7fa78799dfb617cb172354660ac4589f825efaf3819686ef0f2c2"
+    },
+    {
+      "path": "pages/polars-cloud/run/remote-query.md",
+      "url": "https://docs.pola.rs/polars-cloud/run/remote-query",
+      "title": "Execute remote query - Polars user guide",
+      "hash": "be8c562f9d777f8b1bd70b583fc99397b5b48f1f2f9a511e1a2f16600060c787"
+    },
+    {
+      "path": "pages/polars-on-premises.md",
+      "url": "https://docs.pola.rs/polars-on-premises",
+      "title": "Polars On-Prem - Polars user guide",
+      "hash": "fd9caec1b3e8281eff2295ac625007b86ab1b7fb977f79d34e64981dd39b9716"
+    },
+    {
+      "path": "pages/releases/changelog.md",
+      "url": "https://docs.pola.rs/releases/changelog",
+      "title": "Changelog - Polars user guide",
+      "hash": "a6ea18ffcff54f92144b9d8277719fc0cfc74044124d947225ca9b38235047fb"
+    },
+    {
+      "path": "pages/releases/upgrade.md",
+      "url": "https://docs.pola.rs/releases/upgrade",
+      "title": "About - Polars user guide",
+      "hash": "0a0038b59c023d6fa6e618acd623bb8d162625d7175188034b0c765977f01428"
+    },
+    {
+      "path": "pages/releases/upgrade/0.md",
+      "url": "https://docs.pola.rs/releases/upgrade/0.20",
+      "title": "Version 0.20 - Polars user guide",
+      "hash": "29ca4aead575ad5d9550d2f4a7e3a66adc50b89ce48d671621344de3ed08fc45"
+    },
+    {
+      "path": "pages/releases/upgrade/1.md",
+      "url": "https://docs.pola.rs/releases/upgrade/1",
+      "title": "Version 1 - Polars user guide",
+      "hash": "30fc8351a7b78965bdb4b8d69b58cc3dc1ed84d6a70a7a250295f03e46dad4f4"
+    },
+    {
+      "path": "pages/user-guide/concepts.md",
+      "url": "https://docs.pola.rs/user-guide/concepts",
+      "title": "Concepts - Polars user guide",
+      "hash": "11bcbb71a535895b717752ebac758ffee79045ec95e70ff8bc7be4d1ff7d4bf2"
+    },
+    {
+      "path": "pages/user-guide/concepts/data-types-and-structures.md",
+      "url": "https://docs.pola.rs/user-guide/concepts/data-types-and-structures",
+      "title": "Data types and structures - Polars user guide",
+      "hash": "ad1d4ddd7d9b4922f070fae350c00f2386290be8eda52575b6ddd1d41c204223"
+    },
+    {
+      "path": "pages/user-guide/concepts/expressions-and-contexts.md",
+      "url": "https://docs.pola.rs/user-guide/concepts/expressions-and-contexts",
+      "title": "Expressions and contexts - Polars user guide",
+      "hash": "3db81c1eab34a12ad4ad5e5aa0b20db7e6674a2570ec8f54d53af887adde4996"
+    },
+    {
+      "path": "pages/user-guide/concepts/lazy-api.md",
+      "url": "https://docs.pola.rs/user-guide/concepts/lazy-api",
+      "title": "Lazy API - Polars user guide",
+      "hash": "2f109f33feb93d76e7ae0789d616e1721fc406adf6bb9c79ab54c95c5ce0a108"
+    },
+    {
+      "path": "pages/user-guide/concepts/streaming.md",
+      "url": "https://docs.pola.rs/user-guide/concepts/streaming",
+      "title": "Streaming - Polars user guide",
+      "hash": "4977ac123b18a2cc08224e90c0cf844eb54d48ef0b8a220490d8a401676232fe"
+    },
+    {
+      "path": "pages/user-guide/ecosystem.md",
+      "url": "https://docs.pola.rs/user-guide/ecosystem",
+      "title": "Ecosystem - Polars user guide",
+      "hash": "d35f2ac1282e87e925f9bfd473ac3a35357d050abcd1d9cc2b080f20434d2d7d"
+    },
+    {
+      "path": "pages/user-guide/expressions.md",
+      "url": "https://docs.pola.rs/user-guide/expressions",
+      "title": "Expressions - Polars user guide",
+      "hash": "1b745070ba7f72061777a604aa015f52db664f3873c524dbf2576720c5d57630"
+    },
+    {
+      "path": "pages/user-guide/expressions/aggregation.md",
+      "url": "https://docs.pola.rs/user-guide/expressions/aggregation",
+      "title": "Aggregation - Polars user guide",
+      "hash": "f07ee994c636c7e6298d43d00d68d635303f5267f4585550b823a5227b42f2a4"
+    },
+    {
+      "path": "pages/user-guide/expressions/basic-operations.md",
+      "url": "https://docs.pola.rs/user-guide/expressions/basic-operations",
+      "title": "Basic operations - Polars user guide",
+      "hash": "9e00b932d1edcb4a59c14bee0cc80535e5cbdefb3f9983abfe91573a82563aee"
+    },
+    {
+      "path": "pages/user-guide/expressions/casting.md",
+      "url": "https://docs.pola.rs/user-guide/expressions/casting",
+      "title": "Casting - Polars user guide",
+      "hash": "4d742d4b7506ede492a9a58d7867868bc764d72c91ffd961b3129a7cb9f518bc"
+    },
+    {
+      "path": "pages/user-guide/expressions/categorical-data-and-enums.md",
+      "url": "https://docs.pola.rs/user-guide/expressions/categorical-data-and-enums",
+      "title": "Categorical data and enums - Polars user guide",
+      "hash": "600a0090e10d71297cc80620fb2c9096014f2977397a335979ce3ecafd7b74c8"
+    },
+    {
+      "path": "pages/user-guide/expressions/expression-expansion.md",
+      "url": "https://docs.pola.rs/user-guide/expressions/expression-expansion",
+      "title": "Expression expansion - Polars user guide",
+      "hash": "ecfc740c003c20340b6171d1e76875bb98eee9b1570eac4cd6ae65da0946108a"
+    },
+    {
+      "path": "pages/user-guide/expressions/folds.md",
+      "url": "https://docs.pola.rs/user-guide/expressions/folds",
+      "title": "Folds - Polars user guide",
+      "hash": "474cf29ef7795b046519d0ed8435e58970b45998ff2d239c7c8a4d6a65467a46"
+    },
+    {
+      "path": "pages/user-guide/expressions/lists-and-arrays.md",
+      "url": "https://docs.pola.rs/user-guide/expressions/lists-and-arrays",
+      "title": "Lists and arrays - Polars user guide",
+      "hash": "d49bf57e6e775c043142a4250f8a745d7842b798ffc107928a30f8418d37aa99"
+    },
+    {
+      "path": "pages/user-guide/expressions/missing-data.md",
+      "url": "https://docs.pola.rs/user-guide/expressions/missing-data",
+      "title": "Missing data - Polars user guide",
+      "hash": "22c8f51a478b64b365179ef0640bfb5f89fe722a3ae10bab889f4e47733a401a"
+    },
+    {
+      "path": "pages/user-guide/expressions/numpy-functions.md",
+      "url": "https://docs.pola.rs/user-guide/expressions/numpy-functions",
+      "title": "Numpy functions - Polars user guide",
+      "hash": "4f39d16f76e2177530ffec34e31893449b60b2d7ffed6750e072d951e1135bb5"
+    },
+    {
+      "path": "pages/user-guide/expressions/strings.md",
+      "url": "https://docs.pola.rs/user-guide/expressions/strings",
+      "title": "Strings - Polars user guide",
+      "hash": "73d31ad9540c4124e9b70cf0b477c1991f77d973908dca324fd29c0d1da83cc5"
+    },
+    {
+      "path": "pages/user-guide/expressions/structs.md",
+      "url": "https://docs.pola.rs/user-guide/expressions/structs",
+      "title": "Structs - Polars user guide",
+      "hash": "827a370beebbd914694e10b1679a2fc267fbbaae0e9eda23bbf0253e5b9030f4"
+    },
+    {
+      "path": "pages/user-guide/expressions/user-defined-python-functions.md",
+      "url": "https://docs.pola.rs/user-guide/expressions/user-defined-python-functions",
+      "title": "User-defined Python functions - Polars user guide",
+      "hash": "cab373443031d8a51fe7d212fc3e269b5bd122f2bd605f1c7662446d522bc222"
+    },
+    {
+      "path": "pages/user-guide/expressions/window-functions.md",
+      "url": "https://docs.pola.rs/user-guide/expressions/window-functions",
+      "title": "Window functions - Polars user guide",
+      "hash": "61d9a50994bf3644a2e60d9d08a73cb6df70b45d543ea2d38d4af04216453a51"
+    },
+    {
+      "path": "pages/user-guide/getting-started.md",
+      "url": "https://docs.pola.rs/user-guide/getting-started",
+      "title": "Getting started - Polars user guide",
+      "hash": "bb6e968e0d7b22fddc5066f62897bc08ee7d9335a6093d742a52862a9ef11a3b"
+    },
+    {
+      "path": "pages/user-guide/gpu-support.md",
+      "url": "https://docs.pola.rs/user-guide/gpu-support",
+      "title": "GPU Support [Open Beta] - Polars user guide",
+      "hash": "44a9248df88909c373a3f08316018d4462bf19e82b41df073a534526b42555e2"
+    },
+    {
+      "path": "pages/user-guide/installation.md",
+      "url": "https://docs.pola.rs/user-guide/installation",
+      "title": "Installation - Polars user guide",
+      "hash": "eec45a906ef9aae3daf9ea6a3207de42a96394c53bbfb975033441de5dc7bb1f"
+    },
+    {
+      "path": "pages/user-guide/io.md",
+      "url": "https://docs.pola.rs/user-guide/io",
+      "title": "IO - Polars user guide",
+      "hash": "5bfd73b3da5d8e0114ab78da2a45baa93e2c6a88b3602c48e019743e9deffff0"
+    },
+    {
+      "path": "pages/user-guide/io/bigquery.md",
+      "url": "https://docs.pola.rs/user-guide/io/bigquery",
+      "title": "Google BigQuery - Polars user guide",
+      "hash": "a41b8e271ab98a66ee27bcf479bb41cb1f1bd709c07aa1f275c4faa039a7ad1b"
+    },
+    {
+      "path": "pages/user-guide/io/cloud-storage.md",
+      "url": "https://docs.pola.rs/user-guide/io/cloud-storage",
+      "title": "Cloud storage - Polars user guide",
+      "hash": "6ec9f6944e8582ab3db3ce80717e0d4ae53adae6549f203c6ecd6682bd8da8c4"
+    },
+    {
+      "path": "pages/user-guide/io/csv.md",
+      "url": "https://docs.pola.rs/user-guide/io/csv",
+      "title": "CSV - Polars user guide",
+      "hash": "76773b6236adf3e65c79552d543e5f917f52ae6c5e95f246793e9ba39ff9595d"
+    },
+    {
+      "path": "pages/user-guide/io/database.md",
+      "url": "https://docs.pola.rs/user-guide/io/database",
+      "title": "Databases - Polars user guide",
+      "hash": "b475be6c83925dcf8095b67c9531e31c0c58a1ff13d63f518223966b6928f481"
+    },
+    {
+      "path": "pages/user-guide/io/excel.md",
+      "url": "https://docs.pola.rs/user-guide/io/excel",
+      "title": "Excel - Polars user guide",
+      "hash": "1cacad7e5d9953b00d00ece46dee7b973091d582811cecb4561c07b12f84d41c"
+    },
+    {
+      "path": "pages/user-guide/io/hive.md",
+      "url": "https://docs.pola.rs/user-guide/io/hive",
+      "title": "Hive - Polars user guide",
+      "hash": "76427b5f4ca655a6d0f2487898a8c42f893f25de92e34e5eac26953fd3a1e0be"
+    },
+    {
+      "path": "pages/user-guide/io/hugging-face.md",
+      "url": "https://docs.pola.rs/user-guide/io/hugging-face",
+      "title": "Hugging Face - Polars user guide",
+      "hash": "8e54c0f5303a15deae29ae536d54464d4d88003523aa5fb687c4e8d8de3acd72"
+    },
+    {
+      "path": "pages/user-guide/io/json.md",
+      "url": "https://docs.pola.rs/user-guide/io/json",
+      "title": "JSON files - Polars user guide",
+      "hash": "7a098ccace8bd21bf8bdb76dd03ac573afc0817ef292753559e508180655c866"
+    },
+    {
+      "path": "pages/user-guide/io/multiple.md",
+      "url": "https://docs.pola.rs/user-guide/io/multiple",
+      "title": "Multiple - Polars user guide",
+      "hash": "87d1289d815ca9f4a4ac75fc9c08d6dce42664e0898354936134c1c7b2d647c8"
+    },
+    {
+      "path": "pages/user-guide/io/parquet.md",
+      "url": "https://docs.pola.rs/user-guide/io/parquet",
+      "title": "Parquet - Polars user guide",
+      "hash": "f056b5c99f56d180dc34e4d13fc2640bdc1d856ce91d06ac9350c2e28d606935"
+    },
+    {
+      "path": "pages/user-guide/io/sheets_colab.md",
+      "url": "https://docs.pola.rs/user-guide/io/sheets_colab",
+      "title": "Google Sheets (via Colab) - Polars user guide",
+      "hash": "f5301ef4cd132e0ce2c96fd71dd13c45680e5e481fdd1f10690f16c1063e9fc1"
+    },
+    {
+      "path": "pages/user-guide/lazy.md",
+      "url": "https://docs.pola.rs/user-guide/lazy",
+      "title": "Lazy - Polars user guide",
+      "hash": "1be52727fa1f034c812aa3fb8472644a58c5b9290875d3a2c8ae3d32c78c6316"
+    },
+    {
+      "path": "pages/user-guide/lazy/datatype_exprs.md",
+      "url": "https://docs.pola.rs/user-guide/lazy/datatype_exprs",
+      "title": "DataType Expressions - Polars user guide",
+      "hash": "6170d922b4f1627c313ed6c978e46796348ffa62b2e8b9fa1c633217e0bbb70e"
+    },
+    {
+      "path": "pages/user-guide/lazy/execution.md",
+      "url": "https://docs.pola.rs/user-guide/lazy/execution",
+      "title": "Query execution - Polars user guide",
+      "hash": "85403e8bfefb7f9d1e9f65e6eabfd03ca69d8233372de07f90370709b7a75189"
+    },
+    {
+      "path": "pages/user-guide/lazy/gpu.md",
+      "url": "https://docs.pola.rs/user-guide/lazy/gpu",
+      "title": "GPU Support - Polars user guide",
+      "hash": "f2baa05ee23736af6794bf7fdec80d136a95985cb6f31972c961ffd6b7893280"
+    },
+    {
+      "path": "pages/user-guide/lazy/multiplexing.md",
+      "url": "https://docs.pola.rs/user-guide/lazy/multiplexing",
+      "title": "Multiplexing queries - Polars user guide",
+      "hash": "57fbeca76e30440ea686be1bb207303478c84a66491727b80e6a287f37973dce"
+    },
+    {
+      "path": "pages/user-guide/lazy/optimizations.md",
+      "url": "https://docs.pola.rs/user-guide/lazy/optimizations",
+      "title": "Optimizations - Polars user guide",
+      "hash": "48d9677027c21ca5a3300587f981cec444afa822bee252b93910c41e929d599f"
+    },
+    {
+      "path": "pages/user-guide/lazy/query-plan.md",
+      "url": "https://docs.pola.rs/user-guide/lazy/query-plan",
+      "title": "Query plan - Polars user guide",
+      "hash": "39ea5ec4cda16b2663cc73c5a568e64178906b9056efa18b4363ceda58c5682e"
+    },
+    {
+      "path": "pages/user-guide/lazy/schemas.md",
+      "url": "https://docs.pola.rs/user-guide/lazy/schemas",
+      "title": "Schema - Polars user guide",
+      "hash": "a3007dc650eba1172bca1671352c33e61a61db7dd92b803172762af39367c959"
+    },
+    {
+      "path": "pages/user-guide/lazy/sources_sinks.md",
+      "url": "https://docs.pola.rs/user-guide/lazy/sources_sinks",
+      "title": "Sources and sinks - Polars user guide",
+      "hash": "9031ac020f671fa98803092a75d1525533a1f7e353039c14b2aad6d4d04e3d38"
+    },
+    {
+      "path": "pages/user-guide/lazy/using.md",
+      "url": "https://docs.pola.rs/user-guide/lazy/using",
+      "title": "Usage - Polars user guide",
+      "hash": "81650ed311e8431c1a6600887f0477f0af40ad7f3a03e035e4a6f6e58d8c8a73"
+    },
+    {
+      "path": "pages/user-guide/migration/pandas.md",
+      "url": "https://docs.pola.rs/user-guide/migration/pandas",
+      "title": "Coming from Pandas - Polars user guide",
+      "hash": "8305be17ba46010af5c37852879f36ce420184a0a4635937ad5b22f2c62e0f23"
+    },
+    {
+      "path": "pages/user-guide/migration/spark.md",
+      "url": "https://docs.pola.rs/user-guide/migration/spark",
+      "title": "Coming from Apache Spark - Polars user guide",
+      "hash": "333ef6969f7f74f4c647cc780761defad399a92139a71c6ddbc1f949f5bce3a7"
+    },
+    {
+      "path": "pages/user-guide/misc/arrow.md",
+      "url": "https://docs.pola.rs/user-guide/misc/arrow",
+      "title": "Arrow producer/consumer - Polars user guide",
+      "hash": "f9451c869321054f5c1d5540ede1f41c0223e774ad3e42db86803257c815972f"
+    },
+    {
+      "path": "pages/user-guide/misc/comparison.md",
+      "url": "https://docs.pola.rs/user-guide/misc/comparison",
+      "title": "Comparison with other tools - Polars user guide",
+      "hash": "1cda44b536ad14b6f3932c49db0dc7b4f7e8521c45b9c5aa1258a723056c8699"
+    },
+    {
+      "path": "pages/user-guide/misc/multiprocessing.md",
+      "url": "https://docs.pola.rs/user-guide/misc/multiprocessing",
+      "title": "Multiprocessing - Polars user guide",
+      "hash": "e2da6754b996c1973b44fd2ff0eb9d88a9c3504c64335eb681bdb1c354563c76"
+    },
+    {
+      "path": "pages/user-guide/misc/polars_llms.md",
+      "url": "https://docs.pola.rs/user-guide/misc/polars_llms",
+      "title": "Generating Polars code with LLMs - Polars user guide",
+      "hash": "8f70be5adfcf2140f100a0516372ba7c60e4f8eb3ed303778c6692987b8a2fc2"
+    },
+    {
+      "path": "pages/user-guide/misc/styling.md",
+      "url": "https://docs.pola.rs/user-guide/misc/styling",
+      "title": "Styling - Polars user guide",
+      "hash": "e7ec0b5db819aab7be5fbdacb22b87f939e5753ac31182c73d2edcf0d3e97de9"
+    },
+    {
+      "path": "pages/user-guide/misc/visualization.md",
+      "url": "https://docs.pola.rs/user-guide/misc/visualization",
+      "title": "Visualization - Polars user guide",
+      "hash": "3bbe74d3600d0c5dd5c5a8b4a5ed9450fc92718aab11199bb13040b8154a2474"
+    },
+    {
+      "path": "pages/user-guide/plugins.md",
+      "url": "https://docs.pola.rs/user-guide/plugins",
+      "title": "Plugins - Polars user guide",
+      "hash": "c97dfe118cb6eb1487c560002c24bf16322e5517d6660b2b53c594f7c46607d9"
+    },
+    {
+      "path": "pages/user-guide/plugins/expr_plugins.md",
+      "url": "https://docs.pola.rs/user-guide/plugins/expr_plugins",
+      "title": "Expression Plugins - Polars user guide",
+      "hash": "4396de1f5c509580f1e45265919146e8d6dd41b85cc0cd03794fc13dd0bfb530"
+    },
+    {
+      "path": "pages/user-guide/plugins/io_plugins.md",
+      "url": "https://docs.pola.rs/user-guide/plugins/io_plugins",
+      "title": "IO Plugins - Polars user guide",
+      "hash": "28946c68bfc9213807b9cf90218124e3a116d0c4a9c7cf8ef244b445f7c3ea71"
+    },
+    {
+      "path": "pages/user-guide/sql/create.md",
+      "url": "https://docs.pola.rs/user-guide/sql/create",
+      "title": "CREATE - Polars user guide",
+      "hash": "ea49049c28a6aa337c2056634097afafd68238fbe9a7faf1b57b5acf7d4f46de"
+    },
+    {
+      "path": "pages/user-guide/sql/cte.md",
+      "url": "https://docs.pola.rs/user-guide/sql/cte",
+      "title": "Common Table Expressions - Polars user guide",
+      "hash": "f476e131fb17bc76648a35e90fa20c8b9584485e0915f5cf0f868ea49aae550f"
+    },
+    {
+      "path": "pages/user-guide/sql/intro.md",
+      "url": "https://docs.pola.rs/user-guide/sql/intro",
+      "title": "Introduction - Polars user guide",
+      "hash": "e5243b73a1b2bcec09d6539358b305288284af7b84cf475f42e09202b4cb18c0"
+    },
+    {
+      "path": "pages/user-guide/sql/select.md",
+      "url": "https://docs.pola.rs/user-guide/sql/select",
+      "title": "SELECT - Polars user guide",
+      "hash": "561b1f9ea0f46c5f940a629a7462b85eff56ae54411b84dfe5bf08313822be7e"
+    },
+    {
+      "path": "pages/user-guide/sql/show.md",
+      "url": "https://docs.pola.rs/user-guide/sql/show",
+      "title": "SHOW TABLES - Polars user guide",
+      "hash": "1897df1c81a106460bfd82f05202c2a68e1a8e7a4f3e8bcf1c9d396b5aa90695"
+    },
+    {
+      "path": "pages/user-guide/transformations.md",
+      "url": "https://docs.pola.rs/user-guide/transformations",
+      "title": "Transformations - Polars user guide",
+      "hash": "4665018b53d5eed81a048f49b014f520d8c48e36b8be1c4e63453ca9ae16b519"
+    },
+    {
+      "path": "pages/user-guide/transformations/concatenation.md",
+      "url": "https://docs.pola.rs/user-guide/transformations/concatenation",
+      "title": "Concatenation - Polars user guide",
+      "hash": "693901749e891c922ddc94cc29cf868ed02c23054f093dd90d51b02f6823a1fb"
+    },
+    {
+      "path": "pages/user-guide/transformations/joins.md",
+      "url": "https://docs.pola.rs/user-guide/transformations/joins",
+      "title": "Joins - Polars user guide",
+      "hash": "b245fef542a16dc054506087ef2d2abc3ec70d490e0cd2815135fb001b15c395"
+    },
+    {
+      "path": "pages/user-guide/transformations/pivot.md",
+      "url": "https://docs.pola.rs/user-guide/transformations/pivot",
+      "title": "Pivots - Polars user guide",
+      "hash": "87bbcae2ed34361a513cd96629f6563af2dbb9daf5aa0dbb2c7a01cc8eba6e3b"
+    },
+    {
+      "path": "pages/user-guide/transformations/time-series/filter.md",
+      "url": "https://docs.pola.rs/user-guide/transformations/time-series/filter",
+      "title": "Filtering - Polars user guide",
+      "hash": "135d88a0fbb2d122fcc457675dbc76f9f22d42e79be105f143eba7fecdd52c05"
+    },
+    {
+      "path": "pages/user-guide/transformations/time-series/parsing.md",
+      "url": "https://docs.pola.rs/user-guide/transformations/time-series/parsing",
+      "title": "Parsing - Polars user guide",
+      "hash": "7d74cedbdd348049f2d6021c058ad4cb9b5a786036d366587d8db557e3406752"
+    },
+    {
+      "path": "pages/user-guide/transformations/time-series/resampling.md",
+      "url": "https://docs.pola.rs/user-guide/transformations/time-series/resampling",
+      "title": "Resampling - Polars user guide",
+      "hash": "eaf1dbe91cf99c2c3a9dcbf04dd4940756171fbbcd61635c4942629270cafeb1"
+    },
+    {
+      "path": "pages/user-guide/transformations/time-series/rolling.md",
+      "url": "https://docs.pola.rs/user-guide/transformations/time-series/rolling",
+      "title": "Grouping - Polars user guide",
+      "hash": "3e94868efab56a881b6f00d1d1ccf4d949361f5fb247d3f3bb19e28ede0a808e"
+    },
+    {
+      "path": "pages/user-guide/transformations/time-series/timezones.md",
+      "url": "https://docs.pola.rs/user-guide/transformations/time-series/timezones",
+      "title": "Time zones - Polars user guide",
+      "hash": "fca6326485711f4556b010ab56227744920d3375bd45aec325ddad8eafd9324f"
+    },
+    {
+      "path": "pages/user-guide/transformations/unpivot.md",
+      "url": "https://docs.pola.rs/user-guide/transformations/unpivot",
+      "title": "Unpivots - Polars user guide",
+      "hash": "f03463a0a38fd28179e093574e7091a41541accc407df20248797e3bdf04d90e"
+    }
+  ],
+  "edges": [
+    [
+      "pages/api/python/stable/reference/dataframe/home.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/development/contributing.md",
+      "pages/development/contributing/ci.md"
+    ],
+    [
+      "pages/development/contributing.md",
+      "pages/development/contributing/test.md"
+    ],
+    [
+      "pages/development/contributing.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/development/contributing/ci.md",
+      "pages/development/contributing.md"
+    ],
+    [
+      "pages/development/contributing/test.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/development/versioning.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/home.md",
+      "pages/development/contributing.md"
+    ],
+    [
+      "pages/home.md",
+      "pages/user-guide/getting-started.md"
+    ],
+    [
+      "pages/home.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/polars-cloud.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/polars-cloud/connect-cloud.md",
+      "pages/polars-cloud/run/remote-query.md"
+    ],
+    [
+      "pages/polars-cloud/run/remote-query.md",
+      "pages/polars-cloud/connect-cloud.md"
+    ],
+    [
+      "pages/releases/upgrade.md",
+      "pages/development/versioning.md"
+    ],
+    [
+      "pages/releases/upgrade.md",
+      "pages/releases/changelog.md"
+    ],
+    [
+      "pages/user-guide/concepts.md",
+      "pages/user-guide/concepts/data-types-and-structures.md"
+    ],
+    [
+      "pages/user-guide/concepts.md",
+      "pages/user-guide/concepts/expressions-and-contexts.md"
+    ],
+    [
+      "pages/user-guide/concepts.md",
+      "pages/user-guide/concepts/lazy-api.md"
+    ],
+    [
+      "pages/user-guide/concepts.md",
+      "pages/user-guide/concepts/streaming.md"
+    ],
+    [
+      "pages/user-guide/concepts/data-types-and-structures.md",
+      "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/concepts/data-types-and-structures.md",
+      "pages/user-guide/concepts/expressions-and-contexts.md"
+    ],
+    [
+      "pages/user-guide/concepts/data-types-and-structures.md",
+      "pages/user-guide/expressions/categorical-data-and-enums.md"
+    ],
+    [
+      "pages/user-guide/concepts/data-types-and-structures.md",
+      "pages/user-guide/expressions/lists-and-arrays.md"
+    ],
+    [
+      "pages/user-guide/concepts/data-types-and-structures.md",
+      "pages/user-guide/expressions/structs.md"
+    ],
+    [
+      "pages/user-guide/concepts/data-types-and-structures.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/concepts/expressions-and-contexts.md",
+      "pages/user-guide/concepts/lazy-api.md"
+    ],
+    [
+      "pages/user-guide/concepts/expressions-and-contexts.md",
+      "pages/user-guide/expressions.md"
+    ],
+    [
+      "pages/user-guide/concepts/lazy-api.md",
+      "pages/user-guide/concepts/expressions-and-contexts.md"
+    ],
+    [
+      "pages/user-guide/concepts/lazy-api.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/concepts/lazy-api.md",
+      "pages/user-guide/lazy.md"
+    ],
+    [
+      "pages/user-guide/concepts/streaming.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/ecosystem.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/user-guide/ecosystem.md",
+      "pages/user-guide/io/hugging-face.md"
+    ],
+    [
+      "pages/user-guide/ecosystem.md",
+      "pages/user-guide/misc/visualization.md"
+    ],
+    [
+      "pages/user-guide/expressions.md",
+      "pages/user-guide/concepts/expressions-and-contexts.md"
+    ],
+    [
+      "pages/user-guide/expressions.md",
+      "pages/user-guide/expressions/aggregation.md"
+    ],
+    [
+      "pages/user-guide/expressions.md",
+      "pages/user-guide/expressions/basic-operations.md"
+    ],
+    [
+      "pages/user-guide/expressions.md",
+      "pages/user-guide/expressions/casting.md"
+    ],
+    [
+      "pages/user-guide/expressions.md",
+      "pages/user-guide/expressions/categorical-data-and-enums.md"
+    ],
+    [
+      "pages/user-guide/expressions.md",
+      "pages/user-guide/expressions/expression-expansion.md"
+    ],
+    [
+      "pages/user-guide/expressions.md",
+      "pages/user-guide/expressions/folds.md"
+    ],
+    [
+      "pages/user-guide/expressions.md",
+      "pages/user-guide/expressions/lists-and-arrays.md"
+    ],
+    [
+      "pages/user-guide/expressions.md",
+      "pages/user-guide/expressions/missing-data.md"
+    ],
+    [
+      "pages/user-guide/expressions.md",
+      "pages/user-guide/expressions/numpy-functions.md"
+    ],
+    [
+      "pages/user-guide/expressions.md",
+      "pages/user-guide/expressions/strings.md"
+    ],
+    [
+      "pages/user-guide/expressions.md",
+      "pages/user-guide/expressions/structs.md"
+    ],
+    [
+      "pages/user-guide/expressions.md",
+      "pages/user-guide/expressions/user-defined-python-functions.md"
+    ],
+    [
+      "pages/user-guide/expressions.md",
+      "pages/user-guide/expressions/window-functions.md"
+    ],
+    [
+      "pages/user-guide/expressions/aggregation.md",
+      "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/expressions/aggregation.md",
+      "pages/user-guide/concepts/expressions-and-contexts.md"
+    ],
+    [
+      "pages/user-guide/expressions/aggregation.md",
+      "pages/user-guide/expressions/user-defined-python-functions.md"
+    ],
+    [
+      "pages/user-guide/expressions/aggregation.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/expressions/basic-operations.md",
+      "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/expressions/basic-operations.md",
+      "pages/user-guide/expressions/structs.md"
+    ],
+    [
+      "pages/user-guide/expressions/basic-operations.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/expressions/casting.md",
+      "pages/user-guide/concepts/data-types-and-structures.md"
+    ],
+    [
+      "pages/user-guide/expressions/casting.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/expressions/categorical-data-and-enums.md",
+      "pages/user-guide/getting-started.md"
+    ],
+    [
+      "pages/user-guide/expressions/expression-expansion.md",
+      "pages/user-guide/concepts/expressions-and-contexts.md"
+    ],
+    [
+      "pages/user-guide/expressions/expression-expansion.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/expressions/folds.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/expressions/lists-and-arrays.md",
+      "pages/user-guide/expressions/casting.md"
+    ],
+    [
+      "pages/user-guide/expressions/lists-and-arrays.md",
+      "pages/user-guide/expressions/strings.md"
+    ],
+    [
+      "pages/user-guide/expressions/lists-and-arrays.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/expressions/missing-data.md",
+      "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/expressions/missing-data.md",
+      "pages/user-guide/concepts/data-types-and-structures.md"
+    ],
+    [
+      "pages/user-guide/expressions/numpy-functions.md",
+      "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/expressions/numpy-functions.md",
+      "pages/user-guide/expressions/missing-data.md"
+    ],
+    [
+      "pages/user-guide/expressions/numpy-functions.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/expressions/strings.md",
+      "pages/user-guide/concepts/data-types-and-structures.md"
+    ],
+    [
+      "pages/user-guide/expressions/strings.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/expressions/structs.md",
+      "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/expressions/structs.md",
+      "pages/user-guide/expressions/user-defined-python-functions.md"
+    ],
+    [
+      "pages/user-guide/expressions/structs.md",
+      "pages/user-guide/expressions/window-functions.md"
+    ],
+    [
+      "pages/user-guide/expressions/structs.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/expressions/user-defined-python-functions.md",
+      "pages/user-guide/expressions/missing-data.md"
+    ],
+    [
+      "pages/user-guide/expressions/user-defined-python-functions.md",
+      "pages/user-guide/expressions/structs.md"
+    ],
+    [
+      "pages/user-guide/expressions/user-defined-python-functions.md",
+      "pages/user-guide/plugins/expr_plugins.md"
+    ],
+    [
+      "pages/user-guide/expressions/user-defined-python-functions.md",
+      "pages/user-guide/plugins/io_plugins.md"
+    ],
+    [
+      "pages/user-guide/expressions/window-functions.md",
+      "pages/user-guide/expressions/aggregation.md"
+    ],
+    [
+      "pages/user-guide/expressions/window-functions.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/getting-started.md",
+      "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/getting-started.md",
+      "pages/user-guide/concepts/expressions-and-contexts.md"
+    ],
+    [
+      "pages/user-guide/getting-started.md",
+      "pages/user-guide/expressions/basic-operations.md"
+    ],
+    [
+      "pages/user-guide/getting-started.md",
+      "pages/user-guide/expressions/expression-expansion.md"
+    ],
+    [
+      "pages/user-guide/getting-started.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/getting-started.md",
+      "pages/user-guide/io.md"
+    ],
+    [
+      "pages/user-guide/getting-started.md",
+      "pages/user-guide/transformations/concatenation.md"
+    ],
+    [
+      "pages/user-guide/getting-started.md",
+      "pages/user-guide/transformations/joins.md"
+    ],
+    [
+      "pages/user-guide/gpu-support.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/user-guide/gpu-support.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/gpu-support.md",
+      "pages/user-guide/lazy.md"
+    ],
+    [
+      "pages/user-guide/installation.md",
+      "pages/user-guide/gpu-support.md"
+    ],
+    [
+      "pages/user-guide/io.md",
+      "pages/user-guide/io/bigquery.md"
+    ],
+    [
+      "pages/user-guide/io.md",
+      "pages/user-guide/io/cloud-storage.md"
+    ],
+    [
+      "pages/user-guide/io.md",
+      "pages/user-guide/io/csv.md"
+    ],
+    [
+      "pages/user-guide/io.md",
+      "pages/user-guide/io/database.md"
+    ],
+    [
+      "pages/user-guide/io.md",
+      "pages/user-guide/io/excel.md"
+    ],
+    [
+      "pages/user-guide/io.md",
+      "pages/user-guide/io/hive.md"
+    ],
+    [
+      "pages/user-guide/io.md",
+      "pages/user-guide/io/hugging-face.md"
+    ],
+    [
+      "pages/user-guide/io.md",
+      "pages/user-guide/io/json.md"
+    ],
+    [
+      "pages/user-guide/io.md",
+      "pages/user-guide/io/multiple.md"
+    ],
+    [
+      "pages/user-guide/io.md",
+      "pages/user-guide/io/parquet.md"
+    ],
+    [
+      "pages/user-guide/io/bigquery.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/io/cloud-storage.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/io/cloud-storage.md",
+      "pages/user-guide/lazy/optimizations.md"
+    ],
+    [
+      "pages/user-guide/io/csv.md",
+      "pages/user-guide/concepts/lazy-api.md"
+    ],
+    [
+      "pages/user-guide/io/csv.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/io/database.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/user-guide/io/json.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/io/parquet.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/user-guide/io/parquet.md",
+      "pages/user-guide/concepts/lazy-api.md"
+    ],
+    [
+      "pages/user-guide/io/parquet.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/io/parquet.md",
+      "pages/user-guide/io/cloud-storage.md"
+    ],
+    [
+      "pages/user-guide/lazy.md",
+      "pages/user-guide/lazy/execution.md"
+    ],
+    [
+      "pages/user-guide/lazy.md",
+      "pages/user-guide/lazy/gpu.md"
+    ],
+    [
+      "pages/user-guide/lazy.md",
+      "pages/user-guide/lazy/optimizations.md"
+    ],
+    [
+      "pages/user-guide/lazy.md",
+      "pages/user-guide/lazy/query-plan.md"
+    ],
+    [
+      "pages/user-guide/lazy.md",
+      "pages/user-guide/lazy/schemas.md"
+    ],
+    [
+      "pages/user-guide/lazy.md",
+      "pages/user-guide/lazy/sources_sinks.md"
+    ],
+    [
+      "pages/user-guide/lazy.md",
+      "pages/user-guide/lazy/using.md"
+    ],
+    [
+      "pages/user-guide/lazy/gpu.md",
+      "pages/user-guide/gpu-support.md"
+    ],
+    [
+      "pages/user-guide/lazy/gpu.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/lazy/multiplexing.md",
+      "pages/user-guide/lazy/sources_sinks.md"
+    ],
+    [
+      "pages/user-guide/lazy/using.md",
+      "pages/user-guide/lazy/execution.md"
+    ],
+    [
+      "pages/user-guide/migration/pandas.md",
+      "pages/user-guide/expressions/missing-data.md"
+    ],
+    [
+      "pages/user-guide/migration/pandas.md",
+      "pages/user-guide/lazy/using.md"
+    ],
+    [
+      "pages/user-guide/misc/comparison.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/user-guide/misc/multiprocessing.md",
+      "pages/user-guide/lazy/optimizations.md"
+    ],
+    [
+      "pages/user-guide/misc/visualization.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/user-guide/plugins.md",
+      "pages/user-guide/plugins/expr_plugins.md"
+    ],
+    [
+      "pages/user-guide/plugins.md",
+      "pages/user-guide/plugins/io_plugins.md"
+    ],
+    [
+      "pages/user-guide/plugins/io_plugins.md",
+      "pages/user-guide/plugins/expr_plugins.md"
+    ],
+    [
+      "pages/user-guide/sql/intro.md",
+      "pages/user-guide/concepts/expressions-and-contexts.md"
+    ],
+    [
+      "pages/user-guide/sql/intro.md",
+      "pages/user-guide/sql/cte.md"
+    ],
+    [
+      "pages/user-guide/transformations.md",
+      "pages/user-guide/transformations/concatenation.md"
+    ],
+    [
+      "pages/user-guide/transformations.md",
+      "pages/user-guide/transformations/joins.md"
+    ],
+    [
+      "pages/user-guide/transformations.md",
+      "pages/user-guide/transformations/pivot.md"
+    ],
+    [
+      "pages/user-guide/transformations.md",
+      "pages/user-guide/transformations/unpivot.md"
+    ],
+    [
+      "pages/user-guide/transformations/concatenation.md",
+      "pages/user-guide/transformations/joins.md"
+    ],
+    [
+      "pages/user-guide/transformations/joins.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/transformations/pivot.md",
+      "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/filter.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/parsing.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/resampling.md",
+      "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/resampling.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/resampling.md",
+      "pages/user-guide/transformations/time-series/rolling.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/rolling.md",
+      "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/rolling.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/timezones.md",
+      "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/timezones.md",
+      "pages/user-guide/transformations/time-series/parsing.md"
+    ],
+    [
+      "pages/user-guide/transformations/unpivot.md",
+      "pages/api/python/stable/reference/dataframe/home.md"
+    ]
+  ]
+}

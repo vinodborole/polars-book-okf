@@ -1,0 +1,97 @@
+---
+type: Web Page
+title: Ecosystem - Polars user guide
+resource: https://docs.pola.rs/user-guide/ecosystem
+timestamp: '2026-07-07T12:26:19.464100+00:00'
+---
+
+# Ecosystem
+
+## Introduction
+
+On this page you can find a non-exhaustive list of libraries and tools that support Polars. As the
+data ecosystem is evolving fast, more libraries will likely support Polars in the future. One of the
+main drivers is that Polars makes adheres its memory layout to the `Apache Arrow` spec.
+
+### Table of contents:
+
+### Apache Arrow
+
+Apache Arrow enables zero-copy reads of data within the same process, meaning that data can be directly accessed in its in-memory format without the need for copying or serialisation. This enhances performance when integrating with different tools using Apache Arrow. Polars is compatible with a wide range of libraries that also make use of Apache Arrow, like Pandas and DuckDB.
+
+### Data visualisation
+
+See the dedicated visualization section.
+
+### IO
+
+#### Delta Lake
+
+The Delta Lake project aims to unlock the power of the Deltalake for as many users and projects as possible by providing native low-level APIs aimed at developers and integrators, as well as a high-level operations API that lets you query, inspect, and operate your Delta Lake with ease. Delta Lake builds on the native Polars Parquet reader allowing you to write standard Polars queries against a DeltaTable.
+
+Read how to use Delta Lake with Polars at Delta Lake.
+
+### Machine Learning
+
+#### Scikit Learn
+
+The Scikit Learn machine learning package accepts a Polars
+`DataFrame` as input/output to all transformers and as input to models.
+skrub helps encoding DataFrames for scikit-learn estimators (eg converting
+dates or strings).
+
+#### XGBoost & LightGBM
+
+XGBoost and LightGBM are gradient boosting packages for doing regression or classification on
+tabular data.
+XGBoost accepts Polars `DataFrame` and `LazyFrame` as input
+while LightGBM accepts Polars `DataFrame` as input.
+
+#### Time series forecasting
+
+The
+Nixtla time series forecasting packages
+accept a Polars `DataFrame` as input.
+
+#### Hugging Face
+
+Hugging Face is a platform for working with machine learning datasets and models. Polars can be used to work with datasets downloaded from Hugging Face.
+
+#### Deep learning frameworks
+
+A `DataFrame` can be transformed
+into a PyTorch format using `to_torch`
+or
+into a JAX format using `to_jax`.
+
+### Other
+
+#### DuckDB
+
+DuckDB is a high-performance analytical database system. It is designed to be fast, reliable, portable, and easy to use. DuckDB provides a rich SQL dialect, with support far beyond basic SQL. DuckDB supports arbitrary and nested correlated subqueries, window functions, collations, complex types (arrays, structs), and more. Read about integration with Polars on the DuckDB website.
+
+#### Great Tables
+
+With Great Tables anyone can make wonderful-looking tables in Python. Here is a blog post on how to use Great Tables with Polars.
+
+#### LanceDB
+
+LanceDB is a developer-friendly, serverless vector database for AI applications. They have added a direct integration with Polars. LanceDB can ingest Polars dataframes, return results as polars dataframes, and export the entire table as a polars lazyframe. See the LanceDB documentation for more details.
+
+#### Mage
+
+Mage is an open-source data pipeline tool for transforming and integrating data. Learn about integration between Polars and Mage at docs.mage.ai.
+
+#### marimo
+
+marimo is a reactive notebook for Python and SQL that models notebooks as dataflow graphs. It offers built-in support for Polars, allowing seamless integration of Polars dataframes in an interactive, reactive environment - such as displaying rich Polars tables, no-code transformations of Polars dataframes, or selecting points on a Polars-backed reactive chart.
+
+#### Narwhals
+
+Narwhals is a lightweight compatibility layer between dataframe libraries. It mirrors the Polars API and lets you run Polars natively, without any conversion overhead, in libraries like Plotly and others that have adopted it for dataframe interoperability.
+
+See the Narwhals ecosystem for more details.
+
+# Citations
+
+1. Source page: https://docs.pola.rs/user-guide/ecosystem
