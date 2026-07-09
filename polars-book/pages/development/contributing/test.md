@@ -2,7 +2,7 @@
 type: Web Page
 title: Test suite - Polars user guide
 resource: https://docs.pola.rs/development/contributing/test
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Test suite
@@ -36,7 +36,7 @@ If you're working in the Python code only, you can avoid recompiling every time 
 `pytest` instead from your virtual environment.
 
 By default, "slow" tests and "ci-only" tests are skipped for local test runs. Such tests are marked
-using a custom pytest marker. To run these
+using a [custom pytest marker](https://docs.pytest.org/en/latest/example/markers.html). To run these
 tests specifically, you can run `pytest -m slow`, `pytest -m ci_only`, `pytest -m slow ci_only` or
 run `pytest -m ""` to run *all* tests, regardless of marker.
 
@@ -45,7 +45,7 @@ dependencies (such as `torch`) that are otherwise not installed as part of the d
 development environment.
 
 Tests can be run in parallel by running `pytest -n auto`. The parallelization is handled by
-`pytest-xdist`.
+[ pytest-xdist](https://pytest-xdist.readthedocs.io/en/latest/).
 
 ### Writing unit tests
 
@@ -53,14 +53,14 @@ Whenever you add new functionality, you should also add matching unit tests. Add
 appropriate test module in the `unit` folder. Some guidelines to keep in mind:
 
 - Try to fully cover all possible inputs and edge cases you can think of.
-- Utilize pytest tools like `fixture`and`parametrize`where appropriate.
+- Utilize pytest tools like `fixture``parametrize`
 - Since many tests will require some data to be defined first, it can be efficient to run multiple checks in a single test. This can also be addressed using pytest fixtures.
 - Unit tests should not depend on external factors, otherwise test parallelization will break.
 
 ## Parametric tests
 
 The `parametric` folder contains parametric tests written using the
-Hypothesis framework. These tests are intended to find and
+[Hypothesis](https://hypothesis.readthedocs.io/) framework. These tests are intended to find and
 test edge cases by generating many random datapoints.
 
 ### Running parametric tests
@@ -76,11 +76,11 @@ These tests *will* be included when calculating test coverage, and will also be 
 ## Doctests
 
 The `docs` folder contains a script for running
-`doctest`. This folder does not contain any actual
-tests - rather, the script checks all docstrings in the Polars package for `Examples` sections, runs
-the code examples, and verifies the output.
+[ doctest](https://docs.python.org/3/library/doctest.html). This folder does not contain any actual
+tests - rather, the script checks all docstrings in the Polars package for 
 
-The aim of running `doctest` is to make sure the `Examples` sections in our docstrings are valid and
+`Examples` sections, runs
+the code examples, and verifies the output.The aim of running `doctest` is to make sure the `Examples` sections in our docstrings are valid and
 remain up-to-date with code changes.
 
 ### Running `doctest`
@@ -108,7 +108,7 @@ section:
 
 There are many great docstring examples already, just check other code if you need inspiration!
 
-In addition to the regular options
+In addition to the [regular options](https://docs.python.org/3/library/doctest.html#option-flags)
 available when writing doctests, the script configuration allows for a new `IGNORE_RESULT`
 directive. Use this directive if you want to ensure the code runs, but the output may be random by
 design or not interesting to check.
@@ -127,7 +127,9 @@ functionality works as expected when run on a release build or at a larger scale
 For most tests, a relatively large dataset must be generated first. This is done as part of the
 `pytest` setup process.
 
-The data generation logic was taken from the H2O.ai database benchmark, which is the foundation for many of the benchmark tests.
+The data generation logic was taken from the
+[H2O.ai database benchmark](https://github.com/h2oai/db-benchmark), which is the foundation for many
+of the benchmark tests.
 
 ### Running the benchmark tests
 

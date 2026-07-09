@@ -2,7 +2,7 @@
 type: Web Page
 title: Schema - Polars user guide
 resource: https://docs.pola.rs/user-guide/lazy/schemas
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Schema
@@ -77,9 +77,15 @@ We show how to deal with a non-lazy operation in this example where we:
 - do a `.filter`
 - finish by executing the query with `.collect`to get a`DataFrame`
 
-  `collect` ·  `lazy` ·  `pivot` ·  `filter`
+[   collect](https://docs.pola.rs/api/python/stable/reference/lazyframe/api/polars.LazyFrame.collect.html) ·
 
-```
+[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.lazy.html)
+
+`lazy`[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.pivot.html)
+
+`pivot`
+
+`filter````
 lazy_eager_query = (
     pl.LazyFrame(
         {

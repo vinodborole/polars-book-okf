@@ -2,7 +2,7 @@
 type: Web Page
 title: Streaming - Polars user guide
 resource: https://docs.pola.rs/user-guide/concepts/streaming
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Streaming
@@ -21,7 +21,9 @@ q1 = (
 )
 df = q1.collect(engine="streaming")
 ```
-  `collect` ·  Available on feature streaming
+[   collect](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyFrame.html#method.collect) ·
+
+[Available on feature streaming](/user-guide/installation/#feature-flags)
 
 ```
 let q1 = LazyCsvReader::new(PlRefPath::new("docs/assets/data/iris.csv"))

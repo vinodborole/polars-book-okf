@@ -2,14 +2,16 @@
 type: Web Page
 title: Comparison with other tools - Polars user guide
 resource: https://docs.pola.rs/user-guide/misc/comparison
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Comparison with other tools
 
 These are several libraries and tools that share similar functionalities with Polars. This often leads to questions from data experts about what the differences are. Below is a short comparison between some of the more popular data processing tools and Polars, to help data experts make a deliberate decision on which tool to use.
 
-You can find performance benchmarks (h2oai benchmark) of these tools here: Polars blog post or a more recent benchmark done by DuckDB
+You can find performance benchmarks (h2oai benchmark) of these tools here:
+[Polars blog post](https://pola.rs/posts/benchmarks/) or a more recent benchmark
+[done by DuckDB](https://duckdblabs.github.io/db-benchmark/)
 
 ### Pandas
 
@@ -35,7 +37,10 @@ Spark (specifically PySpark) represents a different approach to large-scale data
 
 However, Spark's distributed nature can introduce complexity and overhead, especially for small datasets and tasks that can run on a single machine. Another consideration is collaboration between data scientists and engineers. As they typically work with different tools (Pandas and Pyspark), refactoring is often required by engineers to deploy data scientists' data processing pipelines. Polars offers a single syntax that, due to vertical scaling, works in local environments and on a single machine in the cloud.
 
-For data below a TB, single node with Polars processing might be the most optimal choice considering speed and complexity. Once you go into multiple TB's, distributed compute is often required. Historically this was Sparks area. Nowadays you can also use Polars Distributed.
+For data below a TB, single node with Polars processing might be the most optimal choice considering
+speed and complexity. Once you go into multiple TB's, distributed compute is often required.
+Historically this was Sparks area. Nowadays you can also use
+[Polars Distributed](https://cloud.pola.rs/).
 
 ### DuckDB
 
@@ -43,7 +48,7 @@ Polars and DuckDB have many similarities. However, DuckDB is focused on providin
 OLAP database management system, while Polars is focused on providing a scalable `DataFrame`
 interface to many languages. The different front-ends lead to different optimisation strategies and
 different algorithm prioritisation. The interoperability between both is zero-copy. DuckDB offers a
-guide on how to integrate with Polars.
+guide on [how to integrate with Polars](https://duckdb.org/docs/guides/python/polars.html).
 
 # Citations
 

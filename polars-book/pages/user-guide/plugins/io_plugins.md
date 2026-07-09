@@ -2,12 +2,16 @@
 type: Web Page
 title: IO Plugins - Polars user guide
 resource: https://docs.pola.rs/user-guide/plugins/io_plugins
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # IO Plugins
 
-Besides expression plugins, we also support IO plugins. These allow you to register different file formats as sources to the Polars engines. Because sources can move data zero copy via Arrow FFI and sources can produce large chunks of data before returning, we've decided to interface to IO plugins via Python for now, as we don't think the short time the GIL is needed should lead to any contention.
+Besides [expression plugins](../expr_plugins/), we also support IO plugins. These allow you to
+register different file formats as sources to the Polars engines. Because sources can move data zero
+copy via Arrow FFI and sources can produce large chunks of data before returning, we've decided to
+interface to IO plugins via Python for now, as we don't think the short time the GIL is needed
+should lead to any contention.
 
 E.g. an IO source can read their dataframe's in rust and only at the rendez-vous move the data zero-copy having only a short time the GIL is needed.
 
@@ -78,7 +82,9 @@ Materialize only n rows from the source. The reader can stop when `n_rows` are r
 
 A hint of the ideal batch size the reader's generator must produce.
 
-The inner function is the actual implementation of the IO source and can also call into Rust/C++ or wherever the IO plugin is written. If you want to see an IO source implemented in Rust, take a look at our plugins repository.
+The inner function is the actual implementation of the IO source and can also call into Rust/C++ or
+wherever the IO plugin is written. If you want to see an IO source implemented in Rust, take a look
+at our [plugins repository](https://github.com/pola-rs/pyo3-polars/tree/main/example/io_plugin).
 
 ```
 def my_scan_csv(csv_str: str) -> pl.LazyFrame:

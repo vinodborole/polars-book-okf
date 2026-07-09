@@ -2,7 +2,7 @@
 type: Web Page
 title: Data types and structures - Polars user guide
 resource: https://docs.pola.rs/user-guide/concepts/data-types-and-structures
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Data types and structures
@@ -18,9 +18,11 @@ Polars supports a variety of data types that fall broadly under the following ca
 
 All types support missing values represented by the special value `null`. This is not to be
 conflated with the special value `NaN` in floating number data types; see the
-section about floating point numbers for more information.
+[section about floating point numbers](#floating-point-numbers) for more information.
 
-You can also find a full table with all data types supported in the appendix with notes on when to use each data type and with links to relevant parts of the documentation.
+You can also find a
+[full table with all data types supported in the appendix](#appendix-full-data-types-table) with
+notes on when to use each data type and with links to relevant parts of the documentation.
 
 ## Series
 
@@ -56,7 +58,11 @@ Int64 UInt64
 ```
 ## Dataframe
 
-A dataframe is a 2-dimensional heterogeneous data structure that contains uniquely named series. By holding your data in a dataframe you will be able to use the Polars API to write queries that manipulate your data. You will be able to do this by using the contexts and expressions provided by Polars that we will talk about next.
+A dataframe is a 2-dimensional heterogeneous data structure that contains uniquely named series. By
+holding your data in a dataframe you will be able to use the Polars API to write queries that
+manipulate your data. You will be able to do this by using the
+[contexts and expressions provided by Polars](../expressions-and-contexts/) that we will talk about
+next.
 
 The snippet below shows how to create a dataframe from a dictionary of lists:
 
@@ -189,7 +195,9 @@ You can also use `describe` to compute summary statistics for all columns of you
 ```
 print(df.describe())
 ```
-  `describe` ·  Available on feature describe
+[   describe](https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html#method.describe) ·
+
+[Available on feature describe](/user-guide/installation/#feature-flags)
 
 ```
 // Not available in Rust
@@ -284,9 +292,13 @@ shape: (4, 2)
 ```
 ## Data types internals
 
-Polars utilizes the Arrow Columnar Format for its data orientation. Following this specification allows Polars to transfer data to/from other tools that also use the Arrow specification with little to no overhead.
+Polars utilizes the [Arrow Columnar Format](https://arrow.apache.org/docs/format/Columnar.html) for
+its data orientation. Following this specification allows Polars to transfer data to/from other
+tools that also use the Arrow specification with little to no overhead.
 
-Polars gets most of its performance from its query engine, the optimizations it performs on your query plans, and from the parallelization that it employs when running your expressions.
+Polars gets most of its performance from its query engine, the optimizations it performs on your
+query plans, and from the parallelization that it employs when running
+[your expressions](../expressions-and-contexts/#expressions).
 
 ## Floating point numbers
 
@@ -306,19 +318,19 @@ Polars always attempts to provide reasonably accurate results for floating point
 | `Int8`,`Int16`,`Int32`,`Int64`,`Int128` | Varying-precision signed integer types. | 
 | `UInt8`,`UInt16`,`UInt32`,`UInt64`,`UInt128` | Varying-precision unsigned integer types. | 
 | `Float16`,`Float32`,`Float64` | Varying-precision signed floating point numbers. | 
-| `Decimal` | Decimal 128-bit type with optional precision and non-negative scale. Use this if you need fine-grained control over the precision of your floats and the operations you make on them. See Python's `decimal.Decimal`for documentation on what a decimal data type is. | 
+| `Decimal` | Decimal 128-bit type with optional precision and non-negative scale. Use this if you need fine-grained control over the precision of your floats and the operations you make on them. See [Python's ](https://docs.python.org/3/library/decimal.html)for documentation on what a decimal data type is.`decimal.Decimal` | 
 | `String` | Variable length UTF-8 encoded string data, typically Human-readable. | 
 | `Binary` | Stores arbitrary, varying length raw binary data. | 
 | `Date` | Represents a calendar date. | 
 | `Time` | Represents a time of day. | 
 | `Datetime` | Represents a calendar date and time of day. | 
 | `Duration` | Represents a time duration. | 
-| `Array` | Arrays with a known, fixed shape per series; akin to numpy arrays. Learn more about how arrays and lists differ and how to work with both. | 
-| `List` | Homogeneous 1D container with variable length. Learn more about how arrays and lists differ and how to work with both. | 
+| `Array` | Arrays with a known, fixed shape per series; akin to numpy arrays. [Learn more about how arrays and lists differ and how to work with both](../../expressions/lists-and-arrays/). | 
+| `List` | Homogeneous 1D container with variable length. [Learn more about how arrays and lists differ and how to work with both](../../expressions/lists-and-arrays/). | 
 | `Object` | Wraps arbitrary Python objects. | 
-| `Categorical` | Efficient encoding of string data where the categories are inferred at runtime. Learn more about how categoricals and enums differ and how to work with both. | 
-| `Enum` | Efficient ordered encoding of a set of predetermined string categories. Learn more about how categoricals and enums differ and how to work with both. | 
-| `Struct` | Composite product type that can store multiple fields. Learn more about the data type `Struct`in its dedicated documentation section.. | 
+| `Categorical` | Efficient encoding of string data where the categories are inferred at runtime. [Learn more about how categoricals and enums differ and how to work with both](../../expressions/categorical-data-and-enums/). | 
+| `Enum` | Efficient ordered encoding of a set of predetermined string categories. [Learn more about how categoricals and enums differ and how to work with both](../../expressions/categorical-data-and-enums/). | 
+| `Struct` | Composite product type that can store multiple fields. [Learn more about the data type ](../../expressions/structs/).`Struct`in its dedicated documentation section. | 
 | `Null` | Represents null values. |
 
 # Citations

@@ -2,7 +2,7 @@
 type: Web Page
 title: Databases - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/database
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Databases
@@ -45,15 +45,18 @@ libraries (known as *engines*) handle this.
 When using `pl.read_database`, you specify the engine when you create the connection object. When
 using `pl.read_database_uri`, you can specify one of two engines to read from the database:
 
-- ConnectorX and
-- ADBC
+- [ConnectorX](https://github.com/sfu-db/connector-x)and
+- [ADBC](https://arrow.apache.org/docs/format/ADBC.html)
 
 Both engines have native support for Apache Arrow and so can read data directly into a Polars
 `DataFrame` without copying the data.
 
 #### ConnectorX
 
-ConnectorX is the default engine and supports numerous databases including Postgres, Mysql, SQL Server and Redshift. ConnectorX is written in Rust and stores data in Arrow format to allow for zero-copy to Polars.
+ConnectorX is the default engine and
+[supports numerous databases](https://github.com/sfu-db/connector-x#sources) including Postgres,
+Mysql, SQL Server and Redshift. ConnectorX is written in Rust and stores data in Arrow format to
+allow for zero-copy to Polars.
 
 To read from one of the supported databases with `ConnectorX` you need to activate the additional
 dependency `ConnectorX` when installing Polars or install it manually with
@@ -65,7 +68,11 @@ $ pip install connectorx
 
 ADBC (Arrow Database Connectivity) is an engine supported by the Apache Arrow project. ADBC aims to be both an API standard for connecting to databases and libraries implementing this standard in a range of languages.
 
-It is still early days for ADBC so support for different databases is limited. At present, drivers for ADBC are only available for Postgres, SQLite and Snowflake. To install ADBC, you need to install the driver for your database. For example, to install the driver for SQLite, you run:
+It is still early days for ADBC so support for different databases is limited. At present, drivers
+for ADBC are only available for [Postgres](https://pypi.org/project/adbc-driver-postgresql/),
+[SQLite](https://pypi.org/project/adbc-driver-sqlite/) and
+[Snowflake](https://pypi.org/project/adbc-driver-snowflake/). To install ADBC, you need to install
+the driver for your database. For example, to install the driver for SQLite, you run:
 
 ```
 $ pip install adbc-driver-sqlite
@@ -87,7 +94,7 @@ We can write to a database with Polars using the `pl.write_database` function.
 As with reading from a database above, Polars uses an *engine* to write to a database. The currently
 supported engines are:
 
-- SQLAlchemy and
+- [SQLAlchemy](https://www.sqlalchemy.org/)and
 - Arrow Database Connectivity (ADBC)
 
 #### SQLAlchemy

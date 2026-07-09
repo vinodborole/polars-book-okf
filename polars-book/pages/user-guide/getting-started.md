@@ -2,12 +2,16 @@
 type: Web Page
 title: Getting started - Polars user guide
 resource: https://docs.pola.rs/user-guide/getting-started
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Getting started
 
-This chapter is here to help you get started with Polars. It covers all the fundamental features and functionalities of the library, making it easy for new users to familiarise themselves with the basics from initial installation and setup to core functionalities. If you're already an advanced user or familiar with dataframes, feel free to skip ahead to the next chapter about installation options.
+This chapter is here to help you get started with Polars. It covers all the fundamental features and
+functionalities of the library, making it easy for new users to familiarise themselves with the
+basics from initial installation and setup to core functionalities. If you're already an advanced
+user or familiar with dataframes, feel free to skip ahead to the
+[next chapter about installation options](../installation/).
 
 ## Installing Polars
 
@@ -80,7 +84,11 @@ df.write_csv("docs/assets/data/output.csv")
 df_csv = pl.read_csv("docs/assets/data/output.csv", try_parse_dates=True)
 print(df_csv)
 ```
-  `CsvReader` ·  `CsvWriter` ·  Available on feature csv
+[   CsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvWriter.html)
+
+`CsvWriter`[Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 use std::fs::File;
@@ -109,7 +117,8 @@ shape: (4, 4)
 │ Daniel Donovan ┆ 1981-04-30 ┆ 83.1   ┆ 1.75   │
 └────────────────┴────────────┴────────┴────────┘
 ```
-For more examples on the CSV file format and other data formats, see the IO section of the user guide.
+For more examples on the CSV file format and other data formats, see the [IO section](../io/)
+of the user guide.
 
 ## Expressions and contexts
 
@@ -133,16 +142,21 @@ Below, we will show examples of Polars expressions inside different contexts:
 - `filter`
 - `group_by`
 
-For a more detailed exploration of expressions and contexts see the respective user guide section.
+For a more
+[detailed exploration of expressions and contexts see the respective user guide section](../concepts/expressions-and-contexts/).
 
 `select`
 
 The context `select` allows you to select and manipulate columns from a dataframe. In the simplest
 case, each expression you provide will map to a column in the result dataframe:
 
-  `select` ·  `alias` ·  `dt namespace`
+[   select](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.select.html) ·
 
-```
+[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.alias.html)
+
+`alias`
+
+`dt namespace````
 result = df.select(
     pl.col("name"),
     pl.col("birthdate").dt.year().alias("birth_year"),
@@ -150,7 +164,13 @@ result = df.select(
 )
 print(result)
 ```
-  `select` ·  `alias` ·  `dt namespace` ·  Available on feature temporal
+[   select](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.select) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.alias)
+
+`alias`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html)
+
+`dt namespace`[Available on feature temporal](/user-guide/installation/#feature-flags)
 
 ```
 let result = df
@@ -182,16 +202,26 @@ shorthand for multiple expressions. In the example below, we use expression expa
 the columns “weight” and “height” with a single expression. When using expression expansion you can
 use `.name.suffix` to add a suffix to the names of the original columns:
 
-  `select` ·  `alias` ·  `name namespace`
+[   select](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.select.html) ·
 
-```
+[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.alias.html)
+
+`alias`
+
+`name namespace````
 result = df.select(
     pl.col("name"),
     (pl.col("weight", "height") * 0.95).round(2).name.suffix("-5%"),
 )
 print(result)
 ```
-  `select` ·  `alias` ·  `name namespace` ·  Available on feature lazy
+[   select](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.select) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.alias)
+
+`alias`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/struct.ExprNameNameSpace.html)
+
+`name namespace`[Available on feature lazy](/user-guide/installation/#feature-flags)
 
 ```
 let result = df
@@ -220,7 +250,9 @@ shape: (4, 3)
 │ Daniel Donovan ┆ 78.94     ┆ 1.66      │
 └────────────────┴───────────┴───────────┘
 ```
-You can check other sections of the user guide to learn more about basic operations or column selections in expression expansion.
+You can check other sections of the user guide to learn more about
+[basic operations](../expressions/basic-operations/) or
+[column selections in expression expansion](../expressions/expression-expansion/).
 
 `with_columns`
 
@@ -273,7 +305,11 @@ original one:
 result = df.filter(pl.col("birthdate").dt.year() < 1990)
 print(result)
 ```
-  `filter` ·  `dt namespace` ·  Available on feature temporal
+[   filter](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.filter) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html)
+
+`dt namespace`[Available on feature temporal](/user-guide/installation/#feature-flags)
 
 ```
 let result = df
@@ -305,7 +341,11 @@ result = df.filter(
 )
 print(result)
 ```
-  `filter` ·  `is_between` ·  Available on feature is_between
+[   filter](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.filter) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars/prelude/enum.Expr.html#method.is_between)
+
+`is_between`[Available on feature is_between](/user-guide/installation/#feature-flags)
 
 ```
 let result = df
@@ -339,16 +379,26 @@ The context `group_by` can be used to group together the rows of the dataframe t
 value across one or more expressions. The example below counts how many people were born in each
 decade:
 
-  `group_by` ·  `alias` ·  `dt namespace`
+[   group_by](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.group_by.html) ·
 
-```
+[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.alias.html)
+
+`alias`
+
+`dt namespace````
 result = df.group_by(
     (pl.col("birthdate").dt.year() // 10 * 10).alias("decade"),
     maintain_order=True,
 ).len()
 print(result)
 ```
-  `group_by` ·  `alias` ·  `dt namespace` ·  Available on feature temporal
+[   group_by](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.alias)
+
+`alias`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html)
+
+`dt namespace`[Available on feature temporal](/user-guide/installation/#feature-flags)
 
 ```
 // Use `group_by_stable` if you want the Python behaviour of `maintain_order=True`.
@@ -420,9 +470,19 @@ shape: (2, 4)
 
 Contexts and the expressions within can be chained to create more complex queries according to your needs. In the example below we combine some of the contexts we have seen so far to create a more complex query:
 
-  `group_by` ·  `agg` ·  `select` ·  `with_columns` ·  `str namespace` ·  `list namespace`
+[   group_by](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.group_by.html) ·
 
-```
+[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.dataframe.group_by.GroupBy.agg.html)
+
+`agg`[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.select.html)
+
+`select`[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.with_columns.html)
+
+`with_columns`[·](https://docs.pola.rs/api/python/stable/reference/expressions/string.html)
+
+`str namespace`
+
+`list namespace````
 result = (
     df.with_columns(
         (pl.col("birthdate").dt.year() // 10 * 10).alias("decade"),
@@ -442,7 +502,19 @@ result = (
 )
 print(result)
 ```
-  `group_by` ·  `agg` ·  `select` ·  `with_columns` ·  `str namespace` ·  `list namespace` ·  Available on feature strings
+[   group_by](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by) ·
+
+[·](https://docs.rs/polars/latest/polars/prelude/struct.LazyGroupBy.html#method.agg)
+
+`agg`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.select)
+
+`select`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.with_columns)
+
+`with_columns`[·](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.StringNameSpaceImpl.html)
+
+`str namespace`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/struct.ListNameSpace.html)
+
+`list namespace`[Available on feature strings](/user-guide/installation/#feature-flags)
 
 ```
 let result = df
@@ -527,7 +599,8 @@ shape: (4, 6)
 │ Daniel Donovan ┆ 1981-04-30 ┆ 83.1   ┆ 1.75   ┆ false  ┆ 2        │
 └────────────────┴────────────┴────────┴────────┴────────┴──────────┘
 ```
-Polars provides many different join algorithms that you can learn about in the joins section of the user guide.
+Polars provides many different join algorithms that you can learn about in the
+[joins section of the user guide](../transformations/joins/).
 
 ### Concatenating dataframes
 
@@ -582,7 +655,9 @@ shape: (8, 4)
 │ Henry Harris   ┆ 1971-08-03 ┆ 93.1   ┆ 1.8    │
 └────────────────┴────────────┴────────┴────────┘
 ```
-Polars provides vertical and horizontal concatenation, as well as diagonal concatenation. You can learn more about these in the concatenations section of the user guide.
+Polars provides vertical and horizontal concatenation, as well as diagonal concatenation. You can
+learn more about these in the
+[concatenations section of the user guide](../transformations/concatenation/).
 
 # Citations
 

@@ -2,7 +2,7 @@
 type: Web Page
 title: Lazy API - Polars user guide
 resource: https://docs.pola.rs/user-guide/concepts/lazy-api
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Lazy API
@@ -18,7 +18,9 @@ df_small = df.filter(pl.col("sepal_length") > 5)
 df_agg = df_small.group_by("species").agg(pl.col("sepal_width").mean())
 print(df_agg)
 ```
-  `CsvReader` ·  Available on feature csv
+[   CsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·
+
+[Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 let df = CsvReadOptions::default()
@@ -37,7 +39,7 @@ println!("{df_agg}");
 ```
 In this example we use the eager API to:
 
-- Read the iris dataset.
+- Read the iris [dataset](https://archive.ics.uci.edu/dataset/53/iris).
 - Filter the dataset based on sepal length.
 - Calculate the mean of the sepal width per species.
 
@@ -55,7 +57,9 @@ q = (
 )
 df = q.collect()
 ```
-  `LazyCsvReader` ·  Available on feature csv
+[   LazyCsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyCsvReader.html) ·
+
+[Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 let q = LazyCsvReader::new(PlRefPath::new("docs/assets/data/iris.csv"))
@@ -70,7 +74,7 @@ println!("{df}");
 These will significantly lower the load on memory & CPU thus allowing you to fit bigger datasets in
 memory and process them faster. Once the query is defined you call `collect` to inform Polars that
 you want to execute it. You can
-learn more about the lazy API in its dedicated chapter.
+[learn more about the lazy API in its dedicated chapter](../../lazy/).
 
 Eager API
 
@@ -101,7 +105,7 @@ Immediately, we can see in the explanation that Polars did apply predicate pushd
 
 The function `explain` can also be used to see how expression expansion will unfold in the context
 of a given schema. Consider the example expression from the
-section on expression expansion:
+[section on expression expansion](../expressions-and-contexts/#expression-expansion):
 
 ```
 (pl.col(pl.Float64) * 1.1).name.suffix("*1.1")

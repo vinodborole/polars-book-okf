@@ -2,7 +2,7 @@
 type: Web Page
 title: Getting started - Polars user guide
 resource: https://docs.pola.rs/polars-cloud/quickstart
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Getting started
@@ -25,12 +25,14 @@ $ pc authenticate
 
 Polars Cloud currently exclusively supports AWS as a cloud provider.
 
-Polars Cloud needs permission to manage hardware in your environment. This is done by deploying our cloudformation template. See our infrastructure section for more details.
+Polars Cloud needs permission to manage hardware in your environment. This is done by deploying our
+cloudformation template. See our [infrastructure](../providers/aws/infra/) section for more details.
 
 To set up your Polars Cloud environment and connect your cloud run you can either
 
 - Run `pc setup`to guide you through creation and connecting via CLI.
-- Or create an organization and workspace via the browser.
+- Or create an organization and workspace
+  [via the browser](https://cloud.pola.rs/portal/5f9c09/dbe6d9/dashboard).
 
 ## Run your queries
 
@@ -38,9 +40,9 @@ Now that we are done with the setup, we can start running queries. You can write
 used and to only need to call `.remote()` on your `LazyFrame`. In the following example we create a
 compute cluster and run a simple Polars query.
 
-  `ComputeContext` ·  `LazyFrameRemote`
+[   ComputeContext](https://docs.cloud.pola.rs/reference/compute/compute.html) ·
 
-```
+`LazyFrameRemote````
 import polars as pl
 import polars_cloud as pc
 # First, we need to define the hardware the cluster will run on.

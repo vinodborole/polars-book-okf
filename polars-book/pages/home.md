@@ -2,7 +2,7 @@
 type: Web Page
 title: Index - Polars user guide
 resource: https://docs.pola.rs/
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Blazingly Fast DataFrame Library
@@ -18,7 +18,7 @@ Polars is a blazingly fast DataFrame library for manipulating structured data. T
 - **Parallel**: Utilises the power of your machine by dividing the workload among the available CPU cores without any additional configuration.
 - **Vectorized Query Engine**
 - **GPU Support**: Optionally run queries on NVIDIA GPUs for maximum performance for in-memory workloads.
-- **Apache Arrow support**: Polars can consume and produce Arrow data often with zero-copy operations. Note that Polars is not built on a Pyarrow/Arrow implementation. Instead, Polars has its own compute and buffer implementations.
+- [Apache Arrow support](https://arrow.apache.org/)
 
 Users new to DataFrames
 
@@ -38,9 +38,15 @@ Polars is written in Rust which gives it C/C++ performance and allows it to full
 
 ## Example
 
-  `scan_csv` ·  `filter` ·  `group_by` ·  `collect`
+[   scan_csv](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_csv.html) ·
 
-```
+[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.filter.html)
+
+`filter`[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.group_by.html)
+
+`group_by`
+
+`collect````
 import polars as pl
 q = (
     pl.scan_csv("docs/assets/data/iris.csv")
@@ -50,7 +56,17 @@ q = (
 )
 df = q.collect()
 ```
-  `LazyCsvReader` ·  `filter` ·  `group_by` ·  `collect` ·  Available on feature streaming ·  Available on feature csv
+[   LazyCsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyCsvReader.html) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.filter)
+
+`filter`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by)
+
+`group_by`[·](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyFrame.html#method.collect)
+
+`collect`[Available on feature streaming](/user-guide/installation/#feature-flags)·
+
+[Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 use polars::prelude::*;
@@ -62,7 +78,7 @@ let q = LazyCsvReader::new(PlRefPath::new("docs/assets/data/iris.csv"))
     .agg([col("*").sum()]);
 let df = q.collect()?;
 ```
-A more extensive introduction can be found in the next chapter.
+A more extensive introduction can be found in the [next chapter](user-guide/getting-started/).
 
 ## Community
 
@@ -70,11 +86,13 @@ Polars has a very active community with frequent releases (approximately weekly)
 
 ## Contributing
 
-We appreciate all contributions, from reporting bugs to implementing new features. Read our contributing guide to learn more.
+We appreciate all contributions, from reporting bugs to implementing new features. Read our
+[contributing guide](development/contributing/) to learn more.
 
 ## License
 
-This project is licensed under the terms of the MIT license.
+This project is licensed under the terms of the
+[MIT license](https://github.com/pola-rs/polars/blob/main/LICENSE).
 
 # Citations
 

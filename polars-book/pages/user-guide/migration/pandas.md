@@ -2,7 +2,7 @@
 type: Web Page
 title: Coming from Pandas - Polars user guide
 resource: https://docs.pola.rs/user-guide/migration/pandas
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Coming from Pandas
@@ -124,7 +124,7 @@ line we instruct Polars to eagerly evaluate the query.
 If you do want to run this query in eager mode you can just replace `scan_csv` with `read_csv` in
 the Polars code.
 
-Read more about working with lazy evaluation in the lazy API section.
+Read more about working with lazy evaluation in the [lazy API](../../lazy/using/) section.
 
 ### Express yourself
 
@@ -296,7 +296,7 @@ In pandas an integer column with missing values is cast to be a float column wit
 the missing values (unless using optional nullable integer dtypes). In Polars any missing values in
 an integer column are simply `null` values and the column remains an integer column.
 
-See the missing data section for more details.
+See the [missing data](../../expressions/missing-data/) section for more details.
 
 ## Pipe littering
 

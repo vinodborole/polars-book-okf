@@ -2,7 +2,7 @@
 type: Web Page
 title: Basic operations - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/basic-operations
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Basic operations
@@ -263,7 +263,7 @@ Polars has two functions to count the number of unique values in a series. The f
 can be used to count the exact number of unique values in a series. However, for very large data
 sets, this operation can be quite slow. In those cases, if an approximation is good enough, you can
 use the function `approx_n_unique` that uses the algorithm
-HyperLogLog++ to estimate the result.
+[HyperLogLog++](https://en.wikipedia.org/wiki/HyperLogLog) to estimate the result.
 
 The example below shows an example series where the `approx_n_unique` estimation is wrong by 0.9%:
 
@@ -275,7 +275,11 @@ result = long_df.select(
 )
 print(result)
 ```
-  `n_unique` ·  `approx_n_unique` ·  Available on feature approx_unique
+[   n_unique](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.n_unique) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.approx_n_unique)
+
+`approx_n_unique`[Available on feature approx_unique](/user-guide/installation/#feature-flags)
 
 ```
 use rand::SeedableRng;
@@ -315,7 +319,9 @@ result = df.select(
 )
 print(result)
 ```
-  `value_counts` ·  Available on feature dtype-struct
+[   value_counts](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.value_counts) ·
+
+[Available on feature dtype-struct](/user-guide/installation/#feature-flags)
 
 ```
 let result = df
@@ -341,7 +347,7 @@ shape: (4, 1)
 └──────────────┘
 ```
 The function `value_counts` returns the results in
-structs, a data type that we will explore in a later section.
+[structs, a data type that we will explore in a later section](../structs/).
 
 Alternatively, if you only need a series with the unique values or a series with the unique counts, they are one function away:
 
@@ -352,7 +358,11 @@ result = df.select(
 )
 print(result)
 ```
-  `unique` ·  `unique_counts` ·  Available on feature unique_counts
+[   unique](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.unique) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.unique_counts)
+
+`unique_counts`[Available on feature unique_counts](/user-guide/installation/#feature-flags)
 
 ```
 let result = df
@@ -392,7 +402,9 @@ by the corresponding values of the expression inside the function `then`. The va
 to `False` are replaced by the corresponding values of the expression inside the function
 `otherwise` or `null`, if `otherwise` is not provided.
 
-The example below applies one step of the Collatz conjecture to the numbers in the column “nrs”:
+The example below applies one step of the
+[Collatz conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture) to the numbers in the column
+“nrs”:
 
 ```
 result = df.select(

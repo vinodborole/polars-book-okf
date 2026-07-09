@@ -2,7 +2,7 @@
 type: Web Page
 title: Concatenation - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/concatenation
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Concatenation
@@ -223,7 +223,8 @@ shape: (2, 3)
 ```
 Diagonal concatenation generates nulls when the column names do not overlap.
 
-When the dataframe shapes do not match and we have an overlapping semantic key then we can join the dataframes instead of concatenating them.
+When the dataframe shapes do not match and we have an overlapping semantic key then
+[we can join the dataframes](../joins/) instead of concatenating them.
 
 ## Rechunking
 

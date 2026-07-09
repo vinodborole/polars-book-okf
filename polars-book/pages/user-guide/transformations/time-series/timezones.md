@@ -2,7 +2,7 @@
 type: Web Page
 title: Time zones - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/timezones
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Time zones
@@ -15,14 +15,14 @@ The `Datetime` datatype can have a time zone associated with it. Examples of val
 
 - `None`: no time zone, also known as "time zone naive".
 - `UTC`: Coordinated Universal Time.
-- `Asia/Kathmandu`: time zone in "area/location" format. See the list of tz database time zones to see what's available.
+- `Asia/Kathmandu`: time zone in "area/location" format. See the- [list of tz database time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)to see what's available.
 
 Caution: Fixed offsets such as +02:00, should not be used for handling time zones. It's advised to use the "Area/Location" format mentioned above, as it can manage timezones more effectively.
 
 Note that, because a `Datetime` can only have a single time zone, it is impossible to have a column
 with multiple time zones. If you are parsing data with multiple offsets, you may want to pass
 `utc=True` to convert them all to a common time zone (`UTC`), see
-parsing dates and times.
+[parsing dates and times](../parsing/).
 
 The main methods for setting and converting between time zones are:
 
@@ -31,7 +31,11 @@ The main methods for setting and converting between time zones are:
 
 Let's look at some examples of common operations:
 
-  `str.to_datetime` ·  `dt.replace_time_zone` ·  Available on feature timezone
+[   str.to_datetime](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.to_datetime.html) ·
+
+[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.dt.replace_time_zone.html)
+
+`dt.replace_time_zone`[Available on feature timezone](/user-guide/installation/#feature-flags)
 
 ```
 ts = ["2021-03-27 03:00", "2021-03-28 03:00"]
@@ -40,7 +44,13 @@ tz_aware = tz_naive.dt.replace_time_zone("UTC").rename("tz_aware")
 time_zones_df = pl.DataFrame([tz_naive, tz_aware])
 print(time_zones_df)
 ```
-  `str.replace_all` ·  `dt.replace_time_zone` ·  Available on feature timezones ·  Available on feature dtype-datetime
+[   str.replace_all](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_datetime) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.replace_time_zone)
+
+`dt.replace_time_zone`[Available on feature timezones](/user-guide/installation/#feature-flags)·
+
+[Available on feature dtype-datetime](/user-guide/installation/#feature-flags)
 
 ```
 let ts = ["2021-03-27 03:00", "2021-03-28 03:00"];
@@ -71,7 +81,11 @@ shape: (2, 2)
 │ 2021-03-28 03:00:00 ┆ 2021-03-28 03:00:00 UTC │
 └─────────────────────┴─────────────────────────┘
 ```
-  `dt.convert_time_zone` ·  `dt.replace_time_zone` ·  Available on feature timezone
+[   dt.convert_time_zone](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.dt.convert_time_zone.html) ·
+
+[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.dt.replace_time_zone.html)
+
+`dt.replace_time_zone`[Available on feature timezone](/user-guide/installation/#feature-flags)
 
 ```
 time_zones_operations = time_zones_df.select(
@@ -87,7 +101,11 @@ time_zones_operations = time_zones_df.select(
 )
 print(time_zones_operations)
 ```
-  `dt.convert_time_zone` ·  `dt.replace_time_zone` ·  Available on feature timezones
+[   dt.convert_time_zone](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.convert_time_zone) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.replace_time_zone)
+
+`dt.replace_time_zone`[Available on feature timezones](/user-guide/installation/#feature-flags)
 
 ```
 let time_zones_operations = time_zones_df

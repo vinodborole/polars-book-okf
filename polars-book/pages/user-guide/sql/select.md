@@ -2,7 +2,7 @@
 type: Web Page
 title: SELECT - Polars user guide
 resource: https://docs.pola.rs/user-guide/sql/select
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # SELECT
@@ -168,7 +168,9 @@ Polars provides a wide range of SQL functions, including:
 - Aggregation functions: `SUM`,`AVG`,`MIN`,`MAX`,`COUNT`,`STDDEV`,`FIRST`etc.
 - Array functions: `EXPLODE`,`UNNEST`,`ARRAY_SUM`,`ARRAY_REVERSE`, etc.
 
-For a full list of supported functions go the API documentation. The example below demonstrates how to use a function in a query
+For a full list of supported functions go the
+[API documentation](https://docs.rs/polars-sql/latest/src/polars_sql/keywords.rs.html). The example
+below demonstrates how to use a function in a query
 
 ```
 result = ctx.execute(

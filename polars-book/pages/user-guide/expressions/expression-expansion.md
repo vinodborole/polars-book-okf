@@ -2,14 +2,21 @@
 type: Web Page
 title: Expression expansion - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/expression-expansion
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Expression expansion
 
-As you've seen in the section about expressions and contexts, expression expansion is a feature that enables you to write a single expression that can expand to multiple different expressions, possibly depending on the schema of the context in which the expression is used.
+As you've seen in
+[the section about expressions and contexts](../../concepts/expressions-and-contexts/), expression
+expansion is a feature that enables you to write a single expression that can expand to multiple
+different expressions, possibly depending on the schema of the context in which the expression is
+used.
 
-This feature isn't just decorative or syntactic sugar. It allows for a very powerful application of DRY principles in your code: a single expression that specifies multiple columns expands into a list of expressions, which means you can write one single expression and reuse the computation that it represents.
+This feature isn't just decorative or syntactic sugar. It allows for a very powerful application of
+[DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principles in your code: a single
+expression that specifies multiple columns expands into a list of expressions, which means you can
+write one single expression and reuse the computation that it represents.
 
 In this section we will show several forms of expression expansion and we will be using the dataframe that you can see below for that effect:
 
@@ -222,8 +229,8 @@ shape: (5, 5)
 ### Arguments cannot be of mixed types
 
 In Python, the function `col` accepts an arbitrary number of strings (as
-column names or as
-regular expressions) or an arbitrary number of data types, but you
+[column names](#explicit-expansion-by-column-name) or as
+[regular expressions](#expansion-by-pattern-matching)) or an arbitrary number of data types, but you
 cannot mix both in the same function call:
 
 ```
@@ -347,16 +354,26 @@ designed specifically to rename a single column.
 When it suffices to add a static prefix or a static suffix to the existing names, we can use the
 functions `prefix` and `suffix` from the namespace `name`:
 
-  `name namespace` ·  `prefix` ·  `suffix`
+[   name namespace](https://docs.pola.rs/api/python/stable/reference/expressions/name.html) ·
 
-```
+[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.name.prefix.html)
+
+`prefix`
+
+`suffix````
 result = df.select(
     (pl.col("^year_.*$") / eur_usd_rate).name.prefix("in_eur_"),
     (pl.col("day_high", "day_low") / gbp_usd_rate).name.suffix("_gbp"),
 )
 print(result)
 ```
-  `name namespace` ·  `prefix` ·  `suffix` ·  Available on feature lazy
+[   name namespace](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/struct.ExprNameNameSpace.html) ·
+
+[·](https://docs.rs/polars/latest/polars/prelude/struct.ExprNameNameSpace.html#method.prefix)
+
+`prefix`[·](https://docs.rs/polars/latest/polars/prelude/struct.ExprNameNameSpace.html#method.suffix)
+
+`suffix`[Available on feature lazy](/user-guide/installation/#feature-flags)
 
 ```
 let result = df
@@ -397,7 +414,11 @@ accepts a callable that accepts the old column names and produces the new ones:
 result = df.select(pl.all().name.map(str.upper))
 print(result)
 ```
-  `name namespace` ·  `map` ·  Available on feature lazy
+[   name namespace](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/struct.ExprNameNameSpace.html) ·
+
+[·](https://docs.rs/polars/latest/polars/prelude/struct.ExprNameNameSpace.html#method.map)
+
+`map`[Available on feature lazy](/user-guide/installation/#feature-flags)
 
 ```
 // There is also `name().to_uppercase()`, so this usage of `map` is moot.
@@ -520,7 +541,7 @@ write more flexible column selections for expression expansion.
 
 Warning
 
-This functionality is not available in Rust yet. Refer to Polars issue #10594.
+This functionality is not available in Rust yet. Refer to [Polars issue #10594](https://github.com/pola-rs/polars/issues/10594).
 
 As a first example, here is how we can use the functions `string` and `ends_with`, and the set
 operations that the functions from `selectors` support, to select all string columns and the columns
@@ -550,12 +571,12 @@ shape: (5, 4)
 └────────┴───────────────────┴──────────┴───────────┘
 ```
 The submodule `selectors` provides
-a number of selectors that match based on the data type of the columns,
+[a number of selectors that match based on the data type of the columns](#selectors-for-data-types),
 of which the most useful are the functions that match a whole category of types, like `cs.numeric`
 for all numeric data types or `cs.temporal` for all temporal data types.
 
 The submodule `selectors` also provides
-a number of selectors that match based on patterns in the column names
+[a number of selectors that match based on patterns in the column names](#selectors-for-column-name-patterns)
 which make it more convenient to specify common patterns you may want to check for, like the
 function `cs.ends_with` that was shown above.
 
@@ -623,11 +644,11 @@ shape: (5, 4)
 ```
 However, some operators have been overloaded to operate both on Polars selectors and on expressions.
 For example, the operator `~` on a selector represents
-the set operation “complement” and on an expression
+[the set operation “complement”](#combining-selectors-with-set-operations) and on an expression
 represents the Boolean operation of negation.
 
 When you use a selector and then want to use, in the context of an expression, one of the
-operators that act as set operators for selectors, you
+[operators that act as set operators for selectors](#combining-selectors-with-set-operations), you
 can use the function `as_expr`.
 
 Below, we want to negate the Boolean values in the columns “has_partner”, “has_kids”, and

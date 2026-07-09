@@ -2,7 +2,7 @@
 type: Web Page
 title: Window functions - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/window-functions
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Window functions
@@ -25,7 +25,9 @@ pokemon = pl.read_csv(
 ).cast({"Type 1": type_enum, "Type 2": type_enum})
 print(pokemon.head())
 ```
-  `CsvReader` ·  Available on feature csv
+[   CsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·
+
+[Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 use polars::prelude::*;
@@ -144,7 +146,7 @@ shape: (163, 4)
 └───────────────────────┴─────────┴────────┴────────────┘
 ```
 In general, the results you get with the function `over` can also be achieved with
-an aggregation followed by a call to the function `explode`, although the rows
+[an aggregation](../aggregation/) followed by a call to the function `explode`, although the rows
 would be in a different order:
 
 ```

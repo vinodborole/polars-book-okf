@@ -2,7 +2,7 @@
 type: Web Page
 title: Cloud storage - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/cloud-storage
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Cloud storage
@@ -21,14 +21,28 @@ $ cargo add aws_sdk_s3 aws_config tokio --features tokio/full
 
 Polars supports reading Parquet, CSV, IPC and NDJSON files from cloud storage:
 
-  `read_parquet` ·  `read_csv` ·  `read_ipc`
+[   read_parquet](https://docs.pola.rs/api/python/stable/reference/api/polars.read_parquet.html) ·
 
-```
+[·](https://docs.pola.rs/api/python/stable/reference/api/polars.read_csv.html)
+
+`read_csv`
+
+`read_ipc````
 import polars as pl
 source = "s3://bucket/*.parquet"
 df = pl.read_parquet(source)
 ```
-  `ParquetReader` ·  `CsvReader` ·  `IpcReader` ·  Available on feature ipc ·  Available on feature parquet ·  Available on feature csv
+[   ParquetReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.ParquetReader.html) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html)
+
+`CsvReader`[·](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.IpcReader.html)
+
+`IpcReader`[Available on feature ipc](/user-guide/installation/#feature-flags)·
+
+[Available on feature parquet](/user-guide/installation/#feature-flags)·
+
+[Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 use aws_config::BehaviorVersion;
@@ -55,7 +69,7 @@ async fn main() {
 ## Scanning from cloud storage with query optimisation
 
 Using `pl.scan_*` functions to read from cloud storage can benefit from
-predicate and projection pushdowns, where the query optimizer will apply
+[predicate and projection pushdowns](../../lazy/optimizations/), where the query optimizer will apply
 them before the file is downloaded. This can significantly reduce the amount of data that needs to
 be downloaded. The query evaluation is triggered by calling `collect`.
 
@@ -88,9 +102,9 @@ df = pl.scan_parquet(source, storage_options=storage_options).collect()
 
 - There may be a utility class `pl.CredentialProvider*`that provides the required authentication functionality. For example,`pl.CredentialProviderAWS`supports selecting AWS profiles, as well as assuming an IAM role:
 
-  `scan_parquet` ·  `CredentialProviderAWS`
+[   scan_parquet](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_parquet.html) ·
 
-```
+`CredentialProviderAWS````
 lf = pl.scan_parquet(
     "s3://.../...",
     credential_provider=pl.CredentialProviderAWS(
@@ -123,9 +137,9 @@ df = lf.collect()
 ```
 - Example for Azure:
 
-  `scan_parquet` ·  `CredentialProviderAzure`
+[   scan_parquet](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_parquet.html) ·
 
-```
+`CredentialProviderAzure````
 def credential_provider():
     credential = DefaultAzureCredential(exclude_managed_identity_credential=True)
     token = credential.get_token("https://storage.azure.com/.default")
@@ -146,9 +160,9 @@ pl.scan_parquet(
 
 - It is possible to globally configure a default credential provider, so that it does not need to be passed to every I/O function call. This can be convenient in the case where there are many cloud I/O operations that use the same credential provider.
 
-  `scan_parquet` ·  `CredentialProviderAWS`
+[   scan_parquet](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_parquet.html) ·
 
-```
+`CredentialProviderAWS````
 pl.Config.set_default_credential_provider(
     pl.CredentialProviderAWS(
         profile_name="...",

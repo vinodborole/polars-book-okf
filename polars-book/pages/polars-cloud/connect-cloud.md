@@ -2,12 +2,15 @@
 type: Web Page
 title: Connect to your cloud - Polars user guide
 resource: https://docs.pola.rs/polars-cloud/connect-cloud
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Connect to your cloud
 
-Polars Cloud requires connection to your cloud environment to execute queries. After account registration, a guided onboarding flow walks you through creating an organization, selecting a deployment stack, and connecting your first workspace.
+Polars Cloud requires connection to your cloud environment to execute queries. After account
+registration, a guided onboarding flow walks you through creating an
+[organization](../organization/organizations/), selecting a deployment stack, and connecting your
+first workspace.
 
 ## Registration onboarding
 
@@ -22,7 +25,11 @@ Two deployment types are available:
 - **AWS**: workloads run on AWS-managed services, deployed via a CloudFormation template.
 - **Kubernetes**: workloads run on a Kubernetes cluster (EKS, GKE, AKS, or on-premises), deployed via Helm.
 
-For Kubernetes setup, see the EKS, GKE, or AKS guides. The rest of this page covers the AWS path.
+For Kubernetes setup, see the
+[EKS](../../polars-on-premises/kubernetes/cloud-providers/amazon-elastic-kubernetes-service/),
+[GKE](../../polars-on-premises/kubernetes/cloud-providers/google-kubernetes-engine/), or
+[AKS](../../polars-on-premises/kubernetes/cloud-providers/azure-kubernetes-service/) guides. The rest
+of this page covers the AWS path.
 
 Naming your workspace
 
@@ -60,7 +67,8 @@ The CloudFormation quick-create page is pre-filled with the template URL and a s
 Before clicking **Create stack**, scroll to the bottom of the page and check the acknowledgment that
 the template creates IAM resources.
 
-For detailed information about the AWS resources and architecture, see the AWS Infrastructure page.
+For detailed information about the AWS resources and architecture, see
+[the AWS Infrastructure page](../providers/aws/infra/).
 
 Back in the Polars Cloud dashboard, the **Deploy CloudFormation stack** step tracks progress through
 five stages: Network → Security → Policies → Deploying → Connected.
@@ -76,7 +84,7 @@ One-time workspace setup
 Cloud environment connection is required once per workspace. Team members invited to connected workspaces can immediately execute remote queries without additional setup.
 
 This step is optional and you can click **skip** to continue. Members can be added later from the
-Team page.
+[Team page](../workspace/team/).
 
 ## Run your first query
 
@@ -93,10 +101,10 @@ Once the query completes successfully, the setup confirms your workspace is full
 
 With your workspace connected to AWS, you can execute Polars queries remotely. Consider these next actions:
 
-- Learn how to run queries remotely and get the most out of Polars Cloud
-- Profile your queries to understand and optimize performance
-- Learn about compute context configuration for performance optimization
-- Invite team members to your connected workspace to collaborate on your next project.
+- Learn how to [run queries remotely](../run/remote-query/)and get the most out of Polars Cloud
+- [Profile your queries](../run/query-profile/)to understand and optimize performance
+- Learn about [compute context configuration](../context/compute-context/)for performance optimization
+- Invite [team members](../workspace/team/)to your connected workspace to collaborate on your next project.
 
 # Citations
 

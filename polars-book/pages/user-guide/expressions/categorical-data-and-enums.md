@@ -2,18 +2,22 @@
 type: Web Page
 title: Categorical data and enums - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/categorical-data-and-enums
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Categorical data and enums
 
-String values that can only take on a limited number of possible values are known as categorical data. Usually, the number of possible values is much smaller than the number of rows. Some typical examples include your nationality, the operating system of your computer, or the license that your favorite open source project uses.
+String values that can only take on a limited number of possible values are known as
+[categorical data](https://en.wikipedia.org/wiki/Categorical_variable). Usually, the number of
+possible values is much smaller than the number of rows. Some typical examples include your
+nationality, the operating system of your computer, or the license that your favorite open source
+project uses.
 
 When working with categorical data you can use Polars' dedicated types, `Categorical` and `Enum`, to
 make your queries more performant. On this page, we will show what the differences are between the
 two data types `Categorical` and `Enum` and when to use one or the other. We also include some notes
 on
-why the data types `Categorical` and `Enum` are more efficient than using the plain string values
+[why the data types  Categorical and Enum are more efficient than using the plain string values](#performance-considerations-on-categorical-data-types)
 at the end of this user guide section.
 
 In short, from a performance perspective, prefer `Enum` over `Categorical` whenever possible. In
@@ -70,7 +74,7 @@ InvalidOperationError: conversion from `str` to `enum` failed in column '' for 1
 Ensure that all values in the input column are present in the categories of the enum datatype.
 ```
 If you can't know all of the possible values in advance and erroring on unknown values is
-semantically wrong, you may need to use the data type `Categorical`.
+semantically wrong, you may need to [use the data type  Categorical](#data-type-categorical).
 
 ### Category ordering and comparison
 
@@ -168,7 +172,7 @@ Series: '' [cat]
 Having Polars infer the categories for you may seem easier than listing the categories beforehand,
 but this continuous inference and bookkeeping comes at a performance cost. That is why, whenever
 possible, you should use `Enum`. You can learn why by
-reading the subsection about `Categorical` encodings.
+[reading the subsection about  Categorical encodings](#data-type-categorical-and-encodings).
 
 ### Using `Categories` objects
 
@@ -247,7 +251,7 @@ performs a lexical comparison.
 ### Combining `Categorical` columns
 
 Because `Categorical` columns share a global mapping by default, combining them (e.g.
-concatenating two dataframes vertically) requires
+[concatenating two dataframes vertically](../../getting-started/#concatenating-dataframes)) requires
 no re-encoding:
 
 ```
@@ -283,10 +287,11 @@ shape: (6, 2)
 │ Panda   ┆ 90     │
 └─────────┴────────┘
 ```
-The same holds when using explicit `pl.Categories` objects: two
+The same holds when using [explicit  pl.Categories objects](#using-categories-objects): two
+
 `Categorical` columns can be combined without re-encoding as long as they share the same
 `Categories`. For a deeper look at how encodings work, see
-the performance section below.
+[the performance section below](#data-type-categorical-and-encodings).
 
 ## Performance considerations on categorical data types
 
@@ -345,8 +350,10 @@ Polars encodes the string values in the order they appear. So, the series would 
 Polars avoids this problem by using a shared global mapping for all `Categorical` columns by
 default: the same string always gets the same physical value across columns, making combination
 operations cheap. When you need multiple independent category spaces, use
-explicit `pl.Categories` objects scoped by name and namespace; columns
-sharing the same `Categories` are always compatible with each other. This comes at the cost of
+[explicit  pl.Categories objects](#using-categories-objects) scoped by name and namespace; columns
+sharing the same 
+
+`Categories` are always compatible with each other. This comes at the cost of
 lookups and edits to the global mapping, which can cause locking. This does not occur for the `Enum`
 because the mapping is immutable and can be shared freely.
 

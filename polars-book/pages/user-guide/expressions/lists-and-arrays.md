@@ -2,7 +2,7 @@
 type: Web Page
 title: Lists and arrays - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/lists-and-arrays
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Lists and arrays
@@ -100,7 +100,9 @@ df = pl.DataFrame(
 )
 print(df)
 ```
-  `Array` ·  Available on feature dtype-array
+[   Array](https://docs.pola.rs/api/rust/dev/polars/datatypes/enum.DataType.html#variant.Array) ·
+
+[Available on feature dtype-array](/user-guide/installation/#feature-flags)
 
 ```
 // Contribute the Rust translation of the Python example by opening a PR.
@@ -131,7 +133,9 @@ import numpy as np
 array = np.arange(0, 120).reshape((5, 2, 3, 4))  # 4D array
 print(pl.Series(array).dtype)  # Column with the 3D subarrays
 ```
-  `Array` ·  Available on feature dtype-array
+[   Array](https://docs.pola.rs/api/rust/dev/polars/datatypes/enum.DataType.html#variant.Array) ·
+
+[Available on feature dtype-array](/user-guide/installation/#feature-flags)
 
 ```
 // Contribute the Rust translation of the Python example by opening a PR.
@@ -201,7 +205,7 @@ shape: (5, 2)
 Given the dataframe `weather` defined previously, it is very likely we need to run some analysis on
 the temperatures that are captured by each station. To make this happen, we need to first be able to
 get individual temperature measurements. We
-can use the namespace `str` for this:
+[can use the namespace  str](../strings/#the-string-namespace) for this:
 
 ```
 shape: (5, 2)
@@ -244,7 +248,7 @@ However, in Polars we often do not need to do this to operate on the list elemen
 ### Operating on lists
 
 Polars provides several standard operations on columns with the `List` data type.
-Similar to what you can do with strings, lists can be sliced with the
+[Similar to what you can do with strings](../strings/#slicing), lists can be sliced with the
 functions `head`, `tail`, and `slice`:
 
 ```
@@ -306,7 +310,7 @@ True
 ```
 If you are unfamiliar with the namespace `str` or the notation `(?i)` in the regex, now is a good
 time to
-look at how to work with strings and regular expressions in Polars.
+[look at how to work with strings and regular expressions in Polars](../strings/#check-for-the-existence-of-a-pattern).
 
 ### Aggregation & sorting
 
@@ -375,7 +379,11 @@ result = df.select(
 )
 print(result)
 ```
-  `list.eval` ·  `Expr.sort_by` ·  Available on feature list_eval
+[   list.eval](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/trait.ListNameSpaceExtension.html#method.eval) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.sort_by)
+
+`Expr.sort_by`[Available on feature list_eval](/user-guide/installation/#feature-flags)
 
 ```
 // Contribute the Rust translation of the Python example by opening a PR.
@@ -446,7 +454,11 @@ result = df.with_columns(
 )
 print(result)
 ```
-  `list.agg` ·  `entropy` ·  Available on feature approx_unique
+[   list.agg](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/struct.ListNameSpace.html) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.entropy)
+
+`entropy`[Available on feature approx_unique](/user-guide/installation/#feature-flags)
 
 ```
 // Contribute the Rust translation of the Python example by opening a PR.
@@ -542,9 +554,9 @@ shape: (10, 5)
 
 ### Creating an array column
 
-As we have seen above, Polars usually does not infer the data type `Array`
+As [we have seen above](#the-data-type-array), Polars usually does not infer the data type `Array`
 automatically. You have to specify the data type `Array` when creating a series/dataframe or
-cast a column explicitly unless you create the column out of a NumPy array.
+[cast a column](../casting/) explicitly unless you create the column out of a NumPy array.
 
 ### The namespace `arr`
 
@@ -591,7 +603,9 @@ result = df.select(
 )
 print(result)
 ```
-  ``arr` namespace` ·  Available on feature dtype-array
+[   `arr namespace`](https://docs.pola.rs/api/rust/dev/polars/prelude/enum.Expr.html#method.arr) ·
+
+[Available on feature dtype-array](/user-guide/installation/#feature-flags)
 
 ```
 // Contribute the Rust translation of the Python example by opening a PR.

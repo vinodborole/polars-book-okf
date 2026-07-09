@@ -2,7 +2,7 @@
 type: Web Page
 title: Polars On-Prem - Polars user guide
 resource: https://docs.pola.rs/polars-on-premises
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Polars On-Prem
@@ -14,7 +14,8 @@ Polars On-Prem lets you run Polars clusters inside your own infrastructure, whet
 - want elaborative query profiling;
 - want lineage support.
 
-If you want immediately start with running Polars On-Prem on kubernetes, follow the getting-started guide.
+If you want immediately start with running Polars On-Prem on kubernetes, follow the
+[getting-started](./getting-started) guide.
 
 ## Supported platforms
 

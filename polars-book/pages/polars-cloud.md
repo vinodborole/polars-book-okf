@@ -2,7 +2,7 @@
 type: Web Page
 title: Index - Polars user guide
 resource: https://docs.pola.rs/polars-cloud
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Introducing Polars Cloud
@@ -31,9 +31,9 @@ pip install polars polars_cloud
 To run your query in the cloud, simply write Polars queries like you are used to, but call
 `LazyFrame.remote()` to indicate that the query should be run remotely.
 
-  `ComputeContext` ·  `LazyFrameRemote`
+[   ComputeContext](https://docs.cloud.pola.rs/reference/compute/compute.html) ·
 
-```
+`LazyFrameRemote````
 import polars as pl
 import polars_cloud as pc
 ctx = pc.ComputeContext(workspace="your-workspace", cpus=16, memory=64)
@@ -50,7 +50,8 @@ query.remote(context=ctx).sink_parquet("s3://my-dst/")
 ```
 ## Sign up today and start your 30 day trial
 
-Polars Cloud is available to try with a 30 day free trial. You can sign up on cloud.pola.rs to get started.
+Polars Cloud is available to try with a 30 day free trial. You can sign up on
+[cloud.pola.rs](https://cloud.pola.rs) to get started.
 
 ## Cloud availability
 

@@ -2,7 +2,7 @@
 type: Web Page
 title: Hugging Face - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/hugging-face
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Hugging Face
@@ -14,10 +14,10 @@ Hugging Face:
 
 | Scan | Read | 
 |---|---|
-| scan_parquet | read_parquet | 
-| scan_csv | read_csv | 
-| scan_ndjson | read_ndjson | 
-| scan_ipc | read_ipc | 
+| [scan_parquet](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_parquet.html) | [read_parquet](https://docs.pola.rs/api/python/stable/reference/api/polars.read_parquet.html) | 
+| [scan_csv](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_csv.html) | [read_csv](https://docs.pola.rs/api/python/stable/reference/api/polars.read_csv.html) | 
+| [scan_ndjson](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_ndjson.html) | [read_ndjson](https://docs.pola.rs/api/python/stable/reference/api/polars.read_ndjson.html) | 
+| [scan_ipc](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_ipc.html) | [read_ipc](https://docs.pola.rs/api/python/stable/reference/api/polars.read_ipc.html) | 
 
 ### Path format
 
@@ -33,10 +33,10 @@ Example `hf://` paths:
 
 | Path | Path components | 
 |---|---|
-| hf://datasets/nameexhaustion/polars-docs/iris.csv | Bucket: datasets Repository: nameexhaustion/polars-docs Branch: main Path: iris.csv Web URL | 
-| hf://datasets/nameexhaustion/polars-docs@foods/*.csv | Bucket: datasets Repository: nameexhaustion/polars-docs Branch: foods Path: *.csv Web URL | 
-| hf://datasets/nameexhaustion/polars-docs/hive_dates/ | Bucket: datasets Repository: nameexhaustion/polars-docs Branch: main Path: hive_dates/ Web URL | 
-| hf://spaces/nameexhaustion/polars-docs/orders.feather | Bucket: spaces Repository: nameexhaustion/polars-docs Branch: main Path: orders.feather Web URL | 
+| hf://datasets/nameexhaustion/polars-docs/iris.csv | Bucket: datasets Repository: nameexhaustion/polars-docs Branch: main Path: iris.csv [Web URL](https://huggingface.co/datasets/nameexhaustion/polars-docs/tree/main/) | 
+| hf://datasets/nameexhaustion/polars-docs@foods/*.csv | Bucket: datasets Repository: nameexhaustion/polars-docs Branch: foods Path: *.csv [Web URL](https://huggingface.co/datasets/nameexhaustion/polars-docs/tree/foods/) | 
+| hf://datasets/nameexhaustion/polars-docs/hive_dates/ | Bucket: datasets Repository: nameexhaustion/polars-docs Branch: main Path: hive_dates/ [Web URL](https://huggingface.co/datasets/nameexhaustion/polars-docs/tree/main/hive_dates/) | 
+| hf://spaces/nameexhaustion/polars-docs/orders.feather | Bucket: spaces Repository: nameexhaustion/polars-docs Branch: main Path: orders.feather [Web URL](https://huggingface.co/spaces/nameexhaustion/polars-docs/tree/main/) | 
 
 ### Authentication
 
@@ -72,7 +72,8 @@ shape: (150, 5)
 │ 5.9          ┆ 3.0         ┆ 5.1          ┆ 1.8         ┆ virginica │
 └──────────────┴─────────────┴──────────────┴─────────────┴───────────┘
 ```
-See this file at https://huggingface.co/datasets/nameexhaustion/polars-docs/blob/main/iris.csv
+See this file at
+[https://huggingface.co/datasets/nameexhaustion/polars-docs/blob/main/iris.csv](https://huggingface.co/datasets/nameexhaustion/polars-docs/blob/main/iris.csv)
 
 #### NDJSON
 
@@ -99,7 +100,8 @@ shape: (150, 5)
 │ 5.9          ┆ 3.0         ┆ 5.1          ┆ 1.8         ┆ virginica │
 └──────────────┴─────────────┴──────────────┴─────────────┴───────────┘
 ```
-See this file at https://huggingface.co/datasets/nameexhaustion/polars-docs/blob/main/iris.jsonl
+See this file at
+[https://huggingface.co/datasets/nameexhaustion/polars-docs/blob/main/iris.jsonl](https://huggingface.co/datasets/nameexhaustion/polars-docs/blob/main/iris.jsonl)
 
 #### Parquet
 
@@ -133,7 +135,8 @@ shape: (4, 3)
 │ null       ┆ 2023-03-01 01:01:01.000001 ┆ 4   │
 └────────────┴────────────────────────────┴─────┘
 ```
-See this folder at https://huggingface.co/datasets/nameexhaustion/polars-docs/tree/main/hive_dates/
+See this folder at
+[https://huggingface.co/datasets/nameexhaustion/polars-docs/tree/main/hive_dates/](https://huggingface.co/datasets/nameexhaustion/polars-docs/tree/main/hive_dates/)
 
 #### IPC
 
@@ -168,7 +171,8 @@ shape: (10, 9)
 │            ┆           ┆               ┆              ┆   ┆                 ┆                 ┆                ┆ fluffily fi…            │
 └────────────┴───────────┴───────────────┴──────────────┴───┴─────────────────┴─────────────────┴────────────────┴─────────────────────────┘
 ```
-See this file at https://huggingface.co/spaces/nameexhaustion/polars-docs/blob/main/orders.feather
+See this file at
+[https://huggingface.co/spaces/nameexhaustion/polars-docs/blob/main/orders.feather](https://huggingface.co/spaces/nameexhaustion/polars-docs/blob/main/orders.feather)
 
 # Citations
 

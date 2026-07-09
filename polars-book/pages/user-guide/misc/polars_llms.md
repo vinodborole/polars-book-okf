@@ -2,18 +2,22 @@
 type: Web Page
 title: Generating Polars code with LLMs - Polars user guide
 resource: https://docs.pola.rs/user-guide/misc/polars_llms
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Generating Polars code with LLMs
 
 Large Language Models (LLMs) can sometimes return pandas code or invalid Polars code in their output. This guide presents approaches that help LLMs generate valid Polars code more consistently.
 
-These approaches have been developed by the Polars community through testing model responses to various inputs. If you find additional effective approaches for generating Polars code from LLMs, please raise a pull request.
+These approaches have been developed by the Polars community through testing model responses to
+various inputs. If you find additional effective approaches for generating Polars code from LLMs,
+please raise a [pull request](https://github.com/pola-rs/polars/pulls).
 
 ## Polars skill
 
-The official Polars skill for Agents loads Polars expertise directly into the agent so it writes more idiomatic Polars code and can translate pandas code to Polars. See the repository for installation instructions.
+The official [Polars skill for Agents](https://github.com/polars-inc/skills) loads Polars expertise
+directly into the agent so it writes more idiomatic Polars code and can translate pandas code to
+Polars. See the repository for installation instructions.
 
 ## Polars MCP server
 
@@ -29,7 +33,9 @@ The new remote Model Context Protocol (MCP) server for Polars provides access to
   }
 }
 ```
-If you run into an issue or are missing a feature, please open an issue on the public issue tracker. We plan to expand the capabilities over time.
+If you run into an issue or are missing a feature, please
+[open an issue](https://github.com/pola-rs/polars/issues) on the public issue tracker. We plan to
+expand the capabilities over time.
 
 MCP server installation
 

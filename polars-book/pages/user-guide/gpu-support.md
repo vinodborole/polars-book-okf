@@ -2,24 +2,28 @@
 type: Web Page
 title: GPU Support [Open Beta] - Polars user guide
 resource: https://docs.pola.rs/user-guide/gpu-support
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # GPU Support [Open Beta]
 
-Polars provides an in-memory, GPU-accelerated execution engine for Python users of the Lazy API on NVIDIA GPUs using RAPIDS cuDF. This functionality is available in Open Beta and is undergoing rapid development.
+Polars provides an in-memory, GPU-accelerated execution engine for Python users of the Lazy API on
+NVIDIA GPUs using [RAPIDS cuDF](https://docs.rapids.ai/api/cudf/stable/). This functionality is
+available in Open Beta and is undergoing rapid development.
 
 ### System Requirements
 
-- NVIDIA Volta™ or higher GPU with compute capability 7.0+
-- CUDA 12 (CUDA 11 support ends with RAPIDS v25.06; see RSN 48; if you're using CUDA 11, see the installation note below)
+- NVIDIA Volta™ or higher GPU with [compute capability](https://developer.nvidia.com/cuda-gpus)7.0+
+- CUDA 12 (CUDA 11 support ends with RAPIDS v25.06; see
+  [RSN 48](https://docs.rapids.ai/notices/rsn0048/); if you're using CUDA 11, see the installation note below)
 - Linux or Windows Subsystem for Linux 2 (WSL2)
 
-See the RAPIDS installation guide for full details.
+See the [RAPIDS installation guide](https://docs.rapids.ai/install#system-req) for full details.
 
 ### Installation
 
-You can install the GPU backend for Polars with a feature flag as part of a normal installation.
+You can install the GPU backend for Polars with a feature flag as part of a normal
+[installation](../installation/).
 
 ```
 pip install polars[gpu]
@@ -28,14 +32,14 @@ Note
 
 RAPIDS cuDF will **drop CUDA 11 support** starting with version **25.08**.
 If you are using CUDA 11, you must pin to `cudf-polars-cu11==25.06`.
-See the official deprecation notice (RSN 48) for details.
+See the official [deprecation notice (RSN 48)](https://docs.rapids.ai/notices/rsn0048/) for details.
 
 ```
 pip install polars cudf-polars-cu11
 ```
 ### Usage
 
-Having built a query using the lazy API as normal, GPU-enabled execution is
+Having built a query using the lazy API [as normal](../lazy/), GPU-enabled execution is
 requested by running `.collect(engine="gpu")` instead of `.collect()`.
 
 ```
@@ -78,7 +82,9 @@ shape: (2, 1)
 ```
 ### How It Works
 
-When you use the GPU-accelerated engine, Polars creates and optimizes a query plan and dispatches to a RAPIDS cuDF-based physical execution engine to compute the results on NVIDIA GPUs. The final result is returned as a normal CPU-backed Polars dataframe.
+When you use the GPU-accelerated engine, Polars creates and optimizes a query plan and dispatches to
+a [RAPIDS](https://rapids.ai/) cuDF-based physical execution engine to compute the results on NVIDIA
+GPUs. The final result is returned as a normal CPU-backed Polars dataframe.
 
 ### What's Supported on the GPU?
 
@@ -195,7 +201,8 @@ GPU execution is only available in the Lazy API, so materialized DataFrames will
 
 ### Providing feedback
 
-Please report issues, and missing features, on the Polars issue tracker.
+Please report issues, and missing features, on the Polars
+[issue tracker](https://github.com/pola-rs/polars/issues).
 
 # Citations
 

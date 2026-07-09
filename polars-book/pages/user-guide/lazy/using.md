@@ -2,7 +2,7 @@
 type: Web Page
 title: Usage - Polars user guide
 resource: https://docs.pola.rs/user-guide/lazy/using
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Usage
@@ -23,9 +23,15 @@ We create a lazy query from the Reddit CSV data and apply some transformations.
 
 By starting the query with `pl.scan_csv` we are using the lazy API.
 
-  `scan_csv` ·  `with_columns` ·  `filter` ·  `col`
+[   scan_csv](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_csv.html) ·
 
-```
+[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.with_columns.html)
+
+`with_columns`[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.filter.html)
+
+`filter`
+
+`col````
 q1 = (
     pl.scan_csv(f"docs/assets/data/reddit.csv")
     .with_columns(pl.col("name").str.to_uppercase())
@@ -40,7 +46,8 @@ In this query we tell Polars that we want to:
 - convert the `name`column to uppercase
 - apply a filter to the `comment_karma`column
 
-The lazy query will not be executed at this point. See this page on executing lazy queries for more on running lazy queries.
+The lazy query will not be executed at this point. See this page on
+[executing lazy queries](../execution/) for more on running lazy queries.
 
 ## Using the lazy API from a `DataFrame`
 

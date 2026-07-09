@@ -2,7 +2,7 @@
 type: Web Page
 title: Multiprocessing - Polars user guide
 resource: https://docs.pola.rs/user-guide/misc/multiprocessing
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Multiprocessing
@@ -30,7 +30,7 @@ you're using the GPU Engine with Polars you should also avoid manual multiproces
 simultaneously, they can compete for system memory and processing power, leading to reduced
 performance.
 
-See the optimizations section for more optimizations.
+See [the optimizations section](../../lazy/optimizations/) for more optimizations.
 
 ## When to use multiprocessing
 
@@ -40,7 +40,8 @@ Although Polars is multithreaded, other libraries may be single-threaded. When t
 
 ### Summary
 
-The Python multiprocessing documentation lists the three methods to create a process pool:
+The [Python multiprocessing documentation](https://docs.python.org/3/library/multiprocessing.html)
+lists the three methods to create a process pool:
 
 - spawn
 - fork
@@ -67,7 +68,7 @@ safest choice, and hence the recommended method.
 
 The problem with `fork` is in the copying of the parent's process. Consider the example below, which
 is a slightly modified example posted on the
-Polars issue tracker:
+[Polars issue tracker](https://github.com/pola-rs/polars/issues/3144):
 
 ```
 import multiprocessing
@@ -97,7 +98,7 @@ if __name__ == "__main__":
 Using `fork` as the method, instead of `spawn`, will cause a dead lock.
 
 The fork method is equivalent to calling `os.fork()`, which is a system call as defined in
-the POSIX standard:
+[the POSIX standard](https://pubs.opengroup.org/onlinepubs/9699919799/functions/fork.html):
 
 A process shall be created with a single thread. If a multi-threaded process calls fork(), the new process shall contain a replica of the calling thread and its entire address space, possibly including the states of mutexes and other resources. Consequently, to avoid errors, the child process may only execute async-signal-safe operations until such time as one of the exec functions is called.
 
@@ -146,12 +147,12 @@ First, probably because of historical reasons: `spawn` was added to Python in ve
 
 Second, there are several limitations for `spawn` and `forkserver` that do not apply to `fork`, in
 particular all arguments should be pickleable. See the
-Python multiprocessing docs
+[Python multiprocessing docs](https://docs.python.org/3/library/multiprocessing.html#the-spawn-and-forkserver-start-methods)
 for more information.
 
 Third, because it is faster to create new processes compared to `spawn`, as `spawn` is effectively
 `fork` + creating a brand new Python process without the locks by calling
-execv. Hence the warning in
+[execv](https://pubs.opengroup.org/onlinepubs/9699919799/functions/exec.html). Hence the warning in
 the Python docs that it is slower: there is more overhead to `spawn`. However, in almost all cases,
 one would like to use multiple processes to speed up computations that take multiple minutes or even
 hours, meaning the overhead is negligible in the grand scheme of things. And more importantly, it

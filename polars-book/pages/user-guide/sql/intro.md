@@ -2,24 +2,28 @@
 type: Web Page
 title: Introduction - Polars user guide
 resource: https://docs.pola.rs/user-guide/sql/intro
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Introduction
 
-While Polars supports interaction with SQL, it's recommended that users familiarize themselves with the expression syntax to produce more readable and expressive code. As the DataFrame interface is primary, new features are typically added to the expression API first. However, if you already have an existing SQL codebase or prefer the use of SQL, Polars does offers support for this.
+While Polars supports interaction with SQL, it's recommended that users familiarize themselves with
+the [expression syntax](../../concepts/expressions-and-contexts/#expressions) to produce more
+readable and expressive code. As the DataFrame interface is primary, new features are typically
+added to the expression API first. However, if you already have an existing SQL codebase or prefer
+the use of SQL, Polars does offers support for this.
 
 Note
 
-There is no separate SQL engine because Polars translates SQL queries into expressions, which are then executed using its own engine. This approach ensures that Polars maintains its performance and scalability advantages as a native DataFrame library, while still providing users with the ability to work with SQL.
+There is no separate SQL engine because Polars translates SQL queries into [expressions](../../concepts/expressions-and-contexts/#expressions), which are then executed using its own engine. This approach ensures that Polars maintains its performance and scalability advantages as a native DataFrame library, while still providing users with the ability to work with SQL.
 
 ## Context
 
 Polars uses the `SQLContext` object to manage SQL queries. The context contains a mapping of
-`DataFrame` and `LazyFrame` identifier names to their corresponding datasets1. The example below
-starts a `SQLContext`:
+`DataFrame` and `LazyFrame` identifier names to their corresponding datasets 1. The example below
+starts a 
 
-```
+`SQLContext`:```
 ctx = pl.SQLContext()
 ```
 ## Register Dataframes
@@ -158,7 +162,7 @@ The following are some features that are not yet supported:
 In the upcoming sections we will cover each of the statements in more detail.
 
 - 
-Additionally it also tracks the common table expressions as well. ↩
+Additionally it also tracks the [common table expressions](../cte/)as well.[↩](#fnref:1)
 
 # Citations
 

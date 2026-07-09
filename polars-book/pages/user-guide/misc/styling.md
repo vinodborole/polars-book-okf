@@ -2,14 +2,14 @@
 type: Web Page
 title: Styling - Polars user guide
 resource: https://docs.pola.rs/user-guide/misc/styling
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Styling
 
 Data in a Polars `DataFrame` can be styled for presentation use the `DataFrame.style` property. This
 returns a `GT` object from
-Great Tables, which enables
+[Great Tables](https://posit-dev.github.io/great-tables/articles/intro.html), which enables
 structuring, formatting, and styling for table display.
 
 ```

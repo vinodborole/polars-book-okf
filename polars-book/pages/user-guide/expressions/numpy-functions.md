@@ -2,18 +2,23 @@
 type: Web Page
 title: Numpy functions - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/numpy-functions
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Numpy functions
 
-Polars expressions support NumPy ufuncs. See the NumPy documentation for a list of all supported NumPy functions.
+Polars expressions support NumPy [ufuncs](https://numpy.org/doc/stable/reference/ufuncs.html). See
+[the NumPy documentation for a list of all supported NumPy functions](https://numpy.org/doc/stable/reference/ufuncs.html#available-ufuncs).
 
 This means that if a function is not provided by Polars, we can use NumPy and we still have fast columnar operations through the NumPy API.
 
 ## Example
 
-  `DataFrame` ·  `log` ·  Available on feature numpy
+[   DataFrame](https://docs.pola.rs/api/python/stable/reference/dataframe/index.html) ·
+
+[·](https://numpy.org/doc/stable/reference/generated/numpy.log.html)
+
+`log`[Available on feature numpy](/user-guide/installation/#feature-flags)
 
 ```
 import polars as pl
@@ -41,7 +46,7 @@ Element-wise functions such as `np.exp`, `np.cos`, `np.div`, etc, all work with 
 overhead.
 
 However, bear in mind that
-Polars keeps track of missing values with a separate bitmask and NumPy does not
+[Polars keeps track of missing values with a separate bitmask](../missing-data/) and NumPy does not
 receive this information. This can lead to a window function or a `np.convolve` giving flawed or
 incomplete results, so an error will be raised if you pass a series with missing data to a
 generalized ufunc. Convert a Polars series to a NumPy array with the function `to_numpy`. Missing

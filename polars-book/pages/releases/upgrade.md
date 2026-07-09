@@ -2,7 +2,7 @@
 type: Web Page
 title: About - Polars user guide
 resource: https://docs.pola.rs/releases/upgrade
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # About
@@ -11,7 +11,7 @@ Polars releases an upgrade guide alongside each breaking release. This guide is 
 
 Each guide contains all breaking changes that were not previously deprecated, as well as any significant new deprecations.
 
-A full list of all changes is available in the changelog.
+A full list of all changes is available in the [changelog](../changelog/).
 
 Tip
 
@@ -19,11 +19,14 @@ It can be useful to upgrade to the latest non-breaking version before upgrading 
 
 Tip
 
-One of our maintainers has created a tool for automatically upgrading your Polars code to a later version. It's based on the well-known pyupgrade tool. Try out polars-upgrade and let us know what you think!
+One of our maintainers has created a tool for automatically upgrading your Polars code to a later version.
+It's based on the well-known pyupgrade tool.
+Try out [polars-upgrade](https://github.com/MarcoGorelli/polars-upgrade) and let us know what you think!
 
 Note
 
-There are no upgrade guides yet for Rust releases. These will be added once the rate of breaking changes to the Rust API slows down and a deprecation policy is added.
+There are no upgrade guides yet for Rust releases.
+These will be added once the rate of breaking changes to the Rust API slows down and a [deprecation policy](../../development/versioning/#deprecation-period) is added.
 
 # Citations
 

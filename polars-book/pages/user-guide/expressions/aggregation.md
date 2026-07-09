@@ -2,17 +2,17 @@
 type: Web Page
 title: Aggregation - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/aggregation
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Aggregation
 
-The Polars context `group_by` lets you apply
+The Polars [context](../../concepts/expressions-and-contexts/#contexts) `group_by` lets you apply
 expressions on subsets of columns, as defined by the unique values of the column over which the data
 is grouped. This is a very powerful capability that we explore in this section of the user guide.
 
 We start by reading in a
-US congress `dataset`:
+[US congress  dataset](https://github.com/unitedstates/congress-legislators):
 
 ```
 import polars as pl
@@ -30,7 +30,11 @@ dataset = (
     .with_columns(pl.col("birthday").str.to_date(strict=False))
 )
 ```
-  `DataFrame` ·  `Categorical` ·  Available on feature dtype-categorical
+[   DataFrame](https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars/prelude/enum.DataType.html#variant.Categorical)
+
+`Categorical`[Available on feature dtype-categorical](/user-guide/installation/#feature-flags)
 
 ```
 use std::io::Cursor;
@@ -560,7 +564,7 @@ Polars will try to parallelize the computation of the aggregating functions over
 is recommended that you avoid using `lambda`s and custom Python functions as much as possible.
 Instead, try to stay within the realm of the Polars expression API. This is not always possible,
 though, so if you want to learn more about using `lambda`s you can go
-the user guide section on using user-defined functions.
+[the user guide section on using user-defined functions](../user-defined-python-functions/).
 
 # Citations
 

@@ -2,7 +2,7 @@
 type: Web Page
 title: Grouping - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/rolling
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Grouping
@@ -68,7 +68,9 @@ annual_average_df = df.group_by_dynamic("Date", every="1y").agg(pl.col("Close").
 df_with_year = annual_average_df.with_columns(pl.col("Date").dt.year().alias("year"))
 print(df_with_year)
 ```
-  `group_by_dynamic` ·  Available on feature dynamic_group_by
+[   group_by_dynamic](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by_dynamic) ·
+
+[Available on feature dynamic_group_by](/user-guide/installation/#feature-flags)
 
 ```
 let annual_average_df = df
@@ -194,9 +196,13 @@ Below we show an example where we use **group_by_dynamic** to compute:
 - the number of days until the end of the month
 - the number of days in a month
 
-  `group_by_dynamic` ·  `DataFrame.explode` ·  `date_range`
+[   group_by_dynamic](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.group_by_dynamic.html) ·
 
-```
+[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.explode.html)
+
+`DataFrame.explode`
+
+`date_range````
 df = (
     pl.date_range(
         start=date(2021, 1, 1),
@@ -215,7 +221,17 @@ out = df.group_by_dynamic("time", every="1mo", period="1mo", closed="left").agg(
 )
 print(out)
 ```
-  `group_by_dynamic` ·  `DataFrame.explode` ·  `date_range` ·  Available on feature range ·  Available on feature dynamic_group_by ·  Available on feature dtype-date
+[   group_by_dynamic](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by_dynamic) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html#method.explode)
+
+`DataFrame.explode`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/functions/fn.date_range.html)
+
+`date_range`[Available on feature range](/user-guide/installation/#feature-flags)·
+
+[Available on feature dynamic_group_by](/user-guide/installation/#feature-flags)·
+
+[Available on feature dtype-date](/user-guide/installation/#feature-flags)
 
 ```
 let time = polars::time::date_range(
@@ -380,7 +396,9 @@ out = df.group_by_dynamic(
 ).agg(pl.len())
 print(out)
 ```
-  `group_by_dynamic` ·  Available on feature dynamic_group_by
+[   group_by_dynamic](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by_dynamic) ·
+
+[Available on feature dynamic_group_by](/user-guide/installation/#feature-flags)
 
 ```
 let out = df

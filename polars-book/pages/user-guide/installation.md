@@ -2,7 +2,7 @@
 type: Web Page
 title: Installation - Polars user guide
 resource: https://docs.pola.rs/user-guide/installation
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Installation
@@ -35,7 +35,8 @@ polars = { version = "x", features = ["bigidx", ...] }
 ```
 ## Legacy CPU
 
-To install Polars for Python on an old CPU without AVX support, run:
+To install Polars for Python on an old CPU without
+[AVX](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) support, run:
 
 ```
 pip install polars[rtcompat]
@@ -74,7 +75,8 @@ pip install 'polars[numpy,fsspec]'
 
 Note
 
-See GPU support for more detailed instructions and prerequisites.
+See [GPU support](../gpu-support/) for more detailed instructions and
+prerequisites.
 
 #### Interoperability
 
@@ -126,7 +128,7 @@ See GPU support for more detailed instructions and prerequisites.
 | graph | Visualize LazyFrames as a graph. | 
 | plot | Plot dataframes through the `plot`namespace. | 
 | style | Style dataframes through the `style`namespace. | 
-| timezone | Timezone support 1. | 
+| timezone | Timezone support .[1](#fn:note) | 
 
 ### Rust
 
@@ -157,19 +159,19 @@ The opt-in features are:
 - `streaming`- Be able to process datasets that are larger than RAM.
 - `random`- Generate arrays with randomly sampled values
 - `ndarray`- Convert from- `DataFrame`to- `ndarray`
-- `temporal`- Conversions between Chrono and Polars for temporal data types
+- `temporal`- Conversions between- [Chrono](https://docs.rs/chrono/)and Polars for temporal data types
 - `timezones`- Activate timezone support.
 - `strings`- Extra string utilities for- `StringChunked`:- `string_pad`- for- `pad_start`,- `pad_end`,- `zfill`.
 - `string_to_integer`- for- `parse_int`.
  
-- `object`- Support for generic ChunkedArrays called- `ObjectChunked<T>`(generic over- `T`). These are downcastable from Series through the Any trait.
+- `object`- Support for generic ChunkedArrays called- `ObjectChunked<T>`(generic over- `T`). These are downcastable from Series through the- [Any](https://doc.rust-lang.org/std/any/index.html)trait.
 - Performance related:- `nightly`- Several nightly only features such as SIMD and specialization.
 - `performant`- more fast paths, slower compile times.
 - `bigidx`- Activate this feature if you expect >> \(2^{32}\) rows. This allows polars to scale up way beyond that by using- `u64`as an index. Polars will be a bit slower with this feature activated as many data structures are less cache efficient.
 - `cse`- Activate common subplan elimination optimization.
  
-- IO related:- `serde`- Support for serde serialization and deserialization. Can be used for JSON and more serde supported serialization formats.
-- `serde-lazy`- Support for serde serialization and deserialization. Can be used for JSON and more serde supported serialization formats.
+- IO related:- `serde`- Support for- [serde](https://crates.io/crates/serde)serialization and deserialization. Can be used for JSON and more serde supported serialization formats.
+- `serde-lazy`- Support for- [serde](https://crates.io/crates/serde)serialization and deserialization. Can be used for JSON and more serde supported serialization formats.
 - `parquet`- Read Apache Parquet format.
 - `json`- JSON serialization.
 - `ipc`- Arrow's IPC format serialization.
@@ -204,7 +206,7 @@ The opt-in features are:
 - `cum_agg`-- `cum_sum`,- `cum_min`, and- `cum_max`, aggregations.
 - `rolling_window`- rolling window functions, like- `rolling_mean`.
 - `interpolate`- Interpolate intermediate- `None`values.
-- `extract_jsonpath`- Run- `jsonpath`queries on- `StringChunked`.
+- `extract_jsonpath`-- [Run](https://goessner.net/articles/JsonPath/).- `jsonpath`queries on- `StringChunked`
 - `list`- List utils:
 - `list_gather`- take sublist by multiple indices.
 - `rank`- Ranking algorithms.
@@ -232,7 +234,7 @@ The opt-in features are:
  
 
 - 
-Only needed if you are on Windows. ↩
+Only needed if you are on Windows. [↩](#fnref:note)
 
 # Citations
 

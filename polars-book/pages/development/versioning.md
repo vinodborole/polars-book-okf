@@ -2,14 +2,14 @@
 type: Web Page
 title: Versioning - Polars user guide
 resource: https://docs.pola.rs/development/versioning
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Versioning
 
 ## Version changes
 
-Polars adheres to the semantic versioning specification:
+Polars adheres to the [semantic versioning](https://semver.org/) specification:
 
 - Breaking changes lead to a **major**version increase (`1.0.0`,`2.0.0`, ...)
 - New features and performance improvements lead to a **minor**version increase (`1.1.0`,`1.2.0`, ...)
@@ -33,7 +33,8 @@ Freeing ourselves of past indiscretions is important to keep Polars moving forwa
 
 **A breaking change occurs when an existing component of the public API is changed or removed.**
 
-A feature is part of the public API if it is documented in the API reference.
+A feature is part of the public API if it is documented in the
+[API reference](https://docs.pola.rs/api/python/stable/reference/index.html).
 
 Examples of breaking changes:
 
@@ -47,7 +48,8 @@ Examples of changes that are *not* considered breaking:
 - The module path of a public class is changed.
 - An optional parameter is added to an existing method.
 
-Bug fixes are not considered a breaking change, even though it may impact some users' workflows.
+Bug fixes are not considered a breaking change, even though it may impact some users'
+[workflows](https://xkcd.com/1172/).
 
 ### Unstable functionality
 

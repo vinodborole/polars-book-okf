@@ -2,12 +2,12 @@
 type: Web Page
 title: Multiplexing queries - Polars user guide
 resource: https://docs.pola.rs/user-guide/lazy/multiplexing
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Multiplexing queries
 
-In the Sources and Sinks page, we already discussed multiplexing as a way to
+In the [Sources and Sinks](../sources_sinks/) page, we already discussed multiplexing as a way to
 split a query into multiple sinks. This page will go a bit deeper in this concept, as it is
 important to understand when combining `LazyFrame`s with procedural programming constructs.
 

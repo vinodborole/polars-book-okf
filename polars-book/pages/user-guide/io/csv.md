@@ -2,7 +2,7 @@
 type: Web Page
 title: CSV - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/csv
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # CSV
@@ -14,7 +14,9 @@ Reading a CSV file should look familiar:
 ```
 df = pl.read_csv("docs/assets/data/path.csv")
 ```
-  `CsvReader` ·  Available on feature csv
+[   CsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·
+
+[Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 use polars::prelude::*;
@@ -37,7 +39,9 @@ Writing a CSV file is similar with the `write_csv` function:
 df = pl.DataFrame({"foo": [1, 2, 3], "bar": [None, "bak", "baz"]})
 df.write_csv("docs/assets/data/path.csv")
 ```
-  `CsvWriter` ·  Available on feature csv
+[   CsvWriter](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvWriter.html) ·
+
+[Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 let mut df = df!(
@@ -56,14 +60,17 @@ returns a lazy computation holder called a `LazyFrame`.
 ```
 df = pl.scan_csv("docs/assets/data/path.csv")
 ```
-  `LazyCsvReader` ·  Available on feature csv
+[   LazyCsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyCsvReader.html) ·
+
+[Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 let lf = LazyCsvReader::new(PlRefPath::new("docs/assets/data/path.csv"))
     .finish()
     .unwrap();
 ```
-If you want to know why this is desirable, you can read more about these Polars optimizations here.
+If you want to know why this is desirable, you can read more about these Polars optimizations
+[here](../../concepts/lazy-api/).
 
 # Citations
 

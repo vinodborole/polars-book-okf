@@ -2,7 +2,7 @@
 type: Web Page
 title: Joins - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/joins
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Joins
@@ -15,12 +15,14 @@ The most common type of join is an “equi join”, in which rows are matched by
 
 The table below acts as a quick reference for people who know what they are looking for. If you want to learn about joins in general and how to work with them in Polars, feel free to skip the table and keep reading below.
 
- `join`
-( semi_anti_join needed for some options.)
- `join_asof_by`
- Available on feature asof_join
- `join_where`
- Available on feature iejoin
+[  join](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.DataFrameJoinOps.html#method.join)
+(
+
+[semi_anti_join](/user-guide/installation/#feature-flags)needed for some options.)
+
+`join_asof_by`[Available on feature asof_join](/user-guide/installation/#feature-flags)
+
+`join_where`[Available on feature iejoin](/user-guide/installation/#feature-flags)
 
 | Type | Function | Brief description | 
 |---|---|---|
@@ -32,7 +34,7 @@ The table below acts as a quick reference for people who know what they are look
 | Equi anti join | `join(..., how="anti")` | Keeps rows from the left that do not have a match on the right. | 
 | Non-equi inner join | `join_where` | Finds all possible pairings of rows from the left and right that satisfy the given predicate(s). | 
 | Asof join | `join_asof`/`join_asof_by` | Like a left outer join, but matches on the nearest key instead of on exact key matches. | 
-| Cartesian product | `join(..., how="cross")` | Computes the Cartesian product of the two dataframes. | 
+| Cartesian product | `join(..., how="cross")` | Computes the [Cartesian product](https://en.wikipedia.org/wiki/Cartesian_product)of the two dataframes. | 
 
 ## Equi joins
 
@@ -131,7 +133,10 @@ shape: (4, 3)
 │ The Angel, Islington ┆ light_blue ┆ 100  │
 └──────────────────────┴────────────┴──────┘
 ```
-The result has four rows but both dataframes used in the operation had five rows. Polars uses a joining strategy to determine what happens with rows that have multiple matches or with rows that have no match at all. By default, Polars computes an “inner join” but there are other join strategies that we show next.
+The result has four rows but both dataframes used in the operation had five rows. Polars uses a
+joining strategy to determine what happens with rows that have multiple matches or with rows that
+have no match at all. By default, Polars computes an “inner join” but there are
+[other join strategies that we show next](#join-strategies).
 
 In the example above, the two dataframes conveniently had the column we wish to use as key with the same name and with the values in the exact same format. Suppose, for the sake of argument, that one of the dataframes had a differently named column and the other had the property names in lower case:
 
@@ -141,7 +146,9 @@ props_groups2 = props_groups.with_columns(
 )
 print(props_groups2)
 ```
-  `str namespace` ·  Available on feature strings
+[   str namespace](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.StringNameSpaceImpl.html) ·
+
+[Available on feature strings](/user-guide/installation/#feature-flags)
 
 ```
 let props_groups2 = props_groups
@@ -205,7 +212,11 @@ result = props_groups2.join(
 )
 print(result)
 ```
-  `join` ·  `str namespace` ·  Available on feature strings
+[   join](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.DataFrameJoinOps.html#method.join) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.StringNameSpaceImpl.html)
+
+`str namespace`[Available on feature strings](/user-guide/installation/#feature-flags)
 
 ```
 let result = props_groups2
@@ -416,7 +427,9 @@ A semi join will return the rows of the left dataframe that have a match in the 
 result = props_groups.join(props_prices, on="property_name", how="semi")
 print(result)
 ```
-  `join` ·  Available on feature semi_anti_join
+[   join](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.DataFrameJoinOps.html#method.join) ·
+
+[Available on feature semi_anti_join](/user-guide/installation/#feature-flags)
 
 ```
 let result = props_groups
@@ -454,7 +467,9 @@ Conversely, an anti join will return the rows of the left dataframe that do not 
 result = props_groups.join(props_prices, on="property_name", how="anti")
 print(result)
 ```
-  `join` ·  Available on feature semi_anti_join
+[   join](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.DataFrameJoinOps.html#method.join) ·
+
+[Available on feature semi_anti_join](/user-guide/installation/#feature-flags)
 
 ```
 let result = props_groups
@@ -518,7 +533,9 @@ player could be interested in buying. We use the function `join_where` to comput
 result = players.join_where(props_prices, pl.col("cash") > pl.col("cost"))
 print(result)
 ```
-  `join_where` ·  Available on feature iejoin
+[   join_where](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.JoinBuilder.html#method.join_where) ·
+
+[Available on feature iejoin](/user-guide/installation/#feature-flags)
 
 ```
 let result = players
@@ -652,7 +669,9 @@ df_asof_join = df_trades.join_asof(
 )
 print(df_asof_join)
 ```
-  `join_asof_by` ·  Available on feature asof_join
+[   join_asof_by](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.AsofJoinBy.html#method.join_asof_by) ·
+
+[Available on feature asof_join](/user-guide/installation/#feature-flags)
 
 ```
 let result = df_trades.join_asof_by(
@@ -691,7 +710,9 @@ df_asof_tolerance_join = df_trades.join_asof(
 )
 print(df_asof_tolerance_join)
 ```
-  `join_asof_by` ·  Available on feature asof_join
+[   join_asof_by](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.AsofJoinBy.html#method.join_asof_by) ·
+
+[Available on feature asof_join](/user-guide/installation/#feature-flags)
 
 ```
 let result = df_trades.join_asof_by(
@@ -723,7 +744,7 @@ shape: (4, 4)
 ## Cartesian product
 
 Polars allows you to compute the
-Cartesian product of two dataframes, producing a
+[Cartesian product](https://en.wikipedia.org/wiki/Cartesian_product) of two dataframes, producing a
 dataframe where all rows of the left dataframe are paired up with all the rows of the right
 dataframe. To compute the Cartesian product of two dataframes, you can pass the strategy
 `how="cross"` to the function `join` without specifying any of `on`, `left_on`, and `right_on`:
@@ -733,7 +754,9 @@ tokens = pl.DataFrame({"monopoly_token": ["hat", "shoe", "boat"]})
 result = players.select(pl.col("name")).join(tokens, how="cross")
 print(result)
 ```
-  `cross_join` ·  Available on feature cross_join
+[   cross_join](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyFrame.html#method.cross_join) ·
+
+[Available on feature cross_join](/user-guide/installation/#feature-flags)
 
 ```
 let tokens = df!(

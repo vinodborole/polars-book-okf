@@ -2,7 +2,7 @@
 type: Web Page
 title: Expression Plugins - Polars user guide
 resource: https://docs.pola.rs/user-guide/plugins/expr_plugins
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Expression Plugins
@@ -123,7 +123,7 @@ df = pl.DataFrame(
 out = df.with_columns(pig_latin=pig_latinnify("convert"))
 ```
 Alternatively, you can
-register a custom namespace,
+[register a custom namespace](https://docs.pola.rs/api/python/stable/reference/api/polars.api.register_expr_namespace.html#polars.api.register_expr_namespace),
 which enables you to create a `Expr.language` namespace, allowing users to write:
 
 ```
@@ -231,7 +231,11 @@ fn haversine(inputs: &[Series]) -> PolarsResult<Series> {
     Ok(out)
 }
 ```
-That's all you need to know to get started. Take a look at this repo to see how this all fits together, and at this tutorial to gain a more thorough understanding.
+That's all you need to know to get started. Take a look at
+[this repo](https://github.com/pola-rs/pyo3-polars/tree/main/example/derive_expression) to see how
+this all fits together, and at
+[this tutorial](https://marcogorelli.github.io/polars-plugins-tutorial/) to gain a more thorough
+understanding.
 
 # Citations
 

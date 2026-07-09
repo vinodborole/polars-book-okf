@@ -2,7 +2,7 @@
 type: Web Page
 title: Distributed queries - Polars user guide
 resource: https://docs.pola.rs/polars-cloud/run/distributed-engine
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Distributed queries
@@ -28,7 +28,7 @@ This example demonstrates running query 3 of the PDS-H benchmarkon scale factor 
 
 Run the example yourself
 
-Copy and paste the code to you environment and run it. The data is hosted in S3 buckets that use AWS Requester Pays, meaning you pay only for the transfer cost of the request and the data download from the bucket. The storage costs are covered.
+Copy and paste the code to you environment and run it. The data is hosted in S3 buckets that use [AWS Requester Pays](https://docs.aws.amazon.com/AmazonS3/latest/userguide/RequesterPaysBuckets.html), meaning you pay only for the transfer cost of the request and the data download from the bucket. The storage costs are covered.
 
 First import the required packages and point to the S3 bucket. In this example, we take one of the PDS-H benchmarks queries for demonstration purposes.
 
@@ -48,7 +48,9 @@ orders_sf100 = pl.scan_parquet(
     storage_options={"request_payer": "true"},
 )
 ```
-After that we define the query. Note that this query will also run on your local machine if you have the data available. You can generate the data with the Polars Benchmark repository.
+After that we define the query. Note that this query will also run on your local machine if you have
+the data available. You can generate the data with the
+[Polars Benchmark repository](https://www.github.com/pola-rs/polars-benchmark).
 
 ```
 def pdsh_q3(
@@ -90,15 +92,15 @@ You can also run this example on a higher scale factor. The data is available on
 
 When you call `.execute()` on a distributed query, it passes through the following pipeline:
 
-- You write a query using the Polars DSL, building up a LazyFrame.
-- The LazyFrame is translated into a logical plan: a tree of operations
-   capturing *what*to compute. You can inspect this logical plan by running`lf.explain(optimized=False)`.
+- You write a query using the Polars [DSL](../glossary/#dsl), building up a[LazyFrame](../glossary/#query).
+- The LazyFrame is translated into a [logical plan](../glossary/#logical-plan): a tree of operations capturing*what*to compute. You can inspect this logical plan by running`lf.explain(optimized=False)`.
 - The query optimizer rewrites the logical plan into an equivalent but more efficient
-   optimized logical plan. You can inspect the optimized
-   logical plan with `lf.explain()`.
-- The distributed query planner walks the optimized logical plan and produces a stage graph: a DAG of stages separated by shuffles at each point where a data needs to be redistributed across workers.
-- The scheduler executes stages and assigns partitions to workers in dependency order, waiting for all workers to finish before starting the next stage.
-- Each worker receives the optimized logical plan together with its assigned partitions, derives its own physical plan, and executes it. After finishing the stage, intermediate results are written to a local or network-shared disk.
+   [optimized logical plan](../glossary/#optimized-logical-plan). You can inspect the optimized logical plan with`lf.explain()`.
+- The distributed query planner walks the optimized logical plan and produces a
+   [stage graph](../glossary/#stage-graph): a DAG of[stages](../glossary/#stage)separated by[shuffles](../glossary/#shuffle)at each point where a data needs to be redistributed across workers.
+- The [scheduler](../glossary/#scheduler)executes stages and assigns[partitions](../glossary/#partition)to[workers](../glossary/#worker)in dependency order, waiting for all workers to finish before starting the next stage.
+- Each worker receives the optimized logical plan together with its assigned partitions, derives
+   its own [physical plan](../glossary/#physical-plan), and executes it. After finishing the stage, intermediate results are written to a local or network-shared disk.
 - After the final stage, results are written to the destination location, or sent back to the user, depending on the query.
 
 # Citations

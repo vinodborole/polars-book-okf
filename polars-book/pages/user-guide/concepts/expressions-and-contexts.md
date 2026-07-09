@@ -2,7 +2,7 @@
 type: Web Page
 title: Expressions and contexts - Polars user guide
 resource: https://docs.pola.rs/user-guide/concepts/expressions-and-contexts
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Expressions and contexts
@@ -36,7 +36,7 @@ Because expressions are lazy, no computations have taken place yet. That's what 
 
 Polars expressions need a *context* in which they are executed to produce a result. Depending on the
 context it is used in, the same Polars expression can produce different results. In this section, we
-will learn about the four most common contexts that Polars provides1:
+will learn about the four most common contexts that Polars provides 1:
 
 - `select`
 - `with_columns`
@@ -432,17 +432,24 @@ shape: (0, 0)
 It is equally easy to imagine a scenario where the same expression would expand to dozens of columns.
 
 Next, you will learn about
-the lazy API and the function `explain`, which you can use
+[the lazy API and the function  explain](../lazy-api/#previewing-the-query-plan), which you can use
 to preview what an expression will expand to given a schema.
 
 ## Conclusion
 
-Because expressions are lazy, when you use an expression inside a context Polars can try to simplify your expression before running the data transformation it expresses. Separate expressions within a context are embarrassingly parallel and Polars will take advantage of that, while also parallelizing expression execution when using expression expansion. Further performance gains can be obtained when using the lazy API of Polars, which is introduced next.
+Because expressions are lazy, when you use an expression inside a context Polars can try to simplify
+your expression before running the data transformation it expresses. Separate expressions within a
+context are embarrassingly parallel and Polars will take advantage of that, while also parallelizing
+expression execution when using expression expansion. Further performance gains can be obtained when
+using [the lazy API of Polars](../lazy-api/), which is introduced next.
 
-We have only scratched the surface of the capabilities of expressions. There are a ton more expressions and they can be combined in a variety of ways. See the section on expressions for a deeper dive on the different types of expressions available.
+We have only scratched the surface of the capabilities of expressions. There are a ton more
+expressions and they can be combined in a variety of ways. See the
+[section on expressions](../../expressions/) for a deeper dive on the different types of
+expressions available.
 
 - 
-There are additional List and SQL contexts which are covered later in this guide. But for simplicity, we leave them out of scope for now. ↩
+There are additional List and SQL contexts which are covered later in this guide. But for simplicity, we leave them out of scope for now. [↩](#fnref:1)
 
 # Citations
 

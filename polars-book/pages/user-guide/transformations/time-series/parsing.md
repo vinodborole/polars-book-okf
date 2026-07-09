@@ -2,7 +2,7 @@
 type: Web Page
 title: Parsing - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/parsing
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Parsing
@@ -27,7 +27,9 @@ is set to `True`:
 df = pl.read_csv("docs/assets/data/apple_stock.csv", try_parse_dates=True)
 print(df)
 ```
-  `CsvReader` ·  Available on feature csv
+[   CsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·
+
+[Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 let df = CsvReadOptions::default()
@@ -74,7 +76,13 @@ df = pl.read_csv("docs/assets/data/apple_stock.csv", try_parse_dates=False)
 df = df.with_columns(pl.col("Date").str.to_date("%Y-%m-%d"))
 print(df)
 ```
-  `CsvReader` ·  `str.replace_all` ·  Available on feature dtype-date ·  Available on feature csv
+[   CsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_date)
+
+`str.replace_all`[Available on feature dtype-date](/user-guide/installation/#feature-flags)·
+
+[Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 let df = CsvReadOptions::default()
@@ -109,7 +117,7 @@ shape: (100, 2)
 │ 2014-02-25 ┆ 522.06 │
 └────────────┴────────┘
 ```
-The format string specification can be found here..
+[The format string specification can be found here.](https://docs.rs/chrono/latest/chrono/format/strftime/index.html).
 
 ## Extracting date features from a date column
 
@@ -141,7 +149,11 @@ If your data contains datetimes with mixed UTC offsets (for example due to dayli
 transitions), Polars parses them in UTC. You can either pass a target `time_zone` to
 `str.to_datetime`, or call `str.convert_time_zone` after parsing:
 
-  `str.to_datetime` ·  `dt.convert_time_zone` ·  Available on feature timezone
+[   str.to_datetime](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.to_datetime.html) ·
+
+[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.dt.convert_time_zone.html)
+
+`dt.convert_time_zone`[Available on feature timezone](/user-guide/installation/#feature-flags)
 
 ```
 data = [
@@ -157,7 +169,13 @@ mixed_parsed = (
 )
 print(mixed_parsed)
 ```
-  `str.replace_all` ·  `dt.convert_time_zone` ·  Available on feature timezones ·  Available on feature dtype-datetime
+[   str.replace_all](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_datetime) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.convert_time_zone)
+
+`dt.convert_time_zone`[Available on feature timezones](/user-guide/installation/#feature-flags)·
+
+[Available on feature dtype-datetime](/user-guide/installation/#feature-flags)
 
 ```
 let data = [

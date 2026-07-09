@@ -2,12 +2,12 @@
 type: Web Page
 title: Casting - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/casting
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Casting
 
-Casting converts the underlying data type of a column to
+Casting converts the [underlying data type of a column](../../concepts/data-types-and-structures/) to
 a new one. Casting is available through the function `cast`.
 
 The function `cast` includes a parameter `strict` that determines how Polars behaves when it
@@ -376,7 +376,7 @@ shape: (2, 3)
 ```
 To format temporal data types as strings we can use the function `dt.to_string` and to parse
 temporal data types from strings we can use the function `str.to_datetime`. Both functions adopt the
-chrono format syntax for
+[chrono format syntax](https://docs.rs/chrono/latest/chrono/format/strftime/index.html) for
 formatting.
 
 ```
@@ -392,7 +392,13 @@ result = df.select(
 )
 print(result)
 ```
-  `dt.to_string` ·  `str.replace_all` ·  Available on feature temporal ·  Available on feature dtype-date
+[   dt.to_string](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.to_string) ·
+
+[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_date)
+
+`str.replace_all`[Available on feature temporal](/user-guide/installation/#feature-flags)·
+
+[Available on feature dtype-date](/user-guide/installation/#feature-flags)
 
 ```
 let df = df! (

@@ -2,16 +2,23 @@
 type: Web Page
 title: Overview - Polars user guide
 resource: https://docs.pola.rs/development/contributing
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Overview
 
-Thanks for taking the time to contribute! We appreciate all contributions, from reporting bugs to implementing new features. If you're unclear on how to proceed after reading this guide, please contact us on Discord.
+Thanks for taking the time to contribute! We appreciate all contributions, from reporting bugs to
+implementing new features. If you're unclear on how to proceed after reading this guide, please
+contact us on [Discord](https://discord.gg/4UfP5cfBE7).
 
 ## Reporting bugs
 
-We use GitHub issues to track bugs and suggested enhancements. You can report a bug by opening a new issue. Use the appropriate issue type for the language you are using (Rust / Python).
+We use [GitHub issues](https://github.com/pola-rs/polars/issues) to track bugs and suggested
+enhancements. You can report a bug by opening a
+[new issue](https://github.com/pola-rs/polars/issues/new/choose). Use the appropriate issue type for
+the language you are using
+([Rust](https://github.com/pola-rs/polars/issues/new?labels=bug&template=bug_report_rust.yml) /
+[Python](https://github.com/pola-rs/polars/issues/new?labels=bug&template=bug_report_python.yml)).
 
 Before creating a bug report, please check that your bug has not already been reported, and that your bug exists on the latest version of Polars. If you find a closed issue that seems to report the same bug you're experiencing, open a new issue and include a link to the original issue in your issue description.
 
@@ -19,7 +26,10 @@ Please include as many details as possible in your bug report. The information h
 
 ## Suggesting enhancements
 
-We use GitHub issues to track bugs and suggested enhancements. You can suggest an enhancement by opening a new feature request. Before creating an enhancement suggestion, please check that a similar issue does not already exist.
+We use [GitHub issues](https://github.com/pola-rs/polars/issues) to track bugs and suggested
+enhancements. You can suggest an enhancement by opening a
+[new feature request](https://github.com/pola-rs/polars/issues/new?labels=enhancement&template=feature_request.yml).
+Before creating an enhancement suggestion, please check that a similar issue does not already exist.
 
 Please describe the behavior you want and why, and provide examples of how Polars would be used if your feature were added.
 
@@ -27,27 +37,37 @@ Please describe the behavior you want and why, and provide examples of how Polar
 
 ### Picking an issue
 
-Pick an issue by going through the issue tracker and finding an issue you would like to work on. Feel free to pick any issue with an accepted label that is not already assigned. We use the help wanted label to indicate issues that are high on our wishlist.
+Pick an issue by going through the [issue tracker](https://github.com/pola-rs/polars/issues) and
+finding an issue you would like to work on. Feel free to pick any issue with an
+[accepted](https://github.com/pola-rs/polars/issues?q=is%3Aopen+is%3Aissue+label%3Aaccepted) label
+that is not already assigned. We use the
+[help wanted](https://github.com/pola-rs/polars/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
+label to indicate issues that are high on our wishlist.
 
-If you are a first time contributor, you might want to look for issues labeled good first issue. The Polars code base is quite complex, so starting with a small issue will help you find your way around!
+If you are a first time contributor, you might want to look for issues labeled
+[good first issue](https://github.com/pola-rs/polars/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+The Polars code base is quite complex, so starting with a small issue will help you find your way
+around!
 
 If you would like to take on an issue, please comment on the issue to let others know. You may use the issue to discuss possible solutions.
 
 ### Setting up your local environment
 
-The Polars development flow relies on both Rust and Python, which means setting up your local development environment is not trivial. If you run into problems, please contact us on Discord.
+The Polars development flow relies on both Rust and Python, which means setting up your local
+development environment is not trivial. If you run into problems, please contact us on
+[Discord](https://discord.gg/4UfP5cfBE7).
 
 Note
 
 If you are a Windows user, the steps below might not work as expected.
-Try developing using WSL.
+Try developing using [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 Under native Windows, you may have to manually copy the contents of `toolchain.toml` to `py-polars/toolchain.toml`, as Git for Windows may not correctly handle symbolic links.
 
 #### Configuring Git
 
-For contributing to Polars you need a free GitHub account and have
-git installed on your machine. Start by
-forking the Polars repository, then
+For contributing to Polars you need a free [GitHub account](https://github.com) and have
+[git](https://git-scm.com) installed on your machine. Start by
+[forking](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the Polars repository, then
 clone your forked repository using `git`:
 
 ```
@@ -63,21 +83,24 @@ git fetch upstream
 ```
 #### Installing dependencies
 
-In order to work on Polars effectively, you will need Rust, Python, and dprint.
+In order to work on Polars effectively, you will need [Rust](https://www.rust-lang.org/),
+[Python](https://www.python.org/), and [dprint](https://dprint.dev/).
 
-First, install Rust using rustup. After the initial installation, you will also need to install the nightly toolchain:
+First, install Rust using [rustup](https://www.rust-lang.org/tools/install). After the initial
+installation, you will also need to install the nightly toolchain:
 
 ```
 rustup toolchain install nightly --component miri
 ```
-Next, install Python, for example using pyenv. We
+Next, install Python, for example using [pyenv](https://github.com/pyenv/pyenv#installation). We
 recommend using the latest Python version (`3.13`). Make sure you deactivate any active virtual
 environments (command: `deactivate`) or conda environments (command: `conda deactivate`), as the
-steps below will create a new virtual environment
+steps below will create a new [virtual environment](https://docs.python.org/3/tutorial/venv.html)
 for Polars. You will need Python even if you intend to work on the Rust code only, as we rely on the
 Python tests to verify all functionality.
 
-Finally, install dprint. This is not strictly required, but it is recommended as we use it to autoformat certain file types.
+Finally, install [dprint](https://dprint.dev/install/). This is not strictly required, but it is
+recommended as we use it to autoformat certain file types.
 
 You can now check that everything works correctly by going into the `py-polars` directory and
 running the test suite (warning: this may be slow the first time you run it):
@@ -88,14 +111,14 @@ make test
 ```
 Note
 
-You need to have CMake installed for `make test` to work.
+You need to have [CMake](https://cmake.org/) installed for `make test` to work.
 
 This will do a number of things:
 
 - Use Python to create a virtual environment in the `.venv`folder.
-- Use pip and uv to install all Python dependencies for development, linting, and building documentation.
+- Use [pip](https://pip.pypa.io/)and[uv](https://github.com/astral-sh/uv)to install all Python dependencies for development, linting, and building documentation.
 - Use Rust to compile and install Polars in your virtual environment. *At least 8GB of RAM is recommended for this step to run smoothly.*
-- Use pytest to run the Python unittests in your virtual environment
+- Use [pytest](https://docs.pytest.org/)to run the Python unittests in your virtual environment
 
 Note
 
@@ -108,7 +131,8 @@ Check if linting also works correctly by running:
 ```
 make pre-commit
 ```
-Note that we do not actually use the pre-commit tool. We use the Makefile to conveniently run the following formatting and linting tools:
+Note that we do not actually use the [pre-commit](https://pre-commit.com/) tool. We use the Makefile
+to conveniently run the following formatting and linting tools:
 
 If this all runs correctly, you're ready to start contributing to the Polars codebase!
 
@@ -143,7 +167,7 @@ Create a new git branch from the `main` branch in your local repository, and sta
 The Rust code is located in the `crates` directory, while the Python codebase is located in the
 `py-polars` directory. Both directories contain a `Makefile` with helpful commands. Most notably:
 
-- `make test`to run the test suite (see the test suite docs for more info)
+- `make test`to run the test suite (see the- [test suite docs](test/)for more info)
 - `make pre-commit`to run autoformatting and linting
 
 Note that your work cannot be merged if these checks fail! Run `make help` to get a list of other
@@ -152,17 +176,18 @@ helpful commands.
 Two other things to keep in mind:
 
 - If you add code that should be tested, add tests.
-- If you change the public API, update the documentation.
+- If you change the public API, [update the documentation](#api-reference).
 
 ### Finding the commit that introduced a bug
 
 If you have found a bug, it can be very helpful to identify the exact commit that introduced it.
 This allows maintainers to understand the root cause more quickly. You can use
-`git bisect` to do this automatically.
+[ git bisect](https://git-scm.com/docs/git-bisect) to do this automatically.
 
 **1. Create a minimal reproducible example (MRE)**
 
-First, reduce your bug to the smallest possible Python script that reproduces it. See this guide for guidance.
+First, reduce your bug to the smallest possible Python script that reproduces it. See
+[this guide](https://matthewrocklin.com/minimal-bug-reports/) for guidance.
 
 **2. Turn your MRE into a bisect script**
 
@@ -195,7 +220,7 @@ The script must exit with:
 
 **3. Mark a good and a bad commit**
 
-Find a commit hash or release tag where the bug did not
+Find a commit hash or [release tag](https://github.com/pola-rs/polars/tags) where the bug did not
 exist (e.g. `py-1.32.0` for Polars 1.32.0) and another hash or tag which is confirmed to contain the
 bug (e.g. `HEAD` if it still exists):
 
@@ -216,7 +241,9 @@ done.
 
 **5. Include the result in your issue**
 
-Copy the output (the commit hash and message) and add it to your bug report. This greatly speeds up the investigation for maintainers.
+Copy the output (the commit hash and message) and add it to your
+[bug report](https://github.com/pola-rs/polars/issues/new?labels=bug&template=bug_report_python.yml).
+This greatly speeds up the investigation for maintainers.
 
 When you are done, reset your repository:
 
@@ -225,28 +252,26 @@ git bisect reset
 ```
 ### Pull requests
 
-When you have resolved your issue, open a pull request in the Polars repository. Please adhere to the following guidelines:
+When you have resolved your issue,
+[open a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
+in the Polars repository. Please adhere to the following guidelines:
 
-- Title:- Start your pull request title with a conventional commit tag.
-  This helps us add your contribution to the right section of the changelog.
-  We use the Angular convention.
-  Scope can be `rust`and/or`python`, depending on your contribution: this tag determines which changelog(s) will include your change. Omit the scope if your change affects both Rust and Python.
-- Use a descriptive title starting with an uppercase letter. This text will end up in the changelog, so make sure the text is meaningful to the user. Use single backticks to annotate code snippets. Use active language and do not end your title with punctuation.
+- Title:- Start your pull request title with a [conventional commit](https://www.conventionalcommits.org/)tag. This helps us add your contribution to the right section of the changelog. We use the[Angular convention](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type). Scope can be`rust`and/or`python`, depending on your contribution: this tag determines which changelog(s) will include your change. Omit the scope if your change affects both Rust and Python.
+- Use a descriptive title starting with an uppercase letter.
+  This text will end up in the [changelog](https://github.com/pola-rs/polars/releases), so make sure the text is meaningful to the user. Use single backticks to annotate code snippets. Use active language and do not end your title with punctuation.
 - Example: `fix(python): Fix `DataFrame.top_k` not handling nulls correctly`
  
-- Start your pull request title with a conventional commit tag.
-  This helps us add your contribution to the right section of the changelog.
-  We use the Angular convention.
-  Scope can be 
-- Description:- In the pull request description, link to the issue you were working on.
+- Start your pull request title with a 
+- Description:- In the pull request description, [link](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)to the issue you were working on.
 - Add any relevant information to the description that you think may help the maintainers review your code.
  
-- Make sure your branch is rebased against the latest version of the `main`branch.
-- Make sure all GitHub Actions checks pass.
+- In the pull request description, 
+- Make sure your branch is [rebased](https://docs.github.com/en/get-started/using-git/about-git-rebase)against the latest version of the`main`branch.
+- Make sure all [GitHub Actions checks](ci/)pass.
 - If your contribution contains code generated by AI you **must**:- Clearly state in your pull request's description which parts of the code were AI-generated.
 - Explicitly state that you yourself have reviewed *all*changes in your pull request, and believe that they are relevant and correct.
 - Not try to solve an issue marked as "good first issue".
-- Adhere to the rest of our AI policy. If you fail either requirement the maintainer may simply close your pull request.
+- Adhere to the rest of our [AI policy](https://github.com/pola-rs/polars/blob/main/AI_POLICY.md). If you fail either requirement the maintainer may simply close your pull request.
  
 
 After you have opened your pull request, a maintainer will review it and possibly leave some comments. Once all issues are resolved, the maintainer will merge your pull request, and your work will be part of the next Polars release!
@@ -254,9 +279,14 @@ After you have opened your pull request, a maintainer will review it and possibl
 Keep in mind that your work does not have to be perfect right away! If you are stuck or unsure about your solution, feel free to open a draft pull request and ask for help.
 
 During review, some of our maintainers will use
-*conventional comments* in their reviews. The meanings of the
-comment labels (like **issue**: or **nit:**) are documented at
-https://conventionalcomments.org/#labels
+[ conventional comments](https://conventionalcomments.org) in their reviews. The meanings of the
+comment labels (like 
+
+**issue**: or
+
+**nit:**) are documented at
+
+[https://conventionalcomments.org/#labels](https://conventionalcomments.org/#labels)
 
 ### First-time contributions
 
@@ -267,7 +297,12 @@ We unfortunately are overwhelmed by the amount of low-quality contributions crea
 
 ## Contributing to documentation
 
-The most important components of Polars documentation are the user guide, the API references, and the database of questions on Stack Overflow for Python Polars and Rust Polars.
+The most important components of Polars documentation are the
+[user guide](https://docs.pola.rs/user-guide/), the
+[API references](https://docs.pola.rs/api/python/stable/reference/index.html), and the database of
+questions on Stack Overflow for
+[Python Polars](https://stackoverflow.com/questions/tagged/python-polars) and
+[Rust Polars](https://stackoverflow.com/questions/tagged/rust-polars).
 
 ### User guide
 
@@ -276,9 +311,9 @@ raise an issue to discuss what you feel is missing or could be improved.
 
 #### Building and serving the user guide
 
-The user guide is built using MkDocs. You install the dependencies for
+The user guide is built using [MkDocs](https://www.mkdocs.org/). You install the dependencies for
 building the user guide by running `make build` in the root of the repo. Additionally, you need to
-make sure the graphviz `dot` binary is on your path.
+make sure the [graphviz](https://graphviz.org/) `dot` binary is on your path.
 
 Activate the virtual environment and run `mkdocs serve` to build and serve the user guide, so you
 can view it locally and see updates as you make changes.
@@ -343,7 +378,10 @@ lint the markdown files.
 
 ### API reference
 
-Polars has separate API references for Rust and Python. These are generated directly from the codebase, so in order to contribute, you will have to follow the steps outlined in this section above.
+Polars has separate API references for [Rust](https://docs.pola.rs/api/rust/dev/polars/) and
+[Python](https://docs.pola.rs/api/python/dev/reference/index.html). These are generated directly
+from the codebase, so in order to contribute, you will have to follow the steps outlined in
+[this section](#contributing-to-the-codebase) above.
 
 #### Rust
 
@@ -354,13 +392,13 @@ reference are welcome.
 
 For the Python API reference, we always welcome good docstring examples. There are still parts of the API that do not have any code examples. This is a great way to start contributing to Polars!
 
-Note that we follow the numpydoc
-convention. Docstring examples should also follow the Black
+Note that we follow the [numpydoc](https://numpydoc.readthedocs.io/en/latest/format.html)
+convention. Docstring examples should also follow the [Black](https://black.readthedocs.io/)
 codestyle. From the `py-polars` directory, run `make fmt` to make sure your additions pass the
 linter, and run `make doctest` to make sure your docstring examples are valid.
 
 Polars uses Sphinx to build the API reference. This means docstrings in general should follow the
-reST format. If you want
+[reST](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) format. If you want
 to build the API reference locally, go to the `py-polars/docs` directory and run `make html`. The
 resulting HTML files will be in `py-polars/docs/build/html`.
 
@@ -371,15 +409,22 @@ correct `.rst` file in the `py-polars/docs/source/reference` directory.
 
 We use StackOverflow to create a database of high quality questions and answers that is searchable and remains up-to-date. There is a separate tag for each language:
 
-Contributions in the form of well-formulated questions or answers are always welcome! If you add a new question, please notify us by adding a matching issue to our GitHub issue tracker.
+Contributions in the form of well-formulated questions or answers are always welcome! If you add a
+new question, please notify us by adding a
+[matching issue](https://github.com/pola-rs/polars/issues/new?&labels=question&template=question.yml)
+to our GitHub issue tracker.
 
 ## Release flow
 
 *This section is intended for Polars maintainers.*
 
-Polars releases Rust crates to crates.io and Python packages to PyPI.
+Polars releases Rust crates to [crates.io](https://crates.io/crates/polars) and Python packages to
+[PyPI](https://pypi.org/project/polars/).
 
-New releases are marked by an official GitHub release and an associated git tag. We utilize Release Drafter to automatically draft GitHub releases with release notes.
+New releases are marked by an official [GitHub release](https://github.com/pola-rs/polars/releases)
+and an associated git tag. We utilize
+[Release Drafter](https://github.com/release-drafter/release-drafter) to automatically draft GitHub
+releases with release notes.
 
 ### Steps
 
@@ -387,14 +432,14 @@ The steps for releasing a new Rust or Python version are similar. The release pr
 
 Start by bumping the version number in the source code:
 
-- Check the releases page on GitHub and find the appropriate draft release. Note the version number associated with this release.
+- Check the [releases page](https://github.com/pola-rs/polars/releases)on GitHub and find the appropriate draft release. Note the version number associated with this release.
 - Make sure your fork is up-to-date with the latest version of the main Polars repository, and create a new branch.
 - 
 Bump the version number. 
 - 
 *Rust:*Update the version number in all`Cargo.toml`files in the`polars`directory and subdirectories. You'll probably want to use some search/replace strategy, as there are quite a few crates that need to be updated.
 - 
-*Python:*Update the version number in`py-polars/Cargo.toml`to match the version of the draft release.
+*Python:*Update the version number in`py-polars/Cargo.toml`
 - 
 From the `py-polars`directory, run`make build`to generate a new`Cargo.lock`file.
 - Create a new commit with all files added. The name of the commit should follow the format
@@ -405,9 +450,9 @@ From the `py-polars`directory, run`make build`to generate a new`Cargo.lock`file.
 Directly after merging your pull request, release the new version:
 
 - Go to the release workflow
-   (Python/Rust),
-   click *Run workflow*in the top right, and click the green button. This will trigger the workflow, which will build all release artifacts and publish them.
-- Wait for the workflow to finish, then check crates.io/PyPI/GitHub to verify that the new Polars release is now available.
+   ([Python](https://github.com/pola-rs/polars/actions/workflows/release-python.yml)/[Rust](https://github.com/pola-rs/polars/actions/workflows/release-rust.yml)), click*Run workflow*in the top right, and click the green button. This will trigger the workflow, which will build all release artifacts and publish them.
+- Wait for the workflow to finish, then check
+   [crates.io](https://crates.io/crates/polars)/[PyPI](https://pypi.org/project/polars/)/[GitHub](https://github.com/pola-rs/polars/releases)to verify that the new Polars release is now available.
 
 ### Troubleshooting
 
@@ -418,7 +463,8 @@ made it to the `main` branch, simply re-trigger the release workflow.
 
 ## License
 
-Any contributions you make to this project will fall under the MIT License that covers the Polars project.
+Any contributions you make to this project will fall under the
+[MIT License](https://github.com/pola-rs/polars/blob/main/LICENSE) that covers the Polars project.
 
 # Citations
 

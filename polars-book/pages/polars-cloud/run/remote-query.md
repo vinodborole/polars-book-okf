@@ -2,7 +2,7 @@
 type: Web Page
 title: Execute remote query - Polars user guide
 resource: https://docs.pola.rs/polars-cloud/run/remote-query
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Execute remote query
@@ -11,11 +11,13 @@ Polars Cloud enables you to execute existing Polars queries on cloud infrastruct
 
 Polars Cloud is set up and connected
 
-This page assumes that you have created an organization and connected a workspace to your cloud environment. If you haven't yet, follow the steps on the Connect cloud environment page.
+This page assumes that you have created an organization and connected a workspace to your cloud environment. If you haven't yet, follow the steps on the [Connect cloud environment](../../connect-cloud/) page.
 
 ## Define your query locally
 
-The following example uses a query from the PDS-H benchmark suite, a derived version of the popular TPC-H benchmark. Data generation tools and additional queries are available in the Polars benchmark repository.
+The following example uses a query from the PDS-H benchmark suite, a derived version of the popular
+TPC-H benchmark. Data generation tools and additional queries are available in the
+[Polars benchmark repository](https://github.com/pola-rs/polars-benchmark).
 
 ```
 import polars as pl
@@ -48,7 +50,10 @@ pdsh_q3(customer, lineitem, orders).collect()
 ```
 ## Scale to the cloud
 
-To execute your query in the cloud, you need to define a compute context. The compute context specifies the hardware to use when executing the query in the cloud. It allows you to set the workspace to execute your query and set compute resources. More elaborate options can be found on the Compute context introduction page.
+To execute your query in the cloud, you need to define a compute context. The compute context
+specifies the hardware to use when executing the query in the cloud. It allows you to set the
+workspace to execute your query and set compute resources. More elaborate options can be found on
+the [Compute context introduction page](../../context/compute-context/).
 
 ```
 import polars_cloud as pc

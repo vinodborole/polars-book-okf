@@ -2,7 +2,7 @@
 type: Web Page
 title: Query plan - Polars user guide
 resource: https://docs.pola.rs/user-guide/lazy/query-plan
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Query plan
@@ -27,7 +27,8 @@ q1 = (
 
 ### Graphviz visualization
 
-To create visualizations of the query plan, Graphviz should be installed and added to your PATH.
+To create visualizations of the query plan,
+[Graphviz should be installed](https://graphviz.org/download/) and added to your PATH.
 
 First we visualize the non-optimized plan by setting `optimized=False`.
 

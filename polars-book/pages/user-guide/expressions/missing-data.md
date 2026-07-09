@@ -2,7 +2,7 @@
 type: Web Page
 title: Missing data - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/missing-data
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Missing data
@@ -16,7 +16,7 @@ all data types, including numerical types.
 
 Polars also supports the value `NaN` (“Not a Number”) for columns with floating point numbers. The
 value `NaN` is considered to be a valid floating point value, which is different from missing data.
-We discuss the value `NaN` separately below.
+[We discuss the value  NaN separately below](#not-a-number-or-nan-values).
 
 When creating a series or a dataframe, you can set a value to `null` by using the appropriate
 construct for your language:
@@ -133,7 +133,7 @@ shape: (5, 2)
 └──────┴──────┘
 ```
 However, this is actually just a special case of the general case where
-the function `fill_null` replaces missing values with the corresponding values from the result of a Polars expression,
+[the function  fill_null replaces missing values with the corresponding values from the result of a Polars expression](#fill-with-a-strategy-based-on-neighbouring-values),
 as seen next.
 
 ### Fill with an expression
@@ -353,7 +353,7 @@ shape: (1, 4)
 └────────────┴───────────────┴───────────┴──────────────┘
 ```
 You can learn more about the value `NaN` in
-the section about floating point number data types.
+[the section about floating point number data types](../../concepts/data-types-and-structures/#floating-point-numbers).
 
 # Citations
 

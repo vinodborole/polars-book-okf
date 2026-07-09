@@ -2,7 +2,7 @@
 type: Web Page
 title: Continuous integration - Polars user guide
 resource: https://docs.pola.rs/development/contributing/ci
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-07-09T12:17:10.704938+00:00'
 ---
 
 # Continuous integration
@@ -49,7 +49,8 @@ Care must also be taken not to exceed the maximum cache space of 10Gb allotted t
 
 ## Releases
 
-The release jobs for Rust and Python are triggered manually. Refer to the contributing guide for the full release process.
+The release jobs for Rust and Python are triggered manually. Refer to the
+[contributing guide](../#release-flow) for the full release process.
 
 # Citations
 
