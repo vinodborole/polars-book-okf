@@ -2,7 +2,7 @@
 type: Web Page
 title: Aggregation - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/aggregation
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-07-13T09:31:11.337600+00:00'
 ---
 
 # Aggregation
@@ -189,7 +189,7 @@ shape: (5, 3)
 │ CT    ┆ 0    ┆ 5   │
 │ NJ    ┆ 0    ┆ 3   │
 │ DE    ┆ 1    ┆ 3   │
-│ NC    ┆ 2    ┆ 2   │
+│ MA    ┆ 0    ┆ 2   │
 │ MD    ┆ 0    ┆ 2   │
 └───────┴──────┴─────┘
 ```
@@ -259,11 +259,11 @@ shape: (5, 5)
 │ ---   ┆ ---        ┆ ---       ┆ ---    ┆ ---      │
 │ cat   ┆ f64        ┆ f64       ┆ u32    ┆ u32      │
 ╞═══════╪════════════╪═══════════╪════════╪══════════╡
-│ MO    ┆ 153.969302 ┆ 89.52381  ┆ 1086   ┆ 42       │
-│ ND    ┆ 133.792683 ┆ 87.5      ┆ 164    ┆ 2        │
-│ RI    ┆ 175.469512 ┆ 79.0      ┆ 334    ┆ 5        │
-│ WA    ┆ 122.212195 ┆ 83.634146 ┆ 410    ┆ 41       │
-│ SD    ┆ 136.383648 ┆ 71.7      ┆ 159    ┆ 10       │
+│ WY    ┆ 139.552632 ┆ 74.0      ┆ 114    ┆ 10       │
+│ HI    ┆ 116.321839 ┆ 88.6      ┆ 87     ┆ 25       │
+│ PA    ┆ 167.008592 ┆ 92.636364 ┆ 3205   ┆ 22       │
+│ PI    ┆ 149.219512 ┆ null      ┆ 41     ┆ 0        │
+│ IL    ┆ 146.069482 ┆ 99.203704 ┆ 1895   ┆ 54       │
 └───────┴────────────┴───────────┴────────┴──────────┘
 ```
 Do the average age values look nonsensical? That's because we are working with historical data that dates back to the 1800s and we are doing our computations assuming everyone represented in the dataset is still alive and kicking.
@@ -320,11 +320,11 @@ shape: (5, 3)
 │ ---   ┆ ---                 ┆ ---   │
 │ cat   ┆ cat                 ┆ u32   │
 ╞═══════╪═════════════════════╪═══════╡
-│ CT    ┆ Pro-Administration  ┆ 5     │
 │ VA    ┆ Anti-Administration ┆ 5     │
-│ NJ    ┆ Pro-Administration  ┆ 3     │
+│ CT    ┆ Pro-Administration  ┆ 5     │
 │ PA    ┆ Anti-Administration ┆ 3     │
 │ DE    ┆ Pro-Administration  ┆ 3     │
+│ NJ    ┆ Pro-Administration  ┆ 3     │
 └───────┴─────────────────────┴───────┘
 ```
 Next, we use a nested `group_by` to compute the average age of delegates per state and per gender:
@@ -420,17 +420,17 @@ println!("{df}");
 ```
 ```
 shape: (5, 3)
-┌───────┬───────────────────────┬────────────────────┐
-│ state ┆ youngest              ┆ oldest             │
-│ ---   ┆ ---                   ┆ ---                │
-│ cat   ┆ str                   ┆ str                │
-╞═══════╪═══════════════════════╪════════════════════╡
-│ WA    ┆ Jaime Herrera Beutler ┆ Columbia Lancaster │
-│ MN    ┆ James Shields         ┆ Cyrus Aldrich      │
-│ MO    ┆ Spencer Pettis        ┆ Rufus Easton       │
-│ ND    ┆ Kelly Armstrong       ┆ Lyman Casey        │
-│ PA    ┆ Thomas Fitzsimons     ┆ Israel Jacobs      │
-└───────┴───────────────────────┴────────────────────┘
+┌───────┬───────────────────┬──────────────────┐
+│ state ┆ youngest          ┆ oldest           │
+│ ---   ┆ ---               ┆ ---              │
+│ cat   ┆ str               ┆ str              │
+╞═══════╪═══════════════════╪══════════════════╡
+│ RI    ┆ James Mason       ┆ William Bradford │
+│ VI    ┆ Donna Christensen ┆ Melvin Evans     │
+│ HI    ┆ Tulsi Gabbard     ┆ Robert Wilcox    │
+│ TN    ┆ William Cocke     ┆ John Sevier      │
+│ NH    ┆ John Sherburne    ┆ Samuel Livermore │
+└───────┴───────────────────┴──────────────────┘
 ```
 However, if we also want to sort the names alphabetically, we need to perform an extra sort
 operation. Luckily, we can sort in a `group_by` context without changing the sorting of the
@@ -476,17 +476,17 @@ println!("{df}");
 ```
 ```
 shape: (5, 4)
-┌───────┬────────────────┬──────────────────┬─────────────────────────┐
-│ state ┆ youngest       ┆ oldest           ┆ alphabetical_first      │
-│ ---   ┆ ---            ┆ ---              ┆ ---                     │
-│ cat   ┆ str            ┆ str              ┆ str                     │
-╞═══════╪════════════════╪══════════════════╪═════════════════════════╡
-│ TN    ┆ William Cocke  ┆ John Sevier      ┆ Aaron Brown             │
-│ RI    ┆ James Mason    ┆ William Bradford ┆ Adin Capron             │
-│ CO    ┆ Yadira Caraveo ┆ Allen Bradford   ┆ Allen Bradford          │
-│ PI    ┆ Carlos Romulo  ┆ Pablo Ocampo     ┆ Benito Legarda Y Tuason │
-│ MN    ┆ James Shields  ┆ Cyrus Aldrich    ┆ Alan Franken            │
-└───────┴────────────────┴──────────────────┴─────────────────────────┘
+┌───────┬────────────────┬──────────────────┬────────────────────┐
+│ state ┆ youngest       ┆ oldest           ┆ alphabetical_first │
+│ ---   ┆ ---            ┆ ---              ┆ ---                │
+│ cat   ┆ str            ┆ str              ┆ str                │
+╞═══════╪════════════════╪══════════════════╪════════════════════╡
+│ ME    ┆ Samuel Butman  ┆ Joshua Cushman   ┆ Albert Smith       │
+│ NH    ┆ John Sherburne ┆ Samuel Livermore ┆ Aaron Cragin       │
+│ DE    ┆ Samuel White   ┆ George Read      ┆ Albert Polk        │
+│ DK    ┆ George Mathews ┆ John Todd        ┆ George Mathews     │
+│ CA    ┆ Edward Gilbert ┆ William Gwin     ┆ Aaron Sargent      │
+└───────┴────────────────┴──────────────────┴────────────────────┘
 ```
 We can even sort a column with the order induced by another column, and this also works inside the
 context `group_by`. This modification to the previous query lets us check if the delegate with the

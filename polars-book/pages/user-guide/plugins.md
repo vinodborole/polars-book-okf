@@ -2,7 +2,7 @@
 type: Web Page
 title: Plugins - Polars user guide
 resource: https://docs.pola.rs/user-guide/plugins
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-07-13T09:31:11.337600+00:00'
 ---
 
 # Plugins
@@ -22,6 +22,10 @@ Here is a curated (non-exhaustive) list of community-implemented plugins.
 
 - [polars-distance](https://github.com/ion-elgreco/polars-distance)Polars plugin for pairwise distance functions
 - [polars-ds](https://github.com/abstractqqq/polars_ds_extension)Polars extension aiming to simplify common numerical/string data analysis procedures
+
+### Bioinformatics
+
+- [polars-bio](https://github.com/biodatageeks/polars-bio)Python library for genomics built on top of Polars, Apache Arrow and Apache DataFusion
 
 ### Geo
 

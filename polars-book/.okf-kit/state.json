@@ -2,7 +2,7 @@
   "generator": "okf-kit",
   "okf_version": "0.1",
   "root_url": "https://docs.pola.rs/",
-  "updated_at": "2026-07-09T12:17:10.758116+00:00",
+  "updated_at": "2026-07-13T09:31:11.394963+00:00",
   "config": {
     "max_depth": 3,
     "max_pages": 90,
@@ -28,7 +28,7 @@
       "path": "pages/development/contributing.md",
       "url": "https://docs.pola.rs/development/contributing",
       "title": "Overview - Polars user guide",
-      "hash": "a255309a1517338c3b69350362c486f61a44baa2c7f29256003ad1c09596caad"
+      "hash": "c411967d4a6e0c834b91992fa10a95a8fb35a45a129ddcdd35062601826d6724"
     },
     {
       "path": "pages/development/contributing/ci.md",
@@ -142,7 +142,7 @@
       "path": "pages/user-guide/concepts/expressions-and-contexts.md",
       "url": "https://docs.pola.rs/user-guide/concepts/expressions-and-contexts",
       "title": "Expressions and contexts - Polars user guide",
-      "hash": "d4a7c5a9ef77497e86e86c0babb9d9537c0554564f6dc740f4ec0736639b9aa3"
+      "hash": "2f8c421d98ea649fb99e437b0a45e2efd6644482d5b40281380c1e17fc95c0ed"
     },
     {
       "path": "pages/user-guide/concepts/lazy-api.md",
@@ -172,19 +172,19 @@
       "path": "pages/user-guide/expressions/aggregation.md",
       "url": "https://docs.pola.rs/user-guide/expressions/aggregation",
       "title": "Aggregation - Polars user guide",
-      "hash": "b70f280b1b7fd8a8837cfb141d275b401e664c29294babd828be050228ca0626"
+      "hash": "557ae6c9729be7d4c5c54a63d7452684a50be3fc66d1c0c438595bbdcc96d627"
     },
     {
       "path": "pages/user-guide/expressions/basic-operations.md",
       "url": "https://docs.pola.rs/user-guide/expressions/basic-operations",
       "title": "Basic operations - Polars user guide",
-      "hash": "6bc39f5fa9ba6068c0cd4d654583fa264afabb87247843313c4beb79d368e610"
+      "hash": "77d9d7510221af58d517e70682519c700fd698fade9751c4da0238dbac691f7f"
     },
     {
       "path": "pages/user-guide/expressions/casting.md",
       "url": "https://docs.pola.rs/user-guide/expressions/casting",
       "title": "Casting - Polars user guide",
-      "hash": "e0b5f847e4fe89bccdff7d07cc6f964231275b047fb98b93af2d387db7ae77a0"
+      "hash": "13ff729d42c4700fcd795ccc8826bc632898efc9e028c0b16ac881c68875e022"
     },
     {
       "path": "pages/user-guide/expressions/categorical-data-and-enums.md",
@@ -238,13 +238,13 @@
       "path": "pages/user-guide/expressions/user-defined-python-functions.md",
       "url": "https://docs.pola.rs/user-guide/expressions/user-defined-python-functions",
       "title": "User-defined Python functions - Polars user guide",
-      "hash": "7baf9ad45d380d547b5b8735293acb1cb4761807d85610b59f1726514d34fc1d"
+      "hash": "a13f17ce87b361fa6f57d713e51a512ce9c78f2a98aed7e9b87715ddef23ecd5"
     },
     {
       "path": "pages/user-guide/expressions/window-functions.md",
       "url": "https://docs.pola.rs/user-guide/expressions/window-functions",
       "title": "Window functions - Polars user guide",
-      "hash": "54553bf481780471c2422475d865c05c4d76c97c135f772f20acd11c20242774"
+      "hash": "79f395274fe595a6f385b1f8a2d240b967e48b234bce55077061597f53ead557"
     },
     {
       "path": "pages/user-guide/getting-started.md",
@@ -274,13 +274,13 @@
       "path": "pages/user-guide/io/bigquery.md",
       "url": "https://docs.pola.rs/user-guide/io/bigquery",
       "title": "Google BigQuery - Polars user guide",
-      "hash": "5ec557b3e6cb781c3bdc7155ca40722de6e97cb9d86da377eec934b337ff743e"
+      "hash": "2f8692fe9d7a9c308bcebe76def7dffda798757ef6f2187a11a1ba5dec3010b4"
     },
     {
       "path": "pages/user-guide/io/cloud-storage.md",
       "url": "https://docs.pola.rs/user-guide/io/cloud-storage",
       "title": "Cloud storage - Polars user guide",
-      "hash": "69c2934945f9285e76ef75a74a0bb9f7e3aaf7955cd216ffbca4a9a289d5f354"
+      "hash": "01aca4aaab30534256c0092301c23da86f851635593a747d91cedcf0b076f483"
     },
     {
       "path": "pages/user-guide/io/csv.md",
@@ -322,7 +322,7 @@
       "path": "pages/user-guide/io/multiple.md",
       "url": "https://docs.pola.rs/user-guide/io/multiple",
       "title": "Multiple - Polars user guide",
-      "hash": "87d1289d815ca9f4a4ac75fc9c08d6dce42664e0898354936134c1c7b2d647c8"
+      "hash": "45f597ceeb4971c7870fce4131faf71299888da253f3519bd44aebbdc793c656"
     },
     {
       "path": "pages/user-guide/io/parquet.md",
@@ -364,7 +364,7 @@
       "path": "pages/user-guide/lazy/multiplexing.md",
       "url": "https://docs.pola.rs/user-guide/lazy/multiplexing",
       "title": "Multiplexing queries - Polars user guide",
-      "hash": "3c09bd316e902a919b3cd919a2c136d8c131155ee960f3b5b12c1b6316f7688b"
+      "hash": "0b6e94f2569c68a4e65712580e60ef9a7120ebba7d37a1aeb4ab6c29e410593e"
     },
     {
       "path": "pages/user-guide/lazy/optimizations.md",
@@ -448,7 +448,7 @@
       "path": "pages/user-guide/plugins.md",
       "url": "https://docs.pola.rs/user-guide/plugins",
       "title": "Plugins - Polars user guide",
-      "hash": "80c71c4f798204d72e0458b413f75cad4a016256e0ec707779a0a3cc5c894b1b"
+      "hash": "ebe759c837a93d48efd4e456a4105768dba85c50ae84d98d3ba74c71a00b0959"
     },
     {
       "path": "pages/user-guide/plugins/expr_plugins.md",
@@ -484,7 +484,7 @@
       "path": "pages/user-guide/sql/select.md",
       "url": "https://docs.pola.rs/user-guide/sql/select",
       "title": "SELECT - Polars user guide",
-      "hash": "326f4e9f385021f0763e9318dda50f8e1a1dd81247030c88c2bfa2106577d9e1"
+      "hash": "bf4b0dc96905c21b1c0d943eca7ec326ac9248101e633baa11a9dd44871ac6ad"
     },
     {
       "path": "pages/user-guide/sql/show.md",
@@ -514,7 +514,7 @@
       "path": "pages/user-guide/transformations/pivot.md",
       "url": "https://docs.pola.rs/user-guide/transformations/pivot",
       "title": "Pivots - Polars user guide",
-      "hash": "87bbcae2ed34361a513cd96629f6563af2dbb9daf5aa0dbb2c7a01cc8eba6e3b"
+      "hash": "935395fb3e29292db5a7077a0e529f022d4d3a0d4a26e29a3827f531b381ef80"
     },
     {
       "path": "pages/user-guide/transformations/time-series/filter.md",
@@ -526,7 +526,7 @@
       "path": "pages/user-guide/transformations/time-series/parsing.md",
       "url": "https://docs.pola.rs/user-guide/transformations/time-series/parsing",
       "title": "Parsing - Polars user guide",
-      "hash": "f2892a94324f2b4b6c4169ef3a94a6f746065bb100e845dd73b7da3b87aef12a"
+      "hash": "b0c6e39272f08ee11ae8838751073f72be5af098a830274c37980f0f14abdd9b"
     },
     {
       "path": "pages/user-guide/transformations/time-series/resampling.md",
@@ -544,7 +544,7 @@
       "path": "pages/user-guide/transformations/time-series/timezones.md",
       "url": "https://docs.pola.rs/user-guide/transformations/time-series/timezones",
       "title": "Time zones - Polars user guide",
-      "hash": "f72f138d7ba1760bb0c4db2027c50bb28e0fac1a274bd13585507e7c364b757c"
+      "hash": "c167622a6a762b00abd627aeaf19859e544cee2400e357d907d53cdfaee28275"
     },
     {
       "path": "pages/user-guide/transformations/unpivot.md",
@@ -1164,9 +1164,9 @@
     ]
   ],
   "last_sync": {
-    "synced_at": "2026-07-09T12:17:10.729047+00:00",
+    "synced_at": "2026-07-13T09:31:11.348035+00:00",
     "added": 0,
-    "changed": 70,
+    "changed": 16,
     "removed": 0,
     "pages": 90
   }

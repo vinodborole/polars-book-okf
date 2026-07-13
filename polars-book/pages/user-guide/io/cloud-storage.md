@@ -2,7 +2,7 @@
 type: Web Page
 title: Cloud storage - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/cloud-storage
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-07-13T09:31:11.337600+00:00'
 ---
 
 # Cloud storage
@@ -40,9 +40,9 @@ df = pl.read_parquet(source)
 
 `IpcReader`[Available on feature ipc](/user-guide/installation/#feature-flags)·
 
-[Available on feature parquet](/user-guide/installation/#feature-flags)·
+[Available on feature csv](/user-guide/installation/#feature-flags)·
 
-[Available on feature csv](/user-guide/installation/#feature-flags)
+[Available on feature parquet](/user-guide/installation/#feature-flags)
 
 ```
 use aws_config::BehaviorVersion;

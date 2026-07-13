@@ -2,7 +2,7 @@
 type: Web Page
 title: Multiplexing queries - Polars user guide
 resource: https://docs.pola.rs/user-guide/lazy/multiplexing
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-07-13T09:31:11.337600+00:00'
 ---
 
 # Multiplexing queries
@@ -102,17 +102,17 @@ query come from the same subplan, indicated by the inserted "CACHE" nodes.
 ```
 SINK_MULTIPLE
   PLAN 0:
-    CACHE[id: cda30874-f5c1-47ec-a4c2-4b32b827f970]
+    CACHE[id: 81b0ddb9-5125-47d6-b538-46ec25857d0d]
       AGGREGATE[maintain_order: false]
         [len()] BY [col("n")]
         FROM
         DF ["n"]; PROJECT */1 COLUMNS
   PLAN 1:
     SLICE[offset: 0, len: 5]
-      CACHE[id: cda30874-f5c1-47ec-a4c2-4b32b827f970]
+      CACHE[id: 81b0ddb9-5125-47d6-b538-46ec25857d0d]
   PLAN 2:
     SLICE[offset: 5, len: 5]
-      CACHE[id: cda30874-f5c1-47ec-a4c2-4b32b827f970]
+      CACHE[id: 81b0ddb9-5125-47d6-b538-46ec25857d0d]
 END SINK_MULTIPLE
 ```
 Combining related subplans in a single execution unit with `pl.collect_all` can thus lead to large

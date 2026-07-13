@@ -2,7 +2,7 @@
 type: Web Page
 title: Overview - Polars user guide
 resource: https://docs.pola.rs/development/contributing
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-07-13T09:31:11.337600+00:00'
 ---
 
 # Overview
@@ -292,7 +292,7 @@ comment labels (like
 
 We unfortunately are overwhelmed by the amount of low-quality contributions created primarily using AI. These cost us a lot of time (and regularly simply don't work), while the author has barely spent any effort, so for first-time contributors there are some more rules:
 
-- You must post a screenshot of you successfully running the test suite (`make test`), locally on your machine (not the CI).
+- You must post a screenshot of you successfully running the test suite (`make test`), locally on your machine (not the CI). The screenshot must show your terminal window borders clearly, it must not be cropped to only show text.
 - You may not have more than one open PR at a time.
 
 ## Contributing to documentation

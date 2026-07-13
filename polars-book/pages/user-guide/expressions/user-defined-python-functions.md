@@ -2,7 +2,7 @@
 type: Web Page
 title: User-defined Python functions - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/user-defined-python-functions
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-07-13T09:31:11.337600+00:00'
 ---
 
 # User-defined Python functions
@@ -132,8 +132,8 @@ shape: (2, 2)
 │ ---  ┆ ---           │
 │ str  ┆ list[f64]     │
 ╞══════╪═══════════════╡
-│ b    ┆ [-11.0, 11.0] │
 │ a    ┆ [1.5, -1.5]   │
+│ b    ┆ [-11.0, 11.0] │
 └──────┴───────────────┘
 ```
 ## Fast operations with user-defined functions
@@ -237,8 +237,8 @@ shape: (2, 2)
 │ ---  ┆ ---           │
 │ str  ┆ list[f64]     │
 ╞══════╪═══════════════╡
-│ a    ┆ [1.5, -1.5]   │
 │ b    ┆ [-11.0, 11.0] │
+│ a    ┆ [1.5, -1.5]   │
 └──────┴───────────────┘
 ```
 ## Missing data is not allowed when calling generalized ufuncs

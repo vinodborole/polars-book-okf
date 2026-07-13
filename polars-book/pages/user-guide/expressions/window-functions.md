@@ -2,7 +2,7 @@
 type: Web Page
 title: Window functions - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/window-functions
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-07-13T09:31:11.337600+00:00'
 ---
 
 # Window functions
@@ -166,23 +166,23 @@ print(result)
 ```
 ```
 shape: (163, 3)
-┌────────────┬────────┬────────────┐
-│ Name       ┆ Type 1 ┆ Speed rank │
-│ ---        ┆ ---    ┆ ---        │
-│ str        ┆ enum   ┆ u32        │
-╞════════════╪════════╪════════════╡
-│ Ekans      ┆ Poison ┆ 8          │
-│ Arbok      ┆ Poison ┆ 3          │
-│ Nidoran♀   ┆ Poison ┆ 10         │
-│ Nidorina   ┆ Poison ┆ 7          │
-│ Nidoqueen  ┆ Poison ┆ 4          │
-│ …          ┆ …      ┆ …          │
-│ Weepinbell ┆ Grass  ┆ 4          │
-│ Victreebel ┆ Grass  ┆ 2          │
-│ Exeggcute  ┆ Grass  ┆ 7          │
-│ Exeggutor  ┆ Grass  ┆ 4          │
-│ Tangela    ┆ Grass  ┆ 3          │
-└────────────┴────────┴────────────┘
+┌───────────────────┬──────────┬────────────┐
+│ Name              ┆ Type 1   ┆ Speed rank │
+│ ---               ┆ ---      ┆ ---        │
+│ str               ┆ enum     ┆ u32        │
+╞═══════════════════╪══════════╪════════════╡
+│ Pikachu           ┆ Electric ┆ 6          │
+│ Raichu            ┆ Electric ┆ 3          │
+│ Magnemite         ┆ Electric ┆ 8          │
+│ Magneton          ┆ Electric ┆ 7          │
+│ Voltorb           ┆ Electric ┆ 5          │
+│ …                 ┆ …        ┆ …          │
+│ Articuno          ┆ Ice      ┆ 2          │
+│ Gastly            ┆ Ghost    ┆ 4          │
+│ Haunter           ┆ Ghost    ┆ 3          │
+│ Gengar            ┆ Ghost    ┆ 2          │
+│ GengarMega Gengar ┆ Ghost    ┆ 1          │
+└───────────────────┴──────────┴────────────┘
 ```
 This shows that, usually, `group_by` and `over` produce results of different shapes:
 

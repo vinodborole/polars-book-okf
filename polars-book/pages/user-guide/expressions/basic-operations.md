@@ -2,7 +2,7 @@
 type: Web Page
 title: Basic operations - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/basic-operations
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-07-13T09:31:11.337600+00:00'
 ---
 
 # Basic operations
@@ -340,10 +340,10 @@ shape: (4, 1)
 │ ---          │
 │ struct[2]    │
 ╞══════════════╡
-│ {"ham",1}    │
 │ {"spam",2}   │
 │ {"egg",1}    │
 │ {"foo",1}    │
+│ {"ham",1}    │
 └──────────────┘
 ```
 The function `value_counts` returns the results in
