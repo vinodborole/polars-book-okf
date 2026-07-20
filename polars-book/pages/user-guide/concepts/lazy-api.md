@@ -2,7 +2,7 @@
 type: Web Page
 title: Lazy API - Polars user guide
 resource: https://docs.pola.rs/user-guide/concepts/lazy-api
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-07-20T09:17:48.329595+00:00'
 ---
 
 # Lazy API
@@ -98,7 +98,7 @@ AGGREGATE[maintain_order: false]
   simple π 2/2 ["species", "sepal_width"]
     Csv SCAN [docs/assets/data/iris.csv]
     PROJECT 3/5 COLUMNS
-    SELECTION: [(col("sepal_length")) > (5.0)]
+    SELECTION: col("sepal_length") > 5.0
     ESTIMATED ROWS: 167
 ```
 Immediately, we can see in the explanation that Polars did apply predicate pushdown, as it is only reading rows where the sepal length is greater than 5, and it did apply projection pushdown, as it is only reading the columns that are needed by the query.
@@ -129,7 +129,7 @@ print(
 )
 ```
 ```
-SELECT [[(col("float_1")) * (1.1)].alias("float_1*1.1"), [(col("float_2")) * (1.1)].alias("float_2*1.1"), [(col("float_3")) * (1.1)].alias("float_3*1.1")]
+SELECT [(col("float_1") * 1.1).alias("float_1*1.1"), (col("float_2") * 1.1).alias("float_2*1.1"), (col("float_3") * 1.1).alias("float_3*1.1")]
   DF ["int_1", "int_2", "float_1", "float_2", ...]; PROJECT["float_1", "float_2", "float_3"] 3/5 COLUMNS
 ```
 

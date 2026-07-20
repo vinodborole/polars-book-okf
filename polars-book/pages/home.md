@@ -2,7 +2,7 @@
 type: Web Page
 title: Index - Polars user guide
 resource: https://docs.pola.rs/
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-07-20T09:17:48.329595+00:00'
 ---
 
 # Blazingly Fast DataFrame Library
@@ -17,7 +17,7 @@ Polars is a blazingly fast DataFrame library for manipulating structured data. T
 - **Out of Core**: The streaming API allows you to process your results without requiring all your data to be in memory at the same time.
 - **Parallel**: Utilises the power of your machine by dividing the workload among the available CPU cores without any additional configuration.
 - **Vectorized Query Engine**
-- **GPU Support**: Optionally run queries on NVIDIA GPUs for maximum performance for in-memory workloads.
+- **GPU Support**: Optionally run queries on NVIDIA GPUs for maximum performance for in-memory or streaming workloads.
 - [Apache Arrow support](https://arrow.apache.org/)
 
 Users new to DataFrames
@@ -64,9 +64,9 @@ df = q.collect()
 
 `group_by`[·](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyFrame.html#method.collect)
 
-`collect`[Available on feature streaming](/user-guide/installation/#feature-flags)·
+`collect`[Available on feature csv](/user-guide/installation/#feature-flags)·
 
-[Available on feature csv](/user-guide/installation/#feature-flags)
+[Available on feature streaming](/user-guide/installation/#feature-flags)
 
 ```
 use polars::prelude::*;

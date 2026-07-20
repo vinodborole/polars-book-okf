@@ -2,7 +2,7 @@
 type: Web Page
 title: IDE configuration - Polars user guide
 resource: https://docs.pola.rs/development/contributing/ide
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-07-20T09:17:48.329595+00:00'
 ---
 
 # IDE configuration
@@ -111,6 +111,8 @@ echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 ```
 #### Running the debugger
 
+- 
+First, compile Polars with full debug information using `make build-debug`.
 - 
 Create a Python script containing Polars code. Ensure that your virtual environment is activated. 
 - 

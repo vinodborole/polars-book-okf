@@ -2,7 +2,7 @@
 type: Web Page
 title: Expressions and contexts - Polars user guide
 resource: https://docs.pola.rs/user-guide/concepts/expressions-and-contexts
-timestamp: '2026-07-13T09:31:11.337600+00:00'
+timestamp: '2026-07-20T09:17:48.329595+00:00'
 ---
 
 # Expressions and contexts
@@ -306,9 +306,9 @@ shape: (3, 3)
 │ ---    ┆ ---    ┆ ---                             │
 │ i32    ┆ bool   ┆ list[str]                       │
 ╞════════╪════════╪═════════════════════════════════╡
+│ 1980   ┆ false  ┆ ["Ben Brown", "Daniel Donovan"… │
 │ 1990   ┆ true   ┆ ["Alice Archer"]                │
 │ 1980   ┆ true   ┆ ["Chloe Cooper"]                │
-│ 1980   ┆ false  ┆ ["Ben Brown", "Daniel Donovan"… │
 └────────┴────────┴─────────────────────────────────┘
 ```
 The resulting dataframe, after applying aggregating expressions, contains one column per each grouping expression on the left and then as many columns as needed to represent the results of the aggregating expressions. In turn, we can specify as many aggregating expressions as we want:

@@ -2,7 +2,7 @@
 type: Web Page
 title: Window functions - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/window-functions
-timestamp: '2026-07-13T09:31:11.337600+00:00'
+timestamp: '2026-07-20T09:17:48.329595+00:00'
 ---
 
 # Window functions
@@ -166,23 +166,23 @@ print(result)
 ```
 ```
 shape: (163, 3)
-┌───────────────────┬──────────┬────────────┐
-│ Name              ┆ Type 1   ┆ Speed rank │
-│ ---               ┆ ---      ┆ ---        │
-│ str               ┆ enum     ┆ u32        │
-╞═══════════════════╪══════════╪════════════╡
-│ Pikachu           ┆ Electric ┆ 6          │
-│ Raichu            ┆ Electric ┆ 3          │
-│ Magnemite         ┆ Electric ┆ 8          │
-│ Magneton          ┆ Electric ┆ 7          │
-│ Voltorb           ┆ Electric ┆ 5          │
-│ …                 ┆ …        ┆ …          │
-│ Articuno          ┆ Ice      ┆ 2          │
-│ Gastly            ┆ Ghost    ┆ 4          │
-│ Haunter           ┆ Ghost    ┆ 3          │
-│ Gengar            ┆ Ghost    ┆ 2          │
-│ GengarMega Gengar ┆ Ghost    ┆ 1          │
-└───────────────────┴──────────┴────────────┘
+┌───────────────────┬────────┬────────────┐
+│ Name              ┆ Type 1 ┆ Speed rank │
+│ ---               ┆ ---    ┆ ---        │
+│ str               ┆ enum   ┆ u32        │
+╞═══════════════════╪════════╪════════════╡
+│ Sandshrew         ┆ Ground ┆ 5          │
+│ Sandslash         ┆ Ground ┆ 3          │
+│ Diglett           ┆ Ground ┆ 2          │
+│ Dugtrio           ┆ Ground ┆ 1          │
+│ Cubone            ┆ Ground ┆ 6          │
+│ …                 ┆ …      ┆ …          │
+│ Venonat           ┆ Bug    ┆ 8          │
+│ Venomoth          ┆ Bug    ┆ 3          │
+│ Scyther           ┆ Bug    ┆ 2          │
+│ Pinsir            ┆ Bug    ┆ 4          │
+│ PinsirMega Pinsir ┆ Bug    ┆ 2          │
+└───────────────────┴────────┴────────────┘
 ```
 This shows that, usually, `group_by` and `over` produce results of different shapes:
 
