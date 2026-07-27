@@ -2,7 +2,7 @@
 type: Web Page
 title: Styling - Polars user guide
 resource: https://docs.pola.rs/user-guide/misc/styling
-timestamp: '2026-07-20T09:17:48.329595+00:00'
+timestamp: '2026-07-27T09:55:25.099201+00:00'
 ---
 
 # Styling
@@ -31,8 +31,8 @@ shape: (3, 3)
 │ ---        ┆ ---          ┆ ---         │
 │ str        ┆ f64          ┆ f64         │
 ╞════════════╪══════════════╪═════════════╡
-│ Setosa     ┆ 1.462        ┆ 0.246       │
 │ Versicolor ┆ 4.26         ┆ 1.326       │
+│ Setosa     ┆ 1.462        ┆ 0.246       │
 │ Virginica  ┆ 5.552        ┆ 2.026       │
 └────────────┴──────────────┴─────────────┘
 ```
@@ -45,8 +45,8 @@ df.style.tab_header(title="Iris Data", subtitle="Mean measurement values per spe
 | Mean measurement values per species | ||
 | species | petal_length | petal_width | 
 |---|---|---|
-| Setosa | 1.462 | 0.246 | 
 | Versicolor | 4.26 | 1.326 | 
+| Setosa | 1.462 | 0.246 | 
 | Virginica | 5.552 | 2.026 | 
 
 ## Structure: add row stub
@@ -56,8 +56,8 @@ df.style.tab_stub(rowname_col="species")
 ```
 | petal_length | petal_width | |
 |---|---|---|
-| Setosa | 1.462 | 0.246 | 
 | Versicolor | 4.26 | 1.326 | 
+| Setosa | 1.462 | 0.246 | 
 | Virginica | 5.552 | 2.026 | 
 
 ## Structure: add column spanner
@@ -72,8 +72,8 @@ df.style.tab_stub(rowname_col="species")
 | species | Petal | |
 |---|---|---|
 | Length | Width | |
-| Setosa | 1.462 | 0.246 | 
 | Versicolor | 4.26 | 1.326 | 
+| Setosa | 1.462 | 0.246 | 
 | Virginica | 5.552 | 2.026 | 
 
 ## Format: limit decimal places
@@ -83,8 +83,8 @@ df.style.fmt_number("petal_width", decimals=1)
 ```
 | species | petal_length | petal_width | 
 |---|---|---|
-| Setosa | 1.462 | 0.2 | 
 | Versicolor | 4.26 | 1.3 | 
+| Setosa | 1.462 | 0.2 | 
 | Virginica | 5.552 | 2.0 | 
 
 ## Style: highlight max row
@@ -100,8 +100,8 @@ df.style.tab_style(
 ```
 | species | petal_length | petal_width | 
 |---|---|---|
-| Setosa | 1.462 | 0.246 | 
 | Versicolor | 4.26 | 1.326 | 
+| Setosa | 1.462 | 0.246 | 
 | Virginica | 5.552 | 2.026 | 
 
 ## Style: bold species column
@@ -115,8 +115,8 @@ df.style.tab_style(
 ```
 | species | petal_length | petal_width | 
 |---|---|---|
-| Setosa | 1.462 | 0.246 | 
 | Versicolor | 4.26 | 1.326 | 
+| Setosa | 1.462 | 0.246 | 
 | Virginica | 5.552 | 2.026 | 
 
 ## Full example
@@ -144,8 +144,8 @@ from great_tables import loc, style
 | Petal | ||
 |---|---|---|
 | Length | Width | |
-| Setosa | 1.462 | 0.25 | 
 | Versicolor | 4.26 | 1.33 | 
+| Setosa | 1.462 | 0.25 | 
 | Virginica | 5.552 | 2.03 |
 
 # Citations

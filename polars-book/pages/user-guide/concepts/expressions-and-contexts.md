@@ -2,7 +2,7 @@
 type: Web Page
 title: Expressions and contexts - Polars user guide
 resource: https://docs.pola.rs/user-guide/concepts/expressions-and-contexts
-timestamp: '2026-07-20T09:17:48.329595+00:00'
+timestamp: '2026-07-27T09:55:25.099201+00:00'
 ---
 
 # Expressions and contexts
@@ -306,9 +306,9 @@ shape: (3, 3)
 │ ---    ┆ ---    ┆ ---                             │
 │ i32    ┆ bool   ┆ list[str]                       │
 ╞════════╪════════╪═════════════════════════════════╡
-│ 1980   ┆ false  ┆ ["Ben Brown", "Daniel Donovan"… │
-│ 1990   ┆ true   ┆ ["Alice Archer"]                │
 │ 1980   ┆ true   ┆ ["Chloe Cooper"]                │
+│ 1990   ┆ true   ┆ ["Alice Archer"]                │
+│ 1980   ┆ false  ┆ ["Ben Brown", "Daniel Donovan"… │
 └────────┴────────┴─────────────────────────────────┘
 ```
 The resulting dataframe, after applying aggregating expressions, contains one column per each grouping expression on the left and then as many columns as needed to represent the results of the aggregating expressions. In turn, we can specify as many aggregating expressions as we want:
@@ -351,9 +351,9 @@ shape: (3, 6)
 │ ---    ┆ ---    ┆ --- ┆ ---     ┆ ---        ┆ ---        │
 │ i32    ┆ bool   ┆ u32 ┆ f64     ┆ f64        ┆ f64        │
 ╞════════╪════════╪═════╪═════════╪════════════╪════════════╡
-│ 1980   ┆ false  ┆ 2   ┆ 1.77    ┆ 77.8       ┆ 1.76       │
 │ 1980   ┆ true   ┆ 1   ┆ 1.65    ┆ 53.6       ┆ 1.65       │
 │ 1990   ┆ true   ┆ 1   ┆ 1.56    ┆ 57.9       ┆ 1.56       │
+│ 1980   ┆ false  ┆ 2   ┆ 1.77    ┆ 77.8       ┆ 1.76       │
 └────────┴────────┴─────┴─────────┴────────────┴────────────┘
 ```
 See also `group_by_dynamic` and `rolling` for other grouping contexts.

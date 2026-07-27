@@ -2,7 +2,7 @@
 type: Web Page
 title: Pivots - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/pivot
-timestamp: '2026-07-20T09:17:48.329595+00:00'
+timestamp: '2026-07-27T09:55:25.099201+00:00'
 ---
 
 # Pivots
@@ -189,8 +189,8 @@ shape: (3, 6)
 │ --- ┆ ---  ┆ ---  ┆ ---  ┆ ---  ┆ ---  │
 │ str ┆ i64  ┆ i64  ┆ i64  ┆ i64  ┆ i64  │
 ╞═════╪══════╪══════╪══════╪══════╪══════╡
-│ C   ┆ null ┆ null ┆ null ┆ null ┆ 2    │
 │ A   ┆ 1    ┆ 2    ┆ null ┆ null ┆ null │
+│ C   ┆ null ┆ null ┆ null ┆ null ┆ 2    │
 │ B   ┆ null ┆ null ┆ 2    ┆ 4    ┆ null │
 └─────┴──────┴──────┴──────┴──────┴──────┘
 ```

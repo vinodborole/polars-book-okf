@@ -2,7 +2,7 @@
 type: Web Page
 title: Grouping - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/rolling
-timestamp: '2026-07-20T09:17:48.329595+00:00'
+timestamp: '2026-07-27T09:55:25.099201+00:00'
 ---
 
 # Grouping
@@ -227,11 +227,11 @@ print(out)
 
 `DataFrame.explode`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/functions/fn.date_range.html)
 
-`date_range`[Available on feature dynamic_group_by](/user-guide/installation/#feature-flags)·
+`date_range`[Available on feature range](/user-guide/installation/#feature-flags)·
 
-[Available on feature range](/user-guide/installation/#feature-flags)·
+[Available on feature dtype-date](/user-guide/installation/#feature-flags)·
 
-[Available on feature dtype-date](/user-guide/installation/#feature-flags)
+[Available on feature dynamic_group_by](/user-guide/installation/#feature-flags)
 
 ```
 let time = polars::time::date_range(

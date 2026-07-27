@@ -2,7 +2,7 @@
   "generator": "okf-kit",
   "okf_version": "0.1",
   "root_url": "https://docs.pola.rs/",
-  "updated_at": "2026-07-20T09:17:48.380095+00:00",
+  "updated_at": "2026-07-27T09:55:25.306421+00:00",
   "config": {
     "max_depth": 3,
     "max_pages": 90,
@@ -13,16 +13,52 @@
   "page_count": 90,
   "pages": [
     {
+      "path": "pages/api/python/stable/reference/api/polars.md",
+      "url": "https://docs.pola.rs/api/python/stable/reference/api/polars.scan_csv.html",
+      "title": "polars.scan_csv — Polars  documentation",
+      "hash": "23e1b9c451a5cc6ecf9811bbf7a200a3f763fa1d78e005ce60576a3b49fd3f5e"
+    },
+    {
+      "path": "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md",
+      "url": "https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.filter.html",
+      "title": "polars.DataFrame.filter — Polars  documentation",
+      "hash": "6adde3d82785343c0481881c059afdb4d6d4c20e84e20b35152d9940cec744ab"
+    },
+    {
       "path": "pages/api/python/stable/reference/dataframe/home.md",
       "url": "https://docs.pola.rs/api/python/stable/reference/dataframe/index.html",
       "title": "DataFrame — Polars  documentation",
-      "hash": "8282149e57247402aff394b7fc6e186805b36b6908042099fa7e6f87e853ea69"
+      "hash": "de86e8beabc1c8e43e9c0cc92971a67499f921b4566d075a4b5326a8939024c1"
+    },
+    {
+      "path": "pages/api/python/stable/reference/lazyframe/api/polars.LazyFrame.md",
+      "url": "https://docs.pola.rs/api/python/stable/reference/lazyframe/api/polars.LazyFrame.collect.html",
+      "title": "polars.LazyFrame.collect — Polars  documentation",
+      "hash": "9f480ae3b980de324fe7f29e247f8b7e43d893ecc29a5b207a53d2d771b47c3d"
     },
     {
       "path": "pages/api/reference.md",
       "url": "https://docs.pola.rs/api/reference",
       "title": "Reference guide - Polars user guide",
       "hash": "3d69ebb2bb47c921895c79f2954e2cdb6f4271fd97e89a43e9154f2d19c6c95a"
+    },
+    {
+      "path": "pages/api/rust/dev/polars/frame/struct.md",
+      "url": "https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html",
+      "title": "DataFrame in polars::frame - Rust",
+      "hash": "9d525acc0d839a21881368477ab40e203ad57907df8278672e55922af60c8407"
+    },
+    {
+      "path": "pages/api/rust/dev/polars/prelude/struct.md",
+      "url": "https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyCsvReader.html",
+      "title": "LazyCsvReader in polars::prelude - Rust",
+      "hash": "039e1eae033526404d2e0a4a0f0d3a7a51382024533fce52a81f117218e3c155"
+    },
+    {
+      "path": "pages/api/rust/dev/polars_lazy/frame/struct.md",
+      "url": "https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html",
+      "title": "LazyFrame in polars_lazy::frame - Rust",
+      "hash": "d7db1b3ec6c81f442efbb34d841392702cf05b6211ed4f73efd354add3b8a5dd"
     },
     {
       "path": "pages/development/contributing.md",
@@ -67,42 +103,6 @@
       "hash": "34accb377d98fc29ef5665b1fbe43f2b0cdf080e6720b93e2ebf1fdb712abc4b"
     },
     {
-      "path": "pages/polars-cloud.md",
-      "url": "https://docs.pola.rs/polars-cloud",
-      "title": "Index - Polars user guide",
-      "hash": "9878b32a2e770673a9d391dd5988e60c569a3e8afcc8d6de8cd1c1e8376ce2fd"
-    },
-    {
-      "path": "pages/polars-cloud/connect-cloud.md",
-      "url": "https://docs.pola.rs/polars-cloud/connect-cloud",
-      "title": "Connect to your cloud - Polars user guide",
-      "hash": "0d282950841885e06668d744c26117d5b391bc2be9d8e989e60df10726af3b72"
-    },
-    {
-      "path": "pages/polars-cloud/quickstart.md",
-      "url": "https://docs.pola.rs/polars-cloud/quickstart",
-      "title": "Getting started - Polars user guide",
-      "hash": "fff7002b4d310a3f597250bed3e3fd86bd4ef79637a4920bf09c4fff452f1f97"
-    },
-    {
-      "path": "pages/polars-cloud/run/distributed-engine.md",
-      "url": "https://docs.pola.rs/polars-cloud/run/distributed-engine",
-      "title": "Distributed queries - Polars user guide",
-      "hash": "a03bc002c34e134b568df479e014264cb95836ef3ae58baa943a699b9d1f389b"
-    },
-    {
-      "path": "pages/polars-cloud/run/remote-query.md",
-      "url": "https://docs.pola.rs/polars-cloud/run/remote-query",
-      "title": "Execute remote query - Polars user guide",
-      "hash": "e0710c98486b56897433f44a805c6a0234840f563573a18be2c9cabefdd9089c"
-    },
-    {
-      "path": "pages/polars-on-premises.md",
-      "url": "https://docs.pola.rs/polars-on-premises",
-      "title": "Polars On-Prem - Polars user guide",
-      "hash": "2624369d7bc47702b5b5b1193a87015fb44ea87b318250c71bca4235f258b623"
-    },
-    {
       "path": "pages/releases/changelog.md",
       "url": "https://docs.pola.rs/releases/changelog",
       "title": "Changelog - Polars user guide",
@@ -142,7 +142,7 @@
       "path": "pages/user-guide/concepts/expressions-and-contexts.md",
       "url": "https://docs.pola.rs/user-guide/concepts/expressions-and-contexts",
       "title": "Expressions and contexts - Polars user guide",
-      "hash": "4881be1f51109bc283c1222818f11c033eb8775a1726f298cfc37528b7debc18"
+      "hash": "1e31a5332b8b07be8c97f4d3b8be05ad3f21c478c2a25775f0e663a627685798"
     },
     {
       "path": "pages/user-guide/concepts/lazy-api.md",
@@ -172,13 +172,13 @@
       "path": "pages/user-guide/expressions/aggregation.md",
       "url": "https://docs.pola.rs/user-guide/expressions/aggregation",
       "title": "Aggregation - Polars user guide",
-      "hash": "c834e3c06e42c479363ddb33961e9c6eb85df26451b2c61cd9b8e68919e989bb"
+      "hash": "86fdae369609969fcf520c20f88fa14a9df392faab7e5443b206293591a54e58"
     },
     {
       "path": "pages/user-guide/expressions/basic-operations.md",
       "url": "https://docs.pola.rs/user-guide/expressions/basic-operations",
       "title": "Basic operations - Polars user guide",
-      "hash": "dabe91be71c726e3cf8b13c2d6afc6b7d69cedc2fa2b679e9f59d336bc21a9c0"
+      "hash": "77d9d7510221af58d517e70682519c700fd698fade9751c4da0238dbac691f7f"
     },
     {
       "path": "pages/user-guide/expressions/casting.md",
@@ -238,13 +238,13 @@
       "path": "pages/user-guide/expressions/user-defined-python-functions.md",
       "url": "https://docs.pola.rs/user-guide/expressions/user-defined-python-functions",
       "title": "User-defined Python functions - Polars user guide",
-      "hash": "2bbd45ab28bead20dc161ce5c86c111c692599b8fcf6bd85e8e08e1fe3eb17da"
+      "hash": "a13f17ce87b361fa6f57d713e51a512ce9c78f2a98aed7e9b87715ddef23ecd5"
     },
     {
       "path": "pages/user-guide/expressions/window-functions.md",
       "url": "https://docs.pola.rs/user-guide/expressions/window-functions",
       "title": "Window functions - Polars user guide",
-      "hash": "45eb647fc6f319d47b770bc3191159593af952aef597762ab8b1c4835d59a7d8"
+      "hash": "009af4eb247563b9af4f71e52540d774fd2db979af8ffe2b4556ec15dd605e88"
     },
     {
       "path": "pages/user-guide/getting-started.md",
@@ -280,7 +280,7 @@
       "path": "pages/user-guide/io/cloud-storage.md",
       "url": "https://docs.pola.rs/user-guide/io/cloud-storage",
       "title": "Cloud storage - Polars user guide",
-      "hash": "cbe29b9e7a6a6c723fba57af674cc26b37a2fd849fe37dd3e9c63fca53578568"
+      "hash": "9b3a35f408887c67687fc5d2966d7c9e4b5e352835e8992f00b41b5b35b0991e"
     },
     {
       "path": "pages/user-guide/io/csv.md",
@@ -322,7 +322,7 @@
       "path": "pages/user-guide/io/multiple.md",
       "url": "https://docs.pola.rs/user-guide/io/multiple",
       "title": "Multiple - Polars user guide",
-      "hash": "7d7d6194e6c674dd140e5e36cfbaefc58ba6e82eecbbcb4900ae0750f5dadb38"
+      "hash": "c78803339e41c11a59b298cc4a48aca9a16a3276e7bf3f5c6eca16a20b7fcf4b"
     },
     {
       "path": "pages/user-guide/io/parquet.md",
@@ -364,7 +364,7 @@
       "path": "pages/user-guide/lazy/multiplexing.md",
       "url": "https://docs.pola.rs/user-guide/lazy/multiplexing",
       "title": "Multiplexing queries - Polars user guide",
-      "hash": "0168e1564c1bcc0790c616dbf2f908067a1169e87fe0f03df453078ae05c5942"
+      "hash": "80a75a4790506d915341da85d9b80221576b81a221bb3ca2b0fed5444be57c12"
     },
     {
       "path": "pages/user-guide/lazy/optimizations.md",
@@ -418,7 +418,7 @@
       "path": "pages/user-guide/misc/comparison.md",
       "url": "https://docs.pola.rs/user-guide/misc/comparison",
       "title": "Comparison with other tools - Polars user guide",
-      "hash": "8e49c2d98422211427cb07f03c02ecde2bd5a4cacb6075a2086a8dbc0a9a924a"
+      "hash": "536da255b1251b8d5a11744502b61cebad7a3dafe185867e24a00f4bbc871e08"
     },
     {
       "path": "pages/user-guide/misc/multiprocessing.md",
@@ -436,7 +436,7 @@
       "path": "pages/user-guide/misc/styling.md",
       "url": "https://docs.pola.rs/user-guide/misc/styling",
       "title": "Styling - Polars user guide",
-      "hash": "8e408704354f597f0d31f129d84e0569169bdc5287e4578f979323e7327a664a"
+      "hash": "02b89de2d71c65cb706cd69b32cff46832ad197fec67b6187a38eda2024ee687"
     },
     {
       "path": "pages/user-guide/misc/visualization.md",
@@ -484,7 +484,7 @@
       "path": "pages/user-guide/sql/select.md",
       "url": "https://docs.pola.rs/user-guide/sql/select",
       "title": "SELECT - Polars user guide",
-      "hash": "bf4b0dc96905c21b1c0d943eca7ec326ac9248101e633baa11a9dd44871ac6ad"
+      "hash": "326f4e9f385021f0763e9318dda50f8e1a1dd81247030c88c2bfa2106577d9e1"
     },
     {
       "path": "pages/user-guide/sql/show.md",
@@ -514,7 +514,7 @@
       "path": "pages/user-guide/transformations/pivot.md",
       "url": "https://docs.pola.rs/user-guide/transformations/pivot",
       "title": "Pivots - Polars user guide",
-      "hash": "4f8ed0a00660bc2aa80748194522173dfca5fe3baf432c54fc4c6ec31af53e8b"
+      "hash": "5fa6953ad1dff18fbc90192844d9128e7d68d328af51e1aab7ae783f7928ca4a"
     },
     {
       "path": "pages/user-guide/transformations/time-series/filter.md",
@@ -538,7 +538,7 @@
       "path": "pages/user-guide/transformations/time-series/rolling.md",
       "url": "https://docs.pola.rs/user-guide/transformations/time-series/rolling",
       "title": "Grouping - Polars user guide",
-      "hash": "db12fa69ca984abe4cf19155b8516e1a63f57b0c7ad9cfb6ba5019fa2b2b4178"
+      "hash": "a5db40c327b63c35849a3bf20947e94303e7ed0c457421126f6db625f33b1412"
     },
     {
       "path": "pages/user-guide/transformations/time-series/timezones.md",
@@ -556,7 +556,27 @@
   "edges": [
     [
       "pages/api/python/stable/reference/dataframe/home.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/api/python/stable/reference/dataframe/home.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/api/python/stable/reference/dataframe/home.md",
+      "pages/api/python/stable/reference/lazyframe/api/polars.LazyFrame.md"
+    ],
+    [
+      "pages/api/python/stable/reference/dataframe/home.md",
       "pages/home.md"
+    ],
+    [
+      "pages/api/python/stable/reference/lazyframe/api/polars.LazyFrame.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/api/rust/dev/polars/frame/struct.md",
+      "pages/api/rust/dev/polars/prelude/struct.md"
     ],
     [
       "pages/development/contributing.md",
@@ -584,6 +604,26 @@
     ],
     [
       "pages/home.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/home.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/home.md",
+      "pages/api/python/stable/reference/lazyframe/api/polars.LazyFrame.md"
+    ],
+    [
+      "pages/home.md",
+      "pages/api/rust/dev/polars/prelude/struct.md"
+    ],
+    [
+      "pages/home.md",
+      "pages/api/rust/dev/polars_lazy/frame/struct.md"
+    ],
+    [
+      "pages/home.md",
       "pages/development/contributing.md"
     ],
     [
@@ -593,18 +633,6 @@
     [
       "pages/home.md",
       "pages/user-guide/installation.md"
-    ],
-    [
-      "pages/polars-cloud.md",
-      "pages/home.md"
-    ],
-    [
-      "pages/polars-cloud/connect-cloud.md",
-      "pages/polars-cloud/run/remote-query.md"
-    ],
-    [
-      "pages/polars-cloud/run/remote-query.md",
-      "pages/polars-cloud/connect-cloud.md"
     ],
     [
       "pages/releases/upgrade.md",
@@ -632,7 +660,15 @@
     ],
     [
       "pages/user-guide/concepts/data-types-and-structures.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/concepts/data-types-and-structures.md",
       "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/concepts/data-types-and-structures.md",
+      "pages/api/rust/dev/polars/frame/struct.md"
     ],
     [
       "pages/user-guide/concepts/data-types-and-structures.md",
@@ -656,11 +692,31 @@
     ],
     [
       "pages/user-guide/concepts/expressions-and-contexts.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/concepts/expressions-and-contexts.md",
+      "pages/api/rust/dev/polars_lazy/frame/struct.md"
+    ],
+    [
+      "pages/user-guide/concepts/expressions-and-contexts.md",
       "pages/user-guide/concepts/lazy-api.md"
     ],
     [
       "pages/user-guide/concepts/expressions-and-contexts.md",
       "pages/user-guide/expressions.md"
+    ],
+    [
+      "pages/user-guide/concepts/lazy-api.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/concepts/lazy-api.md",
+      "pages/api/python/stable/reference/lazyframe/api/polars.LazyFrame.md"
+    ],
+    [
+      "pages/user-guide/concepts/lazy-api.md",
+      "pages/api/rust/dev/polars/prelude/struct.md"
     ],
     [
       "pages/user-guide/concepts/lazy-api.md",
@@ -676,7 +732,19 @@
     ],
     [
       "pages/user-guide/concepts/streaming.md",
+      "pages/api/python/stable/reference/lazyframe/api/polars.LazyFrame.md"
+    ],
+    [
+      "pages/user-guide/concepts/streaming.md",
+      "pages/api/rust/dev/polars/prelude/struct.md"
+    ],
+    [
+      "pages/user-guide/concepts/streaming.md",
       "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/ecosystem.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
     ],
     [
       "pages/user-guide/ecosystem.md",
@@ -748,7 +816,19 @@
     ],
     [
       "pages/user-guide/expressions/aggregation.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/expressions/aggregation.md",
       "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/expressions/aggregation.md",
+      "pages/api/rust/dev/polars/frame/struct.md"
+    ],
+    [
+      "pages/user-guide/expressions/aggregation.md",
+      "pages/api/rust/dev/polars_lazy/frame/struct.md"
     ],
     [
       "pages/user-guide/expressions/aggregation.md",
@@ -768,11 +848,19 @@
     ],
     [
       "pages/user-guide/expressions/basic-operations.md",
+      "pages/api/rust/dev/polars/frame/struct.md"
+    ],
+    [
+      "pages/user-guide/expressions/basic-operations.md",
       "pages/user-guide/expressions/structs.md"
     ],
     [
       "pages/user-guide/expressions/basic-operations.md",
       "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/expressions/casting.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
     ],
     [
       "pages/user-guide/expressions/casting.md",
@@ -796,7 +884,15 @@
     ],
     [
       "pages/user-guide/expressions/folds.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/expressions/folds.md",
       "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/expressions/lists-and-arrays.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
     ],
     [
       "pages/user-guide/expressions/lists-and-arrays.md",
@@ -812,7 +908,15 @@
     ],
     [
       "pages/user-guide/expressions/missing-data.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/expressions/missing-data.md",
       "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/expressions/missing-data.md",
+      "pages/api/rust/dev/polars/frame/struct.md"
     ],
     [
       "pages/user-guide/expressions/missing-data.md",
@@ -840,7 +944,15 @@
     ],
     [
       "pages/user-guide/expressions/structs.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/expressions/structs.md",
       "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/expressions/structs.md",
+      "pages/api/rust/dev/polars/frame/struct.md"
     ],
     [
       "pages/user-guide/expressions/structs.md",
@@ -872,6 +984,18 @@
     ],
     [
       "pages/user-guide/expressions/window-functions.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/expressions/window-functions.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/expressions/window-functions.md",
+      "pages/api/rust/dev/polars/prelude/struct.md"
+    ],
+    [
+      "pages/user-guide/expressions/window-functions.md",
       "pages/user-guide/expressions/aggregation.md"
     ],
     [
@@ -880,7 +1004,27 @@
     ],
     [
       "pages/user-guide/getting-started.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/getting-started.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/getting-started.md",
       "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/getting-started.md",
+      "pages/api/rust/dev/polars/frame/struct.md"
+    ],
+    [
+      "pages/user-guide/getting-started.md",
+      "pages/api/rust/dev/polars/prelude/struct.md"
+    ],
+    [
+      "pages/user-guide/getting-started.md",
+      "pages/api/rust/dev/polars_lazy/frame/struct.md"
     ],
     [
       "pages/user-guide/getting-started.md",
@@ -968,7 +1112,19 @@
     ],
     [
       "pages/user-guide/io/bigquery.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/io/bigquery.md",
       "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/io/cloud-storage.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/io/cloud-storage.md",
+      "pages/api/rust/dev/polars/prelude/struct.md"
     ],
     [
       "pages/user-guide/io/cloud-storage.md",
@@ -980,6 +1136,14 @@
     ],
     [
       "pages/user-guide/io/csv.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/io/csv.md",
+      "pages/api/rust/dev/polars/prelude/struct.md"
+    ],
+    [
+      "pages/user-guide/io/csv.md",
       "pages/user-guide/concepts/lazy-api.md"
     ],
     [
@@ -988,11 +1152,51 @@
     ],
     [
       "pages/user-guide/io/database.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/io/database.md",
       "pages/home.md"
+    ],
+    [
+      "pages/user-guide/io/excel.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/io/hive.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/io/hugging-face.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/io/json.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/io/json.md",
+      "pages/api/rust/dev/polars_lazy/frame/struct.md"
     ],
     [
       "pages/user-guide/io/json.md",
       "pages/user-guide/installation.md"
+    ],
+    [
+      "pages/user-guide/io/multiple.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/io/multiple.md",
+      "pages/api/python/stable/reference/lazyframe/api/polars.LazyFrame.md"
+    ],
+    [
+      "pages/user-guide/io/parquet.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/io/parquet.md",
+      "pages/api/rust/dev/polars/prelude/struct.md"
     ],
     [
       "pages/user-guide/io/parquet.md",
@@ -1039,6 +1243,22 @@
       "pages/user-guide/lazy/using.md"
     ],
     [
+      "pages/user-guide/lazy/datatype_exprs.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/lazy/execution.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/lazy/execution.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/lazy/execution.md",
+      "pages/api/python/stable/reference/lazyframe/api/polars.LazyFrame.md"
+    ],
+    [
       "pages/user-guide/lazy/gpu.md",
       "pages/user-guide/gpu-support.md"
     ],
@@ -1049,6 +1269,26 @@
     [
       "pages/user-guide/lazy/multiplexing.md",
       "pages/user-guide/lazy/sources_sinks.md"
+    ],
+    [
+      "pages/user-guide/lazy/query-plan.md",
+      "pages/api/python/stable/reference/lazyframe/api/polars.LazyFrame.md"
+    ],
+    [
+      "pages/user-guide/lazy/schemas.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/lazy/schemas.md",
+      "pages/api/python/stable/reference/lazyframe/api/polars.LazyFrame.md"
+    ],
+    [
+      "pages/user-guide/lazy/using.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/lazy/using.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
     ],
     [
       "pages/user-guide/lazy/using.md",
@@ -1065,6 +1305,14 @@
     [
       "pages/user-guide/misc/comparison.md",
       "pages/home.md"
+    ],
+    [
+      "pages/user-guide/misc/comparison.md",
+      "pages/user-guide/migration/pandas.md"
+    ],
+    [
+      "pages/user-guide/misc/comparison.md",
+      "pages/user-guide/migration/spark.md"
     ],
     [
       "pages/user-guide/misc/multiprocessing.md",
@@ -1112,7 +1360,19 @@
     ],
     [
       "pages/user-guide/transformations/concatenation.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/transformations/concatenation.md",
       "pages/user-guide/transformations/joins.md"
+    ],
+    [
+      "pages/user-guide/transformations/joins.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/transformations/joins.md",
+      "pages/api/rust/dev/polars/prelude/struct.md"
     ],
     [
       "pages/user-guide/transformations/joins.md",
@@ -1120,7 +1380,31 @@
     ],
     [
       "pages/user-guide/transformations/pivot.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/transformations/pivot.md",
       "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/transformations/pivot.md",
+      "pages/api/rust/dev/polars/frame/struct.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/filter.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/filter.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/filter.md",
+      "pages/api/rust/dev/polars/prelude/struct.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/filter.md",
+      "pages/api/rust/dev/polars_lazy/frame/struct.md"
     ],
     [
       "pages/user-guide/transformations/time-series/filter.md",
@@ -1128,11 +1412,27 @@
     ],
     [
       "pages/user-guide/transformations/time-series/parsing.md",
+      "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/parsing.md",
+      "pages/api/rust/dev/polars/prelude/struct.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/parsing.md",
       "pages/user-guide/installation.md"
     ],
     [
       "pages/user-guide/transformations/time-series/resampling.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/resampling.md",
       "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/resampling.md",
+      "pages/api/rust/dev/polars/frame/struct.md"
     ],
     [
       "pages/user-guide/transformations/time-series/resampling.md",
@@ -1144,7 +1444,19 @@
     ],
     [
       "pages/user-guide/transformations/time-series/rolling.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/rolling.md",
       "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/rolling.md",
+      "pages/api/rust/dev/polars/frame/struct.md"
+    ],
+    [
+      "pages/user-guide/transformations/time-series/rolling.md",
+      "pages/api/rust/dev/polars_lazy/frame/struct.md"
     ],
     [
       "pages/user-guide/transformations/time-series/rolling.md",
@@ -1160,14 +1472,22 @@
     ],
     [
       "pages/user-guide/transformations/unpivot.md",
+      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/transformations/unpivot.md",
       "pages/api/python/stable/reference/dataframe/home.md"
+    ],
+    [
+      "pages/user-guide/transformations/unpivot.md",
+      "pages/api/rust/dev/polars/frame/struct.md"
     ]
   ],
   "last_sync": {
-    "synced_at": "2026-07-20T09:17:48.340957+00:00",
-    "added": 0,
-    "changed": 17,
-    "removed": 0,
+    "synced_at": "2026-07-27T09:55:25.116862+00:00",
+    "added": 6,
+    "changed": 14,
+    "removed": 6,
     "pages": 90
   }
 }

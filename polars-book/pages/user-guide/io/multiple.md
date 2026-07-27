@@ -2,7 +2,7 @@
 type: Web Page
 title: Multiple - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/multiple
-timestamp: '2026-07-20T09:17:48.329595+00:00'
+timestamp: '2026-07-27T09:55:25.099201+00:00'
 ---
 
 # Multiple
@@ -76,9 +76,9 @@ print(dataframes)
 │ ---  ┆ --- ┆ --- │
 │ str  ┆ u32 ┆ i64 │
 ╞══════╪═════╪═════╡
-│ null ┆ 1   ┆ 1   │
 │ spam ┆ 1   ┆ 3   │
 │ ham  ┆ 1   ┆ 2   │
+│ null ┆ 1   ┆ 1   │
 └──────┴─────┴─────┘, shape: (3, 3)
 ┌──────┬─────┬─────┐
 │ bar  ┆ len ┆ foo │
@@ -94,9 +94,9 @@ print(dataframes)
 │ ---  ┆ --- ┆ --- │
 │ str  ┆ u32 ┆ i64 │
 ╞══════╪═════╪═════╡
+│ ham  ┆ 1   ┆ 2   │
 │ null ┆ 1   ┆ 1   │
 │ spam ┆ 1   ┆ 3   │
-│ ham  ┆ 1   ┆ 2   │
 └──────┴─────┴─────┘, shape: (3, 3)
 ┌──────┬─────┬─────┐
 │ bar  ┆ len ┆ foo │
@@ -104,16 +104,16 @@ print(dataframes)
 │ str  ┆ u32 ┆ i64 │
 ╞══════╪═════╪═════╡
 │ spam ┆ 1   ┆ 3   │
-│ null ┆ 1   ┆ 1   │
 │ ham  ┆ 1   ┆ 2   │
+│ null ┆ 1   ┆ 1   │
 └──────┴─────┴─────┘, shape: (3, 3)
 ┌──────┬─────┬─────┐
 │ bar  ┆ len ┆ foo │
 │ ---  ┆ --- ┆ --- │
 │ str  ┆ u32 ┆ i64 │
 ╞══════╪═════╪═════╡
-│ ham  ┆ 1   ┆ 2   │
 │ spam ┆ 1   ┆ 3   │
+│ ham  ┆ 1   ┆ 2   │
 │ null ┆ 1   ┆ 1   │
 └──────┴─────┴─────┘]
 ```

@@ -2,7 +2,7 @@
 type: Web Page
 title: SELECT - Polars user guide
 resource: https://docs.pola.rs/user-guide/sql/select
-timestamp: '2026-07-13T09:31:11.337600+00:00'
+timestamp: '2026-07-27T09:55:25.099201+00:00'
 ---
 
 # SELECT
@@ -74,8 +74,8 @@ shape: (2, 2)
 │ ---         ┆ ---            │
 │ str         ┆ f64            │
 ╞═════════════╪════════════════╡
-│ Netherlands ┆ 900000.0       │
 │ USA         ┆ 3.8202e6       │
+│ Netherlands ┆ 900000.0       │
 └─────────────┴────────────────┘
 ```
 ### ORDER BY

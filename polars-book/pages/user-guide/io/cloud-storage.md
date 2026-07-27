@@ -2,7 +2,7 @@
 type: Web Page
 title: Cloud storage - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/cloud-storage
-timestamp: '2026-07-20T09:17:48.329595+00:00'
+timestamp: '2026-07-27T09:55:25.099201+00:00'
 ---
 
 # Cloud storage
@@ -38,11 +38,11 @@ df = pl.read_parquet(source)
 
 `CsvReader`[·](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.IpcReader.html)
 
-`IpcReader`[Available on feature parquet](/user-guide/installation/#feature-flags)·
+`IpcReader`[Available on feature csv](/user-guide/installation/#feature-flags)·
 
-[Available on feature csv](/user-guide/installation/#feature-flags)·
+[Available on feature ipc](/user-guide/installation/#feature-flags)·
 
-[Available on feature ipc](/user-guide/installation/#feature-flags)
+[Available on feature parquet](/user-guide/installation/#feature-flags)
 
 ```
 use aws_config::BehaviorVersion;

@@ -2,7 +2,7 @@
 type: Web Page
 title: Window functions - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/window-functions
-timestamp: '2026-07-20T09:17:48.329595+00:00'
+timestamp: '2026-07-27T09:55:25.099201+00:00'
 ---
 
 # Window functions
@@ -166,23 +166,23 @@ print(result)
 ```
 ```
 shape: (163, 3)
-┌───────────────────┬────────┬────────────┐
-│ Name              ┆ Type 1 ┆ Speed rank │
-│ ---               ┆ ---    ┆ ---        │
-│ str               ┆ enum   ┆ u32        │
-╞═══════════════════╪════════╪════════════╡
-│ Sandshrew         ┆ Ground ┆ 5          │
-│ Sandslash         ┆ Ground ┆ 3          │
-│ Diglett           ┆ Ground ┆ 2          │
-│ Dugtrio           ┆ Ground ┆ 1          │
-│ Cubone            ┆ Ground ┆ 6          │
-│ …                 ┆ …      ┆ …          │
-│ Venonat           ┆ Bug    ┆ 8          │
-│ Venomoth          ┆ Bug    ┆ 3          │
-│ Scyther           ┆ Bug    ┆ 2          │
-│ Pinsir            ┆ Bug    ┆ 4          │
-│ PinsirMega Pinsir ┆ Bug    ┆ 2          │
-└───────────────────┴────────┴────────────┘
+┌───────────┬────────┬────────────┐
+│ Name      ┆ Type 1 ┆ Speed rank │
+│ ---       ┆ ---    ┆ ---        │
+│ str       ┆ enum   ┆ u32        │
+╞═══════════╪════════╪════════════╡
+│ Dratini   ┆ Dragon ┆ 3          │
+│ Dragonair ┆ Dragon ┆ 2          │
+│ Dragonite ┆ Dragon ┆ 1          │
+│ Squirtle  ┆ Water  ┆ 18         │
+│ Wartortle ┆ Water  ┆ 14         │
+│ …         ┆ …      ┆ …          │
+│ Ponyta    ┆ Fire   ┆ 5          │
+│ Rapidash  ┆ Fire   ┆ 1          │
+│ Magmar    ┆ Fire   ┆ 4          │
+│ Flareon   ┆ Fire   ┆ 7          │
+│ Moltres   ┆ Fire   ┆ 5          │
+└───────────┴────────┴────────────┘
 ```
 This shows that, usually, `group_by` and `over` produce results of different shapes:
 
