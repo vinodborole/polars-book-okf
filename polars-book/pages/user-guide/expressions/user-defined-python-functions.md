@@ -2,7 +2,7 @@
 type: Web Page
 title: User-defined Python functions - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/user-defined-python-functions
-timestamp: '2026-07-27T09:55:25.099201+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # User-defined Python functions
@@ -15,8 +15,10 @@ Polars expressions are quite powerful and flexible, so there is much less need f
 
 In this part of the documentation we'll be using two APIs that allows you to do this:
 
-- `map_elements`- `Series`.
-- `map_batches`- `Series`to the function.
+-  [`map_elements`](https://docs.pola.rs/py-polars/html/reference/expressions/api/polars.Expr.map_elements.html) :
+  Call a function separately on each value in the`Series` .
+-  [`map_batches`](https://docs.pola.rs/py-polars/html/reference/expressions/api/polars.Expr.map_batches.html) :
+  Always passes the full`Series` to the function.
 
 ## Processing individual values with `map_elements()`
 
@@ -77,8 +79,10 @@ shape: (4, 1)
 ```
 While this works, `map_elements()` has two problems:
 
-- **Limited to individual items:**Often you'll want to have a calculation that needs to operate on the whole- `Series`, rather than individual items one by one.
-- **Performance overhead:**Even if you do want to process each item individually, calling a function for each individual item is slow; all those extra function calls add a lot of overhead.
+1. **Limited to individual items:** Often you'll want to have a calculation that needs to operate on
+   the whole`Series` , rather than individual items one by one.
+2. **Performance overhead:** Even if you do want to process each item individually, calling a
+   function for each individual item is slow; all those extra function calls add a lot of overhead.
 
 Let's start by solving the first problem, and then we'll see how to solve the second problem.
 
@@ -183,7 +187,7 @@ you to write custom functions in (a subset) of Python while still getting the be
 code.
 
 In particular, Numba provides a decorator called
-[ @guvectorize](https://numba.readthedocs.io/en/stable/user/vectorize.html#the-guvectorize-decorator).
+[`@guvectorize`](https://numba.readthedocs.io/en/stable/user/vectorize.html#the-guvectorize-decorator).
 This creates a generalized ufunc by compiling a Python function to fast machine code, in a way that
 allows it to be used by Polars.
 
@@ -305,7 +309,7 @@ shape: (3, 1)
 
 Passing the full `Series` to the user-defined function has a cost: it may use a lot of memory, as
 its contents are copied into a NumPy array. You can use the `is_elementwise=True` argument to
-[  map_batches](https://docs.pola.rs/py-polars/html/reference/expressions/api/polars.Expr.map_batches.html)
+ [`map_batches`](https://docs.pola.rs/py-polars/html/reference/expressions/api/polars.Expr.map_batches.html)
 to stream results into the function, which means it might not get all values at once.
 
 Note
@@ -323,24 +327,24 @@ for the first non-null value. That value will then be used to determine the type
 
 The mapping of Python types to Polars data types is as follows:
 
-- `int`->- `Int64`
-- `float`->- `Float64`
-- `bool`->- `Boolean`
-- `str`->- `String`
-- `list[tp]`->- `List[tp]`(where the inner type is inferred with the same rules)
-- `dict[str, [tp]]`->- `struct`
-- `Any`->- `object`(Prevent this at all times)
+- `int` ->`Int64`
+- `float` ->`Float64`
+- `bool` ->`Boolean`
+- `str` ->`String`
+- `list[tp]` ->`List[tp]` (where the inner type is inferred with the same rules)
+- `dict[str, [tp]]` ->`struct`
+- `Any` ->`object` (Prevent this at all times)
 
 Rust types map as follows:
 
-- `i32`or- `i64`->- `Int64`
-- `f32`or- `f64`->- `Float64`
-- `bool`->- `Boolean`
-- `String`or- `str`->- `String`
-- `Vec<tp>`->- `List[tp]`(where the inner type is inferred with the same rules)
+- `i32` or`i64` ->`Int64`
+- `f32` or`f64` ->`Float64`
+- `bool` ->`Boolean`
+- `String` or`str` ->`String`
+- `Vec<tp>` ->`List[tp]` (where the inner type is inferred with the same rules)
 
 You can pass a `return_dtype` argument to
-[  map_batches](https://docs.pola.rs/py-polars/html/reference/expressions/api/polars.Expr.map_batches.html)
+ [`map_batches`](https://docs.pola.rs/py-polars/html/reference/expressions/api/polars.Expr.map_batches.html)
 if you want to override the inferred type.
 
 # Citations

@@ -2,7 +2,7 @@
 type: Web Page
 title: IDE configuration - Polars user guide
 resource: https://docs.pola.rs/development/contributing/ide
-timestamp: '2026-07-20T09:17:48.329595+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # IDE configuration
@@ -61,7 +61,7 @@ See the
 [official VSCode documentation](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations)
 for more information about the `launch.json` file.
 
-**launch.json**
+## **launch.json**
 
 **launch.json**
 
@@ -111,14 +111,15 @@ echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 ```
 #### Running the debugger
 
-- 
-First, compile Polars with full debug information using `make build-debug`.
-- 
-Create a Python script containing Polars code. Ensure that your virtual environment is activated. 
-- 
-Set breakpoints in any `.rs`or`.py`file.
-- 
-In the `Run and Debug`panel on the left, select`Debug Rust/Python`from the drop-down menu on top and click the`Start Debugging`button.
+1. 
+First, compile Polars with full debug information using `make build-debug` .
+2. 
+Create a Python script containing Polars code. Ensure that your virtual environment is activated.
+3. 
+Set breakpoints in any `.rs` or`.py` file.
+4. 
+In the `Run and Debug` panel on the left, select`Debug Rust/Python` from the drop-down menu on
+   top and click the`Start Debugging` button.
 
 At this point, your debugger should stop on breakpoints in any `.rs` file located within the
 codebase.

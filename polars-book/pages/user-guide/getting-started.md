@@ -2,7 +2,7 @@
 type: Web Page
 title: Getting started - Polars user guide
 resource: https://docs.pola.rs/user-guide/getting-started
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Getting started
@@ -84,11 +84,7 @@ df.write_csv("docs/assets/data/output.csv")
 df_csv = pl.read_csv("docs/assets/data/output.csv", try_parse_dates=True)
 print(df_csv)
 ```
-[   CsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvWriter.html)
-
-`CsvWriter`[Available on feature csv](/user-guide/installation/#feature-flags)
+  [`CsvReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·  [`CsvWriter`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvWriter.html) ·  [Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 use std::fs::File;
@@ -145,18 +141,14 @@ Below, we will show examples of Polars expressions inside different contexts:
 For a more
 [detailed exploration of expressions and contexts see the respective user guide section](../concepts/expressions-and-contexts/).
 
-`select`
+### `select`
 
 The context `select` allows you to select and manipulate columns from a dataframe. In the simplest
 case, each expression you provide will map to a column in the result dataframe:
 
-[   select](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.select.html) ·
+  [`select`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.select.html) ·  [`alias`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.alias.html) ·  [`dt namespace`](https://docs.pola.rs/api/python/stable/reference/expressions/temporal.html)
 
-[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.alias.html)
-
-`alias`
-
-`dt namespace````
+```
 result = df.select(
     pl.col("name"),
     pl.col("birthdate").dt.year().alias("birth_year"),
@@ -164,13 +156,7 @@ result = df.select(
 )
 print(result)
 ```
-[   select](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.select) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.alias)
-
-`alias`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html)
-
-`dt namespace`[Available on feature temporal](/user-guide/installation/#feature-flags)
+  [`select`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.select) ·  [`alias`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.alias) ·  [`dt namespace`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html) ·  [Available on feature temporal](/user-guide/installation/#feature-flags)
 
 ```
 let result = df
@@ -202,26 +188,16 @@ shorthand for multiple expressions. In the example below, we use expression expa
 the columns “weight” and “height” with a single expression. When using expression expansion you can
 use `.name.suffix` to add a suffix to the names of the original columns:
 
-[   select](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.select.html) ·
+  [`select`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.select.html) ·  [`alias`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.alias.html) ·  [`name namespace`](https://docs.pola.rs/api/python/stable/reference/expressions/name.html)
 
-[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.alias.html)
-
-`alias`
-
-`name namespace````
+```
 result = df.select(
     pl.col("name"),
     (pl.col("weight", "height") * 0.95).round(2).name.suffix("-5%"),
 )
 print(result)
 ```
-[   select](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.select) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.alias)
-
-`alias`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/struct.ExprNameNameSpace.html)
-
-`name namespace`[Available on feature lazy](/user-guide/installation/#feature-flags)
+  [`select`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.select) ·  [`alias`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.alias) ·  [`name namespace`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/struct.ExprNameNameSpace.html) ·  [Available on feature lazy](/user-guide/installation/#feature-flags)
 
 ```
 let result = df
@@ -254,7 +230,7 @@ You can check other sections of the user guide to learn more about
 [basic operations](../expressions/basic-operations/) or
 [column selections in expression expansion](../expressions/expression-expansion/).
 
-`with_columns`
+### `with_columns`
 
 The context `with_columns` is very similar to the context `select` but `with_columns` adds columns
 to the dataframe instead of selecting them. Notice how the resulting dataframe contains the four
@@ -296,7 +272,7 @@ In the example above we also decided to use named expressions instead of the met
 specify the names of the new columns. Other contexts like `select` and `group_by` also accept named
 expressions.
 
-`filter`
+### `filter`
 
 The context `filter` allows us to create a second dataframe with a subset of the rows of the
 original one:
@@ -305,11 +281,7 @@ original one:
 result = df.filter(pl.col("birthdate").dt.year() < 1990)
 print(result)
 ```
-[   filter](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.filter) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html)
-
-`dt namespace`[Available on feature temporal](/user-guide/installation/#feature-flags)
+  [`filter`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.filter) ·  [`dt namespace`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html) ·  [Available on feature temporal](/user-guide/installation/#feature-flags)
 
 ```
 let result = df
@@ -341,11 +313,7 @@ result = df.filter(
 )
 print(result)
 ```
-[   filter](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.filter) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars/prelude/enum.Expr.html#method.is_between)
-
-`is_between`[Available on feature is_between](/user-guide/installation/#feature-flags)
+  [`filter`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.filter) ·  [`is_between`](https://docs.pola.rs/api/rust/dev/polars/prelude/enum.Expr.html#method.is_between) ·  [Available on feature is_between](/user-guide/installation/#feature-flags)
 
 ```
 let result = df
@@ -373,32 +341,22 @@ shape: (1, 4)
 │ Ben Brown ┆ 1985-02-15 ┆ 72.5   ┆ 1.77   │
 └───────────┴────────────┴────────┴────────┘
 ```
-`group_by`
+### `group_by`
 
 The context `group_by` can be used to group together the rows of the dataframe that share the same
 value across one or more expressions. The example below counts how many people were born in each
 decade:
 
-[   group_by](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.group_by.html) ·
+  [`group_by`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.group_by.html) ·  [`alias`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.alias.html) ·  [`dt namespace`](https://docs.pola.rs/api/python/stable/reference/expressions/temporal.html)
 
-[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.alias.html)
-
-`alias`
-
-`dt namespace````
+```
 result = df.group_by(
     (pl.col("birthdate").dt.year() // 10 * 10).alias("decade"),
     maintain_order=True,
 ).len()
 print(result)
 ```
-[   group_by](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.alias)
-
-`alias`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html)
-
-`dt namespace`[Available on feature temporal](/user-guide/installation/#feature-flags)
+  [`group_by`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by) ·  [`alias`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.alias) ·  [`dt namespace`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html) ·  [Available on feature temporal](/user-guide/installation/#feature-flags)
 
 ```
 // Use `group_by_stable` if you want the Python behaviour of `maintain_order=True`.
@@ -470,19 +428,9 @@ shape: (2, 4)
 
 Contexts and the expressions within can be chained to create more complex queries according to your needs. In the example below we combine some of the contexts we have seen so far to create a more complex query:
 
-[   group_by](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.group_by.html) ·
+  [`group_by`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.group_by.html) ·  [`agg`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.dataframe.group_by.GroupBy.agg.html) ·  [`select`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.select.html) ·  [`with_columns`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.with_columns.html) ·  [`str namespace`](https://docs.pola.rs/api/python/stable/reference/expressions/string.html) ·  [`list namespace`](https://docs.pola.rs/api/python/stable/reference/expressions/list.html)
 
-[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.dataframe.group_by.GroupBy.agg.html)
-
-`agg`[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.select.html)
-
-`select`[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.with_columns.html)
-
-`with_columns`[·](https://docs.pola.rs/api/python/stable/reference/expressions/string.html)
-
-`str namespace`
-
-`list namespace````
+```
 result = (
     df.with_columns(
         (pl.col("birthdate").dt.year() // 10 * 10).alias("decade"),
@@ -502,19 +450,7 @@ result = (
 )
 print(result)
 ```
-[   group_by](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by) ·
-
-[·](https://docs.rs/polars/latest/polars/prelude/struct.LazyGroupBy.html#method.agg)
-
-`agg`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.select)
-
-`select`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.with_columns)
-
-`with_columns`[·](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.StringNameSpaceImpl.html)
-
-`str namespace`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/struct.ListNameSpace.html)
-
-`list namespace`[Available on feature strings](/user-guide/installation/#feature-flags)
+  [`group_by`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by) ·  [`agg`](https://docs.rs/polars/latest/polars/prelude/struct.LazyGroupBy.html#method.agg) ·  [`select`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.select) ·  [`with_columns`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.with_columns) ·  [`str namespace`](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.StringNameSpaceImpl.html) ·  [`list namespace`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/struct.ListNameSpace.html) ·  [Available on feature strings](/user-guide/installation/#feature-flags)
 
 ```
 let result = df

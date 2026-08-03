@@ -2,7 +2,7 @@
 type: Web Page
 title: Introduction - Polars user guide
 resource: https://docs.pola.rs/user-guide/sql/intro
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Introduction
@@ -20,17 +20,17 @@ There is no separate SQL engine because Polars translates SQL queries into [expr
 ## Context
 
 Polars uses the `SQLContext` object to manage SQL queries. The context contains a mapping of
-`DataFrame` and `LazyFrame` identifier names to their corresponding datasets 1. The example below
-starts a 
+`DataFrame` and `LazyFrame` identifier names to their corresponding datasets<sup>[1](#fn:1)</sup>. The example below
+starts a `SQLContext`:
 
-`SQLContext`:```
+```
 ctx = pl.SQLContext()
 ```
 ## Register Dataframes
 
 There are several ways to register DataFrames during `SQLContext` initialization.
 
-- register all `LazyFrame`and`DataFrame`objects in the global namespace.
+- register all `LazyFrame` and`DataFrame` objects in the global namespace.
 - register explicitly via a dictionary mapping, or kwargs.
 
 ```
@@ -66,8 +66,10 @@ Dataframes with:
 
 SQL queries are always executed in lazy mode to take advantage of the full set of query planning optimizations, so we have two options to collect the result:
 
-- Set the parameter `eager_execution`to True in`SQLContext`; this ensures that Polars automatically collects the LazyFrame results from`execute`calls.
-- Set the parameter `eager`to True when executing a query with`execute`, or explicitly collect the result using`collect`.
+- Set the parameter `eager_execution` to True in`SQLContext` ; this ensures that Polars
+  automatically collects the LazyFrame results from`execute` calls.
+- Set the parameter `eager` to True when executing a query with`execute` , or explicitly collect the
+  result using`collect` .
 
 We execute SQL queries by calling `execute` on a `SQLContext`.
 
@@ -146,8 +148,8 @@ Where possible, Polars aims to follow PostgreSQL syntax definitions and function
 
 For example, here is a non-exhaustive list of some of the supported functionality:
 
-- Write a `CREATE`statements:`CREATE TABLE xxx AS ...`
-- Write a `SELECT`statements containing:`WHERE`,`ORDER`,`LIMIT`,`GROUP BY`,`UNION`and`JOIN`clauses ...
+- Write a `CREATE` statements:`CREATE TABLE xxx AS ...`
+- Write a `SELECT` statements containing:`WHERE` ,`ORDER` ,`LIMIT` ,`GROUP BY` ,`UNION` and`JOIN` clauses ...
 - Write Common Table Expressions (CTE's) such as: `WITH tablename AS`
 - Explain a query: `EXPLAIN SELECT ...`
 - List registered tables: `SHOW TABLES`
@@ -156,13 +158,13 @@ For example, here is a non-exhaustive list of some of the supported functionalit
 
 The following are some features that are not yet supported:
 
-- `INSERT`,- `UPDATE`or- `DELETE`statements
+- `INSERT` ,`UPDATE` or`DELETE` statements
 - Meta queries such as `ANALYZE`
 
 In the upcoming sections we will cover each of the statements in more detail.
 
-- 
-Additionally it also tracks the [common table expressions](../cte/)as well.[↩](#fnref:1)
+1. 
+Additionally it also tracks the [common table expressions](../cte/) as well.[↩](#fnref:1)
 
 # Citations
 

@@ -2,7 +2,7 @@
 type: Web Page
 title: Schema - Polars user guide
 resource: https://docs.pola.rs/user-guide/lazy/schemas
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Schema
@@ -62,30 +62,24 @@ names cannot be known in advance a `.pivot` is not available in the lazy API.
 If your pipeline includes an operation that is not available in the lazy API it is normally best to:
 
 - run the pipeline in lazy mode up until that point
-- execute the pipeline with `.collect`to materialize a`DataFrame`
+- execute the pipeline with `.collect` to materialize a`DataFrame`
 - do the non-lazy operation on the `DataFrame`
-- convert the output back to a `LazyFrame`with`.lazy`and continue in lazy mode
+- convert the output back to a `LazyFrame` with`.lazy` and continue in lazy mode
 
 We show how to deal with a non-lazy operation in this example where we:
 
 - create a simple `DataFrame`
-- convert it to a `LazyFrame`with`.lazy`
+- convert it to a `LazyFrame` with`.lazy`
 - do a transformation using `.with_columns`
-- execute the query before the pivot with `.collect`to get a`DataFrame`
-- do the `.pivot`on the`DataFrame`
+- execute the query before the pivot with `.collect` to get a`DataFrame`
+- do the `.pivot` on the`DataFrame`
 - convert back in lazy mode
 - do a `.filter`
-- finish by executing the query with `.collect`to get a`DataFrame`
+- finish by executing the query with `.collect` to get a`DataFrame`
 
-[   collect](https://docs.pola.rs/api/python/stable/reference/lazyframe/api/polars.LazyFrame.collect.html) ·
+  [`collect`](https://docs.pola.rs/api/python/stable/reference/lazyframe/api/polars.LazyFrame.collect.html) ·  [`lazy`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.lazy.html) ·  [`pivot`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.pivot.html) ·  [`filter`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.filter.html)
 
-[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.lazy.html)
-
-`lazy`[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.pivot.html)
-
-`pivot`
-
-`filter````
+```
 lazy_eager_query = (
     pl.LazyFrame(
         {

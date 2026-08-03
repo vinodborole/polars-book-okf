@@ -2,7 +2,7 @@
 type: Web Page
 title: Arrow producer/consumer - Polars user guide
 resource: https://docs.pola.rs/user-guide/misc/arrow
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Arrow producer/consumer
@@ -162,8 +162,8 @@ Polars can also consume and export to and import from the
 recommended for libraries that don't support the Arrow PyCapsule Interface and want to interop with
 Polars without requiring a pyarrow installation.
 
-- To export `ArrowArray`C structs, Polars exposes:`Series._export_arrow_to_c`.
-- To import an `ArrowArray`C struct, Polars exposes`Series._import_arrow_from_c`.
+- To export `ArrowArray` C structs, Polars exposes:`Series._export_arrow_to_c` .
+- To import an `ArrowArray` C struct, Polars exposes`Series._import_arrow_from_c` .
 
 # Citations
 

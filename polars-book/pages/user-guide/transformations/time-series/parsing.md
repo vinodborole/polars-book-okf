@@ -2,7 +2,7 @@
 type: Web Page
 title: Parsing - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/parsing
-timestamp: '2026-07-20T09:17:48.329595+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Parsing
@@ -13,10 +13,12 @@ Polars has native support for parsing time series data and doing more sophistica
 
 Polars has the following datetime datatypes:
 
-- `Date`: Date representation e.g. 2014-07-08. It is internally represented as days since UNIX epoch encoded by a 32-bit signed integer.
-- `Datetime`: Datetime representation e.g. 2014-07-08 07:00:00. It is internally represented as a 64 bit integer since the Unix epoch and can have different units such as ns, us, ms.
-- `Duration`: A time delta type that is created when subtracting- `Date/Datetime`. Similar to- `timedelta`in Python.
-- `Time`: Time representation, internally represented as nanoseconds since midnight.
+- `Date` : Date representation e.g. 2014-07-08. It is internally represented as days since UNIX epoch
+  encoded by a 32-bit signed integer.
+- `Datetime` : Datetime representation e.g. 2014-07-08 07:00:00. It is internally represented as a 64
+  bit integer since the Unix epoch and can have different units such as ns, us, ms.
+- `Duration` : A time delta type that is created when subtracting`Date/Datetime` . Similar to`timedelta` in Python.
+- `Time` : Time representation, internally represented as nanoseconds since midnight.
 
 ## Parsing dates from a file
 
@@ -27,9 +29,7 @@ is set to `True`:
 df = pl.read_csv("docs/assets/data/apple_stock.csv", try_parse_dates=True)
 print(df)
 ```
-[   CsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·
-
-[Available on feature csv](/user-guide/installation/#feature-flags)
+  [`CsvReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·  [Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 let df = CsvReadOptions::default()
@@ -76,13 +76,7 @@ df = pl.read_csv("docs/assets/data/apple_stock.csv", try_parse_dates=False)
 df = df.with_columns(pl.col("Date").str.to_date("%Y-%m-%d"))
 print(df)
 ```
-[   CsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_date)
-
-`str.replace_all`[Available on feature csv](/user-guide/installation/#feature-flags)·
-
-[Available on feature dtype-date](/user-guide/installation/#feature-flags)
+  [`CsvReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_date) ·  [Available on feature csv](/user-guide/installation/#feature-flags) ·  [Available on feature dtype-date](/user-guide/installation/#feature-flags)
 
 ```
 let df = CsvReadOptions::default()
@@ -149,11 +143,7 @@ If your data contains datetimes with mixed UTC offsets (for example due to dayli
 transitions), Polars parses them in UTC. You can either pass a target `time_zone` to
 `str.to_datetime`, or call `str.convert_time_zone` after parsing:
 
-[   str.to_datetime](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.to_datetime.html) ·
-
-[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.dt.convert_time_zone.html)
-
-`dt.convert_time_zone`[Available on feature timezone](/user-guide/installation/#feature-flags)
+  [`str.to_datetime`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.to_datetime.html) ·  [`dt.convert_time_zone`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.dt.convert_time_zone.html) ·  [Available on feature timezone](/user-guide/installation/#feature-flags)
 
 ```
 data = [
@@ -169,13 +159,7 @@ mixed_parsed = (
 )
 print(mixed_parsed)
 ```
-[   str.replace_all](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_datetime) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.convert_time_zone)
-
-`dt.convert_time_zone`[Available on feature dtype-datetime](/user-guide/installation/#feature-flags)·
-
-[Available on feature timezones](/user-guide/installation/#feature-flags)
+  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_datetime) ·  [`dt.convert_time_zone`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.convert_time_zone) ·  [Available on feature timezones](/user-guide/installation/#feature-flags) ·  [Available on feature dtype-datetime](/user-guide/installation/#feature-flags)
 
 ```
 let data = [

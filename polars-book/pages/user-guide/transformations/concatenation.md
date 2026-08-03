@@ -2,16 +2,19 @@
 type: Web Page
 title: Concatenation - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/concatenation
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Concatenation
 
 There are a number of ways to concatenate data from separate DataFrames:
 
-- two dataframes with **the same columns**can be**vertically**concatenated to make a**longer**dataframe
-- two dataframes with **non-overlapping columns**can be**horizontally**concatenated to make a**wider**dataframe
-- two dataframes with **different numbers of rows and columns**can be**diagonally**concatenated to make a dataframe which might be longer and/ or wider. Where column names overlap values will be vertically concatenated. Where column names do not overlap new rows and columns will be added. Missing values will be set as`null`
+- two dataframes with **the same columns** can be**vertically** concatenated to make a**longer** dataframe
+- two dataframes with **non-overlapping columns** can be**horizontally** concatenated to make a**wider** dataframe
+- two dataframes with **different numbers of rows and columns** can be**diagonally** concatenated
+  to make a dataframe which might be longer and/ or wider. Where column names overlap values will be
+  vertically concatenated. Where column names do not overlap new rows and columns will be added.
+  Missing values will be set as`null`
 
 ## Vertical concatenation - getting longer
 

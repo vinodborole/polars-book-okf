@@ -2,7 +2,7 @@
 type: Web Page
 title: Window functions - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/window-functions
-timestamp: '2026-07-27T09:55:25.099201+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Window functions
@@ -25,9 +25,7 @@ pokemon = pl.read_csv(
 ).cast({"Type 1": type_enum, "Type 2": type_enum})
 print(pokemon.head())
 ```
-[   CsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·
-
-[Available on feature csv](/user-guide/installation/#feature-flags)
+  [`CsvReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·  [Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 use polars::prelude::*;
@@ -166,28 +164,29 @@ print(result)
 ```
 ```
 shape: (163, 3)
-┌───────────┬────────┬────────────┐
-│ Name      ┆ Type 1 ┆ Speed rank │
-│ ---       ┆ ---    ┆ ---        │
-│ str       ┆ enum   ┆ u32        │
-╞═══════════╪════════╪════════════╡
-│ Dratini   ┆ Dragon ┆ 3          │
-│ Dragonair ┆ Dragon ┆ 2          │
-│ Dragonite ┆ Dragon ┆ 1          │
-│ Squirtle  ┆ Water  ┆ 18         │
-│ Wartortle ┆ Water  ┆ 14         │
-│ …         ┆ …      ┆ …          │
-│ Ponyta    ┆ Fire   ┆ 5          │
-│ Rapidash  ┆ Fire   ┆ 1          │
-│ Magmar    ┆ Fire   ┆ 4          │
-│ Flareon   ┆ Fire   ┆ 7          │
-│ Moltres   ┆ Fire   ┆ 5          │
-└───────────┴────────┴────────────┘
+┌───────────────────────┬────────┬────────────┐
+│ Name                  ┆ Type 1 ┆ Speed rank │
+│ ---                   ┆ ---    ┆ ---        │
+│ str                   ┆ enum   ┆ u32        │
+╞═══════════════════════╪════════╪════════════╡
+│ Sandshrew             ┆ Ground ┆ 5          │
+│ Sandslash             ┆ Ground ┆ 3          │
+│ Diglett               ┆ Ground ┆ 2          │
+│ Dugtrio               ┆ Ground ┆ 1          │
+│ Cubone                ┆ Ground ┆ 6          │
+│ …                     ┆ …      ┆ …          │
+│ GyaradosMega Gyarados ┆ Water  ┆ 5          │
+│ Lapras                ┆ Water  ┆ 13         │
+│ Vaporeon              ┆ Water  ┆ 11         │
+│ Clefairy              ┆ Fairy  ┆ 2          │
+│ Clefable              ┆ Fairy  ┆ 1          │
+└───────────────────────┴────────┴────────────┘
 ```
 This shows that, usually, `group_by` and `over` produce results of different shapes:
 
-- `group_by`usually produces a resulting dataframe with as many rows as groups used for aggregating; and
-- `over`usually produces a dataframe with the same number of rows as the original.
+- `group_by` usually produces a resulting dataframe with as many rows as groups used for
+  aggregating; and
+- `over` usually produces a dataframe with the same number of rows as the original.
 
 The function `over` does not always produce results with the same number of rows as the original
 dataframe, and that is what we explore next.
@@ -197,7 +196,7 @@ dataframe, and that is what we explore next.
 The function `over` accepts a parameter `mapping_strategy` that determines how the results of the
 expression over the group are mapped back to the rows of the dataframe.
 
-`group_to_rows`
+### `group_to_rows`
 
 The default behaviour is `"group_to_rows"`: the result of the expression over the group should be
 the same length as the group and the results are mapped back to the rows of that group.
@@ -241,7 +240,7 @@ shape: (6, 3)
 ```
 The diagram below represents this transformation:
 
-`explode`
+### `explode`
 
 If we set the parameter `mapping_strategy` to `"explode"`, then athletes of the same country are
 grouped together, but the final order of the rows – with respect to the countries – will not be the
@@ -267,7 +266,7 @@ shape: (6, 3)
 │ C       ┆ NL      ┆ 5    │
 └─────────┴─────────┴──────┘
 ```
-`join`
+### `join`
 
 Another possible value for the parameter `mapping_strategy` is `"join"`, which aggregates the
 resulting values in a list and repeats the list over all rows of the same group:
@@ -339,10 +338,10 @@ shape: (163, 4)
 For more exercises, below are some window functions for us to compute:
 
 - sort all Pokémon by type;
-- select the first `3`Pokémon per type as`"Type 1"`;
-- sort the Pokémon within a type by speed in descending order and select the first `3`as`"fastest/group"`;
-- sort the Pokémon within a type by attack in descending order and select the first `3`as`"strongest/group"`; and
-- sort the Pokémon within a type by name and select the first `3`as`"sorted_by_alphabet"`.
+- select the first `3` Pokémon per type as`"Type 1"` ;
+- sort the Pokémon within a type by speed in descending order and select the first `3` as`"fastest/group"` ;
+- sort the Pokémon within a type by attack in descending order and select the first `3` as`"strongest/group"` ; and
+- sort the Pokémon within a type by name and select the first `3` as`"sorted_by_alphabet"` .
 
 ```
 result = pokemon.sort("Type 1").select(

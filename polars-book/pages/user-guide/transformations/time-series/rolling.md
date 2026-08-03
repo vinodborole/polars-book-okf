@@ -2,7 +2,7 @@
 type: Web Page
 title: Grouping - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/rolling
-timestamp: '2026-07-27T09:55:25.099201+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Grouping
@@ -60,17 +60,15 @@ The dates are sorted in ascending order - if they are not sorted in this way the
 
 To get the annual average closing price we tell `group_by_dynamic` that we want to:
 
-- group by the `Date`column on an annual (`1y`) basis
-- take the mean values of the `Close`column for each year:
+- group by the `Date` column on an annual (`1y` ) basis
+- take the mean values of the `Close` column for each year:
 
 ```
 annual_average_df = df.group_by_dynamic("Date", every="1y").agg(pl.col("Close").mean())
 df_with_year = annual_average_df.with_columns(pl.col("Date").dt.year().alias("year"))
 print(df_with_year)
 ```
-[   group_by_dynamic](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by_dynamic) ·
-
-[Available on feature dynamic_group_by](/user-guide/installation/#feature-flags)
+  [`group_by_dynamic`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by_dynamic) ·  [Available on feature dynamic_group_by](/user-guide/installation/#feature-flags)
 
 ```
 let annual_average_df = df
@@ -119,15 +117,15 @@ shape: (34, 3)
 
 A dynamic window is defined by a:
 
-- **every**: indicates the interval of the window
-- **period**: indicates the duration of the window
-- **offset**: can be used to offset the start of the windows
+- **every** : indicates the interval of the window
+- **period** : indicates the duration of the window
+- **offset** : can be used to offset the start of the windows
 
 The value for `every` sets how often the groups start. The time period values are flexible - for
 example we could take:
 
-- the average over 2 year intervals by replacing `1y`with`2y`
-- the average over 18 month periods by replacing `1y`with`1y6mo`
+- the average over 2 year intervals by replacing `1y` with`2y`
+- the average over 18 month periods by replacing `1y` with`1y6mo`
 
 We can also use the `period` parameter to set how long the time period for each group is. For
 example, if we set the `every` parameter to be `1y` and the `period` parameter to be `2y` then we
@@ -136,11 +134,10 @@ would get groups at one year intervals where each groups spanned two years.
 If the `period` parameter is not specified then it is set equal to the `every` parameter so that if
 the `every` parameter is set to be `1y` then each group spans `1y` as well.
 
-Because * every* does not have to be equal to 
+Because ***every*** does not have to be equal to ***period***, we can create many groups in a very
+flexible way. They may overlap or leave boundaries between them.
 
-*, we can create many groups in a very flexible way. They may overlap or leave boundaries between them.*
-
-**period**Let's see how the windows for some parameter combinations would look. Let's start out boring. 🥱
+Let's see how the windows for some parameter combinations would look. Let's start out boring. 🥱
 
 - every: 1 day -> `"1d"`
 - period: 1 day -> `"1d"`
@@ -170,7 +167,7 @@ data points that in these gaps will not be a member of any group
        |--|
               |--|
 ```
-`truncate`
+#### `truncate`
 
 The `truncate` parameter is a Boolean variable that determines what datetime value is associated
 with each group in the output. In the example above the first data point is on 23rd February 1981.
@@ -196,13 +193,9 @@ Below we show an example where we use **group_by_dynamic** to compute:
 - the number of days until the end of the month
 - the number of days in a month
 
-[   group_by_dynamic](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.group_by_dynamic.html) ·
+  [`group_by_dynamic`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.group_by_dynamic.html) ·  [`DataFrame.explode`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.explode.html) ·  [`date_range`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.date_range.html)
 
-[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.explode.html)
-
-`DataFrame.explode`
-
-`date_range````
+```
 df = (
     pl.date_range(
         start=date(2021, 1, 1),
@@ -221,18 +214,6 @@ out = df.group_by_dynamic("time", every="1mo", period="1mo", closed="left").agg(
 )
 print(out)
 ```
-[   group_by_dynamic](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by_dynamic) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html#method.explode)
-
-`DataFrame.explode`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/functions/fn.date_range.html)
-
-`date_range`[Available on feature range](/user-guide/installation/#feature-flags)·
-
-[Available on feature dtype-date](/user-guide/installation/#feature-flags)·
-
-[Available on feature dynamic_group_by](/user-guide/installation/#feature-flags)
-
 ```
 let time = polars::time::date_range(
     "time".into(),
@@ -396,9 +377,7 @@ out = df.group_by_dynamic(
 ).agg(pl.len())
 print(out)
 ```
-[   group_by_dynamic](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by_dynamic) ·
-
-[Available on feature dynamic_group_by](/user-guide/installation/#feature-flags)
+  [`group_by_dynamic`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by_dynamic) ·  [Available on feature dynamic_group_by](/user-guide/installation/#feature-flags)
 
 ```
 let out = df

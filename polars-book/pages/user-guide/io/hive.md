@@ -2,7 +2,7 @@
 type: Web Page
 title: Hive - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/hive
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Hive
@@ -177,9 +177,7 @@ shape: (6, 3)
 ```
 ## Writing hive partitioned data
 
-Note: The following functionality is considered
-
-unstable, and is subject to change.
+Note: The following functionality is considered *unstable*, and is subject to change.
 
 Polars supports writing hive partitioned parquet datasets, with planned support for other formats.
 

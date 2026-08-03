@@ -2,7 +2,7 @@
 type: Web Page
 title: Databases - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/database
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Databases
@@ -45,7 +45,7 @@ libraries (known as *engines*) handle this.
 When using `pl.read_database`, you specify the engine when you create the connection object. When
 using `pl.read_database_uri`, you can specify one of two engines to read from the database:
 
-- [ConnectorX](https://github.com/sfu-db/connector-x)and
+- [ConnectorX](https://github.com/sfu-db/connector-x) and
 - [ADBC](https://arrow.apache.org/docs/format/ADBC.html)
 
 Both engines have native support for Apache Arrow and so can read data directly into a Polars
@@ -94,7 +94,7 @@ We can write to a database with Polars using the `pl.write_database` function.
 As with reading from a database above, Polars uses an *engine* to write to a database. The currently
 supported engines are:
 
-- [SQLAlchemy](https://www.sqlalchemy.org/)and
+- [SQLAlchemy](https://www.sqlalchemy.org/) and
 - Arrow Database Connectivity (ADBC)
 
 #### SQLAlchemy

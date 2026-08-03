@@ -2,7 +2,7 @@
 type: Web Page
 title: Ecosystem - Polars user guide
 resource: https://docs.pola.rs/user-guide/ecosystem
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Ecosystem
@@ -53,10 +53,10 @@ dates or strings).
 
 XGBoost and LightGBM are gradient boosting packages for doing regression or classification on
 tabular data.
-[XGBoost accepts Polars  DataFrame and LazyFrame as input](https://xgboost.readthedocs.io/en/latest/python/python_intro.html)
-while LightGBM accepts Polars 
+[XGBoost accepts Polars `DataFrame` and `LazyFrame` as input](https://xgboost.readthedocs.io/en/latest/python/python_intro.html)
+while LightGBM accepts Polars `DataFrame` as input.
 
-`DataFrame` as input.#### Time series forecasting
+#### Time series forecasting
 
 The
 [Nixtla time series forecasting packages](https://nixtlaverse.nixtla.io/statsforecast/docs/getting-started/getting_started_complete_polars.html)
@@ -70,12 +70,11 @@ Hugging Face is a platform for working with machine learning datasets and models
 #### Deep learning frameworks
 
 A `DataFrame` can be transformed
-[into a PyTorch format using  to_torch](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.to_torch.html)
+[into a PyTorch format using `to_torch`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.to_torch.html)
 or
+[into a JAX format using `to_jax`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.to_jax.html).
 
-[into a JAX format using](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.to_jax.html).
-
-`to_jax`### Other
+### Other
 
 #### DuckDB
 

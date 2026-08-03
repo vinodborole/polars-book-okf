@@ -2,7 +2,7 @@
 type: Web Page
 title: Visualization - Polars user guide
 resource: https://docs.pola.rs/user-guide/misc/visualization
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Visualization
@@ -76,9 +76,9 @@ For configuration, we suggest reading
 [Chart Configuration](https://altair-viz.github.io/altair-tutorial/notebooks/08-Configuration.html).
 For example, you can:
 
-- Change the width/height/title with `.properties(width=500, height=350, title="My amazing plot")`.
-- Change the x-axis label rotation with `.configure_axisX(labelAngle=30)`.
-- Change the opacity of the points in your scatter plot with `.configure_point(opacity=.5)`.
+- Change the width/height/title with `.properties(width=500, height=350, title="My amazing plot")` .
+- Change the x-axis label rotation with `.configure_axisX(labelAngle=30)` .
+- Change the opacity of the points in your scatter plot with `.configure_point(opacity=.5)` .
 
 ## hvPlot
 
@@ -159,8 +159,11 @@ ax.set_ylabel('Sepal Length')
 
 [Plotly](https://plotly.com/) can accept a Polars `DataFrame` by leveraging:
 
-- [Narwhals](https://narwhals-dev.github.io/narwhals/), since plotly v6.0.0, and therefore running execution natively without any conversion overhead.
-- The [dataframe interchange protocol](https://data-apis.org/dataframe-api/), before plotly v6.0.0, which offers zero-copy conversion where possible. Note that the protocol does not support all Polars data types (e.g.`List`) so your mileage may vary here.
+- [Narwhals](https://narwhals-dev.github.io/narwhals/) , since plotly v6.0.0, and therefore running
+  execution natively without any conversion overhead.
+- The [dataframe interchange protocol](https://data-apis.org/dataframe-api/) , before plotly v6.0.0,
+  which offers zero-copy conversion where possible. Note that the protocol does not support all
+  Polars data types (e.g.`List` ) so your mileage may vary here.
 
 ```
 import plotly.express as px

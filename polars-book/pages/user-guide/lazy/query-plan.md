@@ -2,7 +2,7 @@
 type: Web Page
 title: Query plan - Polars user guide
 resource: https://docs.pola.rs/user-guide/lazy/query-plan
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Query plan
@@ -33,13 +33,13 @@ To create visualizations of the query plan,
 First we visualize the non-optimized plan by setting `optimized=False`.
 
 ```
-q1.show_graph(optimized=False)
+q1.show_graph(plan_stage="ir", optimized=False)
 ```
 The query plan visualization should be read from bottom to top. In the visualization:
 
 - each box corresponds to a stage in the query plan
-- the `sigma`stands for`SELECTION`and indicates any filter conditions
-- the `pi`stands for`PROJECTION`and indicates choosing a subset of columns
+- the `sigma` stands for`SELECTION` and indicates any filter conditions
+- the `pi` stands for`PROJECTION` and indicates choosing a subset of columns
 
 ### Printed query plan
 
@@ -56,17 +56,17 @@ FILTER [(col("comment_karma")) > (0)] FROM WITH_COLUMNS:
 ```
 The printed plan should also be read from bottom to top. This non-optimized plan is roughly equal to:
 
-- read from the `data/reddit.csv`file
+- read from the `data/reddit.csv` file
 - read all 6 columns (where the * wildcard in PROJECT */6 COLUMNS means take all columns)
-- transform the `name`column to uppercase
-- apply a filter on the `comment_karma`column
+- transform the `name` column to uppercase
+- apply a filter on the `comment_karma` column
 
 ## Optimized query plan
 
 Now we visualize the optimized plan with `show_graph`.
 
 ```
-q1.show_graph()
+q1.show_graph(plan_stage="ir")
 ```
 We can also print the optimized plan with `explain`
 
@@ -83,8 +83,8 @@ q1.explain()
 The optimized plan is to:
 
 - read the data from the Reddit CSV
-- apply the filter on the `comment_karma`column while the CSV is being read line-by-line
-- transform the `name`column to uppercase
+- apply the filter on the `comment_karma` column while the CSV is being read line-by-line
+- transform the `name` column to uppercase
 
 In this case the query optimizer has identified that the `filter` can be applied while the CSV is
 read from disk rather than reading the whole file into memory and then applying the filter. This

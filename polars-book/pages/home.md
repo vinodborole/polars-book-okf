@@ -2,7 +2,7 @@
 type: Web Page
 title: Index - Polars user guide
 resource: https://docs.pola.rs/
-timestamp: '2026-07-20T09:17:48.329595+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Blazingly Fast DataFrame Library
@@ -11,14 +11,21 @@ Polars is a blazingly fast DataFrame library for manipulating structured data. T
 
 ## Key features
 
-- **Fast**: Written from scratch in Rust, designed close to the machine and without external dependencies.
-- **I/O**: First class support for all common data storage layers: local, cloud storage & databases.
-- **Intuitive API**: Write your queries the way they were intended. Polars, internally, will determine the most efficient way to execute using its query optimizer.
-- **Out of Core**: The streaming API allows you to process your results without requiring all your data to be in memory at the same time.
-- **Parallel**: Utilises the power of your machine by dividing the workload among the available CPU cores without any additional configuration.
+- **Fast** : Written from scratch in Rust, designed close to the machine and without external
+  dependencies.
+- **I/O** : First class support for all common data storage layers: local, cloud storage & databases.
+- **Intuitive API** : Write your queries the way they were intended. Polars, internally, will
+  determine the most efficient way to execute using its query optimizer.
+- **Out of Core** : The streaming API allows you to process your results without requiring all your
+  data to be in memory at the same time.
+- **Parallel** : Utilises the power of your machine by dividing the workload among the available CPU
+  cores without any additional configuration.
 - **Vectorized Query Engine**
-- **GPU Support**: Optionally run queries on NVIDIA GPUs for maximum performance for in-memory or streaming workloads.
-- [Apache Arrow support](https://arrow.apache.org/)
+- **GPU Support** : Optionally run queries on NVIDIA GPUs for maximum performance for in-memory or
+  streaming workloads.
+- **[Apache Arrow support](https://arrow.apache.org/)** : Polars can consume and produce Arrow data
+  often with zero-copy operations. Note that Polars is not built on a Pyarrow/Arrow implementation.
+  Instead, Polars has its own compute and buffer implementations.
 
 Users new to DataFrames
 
@@ -38,15 +45,9 @@ Polars is written in Rust which gives it C/C++ performance and allows it to full
 
 ## Example
 
-[   scan_csv](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_csv.html) ·
+  [`scan_csv`](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_csv.html) ·  [`filter`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.filter.html) ·  [`group_by`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.group_by.html) ·  [`collect`](https://docs.pola.rs/api/python/stable/reference/lazyframe/api/polars.LazyFrame.collect.html)
 
-[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.filter.html)
-
-`filter`[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.group_by.html)
-
-`group_by`
-
-`collect````
+```
 import polars as pl
 q = (
     pl.scan_csv("docs/assets/data/iris.csv")
@@ -56,17 +57,7 @@ q = (
 )
 df = q.collect()
 ```
-[   LazyCsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyCsvReader.html) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.filter)
-
-`filter`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by)
-
-`group_by`[·](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyFrame.html#method.collect)
-
-`collect`[Available on feature csv](/user-guide/installation/#feature-flags)·
-
-[Available on feature streaming](/user-guide/installation/#feature-flags)
+  [`LazyCsvReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyCsvReader.html) ·  [`filter`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.filter) ·  [`group_by`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by) ·  [`collect`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyFrame.html#method.collect) ·  [Available on feature csv](/user-guide/installation/#feature-flags) ·  [Available on feature streaming](/user-guide/installation/#feature-flags)
 
 ```
 use polars::prelude::*;

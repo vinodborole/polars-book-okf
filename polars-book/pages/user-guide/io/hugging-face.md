@@ -2,7 +2,7 @@
 type: Web Page
 title: Hugging Face - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/hugging-face
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Hugging Face
@@ -24,10 +24,10 @@ Hugging Face:
 To scan from Hugging Face, a `hf://` path can be passed to the scan functions. The `hf://` path
 format is defined as `hf://BUCKET/REPOSITORY@REVISION/PATH`, where:
 
-- `BUCKET`is one of- `datasets`or- `spaces`
-- `REPOSITORY`is the location of the repository, this is usually in the format of- `username/repo_name`. A branch can also be optionally specified by appending- `@branch`
-- `REVISION`is the name of the branch (or commit) to use. This is optional and defaults to- `main`if not given.
-- `PATH`is a file or directory path, or a glob pattern from the repository root.
+- `BUCKET` is one of`datasets` or`spaces`
+- `REPOSITORY` is the location of the repository, this is usually in the format of`username/repo_name` . A branch can also be optionally specified by appending`@branch`
+- `REVISION` is the name of the branch (or commit) to use. This is optional and defaults to`main` if not given.
+- `PATH` is a file or directory path, or a glob pattern from the repository root.
 
 Example `hf://` paths:
 
@@ -42,8 +42,8 @@ Example `hf://` paths:
 
 A Hugging Face API key can be passed to Polars to access private locations using either of the following methods:
 
-- Passing a `token`in`storage_options`to the scan function, e.g.`scan_parquet(..., storage_options={'token': '<your HF token>'})`
-- Setting the `HF_TOKEN`environment variable, e.g.`export HF_TOKEN=<your HF token>`
+- Passing a `token` in`storage_options` to the scan function, e.g.`scan_parquet(..., storage_options={'token': '<your HF token>'})`
+- Setting the `HF_TOKEN` environment variable, e.g.`export HF_TOKEN=<your HF token>`
 
 ### Examples
 

@@ -2,7 +2,7 @@
 type: Web Page
 title: Multiprocessing - Polars user guide
 resource: https://docs.pola.rs/user-guide/misc/multiprocessing
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Multiprocessing
@@ -43,9 +43,9 @@ Although Polars is multithreaded, other libraries may be single-threaded. When t
 The [Python multiprocessing documentation](https://docs.python.org/3/library/multiprocessing.html)
 lists the three methods to create a process pool:
 
-- spawn
-- fork
-- forkserver
+1. spawn
+2. fork
+3. forkserver
 
 The description of fork is (as of 2022-10-15):
 
@@ -166,13 +166,13 @@ not an issue for typical projects, but during quick experimentation in notebooks
 
 ## References
 
-- 
-https://docs.python.org/3/library/multiprocessing.html 
-- 
-https://pythonspeed.com/articles/python-multiprocessing/ 
-- 
-https://pubs.opengroup.org/onlinepubs/9699919799/functions/fork.html 
-- 
+1. 
+https://docs.python.org/3/library/multiprocessing.html
+2. 
+https://pythonspeed.com/articles/python-multiprocessing/
+3. 
+https://pubs.opengroup.org/onlinepubs/9699919799/functions/fork.html
+4. 
 https://bnikolic.co.uk/blog/python/parallelism/2019/11/13/python-forkserver-preload.html
 
 # Citations

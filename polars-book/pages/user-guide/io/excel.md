@@ -2,7 +2,7 @@
 type: Web Page
 title: Excel - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/excel
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Excel
@@ -13,7 +13,8 @@ Polars can read and write to Excel files from Python. From a performance perspec
 
 Polars does not have a native Excel reader. Instead, it uses an external library called an "engine" to parse Excel files into a form that Polars can parse. The available engines are:
 
-- fastexcel: This engine is based on the Rust [calamine](https://github.com/tafia/calamine)crate and is (by far) the fastest reader.
+- fastexcel: This engine is based on the Rust [calamine](https://github.com/tafia/calamine) crate
+  and is (by far) the fastest reader.
 - xlsx2csv: This reader parses the .xlsx file to an in-memory CSV that Polars then reads with its own CSV reader.
 - openpyxl: Typically slower than xls2csv, but can provide more flexibility for files that are difficult to parse.
 

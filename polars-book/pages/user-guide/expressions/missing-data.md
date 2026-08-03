@@ -2,21 +2,21 @@
 type: Web Page
 title: Missing data - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/missing-data
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Missing data
 
 This section of the user guide teaches how to work with missing data in Polars.
 
-`null` and `NaN` values
+## `null` and `NaN` values
 
 In Polars, missing data is represented by the value `null`. This missing value `null` is used for
 all data types, including numerical types.
 
 Polars also supports the value `NaN` (“Not a Number”) for columns with floating point numbers. The
 value `NaN` is considered to be a valid floating point value, which is different from missing data.
-[We discuss the value  NaN separately below](#not-a-number-or-nan-values).
+[We discuss the value `NaN` separately below](#not-a-number-or-nan-values).
 
 When creating a series or a dataframe, you can set a value to `null` by using the appropriate
 construct for your language:
@@ -65,8 +65,8 @@ The function `null_count` can be called on a dataframe, a column from a datafram
 directly. The function `null_count` is a cheap operation because the result is already known.
 
 Polars uses something called a “validity bitmap” to know which values are missing in a series. The
-validity bitmap is memory efficient as it is bit encoded. If a series has length \(n\), then its
-validity bitmap will cost \(n / 8\) bytes. The function `is_null` uses the validity bitmap to
+validity bitmap is memory efficient as it is bit encoded. If a series has length $n$, then its
+validity bitmap will cost $n / 8$ bytes. The function `is_null` uses the validity bitmap to
 efficiently report which values are `null` and which are not:
 
 ```
@@ -133,7 +133,7 @@ shape: (5, 2)
 └──────┴──────┘
 ```
 However, this is actually just a special case of the general case where
-[the function  fill_null replaces missing values with the corresponding values from the result of a Polars expression](#fill-with-a-strategy-based-on-neighbouring-values),
+[the function `fill_null` replaces missing values with the corresponding values from the result of a Polars expression](#fill-with-a-strategy-based-on-neighbouring-values),
 as seen next.
 
 ### Fill with an expression
@@ -310,8 +310,8 @@ This does not happen in Polars; instead, an exception is raised.
 `NaN` values are considered to be a type of floating point data and are **not considered to be
 missing data** in Polars. This means:
 
-- `NaN`values are- **not**counted with the function- `null_count`; and
-- `NaN`values are filled when you use the specialised function- `fill_nan`method but are- **not**filled with the function- `fill_null`.
+- `NaN` values are**not** counted with the function`null_count` ; and
+- `NaN` values are filled when you use the specialised function`fill_nan` method but are**not** filled with the function`fill_null` .
 
 Polars has the functions `is_nan` and `fill_nan`, which work in a similar way to the functions
 `is_null` and `fill_null`. Unlike with missing data, Polars does not hold any metadata regarding the

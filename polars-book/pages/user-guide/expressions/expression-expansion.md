@@ -2,7 +2,7 @@
 type: Web Page
 title: Expression expansion - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/expression-expansion
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Expression expansion
@@ -354,26 +354,16 @@ designed specifically to rename a single column.
 When it suffices to add a static prefix or a static suffix to the existing names, we can use the
 functions `prefix` and `suffix` from the namespace `name`:
 
-[   name namespace](https://docs.pola.rs/api/python/stable/reference/expressions/name.html) ·
+  [`name namespace`](https://docs.pola.rs/api/python/stable/reference/expressions/name.html) ·  [`prefix`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.name.prefix.html) ·  [`suffix`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.name.suffix.html)
 
-[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.name.prefix.html)
-
-`prefix`
-
-`suffix````
+```
 result = df.select(
     (pl.col("^year_.*$") / eur_usd_rate).name.prefix("in_eur_"),
     (pl.col("day_high", "day_low") / gbp_usd_rate).name.suffix("_gbp"),
 )
 print(result)
 ```
-[   name namespace](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/struct.ExprNameNameSpace.html) ·
-
-[·](https://docs.rs/polars/latest/polars/prelude/struct.ExprNameNameSpace.html#method.prefix)
-
-`prefix`[·](https://docs.rs/polars/latest/polars/prelude/struct.ExprNameNameSpace.html#method.suffix)
-
-`suffix`[Available on feature lazy](/user-guide/installation/#feature-flags)
+  [`name namespace`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/struct.ExprNameNameSpace.html) ·  [`prefix`](https://docs.rs/polars/latest/polars/prelude/struct.ExprNameNameSpace.html#method.prefix) ·  [`suffix`](https://docs.rs/polars/latest/polars/prelude/struct.ExprNameNameSpace.html#method.suffix) ·  [Available on feature lazy](/user-guide/installation/#feature-flags)
 
 ```
 let result = df
@@ -414,11 +404,7 @@ accepts a callable that accepts the old column names and produces the new ones:
 result = df.select(pl.all().name.map(str.upper))
 print(result)
 ```
-[   name namespace](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/struct.ExprNameNameSpace.html) ·
-
-[·](https://docs.rs/polars/latest/polars/prelude/struct.ExprNameNameSpace.html#method.map)
-
-`map`[Available on feature lazy](/user-guide/installation/#feature-flags)
+  [`name namespace`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/struct.ExprNameNameSpace.html) ·  [`map`](https://docs.rs/polars/latest/polars/prelude/struct.ExprNameNameSpace.html#method.map) ·  [Available on feature lazy](/user-guide/installation/#feature-flags)
 
 ```
 // There is also `name().to_uppercase()`, so this usage of `map` is moot.
@@ -531,8 +517,8 @@ shape: (5, 9)
 ```
 This produces the same final result and by specifying all of the expressions in one go we give Polars the opportunity to:
 
-- do a better job at optimising the query; and
-- parallelise the execution of the actual computations.
+1. do a better job at optimising the query; and
+2. parallelise the execution of the actual computations.
 
 ## More flexible column selections
 
@@ -586,7 +572,7 @@ We can combine multiple selectors using set operations and the usual Python oper
 
 | Operator | Operation | 
 |---|---|
-| `A | B` | Union | 
+| `A \| B` | Union | 
 | `A & B` | Intersection | 
 | `A - B` | Difference | 
 | `A ^ B` | Symmetric difference | 
@@ -755,15 +741,15 @@ Selectors that match based on the data type of the column:
 | `by_dtype` | Data types specified as arguments | 
 | `categorical` | `Categorical` | 
 | `date` | `Date` | 
-| `datetime` | `Datetime`, optionally filtering by time unit/zone | 
+| `datetime` | `Datetime` , optionally filtering by time unit/zone | 
 | `decimal` | `Decimal` | 
-| `duration` | `Duration`, optionally filtering by time unit | 
+| `duration` | `Duration` , optionally filtering by time unit | 
 | `float` | All float types, regardless of precision | 
 | `integer` | All integer types, signed and unsigned, regardless of precision | 
 | `numeric` | All numeric types, namely integers, floats, and `Decimal` | 
 | `signed_integer` | All signed integer types, regardless of precision | 
 | `string` | `String` | 
-| `temporal` | All temporal data types, namely `Date`,`Datetime`, and`Duration` | 
+| `temporal` | All temporal data types, namely `Date` ,`Datetime` , and`Duration` | 
 | `time` | `Time` | 
 | `unsigned_integer` | All unsigned integer types, regardless of precision | 
 
@@ -799,7 +785,7 @@ The submodule `selectors` also provides the following functions:
 
 | Function | Behaviour | 
 |---|---|
-| `as_expr`* | Convert a selector to an expression | 
+| `as_expr` * | Convert a selector to an expression | 
 | `exclude` | Selects all columns except those matching the given names, data types, or selectors | 
 | `expand_selector` | Expand selector to matching columns with respect to a specific frame or target schema | 
 | `is_selector` | Check whether the given object/expression is a selector | 

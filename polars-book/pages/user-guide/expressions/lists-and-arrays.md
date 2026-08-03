@@ -2,7 +2,7 @@
 type: Web Page
 title: Lists and arrays - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/lists-and-arrays
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Lists and arrays
@@ -100,9 +100,7 @@ df = pl.DataFrame(
 )
 print(df)
 ```
-[   Array](https://docs.pola.rs/api/rust/dev/polars/datatypes/enum.DataType.html#variant.Array) ·
-
-[Available on feature dtype-array](/user-guide/installation/#feature-flags)
+  [`Array`](https://docs.pola.rs/api/rust/dev/polars/datatypes/enum.DataType.html#variant.Array) ·  [Available on feature dtype-array](/user-guide/installation/#feature-flags)
 
 ```
 // Contribute the Rust translation of the Python example by opening a PR.
@@ -125,17 +123,15 @@ each array.
 In general, Polars does not infer that a column has the data type `Array` for performance reasons,
 and defaults to the appropriate variant of the data type `List`. In Python, an exception to this
 rule is when you provide a NumPy array to build a column. In that case, Polars has the guarantee
-from NumPy that all subarrays have the same shape, so an array of \(n + 1\) dimensions will generate a
-column of \(n\) dimensional arrays:
+from NumPy that all subarrays have the same shape, so an array of $n + 1$ dimensions will generate a
+column of $n$ dimensional arrays:
 
 ```
 import numpy as np
 array = np.arange(0, 120).reshape((5, 2, 3, 4))  # 4D array
 print(pl.Series(array).dtype)  # Column with the 3D subarrays
 ```
-[   Array](https://docs.pola.rs/api/rust/dev/polars/datatypes/enum.DataType.html#variant.Array) ·
-
-[Available on feature dtype-array](/user-guide/installation/#feature-flags)
+  [`Array`](https://docs.pola.rs/api/rust/dev/polars/datatypes/enum.DataType.html#variant.Array) ·  [Available on feature dtype-array](/user-guide/installation/#feature-flags)
 
 ```
 // Contribute the Rust translation of the Python example by opening a PR.
@@ -205,7 +201,7 @@ shape: (5, 2)
 Given the dataframe `weather` defined previously, it is very likely we need to run some analysis on
 the temperatures that are captured by each station. To make this happen, we need to first be able to
 get individual temperature measurements. We
-[can use the namespace  str](../strings/#the-string-namespace) for this:
+[can use the namespace `str`](../strings/#the-string-namespace) for this:
 
 ```
 shape: (5, 2)
@@ -280,9 +276,9 @@ shape: (5, 5)
 
 If we need to identify the stations that are giving the most number of errors we need to
 
-- try to convert the measurements into numbers;
-- count the number of non-numeric values (i.e., `null`values) in the list, by row; and
-- rename this output column as “errors” so that we can easily identify the stations.
+1. try to convert the measurements into numbers;
+2. count the number of non-numeric values (i.e., `null` values) in the list, by row; and
+3. rename this output column as “errors” so that we can easily identify the stations.
 
 To perform these steps, we need to perform a casting operation on each measurement within the list
 values. The function `eval` is used as the entry point to perform operations on the elements of the
@@ -379,11 +375,7 @@ result = df.select(
 )
 print(result)
 ```
-[   list.eval](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/trait.ListNameSpaceExtension.html#method.eval) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.sort_by)
-
-`Expr.sort_by`[Available on feature list_eval](/user-guide/installation/#feature-flags)
+  [`list.eval`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/trait.ListNameSpaceExtension.html#method.eval) ·  [`Expr.sort_by`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.sort_by) ·  [Available on feature list_eval](/user-guide/installation/#feature-flags)
 
 ```
 // Contribute the Rust translation of the Python example by opening a PR.
@@ -454,11 +446,7 @@ result = df.with_columns(
 )
 print(result)
 ```
-[   list.agg](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/struct.ListNameSpace.html) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.entropy)
-
-`entropy`[Available on feature approx_unique](/user-guide/installation/#feature-flags)
+  [`list.agg`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/struct.ListNameSpace.html) ·  [`entropy`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.entropy) ·  [Available on feature approx_unique](/user-guide/installation/#feature-flags)
 
 ```
 // Contribute the Rust translation of the Python example by opening a PR.
@@ -603,9 +591,7 @@ result = df.select(
 )
 print(result)
 ```
-[   `arr namespace`](https://docs.pola.rs/api/rust/dev/polars/prelude/enum.Expr.html#method.arr) ·
-
-[Available on feature dtype-array](/user-guide/installation/#feature-flags)
+  [`` `arr `` namespace`](https://docs.pola.rs/api/rust/dev/polars/prelude/enum.Expr.html#method.arr) ·  [Available on feature dtype-array](/user-guide/installation/#feature-flags)
 
 ```
 // Contribute the Rust translation of the Python example by opening a PR.

@@ -2,7 +2,7 @@
 type: Web Page
 title: Numpy functions - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/numpy-functions
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Numpy functions
@@ -14,11 +14,7 @@ This means that if a function is not provided by Polars, we can use NumPy and we
 
 ## Example
 
-[   DataFrame](https://docs.pola.rs/api/python/stable/reference/dataframe/index.html) ·
-
-[·](https://numpy.org/doc/stable/reference/generated/numpy.log.html)
-
-`log`[Available on feature numpy](/user-guide/installation/#feature-flags)
+  [`DataFrame`](https://docs.pola.rs/api/python/stable/reference/dataframe/index.html) ·  [`log`](https://numpy.org/doc/stable/reference/generated/numpy.log.html) ·  [Available on feature numpy](/user-guide/installation/#feature-flags)
 
 ```
 import polars as pl

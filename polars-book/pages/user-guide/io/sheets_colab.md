@@ -2,7 +2,7 @@
 type: Web Page
 title: Google Sheets (via Colab) - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/sheets_colab
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Google Sheets (via Colab)
@@ -13,8 +13,9 @@ Google Colab provides a utility class to read from and write to Google Sheets.
 
 We can open existing sheets by initializing `sheets.InteractiveSheet` with either:
 
-- the `url`parameter, for example https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/
-- the `sheet_id`parameter for example 1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
+- the `url` parameter, for example
+  https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/
+- the `sheet_id` parameter for example 1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
 
 By default the left-most worksheets will be used, we can change this by providing either
 `worksheet_id` or `worksheet_name`.

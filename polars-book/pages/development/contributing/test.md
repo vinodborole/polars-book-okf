@@ -2,7 +2,7 @@
 type: Web Page
 title: Test suite - Polars user guide
 resource: https://docs.pola.rs/development/contributing/test
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Test suite
@@ -45,7 +45,7 @@ dependencies (such as `torch`) that are otherwise not installed as part of the d
 development environment.
 
 Tests can be run in parallel by running `pytest -n auto`. The parallelization is handled by
-[ pytest-xdist](https://pytest-xdist.readthedocs.io/en/latest/).
+[`pytest-xdist`](https://pytest-xdist.readthedocs.io/en/latest/).
 
 ### Writing unit tests
 
@@ -53,7 +53,7 @@ Whenever you add new functionality, you should also add matching unit tests. Add
 appropriate test module in the `unit` folder. Some guidelines to keep in mind:
 
 - Try to fully cover all possible inputs and edge cases you can think of.
-- Utilize pytest tools like `fixture``parametrize`
+- Utilize pytest tools like [`fixture`](https://docs.pytest.org/en/latest/explanation/fixtures.html) and[`parametrize`](https://docs.pytest.org/en/latest/how-to/parametrize.html) where appropriate.
 - Since many tests will require some data to be defined first, it can be efficient to run multiple checks in a single test. This can also be addressed using pytest fixtures.
 - Unit tests should not depend on external factors, otherwise test parallelization will break.
 
@@ -76,11 +76,11 @@ These tests *will* be included when calculating test coverage, and will also be 
 ## Doctests
 
 The `docs` folder contains a script for running
-[ doctest](https://docs.python.org/3/library/doctest.html). This folder does not contain any actual
-tests - rather, the script checks all docstrings in the Polars package for 
+[`doctest`](https://docs.python.org/3/library/doctest.html). This folder does not contain any actual
+tests - rather, the script checks all docstrings in the Polars package for `Examples` sections, runs
+the code examples, and verifies the output.
 
-`Examples` sections, runs
-the code examples, and verifies the output.The aim of running `doctest` is to make sure the `Examples` sections in our docstrings are valid and
+The aim of running `doctest` is to make sure the `Examples` sections in our docstrings are valid and
 remain up-to-date with code changes.
 
 ### Running `doctest`

@@ -2,7 +2,7 @@
 type: Web Page
 title: Data types and structures - Polars user guide
 resource: https://docs.pola.rs/user-guide/concepts/data-types-and-structures
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Data types and structures
@@ -195,9 +195,7 @@ You can also use `describe` to compute summary statistics for all columns of you
 ```
 print(df.describe())
 ```
-[   describe](https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html#method.describe) ·
-
-[Available on feature describe](/user-guide/installation/#feature-flags)
+  [`describe`](https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html#method.describe) ·  [Available on feature describe](/user-guide/installation/#feature-flags)
 
 ```
 // Not available in Rust
@@ -305,8 +303,11 @@ query plans, and from the parallelization that it employs when running
 Polars generally follows the IEEE 754 floating point standard for `Float32` and `Float64`, with some
 exceptions:
 
-- Any `NaN`compares equal to any other`NaN`, and greater than any non-`NaN`value.
-- Operations do not guarantee any particular behavior on the sign of zero or `NaN`, nor on the payload of`NaN`values. This is not just limited to arithmetic operations, e.g. a sort or group by operation may canonicalize all zeroes to +0 and all`NaN`s to a positive`NaN`without payload for efficient equality checks.
+- Any `NaN` compares equal to any other`NaN` , and greater than any non-`NaN` value.
+- Operations do not guarantee any particular behavior on the sign of zero or `NaN` , nor on the
+  payload of`NaN` values. This is not just limited to arithmetic operations, e.g. a sort or group
+  by operation may canonicalize all zeroes to +0 and all`NaN` s to a positive`NaN` without payload
+  for efficient equality checks.
 
 Polars always attempts to provide reasonably accurate results for floating point computations but does not provide guarantees on the error unless mentioned otherwise. Generally speaking 100% accurate results are infeasibly expensive to achieve (requiring much larger internal representations than 64-bit floats), and thus some error is always to be expected.
 
@@ -315,22 +316,22 @@ Polars always attempts to provide reasonably accurate results for floating point
 | Type(s) | Details | 
 |---|---|
 | `Boolean` | Boolean type that is bit packed efficiently. | 
-| `Int8`,`Int16`,`Int32`,`Int64`,`Int128` | Varying-precision signed integer types. | 
-| `UInt8`,`UInt16`,`UInt32`,`UInt64`,`UInt128` | Varying-precision unsigned integer types. | 
-| `Float16`,`Float32`,`Float64` | Varying-precision signed floating point numbers. | 
-| `Decimal` | Decimal 128-bit type with optional precision and non-negative scale. Use this if you need fine-grained control over the precision of your floats and the operations you make on them. See [Python's ](https://docs.python.org/3/library/decimal.html)for documentation on what a decimal data type is.`decimal.Decimal` | 
+| `Int8` ,`Int16` ,`Int32` ,`Int64` ,`Int128` | Varying-precision signed integer types. | 
+| `UInt8` ,`UInt16` ,`UInt32` ,`UInt64` ,`UInt128` | Varying-precision unsigned integer types. | 
+| `Float16` ,`Float32` ,`Float64` | Varying-precision signed floating point numbers. | 
+| `Decimal` | Decimal 128-bit type with optional precision and non-negative scale. Use this if you need fine-grained control over the precision of your floats and the operations you make on them. See [Python's `decimal.Decimal`](https://docs.python.org/3/library/decimal.html) for documentation on what a decimal data type is. | 
 | `String` | Variable length UTF-8 encoded string data, typically Human-readable. | 
 | `Binary` | Stores arbitrary, varying length raw binary data. | 
 | `Date` | Represents a calendar date. | 
 | `Time` | Represents a time of day. | 
 | `Datetime` | Represents a calendar date and time of day. | 
 | `Duration` | Represents a time duration. | 
-| `Array` | Arrays with a known, fixed shape per series; akin to numpy arrays. [Learn more about how arrays and lists differ and how to work with both](../../expressions/lists-and-arrays/). | 
-| `List` | Homogeneous 1D container with variable length. [Learn more about how arrays and lists differ and how to work with both](../../expressions/lists-and-arrays/). | 
+| `Array` | Arrays with a known, fixed shape per series; akin to numpy arrays. [Learn more about how arrays and lists differ and how to work with both](../../expressions/lists-and-arrays/) . | 
+| `List` | Homogeneous 1D container with variable length. [Learn more about how arrays and lists differ and how to work with both](../../expressions/lists-and-arrays/) . | 
 | `Object` | Wraps arbitrary Python objects. | 
-| `Categorical` | Efficient encoding of string data where the categories are inferred at runtime. [Learn more about how categoricals and enums differ and how to work with both](../../expressions/categorical-data-and-enums/). | 
-| `Enum` | Efficient ordered encoding of a set of predetermined string categories. [Learn more about how categoricals and enums differ and how to work with both](../../expressions/categorical-data-and-enums/). | 
-| `Struct` | Composite product type that can store multiple fields. [Learn more about the data type ](../../expressions/structs/).`Struct`in its dedicated documentation section. | 
+| `Categorical` | Efficient encoding of string data where the categories are inferred at runtime. [Learn more about how categoricals and enums differ and how to work with both](../../expressions/categorical-data-and-enums/) . | 
+| `Enum` | Efficient ordered encoding of a set of predetermined string categories. [Learn more about how categoricals and enums differ and how to work with both](../../expressions/categorical-data-and-enums/) . | 
+| `Struct` | Composite product type that can store multiple fields. [Learn more about the data type `Struct` in its dedicated documentation section.](../../expressions/structs/) . | 
 | `Null` | Represents null values. |
 
 # Citations

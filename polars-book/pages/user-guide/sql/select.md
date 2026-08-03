@@ -2,7 +2,7 @@
 type: Web Page
 title: SELECT - Polars user guide
 resource: https://docs.pola.rs/user-guide/sql/select
-timestamp: '2026-07-27T09:55:25.099201+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # SELECT
@@ -163,10 +163,10 @@ shape: (6, 4)
 
 Polars provides a wide range of SQL functions, including:
 
-- Mathematical functions: `ABS`,`EXP`,`LOG`,`ASIN`,`ACOS`,`ATAN`, etc.
-- String functions: `LOWER`,`UPPER`,`LTRIM`,`RTRIM`,`STARTS_WITH`,`ENDS_WITH`.
-- Aggregation functions: `SUM`,`AVG`,`MIN`,`MAX`,`COUNT`,`STDDEV`,`FIRST`etc.
-- Array functions: `EXPLODE`,`UNNEST`,`ARRAY_SUM`,`ARRAY_REVERSE`, etc.
+- Mathematical functions: `ABS` ,`EXP` ,`LOG` ,`ASIN` ,`ACOS` ,`ATAN` , etc.
+- String functions: `LOWER` ,`UPPER` ,`LTRIM` ,`RTRIM` ,`STARTS_WITH` ,`ENDS_WITH` .
+- Aggregation functions: `SUM` ,`AVG` ,`MIN` ,`MAX` ,`COUNT` ,`STDDEV` ,`FIRST` etc.
+- Array functions: `EXPLODE` ,`UNNEST` ,`ARRAY_SUM` ,`ARRAY_REVERSE` , etc.
 
 For a full list of supported functions go the
 [API documentation](https://docs.rs/polars-sql/latest/src/polars_sql/keywords.rs.html). The example

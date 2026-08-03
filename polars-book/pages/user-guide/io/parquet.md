@@ -2,16 +2,16 @@
 type: Web Page
 title: Parquet - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/parquet
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Parquet
 
-Loading or writing [ Parquet files](https://parquet.apache.org/) is lightning fast as the layout of
-data in a Polars 
+Loading or writing [`Parquet` files](https://parquet.apache.org/) is lightning fast as the layout of
+data in a Polars `DataFrame` in memory mirrors the layout of a Parquet file on disk in many
+respects.
 
-`DataFrame` in memory mirrors the layout of a Parquet file on disk in many
-respects.Unlike CSV, Parquet is a columnar format. This means that the data is stored in columns rather than rows. This is a more efficient way of storing data as it allows for better compression and faster access to data.
+Unlike CSV, Parquet is a columnar format. This means that the data is stored in columns rather than rows. This is a more efficient way of storing data as it allows for better compression and faster access to data.
 
 ## Read
 
@@ -20,9 +20,7 @@ We can read a `Parquet` file into a `DataFrame` using the `read_parquet` functio
 ```
 df = pl.read_parquet("docs/assets/data/path.parquet")
 ```
-[   ParquetReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.ParquetReader.html) ·
-
-[Available on feature parquet](/user-guide/installation/#feature-flags)
+  [`ParquetReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.ParquetReader.html) ·  [Available on feature parquet](/user-guide/installation/#feature-flags)
 
 ```
 let mut file = std::fs::File::open("docs/assets/data/path.parquet").unwrap();
@@ -34,9 +32,7 @@ let df = ParquetReader::new(&mut file).finish().unwrap();
 df = pl.DataFrame({"foo": [1, 2, 3], "bar": [None, "bak", "baz"]})
 df.write_parquet("docs/assets/data/path.parquet")
 ```
-[   ParquetWriter](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.ParquetWriter.html) ·
-
-[Available on feature parquet](/user-guide/installation/#feature-flags)
+  [`ParquetWriter`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.ParquetWriter.html) ·  [Available on feature parquet](/user-guide/installation/#feature-flags)
 
 ```
 let mut df = df!(
@@ -55,9 +51,7 @@ instead returns a lazy computation holder called a `LazyFrame`.
 ```
 df = pl.scan_parquet("docs/assets/data/path.parquet")
 ```
-[   scan_parquet](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyFrame.html#method.scan_parquet) ·
-
-[Available on feature parquet](/user-guide/installation/#feature-flags)
+  [`scan_parquet`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyFrame.html#method.scan_parquet) ·  [Available on feature parquet](/user-guide/installation/#feature-flags)
 
 ```
 let args = ScanArgsParquet::default();

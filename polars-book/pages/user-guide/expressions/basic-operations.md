@@ -2,7 +2,7 @@
 type: Web Page
 title: Basic operations - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/basic-operations
-timestamp: '2026-07-27T09:55:25.099201+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Basic operations
@@ -275,11 +275,7 @@ result = long_df.select(
 )
 print(result)
 ```
-[   n_unique](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.n_unique) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.approx_n_unique)
-
-`approx_n_unique`[Available on feature approx_unique](/user-guide/installation/#feature-flags)
+  [`n_unique`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.n_unique) ·  [`approx_n_unique`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.approx_n_unique) ·  [Available on feature approx_unique](/user-guide/installation/#feature-flags)
 
 ```
 use rand::SeedableRng;
@@ -319,9 +315,7 @@ result = df.select(
 )
 print(result)
 ```
-[   value_counts](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.value_counts) ·
-
-[Available on feature dtype-struct](/user-guide/installation/#feature-flags)
+  [`value_counts`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.value_counts) ·  [Available on feature dtype-struct](/user-guide/installation/#feature-flags)
 
 ```
 let result = df
@@ -340,10 +334,10 @@ shape: (4, 1)
 │ ---          │
 │ struct[2]    │
 ╞══════════════╡
+│ {"ham",1}    │
 │ {"spam",2}   │
 │ {"egg",1}    │
 │ {"foo",1}    │
-│ {"ham",1}    │
 └──────────────┘
 ```
 The function `value_counts` returns the results in
@@ -358,11 +352,7 @@ result = df.select(
 )
 print(result)
 ```
-[   unique](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.unique) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.unique_counts)
-
-`unique_counts`[Available on feature unique_counts](/user-guide/installation/#feature-flags)
+  [`unique`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.unique) ·  [`unique_counts`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.unique_counts) ·  [Available on feature unique_counts](/user-guide/installation/#feature-flags)
 
 ```
 let result = df

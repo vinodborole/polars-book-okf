@@ -2,7 +2,7 @@
 type: Web Page
 title: Lazy API - Polars user guide
 resource: https://docs.pola.rs/user-guide/concepts/lazy-api
-timestamp: '2026-07-20T09:17:48.329595+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Lazy API
@@ -18,9 +18,7 @@ df_small = df.filter(pl.col("sepal_length") > 5)
 df_agg = df_small.group_by("species").agg(pl.col("sepal_width").mean())
 print(df_agg)
 ```
-[   CsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·
-
-[Available on feature csv](/user-guide/installation/#feature-flags)
+  [`CsvReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·  [Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 let df = CsvReadOptions::default()
@@ -39,9 +37,9 @@ println!("{df_agg}");
 ```
 In this example we use the eager API to:
 
-- Read the iris [dataset](https://archive.ics.uci.edu/dataset/53/iris).
-- Filter the dataset based on sepal length.
-- Calculate the mean of the sepal width per species.
+1. Read the iris [dataset](https://archive.ics.uci.edu/dataset/53/iris) .
+2. Filter the dataset based on sepal length.
+3. Calculate the mean of the sepal width per species.
 
 Every step is executed immediately returning the intermediate results. This can be very wasteful as we might do work or load extra data that is not being used. If we instead used the lazy API and waited on execution until all the steps are defined then the query planner could perform various optimizations. In this case:
 
@@ -57,9 +55,7 @@ q = (
 )
 df = q.collect()
 ```
-[   LazyCsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyCsvReader.html) ·
-
-[Available on feature csv](/user-guide/installation/#feature-flags)
+  [`LazyCsvReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyCsvReader.html) ·  [Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 let q = LazyCsvReader::new(PlRefPath::new("docs/assets/data/iris.csv"))

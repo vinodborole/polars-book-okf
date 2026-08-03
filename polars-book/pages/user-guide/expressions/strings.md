@@ -2,7 +2,7 @@
 type: Web Page
 title: Strings - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/strings
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Strings
@@ -82,13 +82,9 @@ to specify a literal substring, set the parameter `literal` to `True`.
 For the special cases where you want to check if the strings start or end with a fixed substring,
 you can use the functions `starts_with` or `ends_with`, respectively.
 
-[   str.contains](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.contains.html) ·
+  [`str.contains`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.contains.html) ·  [`str.starts_with`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.starts_with.html) ·  [`str.ends_with`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.ends_with.html)
 
-[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.starts_with.html)
-
-`str.starts_with`
-
-`str.ends_with````
+```
 result = df.select(
     pl.col("fruit"),
     pl.col("fruit").str.starts_with("p").alias("starts_with_p"),
@@ -98,13 +94,7 @@ result = df.select(
 )
 print(result)
 ```
-[   str.contains](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.contains) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.starts_with)
-
-`str.starts_with`[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.ends_with)
-
-`str.ends_with`[Available on feature regex](/user-guide/installation/#feature-flags)
+  [`str.contains`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.contains) ·  [`str.starts_with`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.starts_with) ·  [`str.ends_with`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.ends_with) ·  [Available on feature regex](/user-guide/installation/#feature-flags)
 
 ```
 let result = df
@@ -241,11 +231,7 @@ result = df.with_columns(
 )
 print(result)
 ```
-[   str.replace](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.replace) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.replace_all)
-
-`str.replace_all`[Available on feature regex](/user-guide/installation/#feature-flags)
+  [`str.replace`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.replace) ·  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.replace_all) ·  [Available on feature regex](/user-guide/installation/#feature-flags)
 
 ```
 let df = df! (
@@ -321,13 +307,9 @@ shape: (3, 3)
 Converting the casing of a string is a common operation and Polars supports it out of the box with
 the functions `to_lowercase`, `to_titlecase`, and `to_uppercase`:
 
-[   str.to_lowercase](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.to_lowercase.html) ·
+  [`str.to_lowercase`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.to_lowercase.html) ·  [`str.to_titlecase`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.to_titlecase.html) ·  [`str.to_uppercase`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.to_uppercase.html)
 
-[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.to_titlecase.html)
-
-`str.to_titlecase`
-
-`str.to_uppercase````
+```
 addresses = pl.DataFrame(
     {
         "addresses": [
@@ -346,13 +328,7 @@ addresses = addresses.select(
 )
 print(addresses)
 ```
-[   str.to_lowercase](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.to_lowercase) ·
-
-[·](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.to_titlecase)
-
-`str.to_titlecase`[·](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.to_uppercase)
-
-`str.to_uppercase`[Available on feature nightly](/user-guide/installation/#feature-flags)
+  [`str.to_lowercase`](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.to_lowercase) ·  [`str.to_titlecase`](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.to_titlecase) ·  [`str.to_uppercase`](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.to_uppercase) ·  [Available on feature nightly](/user-guide/installation/#feature-flags)
 
 ```
 let addresses = df! (
@@ -409,17 +385,9 @@ It is important to understand that the first three functions interpret their str
 set of characters whereas the functions `strip_prefix` and `strip_suffix` do interpret their string
 argument as a literal string.
 
-[   str.strip_chars](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.strip_chars.html) ·
+  [`str.strip_chars`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.strip_chars.html) ·  [`str.strip_chars_end`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.strip_chars_end.html) ·  [`str.strip_chars_start`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.strip_chars_start.html) ·  [`str.strip_prefix`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.strip_prefix.html) ·  [`str.strip_suffix`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.strip_suffix.html)
 
-[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.strip_chars_end.html)
-
-`str.strip_chars_end`[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.strip_chars_start.html)
-
-`str.strip_chars_start`[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.strip_prefix.html)
-
-`str.strip_prefix`
-
-`str.strip_suffix````
+```
 addr = pl.col("addresses")
 chars = ", 0123456789"
 result = addresses.select(
@@ -431,17 +399,9 @@ result = addresses.select(
 )
 print(result)
 ```
-[   str.strip_chars](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.strip_chars) ·
+  [`str.strip_chars`](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.strip_chars) ·  [`str.strip_chars_end`](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.strip_chars_end) ·  [`str.strip_chars_start`](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.strip_chars_start) ·  [`str.strip_prefix`](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.strip_prefix) ·  [`str.strip_suffix`](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.strip_suffix)
 
-[·](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.strip_chars_end)
-
-`str.strip_chars_end`[·](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.strip_chars_start)
-
-`str.strip_chars_start`[·](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.strip_prefix)
-
-`str.strip_prefix`
-
-`str.strip_suffix````
+```
 let addr = col("addresses");
 let chars = lit(", 0123456789");
 let result = addresses
@@ -486,13 +446,9 @@ way to the end.
 The functions `head` and `tail` are specialised versions used for slicing the beginning and end of a
 string, respectively.
 
-[   str.slice](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.slice.html) ·
+  [`str.slice`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.slice.html) ·  [`str.head`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.head.html) ·  [`str.tail`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.tail.html)
 
-[·](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.str.head.html)
-
-`str.head`
-
-`str.tail````
+```
 df = pl.DataFrame(
     {
         "fruits": ["pear", "mango", "dragonfruit", "passionfruit"],
@@ -506,13 +462,9 @@ result = df.with_columns(
 )
 print(result)
 ```
-[   str.str_slice](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.str_slice) ·
+  [`str.str_slice`](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.str_slice) ·  [`str.str_head`](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.str_head) ·  [`str.str_tail`](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.str_tail)
 
-[·](https://docs.rs/polars/latest/polars/prelude/trait.StringNameSpaceImpl.html#method.str_head)
-
-`str.str_head`
-
-`str.str_tail````
+```
 let df = df! (
     "fruits" => ["pear", "mango", "dragonfruit", "passionfruit"],
     "n" => [1, -1, 4, -4],

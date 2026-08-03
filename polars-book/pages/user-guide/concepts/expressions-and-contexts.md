@@ -2,7 +2,7 @@
 type: Web Page
 title: Expressions and contexts - Polars user guide
 resource: https://docs.pola.rs/user-guide/concepts/expressions-and-contexts
-timestamp: '2026-07-27T09:55:25.099201+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Expressions and contexts
@@ -36,12 +36,12 @@ Because expressions are lazy, no computations have taken place yet. That's what 
 
 Polars expressions need a *context* in which they are executed to produce a result. Depending on the
 context it is used in, the same Polars expression can produce different results. In this section, we
-will learn about the four most common contexts that Polars provides 1:
+will learn about the four most common contexts that Polars provides<sup>[1](#fn:1)</sup>:
 
-- `select`
-- `with_columns`
-- `filter`
-- `group_by`
+1. `select`
+2. `with_columns`
+3. `filter`
+4. `group_by`
 
 We use the dataframe below to show how each of the contexts works.
 
@@ -92,7 +92,7 @@ shape: (4, 4)
 │ Daniel Donovan ┆ 1981-04-30 ┆ 83.1   ┆ 1.75   │
 └────────────────┴────────────┴────────┴────────┘
 ```
-`select`
+### `select`
 
 The selection context `select` applies expressions over columns. The context `select` may produce
 new columns that are aggregations, combinations of other columns, or literals:
@@ -156,7 +156,7 @@ The context `select` is very flexible and powerful and allows you to evaluate ar
 independent of, and in parallel to, each other. This is also true of the other contexts that we will
 see next.
 
-`with_columns`
+### `with_columns`
 
 The context `with_columns` is very similar to the context `select`. The main difference between the
 two is that the context `with_columns` creates a new dataframe that contains the columns from the
@@ -201,7 +201,7 @@ Because of this difference between `select` and `with_columns`, the expressions 
 dataframe, whereas it is enough for the expressions in the context `select` to produce series that
 have the same length among them.
 
-`filter`
+### `filter`
 
 The context `filter` filters the rows of a dataframe based on one or more expressions that evaluate
 to the Boolean data type.
@@ -239,7 +239,7 @@ shape: (1, 4)
 │ Ben Brown ┆ 1985-02-15 ┆ 72.5   ┆ 1.77   │
 └───────────┴────────────┴────────┴────────┘
 ```
-`group_by` and aggregations
+### `group_by` and aggregations
 
 In the context `group_by`, rows are grouped according to the unique values of the grouping
 expressions. You can then apply expressions to the resulting groups, which may be of variable
@@ -269,8 +269,8 @@ shape: (2, 2)
 │ ---    ┆ ---                             │
 │ i32    ┆ list[str]                       │
 ╞════════╪═════════════════════════════════╡
-│ 1990   ┆ ["Alice Archer"]                │
 │ 1980   ┆ ["Ben Brown", "Chloe Cooper", … │
+│ 1990   ┆ ["Alice Archer"]                │
 └────────┴─────────────────────────────────┘
 ```
 After using `group_by` we use `agg` to apply aggregating expressions to the groups. Since in the
@@ -306,8 +306,8 @@ shape: (3, 3)
 │ ---    ┆ ---    ┆ ---                             │
 │ i32    ┆ bool   ┆ list[str]                       │
 ╞════════╪════════╪═════════════════════════════════╡
-│ 1980   ┆ true   ┆ ["Chloe Cooper"]                │
 │ 1990   ┆ true   ┆ ["Alice Archer"]                │
+│ 1980   ┆ true   ┆ ["Chloe Cooper"]                │
 │ 1980   ┆ false  ┆ ["Ben Brown", "Daniel Donovan"… │
 └────────┴────────┴─────────────────────────────────┘
 ```
@@ -351,9 +351,9 @@ shape: (3, 6)
 │ ---    ┆ ---    ┆ --- ┆ ---     ┆ ---        ┆ ---        │
 │ i32    ┆ bool   ┆ u32 ┆ f64     ┆ f64        ┆ f64        │
 ╞════════╪════════╪═════╪═════════╪════════════╪════════════╡
-│ 1980   ┆ true   ┆ 1   ┆ 1.65    ┆ 53.6       ┆ 1.65       │
 │ 1990   ┆ true   ┆ 1   ┆ 1.56    ┆ 57.9       ┆ 1.56       │
 │ 1980   ┆ false  ┆ 2   ┆ 1.77    ┆ 77.8       ┆ 1.76       │
+│ 1980   ┆ true   ┆ 1   ┆ 1.65    ┆ 53.6       ┆ 1.65       │
 └────────┴────────┴─────┴─────────┴────────────┴────────────┘
 ```
 See also `group_by_dynamic` and `rolling` for other grouping contexts.
@@ -432,7 +432,7 @@ shape: (0, 0)
 It is equally easy to imagine a scenario where the same expression would expand to dozens of columns.
 
 Next, you will learn about
-[the lazy API and the function  explain](../lazy-api/#previewing-the-query-plan), which you can use
+[the lazy API and the function `explain`](../lazy-api/#previewing-the-query-plan), which you can use
 to preview what an expression will expand to given a schema.
 
 ## Conclusion
@@ -448,7 +448,7 @@ expressions and they can be combined in a variety of ways. See the
 [section on expressions](../../expressions/) for a deeper dive on the different types of
 expressions available.
 
-- 
+1. 
 There are additional List and SQL contexts which are covered later in this guide. But for simplicity, we leave them out of scope for now. [↩](#fnref:1)
 
 # Citations

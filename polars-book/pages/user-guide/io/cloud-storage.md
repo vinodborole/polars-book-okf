@@ -2,7 +2,7 @@
 type: Web Page
 title: Cloud storage - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/cloud-storage
-timestamp: '2026-07-27T09:55:25.099201+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Cloud storage
@@ -21,28 +21,14 @@ $ cargo add aws_sdk_s3 aws_config tokio --features tokio/full
 
 Polars supports reading Parquet, CSV, IPC and NDJSON files from cloud storage:
 
-[   read_parquet](https://docs.pola.rs/api/python/stable/reference/api/polars.read_parquet.html) ·
+  [`read_parquet`](https://docs.pola.rs/api/python/stable/reference/api/polars.read_parquet.html) ·  [`read_csv`](https://docs.pola.rs/api/python/stable/reference/api/polars.read_csv.html) ·  [`read_ipc`](https://docs.pola.rs/api/python/stable/reference/api/polars.read_ipc.html)
 
-[·](https://docs.pola.rs/api/python/stable/reference/api/polars.read_csv.html)
-
-`read_csv`
-
-`read_ipc````
+```
 import polars as pl
 source = "s3://bucket/*.parquet"
 df = pl.read_parquet(source)
 ```
-[   ParquetReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.ParquetReader.html) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html)
-
-`CsvReader`[·](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.IpcReader.html)
-
-`IpcReader`[Available on feature csv](/user-guide/installation/#feature-flags)·
-
-[Available on feature ipc](/user-guide/installation/#feature-flags)·
-
-[Available on feature parquet](/user-guide/installation/#feature-flags)
+  [`ParquetReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.ParquetReader.html) ·  [`CsvReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·  [`IpcReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.IpcReader.html) ·  [Available on feature csv](/user-guide/installation/#feature-flags) ·  [Available on feature ipc](/user-guide/installation/#feature-flags) ·  [Available on feature parquet](/user-guide/installation/#feature-flags)
 
 ```
 use aws_config::BehaviorVersion;
@@ -86,7 +72,7 @@ Polars is able to automatically load default credential configurations for some 
 
 ### Using `storage_options`:
 
-- Credentials can be passed as configuration keys in a dict with the `storage_options`parameter:
+- Credentials can be passed as configuration keys in a dict with the `storage_options` parameter:
 
 ```
 import polars as pl
@@ -100,11 +86,13 @@ df = pl.scan_parquet(source, storage_options=storage_options).collect()
 ```
 ### Using one of the available `CredentialProvider*` utility classes
 
-- There may be a utility class `pl.CredentialProvider*`that provides the required authentication functionality. For example,`pl.CredentialProviderAWS`supports selecting AWS profiles, as well as assuming an IAM role:
+- There may be a utility class `pl.CredentialProvider*` that provides the required authentication
+  functionality. For example,`pl.CredentialProviderAWS` supports selecting AWS profiles, as well as
+  assuming an IAM role:
 
-[   scan_parquet](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_parquet.html) ·
+  [`scan_parquet`](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_parquet.html) ·  [`CredentialProviderAWS`](https://docs.pola.rs/api/python/stable/reference/api/polars.CredentialProviderAWS.html)
 
-`CredentialProviderAWS````
+```
 lf = pl.scan_parquet(
     "s3://.../...",
     credential_provider=pl.CredentialProviderAWS(
@@ -137,9 +125,9 @@ df = lf.collect()
 ```
 - Example for Azure:
 
-[   scan_parquet](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_parquet.html) ·
+  [`scan_parquet`](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_parquet.html) ·  [`CredentialProviderAzure`](https://docs.pola.rs/api/python/stable/reference/api/polars.CredentialProviderAzure.html)
 
-`CredentialProviderAzure````
+```
 def credential_provider():
     credential = DefaultAzureCredential(exclude_managed_identity_credential=True)
     token = credential.get_token("https://storage.azure.com/.default")
@@ -160,9 +148,9 @@ pl.scan_parquet(
 
 - It is possible to globally configure a default credential provider, so that it does not need to be passed to every I/O function call. This can be convenient in the case where there are many cloud I/O operations that use the same credential provider.
 
-[   scan_parquet](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_parquet.html) ·
+  [`scan_parquet`](https://docs.pola.rs/api/python/stable/reference/api/polars.scan_parquet.html) ·  [`CredentialProviderAWS`](https://docs.pola.rs/api/python/stable/reference/api/polars.CredentialProviderAWS.html)
 
-`CredentialProviderAWS````
+```
 pl.Config.set_default_credential_provider(
     pl.CredentialProviderAWS(
         profile_name="...",
@@ -175,7 +163,7 @@ pl.Config.set_default_credential_provider(
 ```
 ## Cloud retry configuration
 
-- Retry behavior such as maximum retries and backoff can be configured via `storage_options`:
+- Retry behavior such as maximum retries and backoff can be configured via `storage_options` :
 
 ```
 import polars as pl

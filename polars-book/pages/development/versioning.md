@@ -2,7 +2,7 @@
 type: Web Page
 title: Versioning - Polars user guide
 resource: https://docs.pola.rs/development/versioning
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Versioning
@@ -11,9 +11,10 @@ timestamp: '2026-07-09T12:17:10.704938+00:00'
 
 Polars adheres to the [semantic versioning](https://semver.org/) specification:
 
-- Breaking changes lead to a **major**version increase (`1.0.0`,`2.0.0`, ...)
-- New features and performance improvements lead to a **minor**version increase (`1.1.0`,`1.2.0`, ...)
-- Other changes lead to a **patch**version increase (`1.0.1`,`1.0.2`, ...)
+- Breaking changes lead to a **major** version increase (`1.0.0` ,`2.0.0` , ...)
+- New features and performance improvements lead to a **minor** version increase (`1.1.0` ,`1.2.0` ,
+  ...)
+- Other changes lead to a **patch** version increase (`1.0.1` ,`1.0.2` , ...)
 
 ## Policy for breaking changes
 

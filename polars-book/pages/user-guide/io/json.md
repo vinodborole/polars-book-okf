@@ -2,7 +2,7 @@
 type: Web Page
 title: JSON files - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/json
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # JSON files
@@ -18,9 +18,7 @@ Reading a JSON file should look familiar:
 ```
 df = pl.read_json("docs/assets/data/path.json")
 ```
-[   JsonReader](https://docs.pola.rs/api/rust/dev/polars_io/json/struct.JsonReader.html) ·
-
-[Available on feature json](/user-guide/installation/#feature-flags)
+  [`JsonReader`](https://docs.pola.rs/api/rust/dev/polars_io/json/struct.JsonReader.html) ·  [Available on feature json](/user-guide/installation/#feature-flags)
 
 ```
 use polars::prelude::*;
@@ -36,9 +34,7 @@ Polars can read an NDJSON file into a `DataFrame` using the `read_ndjson` functi
 ```
 df = pl.read_ndjson("docs/assets/data/path.json")
 ```
-[   JsonReader](https://docs.pola.rs/api/rust/dev/polars_io/json/struct.JsonReader.html) ·
-
-[Available on feature json](/user-guide/installation/#feature-flags)
+  [`JsonReader`](https://docs.pola.rs/api/rust/dev/polars_io/json/struct.JsonReader.html) ·  [Available on feature json](/user-guide/installation/#feature-flags)
 
 ```
 let df = LazyJsonLineReader::new(PlRefPath::new("docs/assets/data/path.json"))
@@ -53,11 +49,7 @@ let df = LazyJsonLineReader::new(PlRefPath::new("docs/assets/data/path.json"))
 df = pl.DataFrame({"foo": [1, 2, 3], "bar": [None, "bak", "baz"]})
 df.write_json("docs/assets/data/path.json")
 ```
-[   JsonWriter](https://docs.pola.rs/api/rust/dev/polars_io/json/struct.JsonWriter.html) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars_io/json/struct.JsonWriter.html)
-
-`JsonWriter`[Available on feature json](/user-guide/installation/#feature-flags)
+  [`JsonWriter`](https://docs.pola.rs/api/rust/dev/polars_io/json/struct.JsonWriter.html) ·  [`JsonWriter`](https://docs.pola.rs/api/rust/dev/polars_io/json/struct.JsonWriter.html) ·  [Available on feature json](/user-guide/installation/#feature-flags)
 
 ```
 let mut df = df!(
@@ -85,9 +77,7 @@ instead returns a lazy computation holder called a `LazyFrame`.
 ```
 df = pl.scan_ndjson("docs/assets/data/path.json")
 ```
-[   LazyJsonLineReader](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyJsonLineReader.html) ·
-
-[Available on feature json](/user-guide/installation/#feature-flags)
+  [`LazyJsonLineReader`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyJsonLineReader.html) ·  [Available on feature json](/user-guide/installation/#feature-flags)
 
 ```
 let lf = LazyJsonLineReader::new(PlRefPath::new("docs/assets/data/path.json"))

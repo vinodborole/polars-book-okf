@@ -2,14 +2,10 @@
 type: Web Page
 title: Transformations - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations
-timestamp: '2026-07-07T12:26:19.464100+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
-# Transformations
-
-The focus of this section is to describe different types of data transformations and provide some examples on how to use them.
-
-The focus of this section is to describe different types of data transformations and provide some examples on how to use them.
+Transformations The focus of this section is to describe different types of data transformations and provide some examples on how to use them. Joins Concatenation Pivot Unpivot
 
 # Citations
 

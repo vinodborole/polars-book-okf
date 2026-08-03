@@ -2,7 +2,7 @@
 type: Web Page
 title: Resampling - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/resampling
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Resampling
@@ -38,13 +38,7 @@ df = pl.DataFrame(
 )
 print(df)
 ```
-[   DataFrame](https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html) ·
-
-[·](https://docs.rs/polars/latest/polars/prelude/fn.datetime_range.html)
-
-`datetime_range`[Available on feature lazy](/user-guide/installation/#feature-flags)·
-
-[Available on feature dtype-datetime](/user-guide/installation/#feature-flags)
+  [`DataFrame`](https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html) ·  [`datetime_range`](https://docs.rs/polars/latest/polars/prelude/fn.datetime_range.html) ·  [Available on feature dtype-datetime](/user-guide/installation/#feature-flags) ·  [Available on feature lazy](/user-guide/installation/#feature-flags)
 
 ```
 let time = polars::time::date_range(
@@ -114,13 +108,9 @@ shape: (13, 3)
 ```
 In this example we instead fill the nulls by linear interpolation:
 
-[   upsample](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.upsample.html) ·
+  [`upsample`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.upsample.html) ·  [`interpolate`](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.interpolate.html) ·  [`fill_null`](https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.Expr.fill_null.html)
 
-[·](https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.interpolate.html)
-
-`interpolate`
-
-`fill_null````
+```
 out2 = (
     df.upsample(time_column="time", every="15m")
     .interpolate()
@@ -128,13 +118,9 @@ out2 = (
 )
 print(out2)
 ```
-[   upsample](https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html#method.upsample) ·
+  [`upsample`](https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html#method.upsample) ·  [`interpolate`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.interpolate) ·  [`fill_null`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.fill_null)
 
-[·](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.interpolate)
-
-`interpolate`
-
-`fill_null````
+```
 let out2 = df
     .upsample::<[String; 0]>([], "time", Duration::parse("15m"))?
     .lazy()

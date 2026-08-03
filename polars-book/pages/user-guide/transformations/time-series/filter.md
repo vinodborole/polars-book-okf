@@ -2,7 +2,7 @@
 type: Web Page
 title: Filtering - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/filter
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Filtering
@@ -21,9 +21,7 @@ from datetime import datetime
 df = pl.read_csv("docs/assets/data/apple_stock.csv", try_parse_dates=True)
 print(df)
 ```
-[   CsvReader](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·
-
-[Available on feature csv](/user-guide/installation/#feature-flags)
+  [`CsvReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·  [Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 let df = CsvReadOptions::default()
@@ -81,11 +79,7 @@ filtered_range_df = df.filter(
 )
 print(filtered_range_df)
 ```
-[   filter](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.filter) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars/prelude/enum.Expr.html#method.is_between)
-
-`is_between`[Available on feature is_between](/user-guide/installation/#feature-flags)
+  [`filter`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.filter) ·  [`is_between`](https://docs.pola.rs/api/rust/dev/polars/prelude/enum.Expr.html#method.is_between) ·  [Available on feature is_between](/user-guide/installation/#feature-flags)
 
 ```
 let filtered_range_df = df
@@ -121,9 +115,7 @@ negative_dates_df = pl.DataFrame({"ts": ts, "values": [3, 4]})
 negative_dates_filtered_df = negative_dates_df.filter(pl.col("ts").dt.year() < -1300)
 print(negative_dates_filtered_df)
 ```
-[   str.replace_all](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_date) ·
-
-[Available on feature dtype-date](/user-guide/installation/#feature-flags)
+  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_date) ·  [Available on feature dtype-date](/user-guide/installation/#feature-flags)
 
 ```
     let negative_dates_df = df!(

@@ -2,7 +2,7 @@
 type: Web Page
 title: Folds - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/folds
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Folds
@@ -125,11 +125,11 @@ shape: (3, 2)
 │ 33      ┆ 33       │
 └─────────┴──────────┘
 ```
-`fold` in Python
+## `fold` in Python
 
 Most programming languages include a higher-order function that implements the algorithm that the function `fold` in Polars implements.
 The Polars `fold` is very similar to Python's `functools.reduce`.
-You can [learn more about the power of  functools.reduce in this article](http://mathspp.com/blog/pydonts/the-power-of-reduce).
+You can [learn more about the power of `functools.reduce` in this article](http://mathspp.com/blog/pydonts/the-power-of-reduce).
 
 ## The initial value `acc`
 
@@ -278,9 +278,7 @@ df = pl.DataFrame(
 result = df.select(pl.concat_str(["a", "b"]))
 print(result)
 ```
-[   concat_str](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/fn.concat_str.html) ·
-
-[Available on feature concat_str](/user-guide/installation/#feature-flags)
+  [`concat_str`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/fn.concat_str.html) ·  [Available on feature concat_str](/user-guide/installation/#feature-flags)
 
 ```
 let df = df!(

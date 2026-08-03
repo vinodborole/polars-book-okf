@@ -2,7 +2,7 @@
 type: Web Page
 title: GPU Support [Open Beta] - Polars user guide
 resource: https://docs.pola.rs/user-guide/gpu-support
-timestamp: '2026-07-20T09:17:48.329595+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # GPU Support [Open Beta]
@@ -13,7 +13,7 @@ available in Open Beta and is undergoing rapid development.
 
 ### System Requirements
 
-- NVIDIA Volta™ or higher GPU with [compute capability](https://developer.nvidia.com/cuda-gpus)7.0+
+- NVIDIA Volta™ or higher GPU with [compute capability](https://developer.nvidia.com/cuda-gpus) 7.0+
 - CUDA 12 or CUDA 13
 - Linux or Windows Subsystem for Linux 2 (WSL2)
 
@@ -62,16 +62,19 @@ shape: (2, 1)
 │ 1.5 │
 └─────┘
 ```
-`GPUEngine`s and multiple GPUs
+#### `GPUEngine`s and multiple GPUs
 
 `engine="gpu"` is convenient for running a query on a single GPU. Multi-GPU execution and other
 query-runtime configurations can be specified by passing a `GPUEngine` object.
 
 As of cudf-polars version 26.06, 3 `GPUEngine` subclasses are provided by cudf-polars library:
 
-- `RayEngine`- [Ray](https://www.ray.io/)
-- `DaskEngine`- [Dask](https://www.dask.org/)
-- `SPMDEngine`
+- [`RayEngine`](https://docs.rapids.ai/api/cudf/stable/cudf_polars/usage/#configuring-rayengine) :
+  Facilitates multi-GPU execution using[Ray](https://www.ray.io/)
+- [`DaskEngine`](https://docs.rapids.ai/api/cudf/stable/cudf_polars/dask_engine/) : Facilitates
+  multi-GPU execution using[Dask](https://www.dask.org/)
+- [`SPMDEngine`](https://docs.rapids.ai/api/cudf/stable/cudf_polars/spmd_engine/) : Single program,
+  multiple data model for multi-GPU execution
 
 These 3 engines spin up resources that can be torn down by using the engines as context managers.
 

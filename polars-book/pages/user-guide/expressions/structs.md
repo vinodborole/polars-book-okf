@@ -2,7 +2,7 @@
 type: Web Page
 title: Structs - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/structs
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Structs
@@ -71,9 +71,7 @@ appears in the data is done as so:
 result = ratings.select(pl.col("Theatre").value_counts(sort=True))
 print(result)
 ```
-[   value_counts](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.value_counts) ·
-
-[Available on feature dtype-struct](/user-guide/installation/#feature-flags)
+  [`value_counts`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.value_counts) ·  [Available on feature dtype-struct](/user-guide/installation/#feature-flags)
 
 ```
 let result = ratings
@@ -274,11 +272,7 @@ This is where the data type `Struct` shines:
 result = ratings.filter(pl.struct("Movie", "Theatre").is_duplicated())
 print(result)
 ```
-[   is_duplicated](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.is_duplicated) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars/datatypes/enum.DataType.html#variant.Struct)
-
-`Struct`[Available on feature dtype-struct](/user-guide/installation/#feature-flags)
+  [`is_duplicated`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.is_duplicated) ·  [`Struct`](https://docs.pola.rs/api/rust/dev/polars/datatypes/enum.DataType.html#variant.Struct) ·  [Available on feature dtype-struct](/user-guide/installation/#feature-flags)
 
 ```
 // Contribute the Rust translation of the Python example by opening a PR.
@@ -314,11 +308,7 @@ result = ratings.with_columns(
 ).filter(pl.struct("Movie", "Theatre").is_duplicated())
 print(result)
 ```
-[   is_duplicated](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.is_duplicated) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars/datatypes/enum.DataType.html#variant.Struct)
-
-`Struct`[Available on feature dtype-struct](/user-guide/installation/#feature-flags)
+  [`is_duplicated`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/enum.Expr.html#method.is_duplicated) ·  [`Struct`](https://docs.pola.rs/api/rust/dev/polars/datatypes/enum.DataType.html#variant.Struct) ·  [Available on feature dtype-struct](/user-guide/installation/#feature-flags)
 
 ```
 let result = ratings
@@ -362,7 +352,7 @@ function `over`, used above, [see the user guide section on window functions](..
 As mentioned earlier, the data type `Struct` is also useful if you need to pass multiple columns as
 input to an expression. As an example, suppose we want to compute
 [the Ackermann function](https://en.wikipedia.org/wiki/Ackermann_function) on two columns of a
-dataframe. There is no way of composing Polars expressions to compute the Ackermann function 1, so
+dataframe. There is no way of composing Polars expressions to compute the Ackermann function<sup>[1](#fn:1)</sup>, so
 we define a custom function:
 
 ```
@@ -413,7 +403,7 @@ shape: (7, 3)
 │ 2   ┆ 1   ┆ 5   │
 └─────┴─────┴─────┘
 ```
-- 
+1. 
 To say that something cannot be done is quite a bold claim. If you prove us wrong, please let us know! [↩](#fnref:1)
 
 # Citations

@@ -2,7 +2,7 @@
 type: Web Page
 title: Joins - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/joins
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-08-03T09:49:29.273788+00:00'
 ---
 
 # Joins
@@ -15,26 +15,24 @@ The most common type of join is an “equi join”, in which rows are matched by
 
 The table below acts as a quick reference for people who know what they are looking for. If you want to learn about joins in general and how to work with them in Polars, feel free to skip the table and keep reading below.
 
-[  join](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.DataFrameJoinOps.html#method.join)
-(
-
-[semi_anti_join](/user-guide/installation/#feature-flags)needed for some options.)
-
-`join_asof_by`[Available on feature asof_join](/user-guide/installation/#feature-flags)
-
-`join_where`[Available on feature iejoin](/user-guide/installation/#feature-flags)
+ [`join`](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.DataFrameJoinOps.html#method.join)
+( [semi_anti_join](/user-guide/installation/#feature-flags) needed for some options.)
+ [`join_asof_by`](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.AsofJoinBy.html#method.join_asof_by)
+ [Available on feature asof_join](/user-guide/installation/#feature-flags)
+ [`join_where`](https://docs.rs/polars/latest/polars/prelude/struct.JoinBuilder.html#method.join_where)
+ [Available on feature iejoin](/user-guide/installation/#feature-flags)
 
 | Type | Function | Brief description | 
 |---|---|---|
 | Equi inner join | `join(..., how="inner")` | Keeps rows that matched both on the left and right. | 
-| Equi left outer join | `join(..., how="left")` | Keeps all rows from the left plus matching rows from the right. Non-matching rows from the left have their right columns filled with `null`. | 
-| Equi right outer join | `join(..., how="right")` | Keeps all rows from the right plus matching rows from the left. Non-matching rows from the right have their left columns filled with `null`. | 
-| Equi full join | `join(..., how="full")` | Keeps all rows from either dataframe, regardless of whether they match or not. Non-matching rows from one side have the columns from the other side filled with `null`. | 
+| Equi left outer join | `join(..., how="left")` | Keeps all rows from the left plus matching rows from the right. Non-matching rows from the left have their right columns filled with `null` . | 
+| Equi right outer join | `join(..., how="right")` | Keeps all rows from the right plus matching rows from the left. Non-matching rows from the right have their left columns filled with `null` . | 
+| Equi full join | `join(..., how="full")` | Keeps all rows from either dataframe, regardless of whether they match or not. Non-matching rows from one side have the columns from the other side filled with `null` . | 
 | Equi semi join | `join(..., how="semi")` | Keeps rows from the left that have a match on the right. | 
 | Equi anti join | `join(..., how="anti")` | Keeps rows from the left that do not have a match on the right. | 
 | Non-equi inner join | `join_where` | Finds all possible pairings of rows from the left and right that satisfy the given predicate(s). | 
-| Asof join | `join_asof`/`join_asof_by` | Like a left outer join, but matches on the nearest key instead of on exact key matches. | 
-| Cartesian product | `join(..., how="cross")` | Computes the [Cartesian product](https://en.wikipedia.org/wiki/Cartesian_product)of the two dataframes. | 
+| Asof join | `join_asof` /`join_asof_by` | Like a left outer join, but matches on the nearest key instead of on exact key matches. | 
+| Cartesian product | `join(..., how="cross")` | Computes the [Cartesian product](https://en.wikipedia.org/wiki/Cartesian_product) of the two dataframes. | 
 
 ## Equi joins
 
@@ -146,9 +144,7 @@ props_groups2 = props_groups.with_columns(
 )
 print(props_groups2)
 ```
-[   str namespace](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.StringNameSpaceImpl.html) ·
-
-[Available on feature strings](/user-guide/installation/#feature-flags)
+  [`str namespace`](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.StringNameSpaceImpl.html) ·  [Available on feature strings](/user-guide/installation/#feature-flags)
 
 ```
 let props_groups2 = props_groups
@@ -212,11 +208,7 @@ result = props_groups2.join(
 )
 print(result)
 ```
-[   join](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.DataFrameJoinOps.html#method.join) ·
-
-[·](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.StringNameSpaceImpl.html)
-
-`str namespace`[Available on feature strings](/user-guide/installation/#feature-flags)
+  [`join`](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.DataFrameJoinOps.html#method.join) ·  [`str namespace`](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.StringNameSpaceImpl.html) ·  [Available on feature strings](/user-guide/installation/#feature-flags)
 
 ```
 let result = props_groups2
@@ -427,9 +419,7 @@ A semi join will return the rows of the left dataframe that have a match in the 
 result = props_groups.join(props_prices, on="property_name", how="semi")
 print(result)
 ```
-[   join](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.DataFrameJoinOps.html#method.join) ·
-
-[Available on feature semi_anti_join](/user-guide/installation/#feature-flags)
+  [`join`](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.DataFrameJoinOps.html#method.join) ·  [Available on feature semi_anti_join](/user-guide/installation/#feature-flags)
 
 ```
 let result = props_groups
@@ -467,9 +457,7 @@ Conversely, an anti join will return the rows of the left dataframe that do not 
 result = props_groups.join(props_prices, on="property_name", how="anti")
 print(result)
 ```
-[   join](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.DataFrameJoinOps.html#method.join) ·
-
-[Available on feature semi_anti_join](/user-guide/installation/#feature-flags)
+  [`join`](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.DataFrameJoinOps.html#method.join) ·  [Available on feature semi_anti_join](/user-guide/installation/#feature-flags)
 
 ```
 let result = props_groups
@@ -533,9 +521,7 @@ player could be interested in buying. We use the function `join_where` to comput
 result = players.join_where(props_prices, pl.col("cash") > pl.col("cost"))
 print(result)
 ```
-[   join_where](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.JoinBuilder.html#method.join_where) ·
-
-[Available on feature iejoin](/user-guide/installation/#feature-flags)
+  [`join_where`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.JoinBuilder.html#method.join_where) ·  [Available on feature iejoin](/user-guide/installation/#feature-flags)
 
 ```
 let result = players
@@ -669,9 +655,7 @@ df_asof_join = df_trades.join_asof(
 )
 print(df_asof_join)
 ```
-[   join_asof_by](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.AsofJoinBy.html#method.join_asof_by) ·
-
-[Available on feature asof_join](/user-guide/installation/#feature-flags)
+  [`join_asof_by`](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.AsofJoinBy.html#method.join_asof_by) ·  [Available on feature asof_join](/user-guide/installation/#feature-flags)
 
 ```
 let result = df_trades.join_asof_by(
@@ -710,9 +694,7 @@ df_asof_tolerance_join = df_trades.join_asof(
 )
 print(df_asof_tolerance_join)
 ```
-[   join_asof_by](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.AsofJoinBy.html#method.join_asof_by) ·
-
-[Available on feature asof_join](/user-guide/installation/#feature-flags)
+  [`join_asof_by`](https://docs.pola.rs/api/rust/dev/polars/prelude/trait.AsofJoinBy.html#method.join_asof_by) ·  [Available on feature asof_join](/user-guide/installation/#feature-flags)
 
 ```
 let result = df_trades.join_asof_by(
@@ -754,9 +736,7 @@ tokens = pl.DataFrame({"monopoly_token": ["hat", "shoe", "boat"]})
 result = players.select(pl.col("name")).join(tokens, how="cross")
 print(result)
 ```
-[   cross_join](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyFrame.html#method.cross_join) ·
-
-[Available on feature cross_join](/user-guide/installation/#feature-flags)
+  [`cross_join`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyFrame.html#method.cross_join) ·  [Available on feature cross_join](/user-guide/installation/#feature-flags)
 
 ```
 let tokens = df!(
