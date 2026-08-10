@@ -2,7 +2,7 @@
   "generator": "okf-kit",
   "okf_version": "0.1",
   "root_url": "https://docs.pola.rs/",
-  "updated_at": "2026-08-03T09:49:29.378662+00:00",
+  "updated_at": "2026-08-10T07:44:31.784970+00:00",
   "config": {
     "max_depth": 3,
     "max_pages": 90,
@@ -46,7 +46,7 @@
       "path": "pages/api/rust/dev/polars/frame/struct.md",
       "url": "https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html",
       "title": "DataFrame in polars::frame - Rust",
-      "hash": "98c2cf8cac4a083d39a062d6e23c581e0c750b978f1ac0993055862da1664e17"
+      "hash": "fe043ba634e5436b6cc6acc80284032df103f7b497260f28e292043f1acd4ab5"
     },
     {
       "path": "pages/api/rust/dev/polars/prelude/struct.md",
@@ -1484,9 +1484,9 @@
     ]
   ],
   "last_sync": {
-    "synced_at": "2026-08-03T09:49:29.313629+00:00",
+    "synced_at": "2026-08-10T07:44:31.718443+00:00",
     "added": 0,
-    "changed": 72,
+    "changed": 1,
     "removed": 0,
     "pages": 90
   }
