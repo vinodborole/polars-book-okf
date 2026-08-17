@@ -3,7 +3,7 @@ type: Web Page
 title: DataFrame in polars::frame - Rust
 description: A contiguous growable collection of `Column`s that have the same length.
 resource: https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html
-timestamp: '2026-08-10T07:44:31.713523+00:00'
+timestamp: '2026-08-17T06:58:25.170846+00:00'
 ---
 
 `pub struct DataFrame { /* private fields */ }`
@@ -205,17 +205,17 @@ Convert the columns of this [DataFrame](../prelude/struct.DataFrame.html) to arr
 
 Convert the columns of this [DataFrame](../prelude/struct.DataFrame.html) to arrow arrays.
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#98)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#99)
 ### impl [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#98)
+[Source](../../src/polars_core/frame/dataframe.rs.html#99)
 
 ### impl [DataFrame](../prelude/struct.DataFrame.html)
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#107)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#108)
 #### pub const fn [empty](#method.empty)() -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#107)
+[Source](../../src/polars_core/frame/dataframe.rs.html#108)
 
 #### pub const fn [empty](#method.empty)() -> [DataFrame](../prelude/struct.DataFrame.html)
 
@@ -227,40 +227,40 @@ Creates an empty `DataFrame` usable in a compile time context (such as static in
 use polars_core::prelude::DataFrame;
 static EMPTY: DataFrame = DataFrame::empty();
 ```
-[Source](../../src/polars_core/frame/dataframe.rs.html#111)
+[Source](../../src/polars_core/frame/dataframe.rs.html#112)
 
 #### pub const fn [empty_with_height](#method.empty_with_height)(height: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#119)
+[Source](../../src/polars_core/frame/dataframe.rs.html#120)
 
 #### pub fn [new](#method.new)(
     height: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html),
     columns: [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#127)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#128)
 #### pub fn [new_infer_height](#method.new_infer_height)(columns: [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#127)
+[Source](../../src/polars_core/frame/dataframe.rs.html#128)
 
 #### pub fn [new_infer_height](#method.new_infer_height)(columns: [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
 Height is sourced from first column.
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#148)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#149)
 #### pub unsafe fn [new_unchecked_infer_height](#method.new_unchecked_infer_height)(columns: [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#148)
+[Source](../../src/polars_core/frame/dataframe.rs.html#149)
 
 #### pub unsafe fn [new_unchecked_infer_height](#method.new_unchecked_infer_height)(columns: [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#156)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#157)
 #### pub const unsafe fn [_new_unchecked_impl](#method._new_unchecked_impl)(
     height: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html),
     columns: [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>,
 ) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#156)
+[Source](../../src/polars_core/frame/dataframe.rs.html#157)
 
 #### pub const unsafe fn [_new_unchecked_impl](#method._new_unchecked_impl)(
     height: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html),
@@ -269,13 +269,13 @@ Height is sourced from first column.
 
 This will not panic even in debug mode - there are some (rare) use cases where a DataFrame is temporarily constructed containing duplicates for dispatching to functions. A DataFrame constructed with this method is generally highly unsafe and should not be long-lived.
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#166)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#167)
 #### pub fn [new_with_broadcast](#method.new_with_broadcast)(
     height: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html),
     columns: [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#166)
+[Source](../../src/polars_core/frame/dataframe.rs.html#167)
 
 #### pub fn [new_with_broadcast](#method.new_with_broadcast)(
     height: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html),
@@ -285,12 +285,12 @@ This will not panic even in debug mode - there are some (rare) use cases where a
 Broadcasts unit-length columns to `height`. Errors if a column has height that is non-unit
 length and not equal to `self.height()`.
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#172)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#175)
 #### pub fn [new_infer_broadcast](#method.new_infer_broadcast)(
     columns: [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#172)
+[Source](../../src/polars_core/frame/dataframe.rs.html#175)
 
 #### pub fn [new_infer_broadcast](#method.new_infer_broadcast)(
     columns: [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>,
@@ -298,59 +298,100 @@ length and not equal to `self.height()`.
 
 Infers height as the first non-unit length column or 1 if not found.
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#181-184)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#185-188)
 #### pub unsafe fn [new_unchecked_with_broadcast](#method.new_unchecked_with_broadcast)(
     height: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html),
     columns: [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#181-184)
+[Source](../../src/polars_core/frame/dataframe.rs.html#185-188)
 
 #### pub unsafe fn [new_unchecked_with_broadcast](#method.new_unchecked_with_broadcast)(
     height: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html),
     columns: [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#191)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#197)
 #### pub unsafe fn [new_unchecked_infer_broadcast](#method.new_unchecked_infer_broadcast)(
     columns: [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#191)
+[Source](../../src/polars_core/frame/dataframe.rs.html#197)
 
 #### pub unsafe fn [new_unchecked_infer_broadcast](#method.new_unchecked_infer_broadcast)(
     columns: [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#196)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#205)
+#### pub fn [broadcast_to](#method.broadcast_to)(
+    &self,
+    height: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html),
+) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Cow](https://doc.rust-lang.org/nightly/alloc/borrow/enum.Cow.html)<'_, [DataFrame](../prelude/struct.DataFrame.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
+
+[Source](../../src/polars_core/frame/dataframe.rs.html#205)
+
+#### pub fn [broadcast_to](#method.broadcast_to)(
+    &self,
+    height: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html),
+) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Cow](https://doc.rust-lang.org/nightly/alloc/borrow/enum.Cow.html)<'_, [DataFrame](../prelude/struct.DataFrame.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
+
+Returns a DataFrame with the given height.
+
+Errors if this DataFrame’s height is not 1 and also not equal to the requested height.
+
+## [Source](../../src/polars_core/frame/dataframe.rs.html#219)
+#### pub fn [broadcast_in_place_to](#method.broadcast_in_place_to)(
+    &mut self,
+    length: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html),
+) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[()](https://doc.rust-lang.org/nightly/std/primitive.unit.html), [PolarsError](../prelude/enum.PolarsError.html)>
+
+[Source](../../src/polars_core/frame/dataframe.rs.html#219)
+
+#### pub fn [broadcast_in_place_to](#method.broadcast_in_place_to)(
+    &mut self,
+    length: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html),
+) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[()](https://doc.rust-lang.org/nightly/std/primitive.unit.html), [PolarsError](../prelude/enum.PolarsError.html)>
+
+See broadcast_to.
+
+## [Source](../../src/polars_core/frame/dataframe.rs.html#227)
+#### pub fn [broadcast_owned_to](#method.broadcast_owned_to)(self, length: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
+
+[Source](../../src/polars_core/frame/dataframe.rs.html#227)
+
+#### pub fn [broadcast_owned_to](#method.broadcast_owned_to)(self, length: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
+
+See broadcast_to.
+
+## [Source](../../src/polars_core/frame/dataframe.rs.html#233)
 #### pub fn [empty_with_schema](#method.empty_with_schema)(schema: &Schema<[DataType](../prelude/enum.DataType.html), [()](https://doc.rust-lang.org/nightly/std/primitive.unit.html)>) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#196)
+[Source](../../src/polars_core/frame/dataframe.rs.html#233)
 
 #### pub fn [empty_with_schema](#method.empty_with_schema)(schema: &Schema<[DataType](../prelude/enum.DataType.html), [()](https://doc.rust-lang.org/nightly/std/primitive.unit.html)>) -> [DataFrame](../prelude/struct.DataFrame.html)
 
 Create a `DataFrame` 0 height and columns as per the `schema`.
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#206)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#243)
 #### pub fn [empty_with_arc_schema](#method.empty_with_arc_schema)(schema: [Arc](../prelude/struct.Arc.html)<Schema<[DataType](../prelude/enum.DataType.html), [()](https://doc.rust-lang.org/nightly/std/primitive.unit.html)>>) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#206)
+[Source](../../src/polars_core/frame/dataframe.rs.html#243)
 
 #### pub fn [empty_with_arc_schema](#method.empty_with_arc_schema)(schema: [Arc](../prelude/struct.Arc.html)<Schema<[DataType](../prelude/enum.DataType.html), [()](https://doc.rust-lang.org/nightly/std/primitive.unit.html)>>) -> [DataFrame](../prelude/struct.DataFrame.html)
 
 Create an empty `DataFrame` with empty columns as per the `schema`.
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#218)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#255)
 #### pub unsafe fn [set_height](#method.set_height)(&mut self, height: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#218)
+[Source](../../src/polars_core/frame/dataframe.rs.html#255)
 
 #### pub unsafe fn [set_height](#method.set_height)(&mut self, height: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#252)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#289)
 #### pub fn [shape](#method.shape)(&self) -> ([usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html), [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html))
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#252)
+[Source](../../src/polars_core/frame/dataframe.rs.html#289)
 
 #### pub fn [shape](#method.shape)(&self) -> ([usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html), [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html))
 
@@ -367,27 +408,27 @@ assert_eq!(df0.shape(), (0 ,0));
 assert_eq!(df1.shape(), (5, 1));
 assert_eq!(df2.shape(), (5, 2));
 ```
-## [Source](../../src/polars_core/frame/dataframe.rs.html#258)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#295)
 #### pub fn [shape_has_zero](#method.shape_has_zero)(&self) -> [bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html)
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#258)
+[Source](../../src/polars_core/frame/dataframe.rs.html#295)
 
 #### pub fn [shape_has_zero](#method.shape_has_zero)(&self) -> [bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html)
 
 0 width or height.
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#263)
+[Source](../../src/polars_core/frame/dataframe.rs.html#300)
 
 #### pub fn [columns](#method.columns)(&self) -> &[[Column](../prelude/enum.Column.html)]
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#268)
+[Source](../../src/polars_core/frame/dataframe.rs.html#305)
 
 #### pub fn [into_columns](#method.into_columns)(self) -> [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#277)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#314)
 #### pub unsafe fn [columns_mut](#method.columns_mut)(&mut self) -> &mut [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#277)
+[Source](../../src/polars_core/frame/dataframe.rs.html#314)
 
 #### pub unsafe fn [columns_mut](#method.columns_mut)(&mut self) -> &mut [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>
 
@@ -396,10 +437,10 @@ assert_eq!(df2.shape(), (5, 2));
 The caller must ensure the length of all [`Column`](../prelude/enum.Column.html)s remains equal to `self.height`, or
 that [`DataFrame::set_height`](../prelude/struct.DataFrame.html#method.set_height) is called afterwards with the new `height`.
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#286)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#323)
 #### pub unsafe fn [columns_mut_retain_schema](#method.columns_mut_retain_schema)(&mut self) -> &mut [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#286)
+[Source](../../src/polars_core/frame/dataframe.rs.html#323)
 
 #### pub unsafe fn [columns_mut_retain_schema](#method.columns_mut_retain_schema)(&mut self) -> &mut [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>
 
@@ -408,27 +449,27 @@ that [`DataFrame::set_height`](../prelude/struct.DataFrame.html#method.set_heigh
 Adheres to all safety requirements of [`DataFrame::columns_mut`](../prelude/struct.DataFrame.html#method.columns_mut), and that the list of column
 names remains unchanged.
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#312)
+[Source](../../src/polars_core/frame/dataframe.rs.html#349)
 
 #### pub fn [cached_schema](#method.cached_schema)(&self) -> [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<&[Arc](../prelude/struct.Arc.html)<Schema<[DataType](../prelude/enum.DataType.html), [()](https://doc.rust-lang.org/nightly/std/primitive.unit.html)>>>
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#341)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#378)
 #### pub unsafe fn [set_opt_schema](#method.set_opt_schema)(
     &mut self,
     schema: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Arc](../prelude/struct.Arc.html)<Schema<[DataType](../prelude/enum.DataType.html), [()](https://doc.rust-lang.org/nightly/std/primitive.unit.html)>>>,
 ) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#341)
+[Source](../../src/polars_core/frame/dataframe.rs.html#378)
 
 #### pub unsafe fn [set_opt_schema](#method.set_opt_schema)(
     &mut self,
     schema: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Arc](../prelude/struct.Arc.html)<Schema<[DataType](../prelude/enum.DataType.html), [()](https://doc.rust-lang.org/nightly/std/primitive.unit.html)>>>,
 ) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#354)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#391)
 #### pub unsafe fn [set_schema_from](#method.set_schema_from)(&mut self, from: &[DataFrame](../prelude/struct.DataFrame.html)) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#354)
+[Source](../../src/polars_core/frame/dataframe.rs.html#391)
 
 #### pub unsafe fn [set_schema_from](#method.set_schema_from)(&mut self, from: &[DataFrame](../prelude/struct.DataFrame.html)) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
@@ -438,10 +479,10 @@ Clones the cached schema from `from` to `self.cached_schema` if there is one.
 
 Schema must match the columns in `self`.
 
-## [Source](../../src/polars_core/frame/dataframe.rs.html#364)
+## [Source](../../src/polars_core/frame/dataframe.rs.html#401)
 #### pub unsafe fn [with_schema_from](#method.with_schema_from)(self, from: &[DataFrame](../prelude/struct.DataFrame.html)) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/dataframe.rs.html#364)
+[Source](../../src/polars_core/frame/dataframe.rs.html#401)
 
 #### pub unsafe fn [with_schema_from](#method.with_schema_from)(self, from: &[DataFrame](../prelude/struct.DataFrame.html)) -> [DataFrame](../prelude/struct.DataFrame.html)
 
@@ -537,14 +578,14 @@ Outputs:
  | 2   | 3   | 1   |
  +-----+-----+-----+
 ```
-## [Source](../../src/polars_core/frame/group_by/mod.rs.html#27)
+## [Source](../../src/polars_core/frame/group_by/mod.rs.html#28)
 ### impl [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/group_by/mod.rs.html#27)
+[Source](../../src/polars_core/frame/group_by/mod.rs.html#28)
 
 ### impl [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/group_by/mod.rs.html#28-33)
+[Source](../../src/polars_core/frame/group_by/mod.rs.html#29-34)
 
 #### pub fn [group_by_with_series](#method.group_by_with_series)(
     &self,
@@ -553,10 +594,10 @@ Outputs:
     sorted: [bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[GroupBy](../prelude/struct.GroupBy.html)<'_>, [PolarsError](../prelude/enum.PolarsError.html)>
 
-## [Source](../../src/polars_core/frame/group_by/mod.rs.html#115-118)
+## [Source](../../src/polars_core/frame/group_by/mod.rs.html#112-115)
 #### pub fn [group_by](#method.group_by)<I, S>(&self, by: I) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[GroupBy](../prelude/struct.GroupBy.html)<'_>, [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/group_by/mod.rs.html#115-118)
+[Source](../../src/polars_core/frame/group_by/mod.rs.html#112-115)
 
 #### pub fn [group_by](#method.group_by)<I, S>(&self, by: I) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[GroupBy](../prelude/struct.GroupBy.html)<'_>, [PolarsError](../prelude/enum.PolarsError.html)>
 
@@ -572,10 +613,10 @@ fn group_by_sum(df: &DataFrame) -> PolarsResult<DataFrame> {
     .sum()
 }
 ```
-## [Source](../../src/polars_core/frame/group_by/mod.rs.html#126-129)
+## [Source](../../src/polars_core/frame/group_by/mod.rs.html#123-126)
 #### pub fn [group_by_stable](#method.group_by_stable)<I, S>(&self, by: I) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[GroupBy](../prelude/struct.GroupBy.html)<'_>, [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/group_by/mod.rs.html#126-129)
+[Source](../../src/polars_core/frame/group_by/mod.rs.html#123-126)
 
 #### pub fn [group_by_stable](#method.group_by_stable)<I, S>(&self, by: I) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[GroupBy](../prelude/struct.GroupBy.html)<'_>, [PolarsError](../prelude/enum.PolarsError.html)>
 
@@ -759,21 +800,21 @@ of columns in the `DataFrame`
 
 Transpose a DataFrame. This is a very expensive operation.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#87)
+## [Source](../../src/polars_core/frame/mod.rs.html#86)
+### impl [DataFrame](../prelude/struct.DataFrame.html)
+
+[Source](../../src/polars_core/frame/mod.rs.html#86)
+
 ### impl [DataFrame](../prelude/struct.DataFrame.html)
 
 [Source](../../src/polars_core/frame/mod.rs.html#87)
 
-### impl [DataFrame](../prelude/struct.DataFrame.html)
-
-[Source](../../src/polars_core/frame/mod.rs.html#88)
-
 #### pub fn [materialized_column_iter](#method.materialized_column_iter)(&self) -> impl [ExactSizeIterator](https://doc.rust-lang.org/nightly/core/iter/traits/exact_size/trait.ExactSizeIterator.html)
 
-## [Source](../../src/polars_core/frame/mod.rs.html#104)
+## [Source](../../src/polars_core/frame/mod.rs.html#103)
 #### pub fn [estimated_size](#method.estimated_size)(&self) -> [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#104)
+[Source](../../src/polars_core/frame/mod.rs.html#103)
 
 #### pub fn [estimated_size](#method.estimated_size)(&self) -> [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)
 
@@ -789,54 +830,54 @@ When an array is sliced, its allocated size remains constant because the buffer 
 
 FFI buffers are included in this estimation.
 
-[Source](../../src/polars_core/frame/mod.rs.html#108-111)
+[Source](../../src/polars_core/frame/mod.rs.html#107-110)
 
 #### pub fn [try_apply_columns](#method.try_apply_columns)(
     &self,
     func: impl [Fn](https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html)(&[Column](../prelude/enum.Column.html)) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Column](../prelude/enum.Column.html), [PolarsError](../prelude/enum.PolarsError.html)> + [Send](https://doc.rust-lang.org/nightly/core/marker/trait.Send.html) + [Sync](https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#122)
+[Source](../../src/polars_core/frame/mod.rs.html#121)
 
 #### pub fn [apply_columns](#method.apply_columns)(
     &self,
     func: impl [Fn](https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html)(&[Column](../prelude/enum.Column.html)) -> [Column](../prelude/enum.Column.html) + [Send](https://doc.rust-lang.org/nightly/core/marker/trait.Send.html) + [Sync](https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html),
 ) -> [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#130-133)
+[Source](../../src/polars_core/frame/mod.rs.html#129-132)
 
 #### pub fn [try_apply_columns_par](#method.try_apply_columns_par)(
     &self,
     func: impl [Fn](https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html)(&[Column](../prelude/enum.Column.html)) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Column](../prelude/enum.Column.html), [PolarsError](../prelude/enum.PolarsError.html)> + [Send](https://doc.rust-lang.org/nightly/core/marker/trait.Send.html) + [Sync](https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#144)
+[Source](../../src/polars_core/frame/mod.rs.html#143)
 
 #### pub fn [apply_columns_par](#method.apply_columns_par)(
     &self,
     func: impl [Fn](https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html)(&[Column](../prelude/enum.Column.html)) -> [Column](../prelude/enum.Column.html) + [Send](https://doc.rust-lang.org/nightly/core/marker/trait.Send.html) + [Sync](https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html),
 ) -> [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#162)
+[Source](../../src/polars_core/frame/mod.rs.html#161)
 
 #### pub fn [new_from_index](#method.new_from_index)(&self, index: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html), height: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-## [Source](../../src/polars_core/frame/mod.rs.html#169)
+## [Source](../../src/polars_core/frame/mod.rs.html#168)
 #### pub fn [full_null](#method.full_null)(schema: &Schema<[DataType](../prelude/enum.DataType.html), [()](https://doc.rust-lang.org/nightly/std/primitive.unit.html)>, height: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#169)
+[Source](../../src/polars_core/frame/mod.rs.html#168)
 
 #### pub fn [full_null](#method.full_null)(schema: &Schema<[DataType](../prelude/enum.DataType.html), [()](https://doc.rust-lang.org/nightly/std/primitive.unit.html)>, height: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)) -> [DataFrame](../prelude/struct.DataFrame.html)
 
 Create a new `DataFrame` with the given schema, only containing nulls.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#180)
+## [Source](../../src/polars_core/frame/mod.rs.html#179)
 #### pub fn [ensure_matches_schema](#method.ensure_matches_schema)(
     &mut self,
     schema: &Schema<[DataType](../prelude/enum.DataType.html), [()](https://doc.rust-lang.org/nightly/std/primitive.unit.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[()](https://doc.rust-lang.org/nightly/std/primitive.unit.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#180)
+[Source](../../src/polars_core/frame/mod.rs.html#179)
 
 #### pub fn [ensure_matches_schema](#method.ensure_matches_schema)(
     &mut self,
@@ -845,14 +886,14 @@ Create a new `DataFrame` with the given schema, only containing nulls.
 
 Ensure this DataFrame matches the given schema. Casts null columns to the expected schema if necessary (but nothing else).
 
-## [Source](../../src/polars_core/frame/mod.rs.html#241)
+## [Source](../../src/polars_core/frame/mod.rs.html#240)
 #### pub fn [with_row_index](#method.with_row_index)(
     &self,
     name: [PlSmallStr](../prelude/struct.PlSmallStr.html),
     offset: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[u32](https://doc.rust-lang.org/nightly/std/primitive.u32.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#241)
+[Source](../../src/polars_core/frame/mod.rs.html#240)
 
 #### pub fn [with_row_index](#method.with_row_index)(
     &self,
@@ -889,14 +930,14 @@ Output:
  | 3   | Patricia |
  +-----+----------+
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#263-267)
+## [Source](../../src/polars_core/frame/mod.rs.html#262-266)
 #### pub unsafe fn [with_row_index_mut](#method.with_row_index_mut)(
     &mut self,
     name: [PlSmallStr](../prelude/struct.PlSmallStr.html),
     offset: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[u32](https://doc.rust-lang.org/nightly/std/primitive.u32.html)>,
 ) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#263-267)
+[Source](../../src/polars_core/frame/mod.rs.html#262-266)
 
 #### pub unsafe fn [with_row_index_mut](#method.with_row_index_mut)(
     &mut self,
@@ -904,64 +945,64 @@ Output:
     offset: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[u32](https://doc.rust-lang.org/nightly/std/primitive.u32.html)>,
 ) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
-## [Source](../../src/polars_core/frame/mod.rs.html#282)
+## [Source](../../src/polars_core/frame/mod.rs.html#281)
 #### pub fn [shrink_to_fit](#method.shrink_to_fit)(&mut self)
 
-[Source](../../src/polars_core/frame/mod.rs.html#282)
+[Source](../../src/polars_core/frame/mod.rs.html#281)
 
 #### pub fn [shrink_to_fit](#method.shrink_to_fit)(&mut self)
 
 Shrink the capacity of this DataFrame to fit its length.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#291)
+## [Source](../../src/polars_core/frame/mod.rs.html#290)
 #### pub fn [rechunk_mut_par](#method.rechunk_mut_par)(&mut self) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#291)
+[Source](../../src/polars_core/frame/mod.rs.html#290)
 
 #### pub fn [rechunk_mut_par](#method.rechunk_mut_par)(&mut self) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
 Aggregate all the chunks in the DataFrame to a single chunk in parallel. This may lead to more peak memory consumption.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#304)
+## [Source](../../src/polars_core/frame/mod.rs.html#303)
 #### pub fn [rechunk_mut](#method.rechunk_mut)(&mut self) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#304)
+[Source](../../src/polars_core/frame/mod.rs.html#303)
 
 #### pub fn [rechunk_mut](#method.rechunk_mut)(&mut self) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
 Rechunks all columns to only have a single chunk.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#316)
+## [Source](../../src/polars_core/frame/mod.rs.html#315)
 #### pub fn [should_rechunk](#method.should_rechunk)(&self) -> [bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#316)
+[Source](../../src/polars_core/frame/mod.rs.html#315)
 
 #### pub fn [should_rechunk](#method.should_rechunk)(&self) -> [bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html)
 
 Returns true if the chunks of the columns do not align and re-chunking should be done
 
-## [Source](../../src/polars_core/frame/mod.rs.html#357)
+## [Source](../../src/polars_core/frame/mod.rs.html#356)
 #### pub fn [align_chunks_par](#method.align_chunks_par)(&mut self) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#357)
+[Source](../../src/polars_core/frame/mod.rs.html#356)
 
 #### pub fn [align_chunks_par](#method.align_chunks_par)(&mut self) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
 Ensure all the chunks in the [`DataFrame`](../prelude/struct.DataFrame.html) are aligned.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#366)
+## [Source](../../src/polars_core/frame/mod.rs.html#365)
 #### pub fn [align_chunks](#method.align_chunks)(&mut self) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#366)
+[Source](../../src/polars_core/frame/mod.rs.html#365)
 
 #### pub fn [align_chunks](#method.align_chunks)(&mut self) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
 Ensure all the chunks in the [`DataFrame`](../prelude/struct.DataFrame.html) are aligned.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#384)
+## [Source](../../src/polars_core/frame/mod.rs.html#383)
 #### pub fn [get_column_names](#method.get_column_names)(&self) -> [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<&[PlSmallStr](../prelude/struct.PlSmallStr.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#384)
+[Source](../../src/polars_core/frame/mod.rs.html#383)
 
 #### pub fn [get_column_names](#method.get_column_names)(&self) -> [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<&[PlSmallStr](../prelude/struct.PlSmallStr.html)>
 
@@ -972,22 +1013,22 @@ let df: DataFrame = df!("Language" => ["Rust", "Python"],
                         "Designer" => ["Graydon Hoare", "Guido van Rossum"])?;
 assert_eq!(df.get_column_names(), &["Language", "Designer"]);
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#389)
+## [Source](../../src/polars_core/frame/mod.rs.html#388)
 #### pub fn [get_column_names_owned](#method.get_column_names_owned)(&self) -> [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[PlSmallStr](../prelude/struct.PlSmallStr.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#389)
+[Source](../../src/polars_core/frame/mod.rs.html#388)
 
 #### pub fn [get_column_names_owned](#method.get_column_names_owned)(&self) -> [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[PlSmallStr](../prelude/struct.PlSmallStr.html)>
 
 Get the [`Vec<PlSmallStr>`](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html) representing the column names.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#404-406)
+## [Source](../../src/polars_core/frame/mod.rs.html#403-405)
 #### pub fn [set_column_names](#method.set_column_names)<T>(
     &mut self,
     new_names: &[\[T\]](https://doc.rust-lang.org/nightly/std/primitive.slice.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[()](https://doc.rust-lang.org/nightly/std/primitive.unit.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#404-406)
+[Source](../../src/polars_core/frame/mod.rs.html#403-405)
 
 #### pub fn [set_column_names](#method.set_column_names)<T>(
     &mut self,
@@ -1003,28 +1044,28 @@ let mut df: DataFrame = df!("Mathematical set" => ["ℕ", "ℤ", "𝔻", "ℚ", 
 df.set_column_names(&["Set"])?;
 assert_eq!(df.get_column_names(), &["Set"]);
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#442)
+## [Source](../../src/polars_core/frame/mod.rs.html#441)
 #### pub fn [first_col_n_chunks](#method.first_col_n_chunks)(&self) -> [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#442)
+[Source](../../src/polars_core/frame/mod.rs.html#441)
 
 #### pub fn [first_col_n_chunks](#method.first_col_n_chunks)(&self) -> [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)
 
 The number of chunks for the first column.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#451)
+## [Source](../../src/polars_core/frame/mod.rs.html#450)
 #### pub fn [max_n_chunks](#method.max_n_chunks)(&self) -> [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#451)
+[Source](../../src/polars_core/frame/mod.rs.html#450)
 
 #### pub fn [max_n_chunks](#method.max_n_chunks)(&self) -> [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)
 
 The highest number of chunks for any column.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#474)
+## [Source](../../src/polars_core/frame/mod.rs.html#473)
 #### pub fn [fields](#method.fields)(&self) -> [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Field](../prelude/struct.Field.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#474)
+[Source](../../src/polars_core/frame/mod.rs.html#473)
 
 #### pub fn [fields](#method.fields)(&self) -> [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Field](../prelude/struct.Field.html)>
 
@@ -1039,10 +1080,10 @@ let f1: Field = Field::new("Surface type".into(), DataType::String);
 let f2: Field = Field::new("Fraction".into(), DataType::Float64);
 assert_eq!(earth.fields(), &[f1, f2]);
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#514)
+## [Source](../../src/polars_core/frame/mod.rs.html#513)
 #### pub fn [hstack](#method.hstack)(&self, columns: &[[Column](../prelude/enum.Column.html)]) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#514)
+[Source](../../src/polars_core/frame/mod.rs.html#513)
 
 #### pub fn [hstack](#method.hstack)(&self, columns: &[[Column](../prelude/enum.Column.html)]) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
@@ -1075,10 +1116,10 @@ shape: (3, 3)
 | Gold    | 79     | 79       |
 +---------+--------+----------+
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#562)
+## [Source](../../src/polars_core/frame/mod.rs.html#561)
 #### pub fn [vstack](#method.vstack)(&self, other: &[DataFrame](../prelude/struct.DataFrame.html)) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#562)
+[Source](../../src/polars_core/frame/mod.rs.html#561)
 
 #### pub fn [vstack](#method.vstack)(&self, other: &[DataFrame](../prelude/struct.DataFrame.html)) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
@@ -1117,13 +1158,13 @@ shape: (5, 2)
 | Palladium | 1828.05           |
 +-----------+-------------------+
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#608)
+## [Source](../../src/polars_core/frame/mod.rs.html#607)
 #### pub fn [vstack_mut](#method.vstack_mut)(
     &mut self,
     other: &[DataFrame](../prelude/struct.DataFrame.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<&mut [DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#608)
+[Source](../../src/polars_core/frame/mod.rs.html#607)
 
 #### pub fn [vstack_mut](#method.vstack_mut)(
     &mut self,
@@ -1165,17 +1206,17 @@ shape: (5, 2)
 | Palladium | 1828.05           |
 +-----------+-------------------+
 ```
-[Source](../../src/polars_core/frame/mod.rs.html#639)
+[Source](../../src/polars_core/frame/mod.rs.html#638)
 
 #### pub fn [vstack_mut_owned](#method.vstack_mut_owned)(
     &mut self,
     other: [DataFrame](../prelude/struct.DataFrame.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<&mut [DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-## [Source](../../src/polars_core/frame/mod.rs.html#677)
+## [Source](../../src/polars_core/frame/mod.rs.html#676)
 #### pub fn [vstack_mut_unchecked](#method.vstack_mut_unchecked)(&mut self, other: &[DataFrame](../prelude/struct.DataFrame.html)) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#677)
+[Source](../../src/polars_core/frame/mod.rs.html#676)
 
 #### pub fn [vstack_mut_unchecked](#method.vstack_mut_unchecked)(&mut self, other: &[DataFrame](../prelude/struct.DataFrame.html)) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
@@ -1187,10 +1228,10 @@ If many `vstack` operations are done, it is recommended to call [`DataFrame::ali
 
 Panics if the schema’s don’t match.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#700)
+## [Source](../../src/polars_core/frame/mod.rs.html#699)
 #### pub fn [vstack_mut_owned_unchecked](#method.vstack_mut_owned_unchecked)(&mut self, other: [DataFrame](../prelude/struct.DataFrame.html)) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#700)
+[Source](../../src/polars_core/frame/mod.rs.html#699)
 
 #### pub fn [vstack_mut_owned_unchecked](#method.vstack_mut_owned_unchecked)(&mut self, other: [DataFrame](../prelude/struct.DataFrame.html)) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
@@ -1202,10 +1243,10 @@ If many `vstack` operations are done, it is recommended to call [`DataFrame::ali
 
 Panics if the schema’s don’t match.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#729)
+## [Source](../../src/polars_core/frame/mod.rs.html#728)
 #### pub fn [extend](#method.extend)(&mut self, other: &[DataFrame](../prelude/struct.DataFrame.html)) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[()](https://doc.rust-lang.org/nightly/std/primitive.unit.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#729)
+[Source](../../src/polars_core/frame/mod.rs.html#728)
 
 #### pub fn [extend](#method.extend)(&mut self, other: &[DataFrame](../prelude/struct.DataFrame.html)) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[()](https://doc.rust-lang.org/nightly/std/primitive.unit.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
@@ -1222,10 +1263,10 @@ Prefer `vstack` over `extend` when you want to append many times before doing a 
 when you read in multiple files and when to store them in a single `DataFrame`. In the latter case, finish the sequence
 of `append` operations with a [`rechunk`](../prelude/struct.DataFrame.html#method.align_chunks_par).
 
-## [Source](../../src/polars_core/frame/mod.rs.html#770)
+## [Source](../../src/polars_core/frame/mod.rs.html#769)
 #### pub fn [drop_in_place](#method.drop_in_place)(&mut self, name: &[str](https://doc.rust-lang.org/nightly/std/primitive.str.html)) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Column](../prelude/enum.Column.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#770)
+[Source](../../src/polars_core/frame/mod.rs.html#769)
 
 #### pub fn [drop_in_place](#method.drop_in_place)(&mut self, name: &[str](https://doc.rust-lang.org/nightly/std/primitive.str.html)) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Column](../prelude/enum.Column.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
@@ -1241,13 +1282,13 @@ assert!(s1.is_err());
 let s2: Column = df.drop_in_place("Animal")?;
 assert_eq!(s2, Column::new("Animal".into(), &["Tiger", "Lion", "Great auk"]));
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#803-805)
+## [Source](../../src/polars_core/frame/mod.rs.html#802-804)
 #### pub fn [drop_nulls](#method.drop_nulls)<S>(
     &self,
     subset: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<&[\[S\]](https://doc.rust-lang.org/nightly/std/primitive.slice.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#803-805)
+[Source](../../src/polars_core/frame/mod.rs.html#802-804)
 
 #### pub fn [drop_nulls](#method.drop_nulls)<S>(
     &self,
@@ -1278,13 +1319,13 @@ shape: (1, 2)
 | Malta   | 32.7                |
 +---------+---------------------+
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#872)
+## [Source](../../src/polars_core/frame/mod.rs.html#871)
 #### pub fn [drop_many_amortized](#method.drop_many_amortized)(
     &self,
     names: &HashSet<[PlSmallStr](../prelude/struct.PlSmallStr.html), RandomState>,
 ) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#872)
+[Source](../../src/polars_core/frame/mod.rs.html#871)
 
 #### pub fn [drop_many_amortized](#method.drop_many_amortized)(
     &self,
@@ -1293,14 +1334,14 @@ shape: (1, 2)
 
 Drop columns that are in `names` without allocating a [`HashSet`](https://doc.rust-lang.org/nightly/std/collections/hash/set/struct.HashSet.html).
 
-## [Source](../../src/polars_core/frame/mod.rs.html#909)
+## [Source](../../src/polars_core/frame/mod.rs.html#908)
 #### pub fn [insert_column](#method.insert_column)(
     &mut self,
     index: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html),
     column: [Column](../prelude/enum.Column.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<&mut [DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#909)
+[Source](../../src/polars_core/frame/mod.rs.html#908)
 
 #### pub fn [insert_column](#method.insert_column)(
     &mut self,
@@ -1310,13 +1351,13 @@ Drop columns that are in `names` without allocating a [`HashSet`](https://doc.ru
 
 Insert a new column at a given index.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#923)
+## [Source](../../src/polars_core/frame/mod.rs.html#922)
 #### pub fn [with_column](#method.with_column)(
     &mut self,
     column: [Column](../prelude/enum.Column.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<&mut [DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#923)
+[Source](../../src/polars_core/frame/mod.rs.html#922)
 
 #### pub fn [with_column](#method.with_column)(
     &mut self,
@@ -1326,21 +1367,21 @@ Insert a new column at a given index.
 Add a new column to this [`DataFrame`](../prelude/struct.DataFrame.html) or replace an existing one. Broadcasts unit-length
 columns.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#952)
+## [Source](../../src/polars_core/frame/mod.rs.html#943)
 #### pub unsafe fn [push_column_unchecked](#method.push_column_unchecked)(&mut self, column: [Column](../prelude/enum.Column.html)) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#952)
+[Source](../../src/polars_core/frame/mod.rs.html#943)
 
 #### pub unsafe fn [push_column_unchecked](#method.push_column_unchecked)(&mut self, column: [Column](../prelude/enum.Column.html)) -> &mut [DataFrame](../prelude/struct.DataFrame.html)
 
-## [Source](../../src/polars_core/frame/mod.rs.html#959-963)
+## [Source](../../src/polars_core/frame/mod.rs.html#950-954)
 #### pub fn [with_columns_mut](#method.with_columns_mut)(
     &mut self,
     columns: impl [IntoIterator](https://doc.rust-lang.org/nightly/core/iter/traits/collect/trait.IntoIterator.html)<Item = [Column](../prelude/enum.Column.html)>,
     output_schema: &Schema<[DataType](../prelude/enum.DataType.html), [()](https://doc.rust-lang.org/nightly/std/primitive.unit.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[()](https://doc.rust-lang.org/nightly/std/primitive.unit.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#959-963)
+[Source](../../src/polars_core/frame/mod.rs.html#950-954)
 
 #### pub fn [with_columns_mut](#method.with_columns_mut)(
     &mut self,
@@ -1351,10 +1392,10 @@ columns.
 Add or replace columns to this [`DataFrame`](../prelude/struct.DataFrame.html) or replace an existing one.
 Broadcasts unit-length columns, and uses an existing schema to amortize lookups.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#1044)
+## [Source](../../src/polars_core/frame/mod.rs.html#1026)
 #### pub fn [select_at_idx](#method.select_at_idx)(&self, idx: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)) -> [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<&[Column](../prelude/enum.Column.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1044)
+[Source](../../src/polars_core/frame/mod.rs.html#1026)
 
 #### pub fn [select_at_idx](#method.select_at_idx)(&self, idx: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)) -> [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<&[Column](../prelude/enum.Column.html)>
 
@@ -1369,10 +1410,10 @@ let s1: Option<&Column> = df.select_at_idx(0);
 let s2 = Column::new("Star".into(), ["Sun", "Betelgeuse", "Sirius A", "Sirius B"]);
 assert_eq!(s1, Some(&s2));
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#1065)
+## [Source](../../src/polars_core/frame/mod.rs.html#1047)
 #### pub fn [get_column_index](#method.get_column_index)(&self, name: &[str](https://doc.rust-lang.org/nightly/std/primitive.str.html)) -> [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1065)
+[Source](../../src/polars_core/frame/mod.rs.html#1047)
 
 #### pub fn [get_column_index](#method.get_column_index)(&self, name: &[str](https://doc.rust-lang.org/nightly/std/primitive.str.html)) -> [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)>
 
@@ -1391,19 +1432,19 @@ assert_eq!(df.get_column_index("Mana"), Some(2));
 assert_eq!(df.get_column_index("Strength"), Some(3));
 assert_eq!(df.get_column_index("Haste"), None);
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#1076)
+## [Source](../../src/polars_core/frame/mod.rs.html#1058)
 #### pub fn [try_get_column_index](#method.try_get_column_index)(&self, name: &[str](https://doc.rust-lang.org/nightly/std/primitive.str.html)) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1076)
+[Source](../../src/polars_core/frame/mod.rs.html#1058)
 
 #### pub fn [try_get_column_index](#method.try_get_column_index)(&self, name: &[str](https://doc.rust-lang.org/nightly/std/primitive.str.html)) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
 Get column index of a [`Series`](../prelude/struct.Series.html) by name.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#1094)
+## [Source](../../src/polars_core/frame/mod.rs.html#1076)
 #### pub fn [column](#method.column)(&self, name: &[str](https://doc.rust-lang.org/nightly/std/primitive.str.html)) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<&[Column](../prelude/enum.Column.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1094)
+[Source](../../src/polars_core/frame/mod.rs.html#1076)
 
 #### pub fn [column](#method.column)(&self, name: &[str](https://doc.rust-lang.org/nightly/std/primitive.str.html)) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<&[Column](../prelude/enum.Column.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
@@ -1417,33 +1458,33 @@ let s2 = Column::new("Robustness".into(), ["Weak", "Strong"]);
 let df: DataFrame = DataFrame::new_infer_height(vec![s1.clone(), s2])?;
 assert_eq!(df.column("Password")?, &s1);
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#1109-1112)
+## [Source](../../src/polars_core/frame/mod.rs.html#1091-1094)
 #### pub fn [select](#method.select)<I, S>(&self, names: I) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1109-1112)
+[Source](../../src/polars_core/frame/mod.rs.html#1091-1094)
 
 #### pub fn [select](#method.select)<I, S>(&self, names: I) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-## [Source](../../src/polars_core/frame/mod.rs.html#1121-1124)
+## [Source](../../src/polars_core/frame/mod.rs.html#1103-1106)
 #### pub unsafe fn [select_unchecked](#method.select_unchecked)<I, S>(
     &self,
     names: I,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1121-1124)
+[Source](../../src/polars_core/frame/mod.rs.html#1103-1106)
 
 #### pub unsafe fn [select_unchecked](#method.select_unchecked)<I, S>(
     &self,
     names: I,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-## [Source](../../src/polars_core/frame/mod.rs.html#1146-1149)
+## [Source](../../src/polars_core/frame/mod.rs.html#1128-1131)
 #### pub fn [select_to_vec](#method.select_to_vec)(
     &self,
     selection: impl [IntoIterator](https://doc.rust-lang.org/nightly/core/iter/traits/collect/trait.IntoIterator.html)<Item = impl [AsRef](https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html)<[str](https://doc.rust-lang.org/nightly/std/primitive.str.html)>>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[Column](../prelude/enum.Column.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1146-1149)
+[Source](../../src/polars_core/frame/mod.rs.html#1128-1131)
 
 #### pub fn [select_to_vec](#method.select_to_vec)(
     &self,
@@ -1464,26 +1505,26 @@ let sv: Vec<Column> = df.select_to_vec(["Carbon", "Hydrogen"])?;
 assert_eq!(df["Carbon"], sv[0]);
 assert_eq!(df["Hydrogen"], sv[1]);
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#1164)
+## [Source](../../src/polars_core/frame/mod.rs.html#1146)
 #### pub fn [filter](#method.filter)(
     &self,
     mask: &[ChunkedArray](../prelude/struct.ChunkedArray.html)<[BooleanType](../prelude/struct.BooleanType.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1164)
+[Source](../../src/polars_core/frame/mod.rs.html#1146)
 
 #### pub fn [filter](#method.filter)(
     &self,
     mask: &[ChunkedArray](../prelude/struct.ChunkedArray.html)<[BooleanType](../prelude/struct.BooleanType.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-## [Source](../../src/polars_core/frame/mod.rs.html#1184)
+## [Source](../../src/polars_core/frame/mod.rs.html#1166)
 #### pub fn [filter_seq](#method.filter_seq)(
     &self,
     mask: &[ChunkedArray](../prelude/struct.ChunkedArray.html)<[BooleanType](../prelude/struct.BooleanType.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1184)
+[Source](../../src/polars_core/frame/mod.rs.html#1166)
 
 #### pub fn [filter_seq](#method.filter_seq)(
     &self,
@@ -1492,23 +1533,23 @@ assert_eq!(df["Hydrogen"], sv[1]);
 
 Same as `filter` but does not parallelize.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#1214)
+## [Source](../../src/polars_core/frame/mod.rs.html#1196)
 #### pub fn [take](#method.take)(
     &self,
     indices: &[ChunkedArray](../prelude/struct.ChunkedArray.html)<[UInt32Type](../prelude/struct.UInt32Type.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1214)
+[Source](../../src/polars_core/frame/mod.rs.html#1196)
 
 #### pub fn [take](#method.take)(
     &self,
     indices: &[ChunkedArray](../prelude/struct.ChunkedArray.html)<[UInt32Type](../prelude/struct.UInt32Type.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-## [Source](../../src/polars_core/frame/mod.rs.html#1227)
+## [Source](../../src/polars_core/frame/mod.rs.html#1209)
 #### pub unsafe fn [take_unchecked](#method.take_unchecked)(&self, idx: &[ChunkedArray](../prelude/struct.ChunkedArray.html)<[UInt32Type](../prelude/struct.UInt32Type.html)>) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#1227)
+[Source](../../src/polars_core/frame/mod.rs.html#1209)
 
 #### pub unsafe fn [take_unchecked](#method.take_unchecked)(&self, idx: &[ChunkedArray](../prelude/struct.ChunkedArray.html)<[UInt32Type](../prelude/struct.UInt32Type.html)>) -> [DataFrame](../prelude/struct.DataFrame.html)
 
@@ -1516,7 +1557,7 @@ Same as `filter` but does not parallelize.
 
 The indices must be in-bounds.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#1234)
+## [Source](../../src/polars_core/frame/mod.rs.html#1216)
 #### pub unsafe fn [gather_group_unchecked](#method.gather_group_unchecked)(
     &self,
     group: &[GroupsIndicator](../prelude/enum.GroupsIndicator.html)<'_>,
@@ -1524,7 +1565,7 @@ The indices must be in-bounds.
 
 **crate feature `algorithm_group_by`** only.
 
-[Source](../../src/polars_core/frame/mod.rs.html#1234)
+[Source](../../src/polars_core/frame/mod.rs.html#1216)
 
 #### pub unsafe fn [gather_group_unchecked](#method.gather_group_unchecked)(
     &self,
@@ -1538,14 +1579,14 @@ The indices must be in-bounds.
 
 The indices must be in-bounds.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#1245)
+## [Source](../../src/polars_core/frame/mod.rs.html#1227)
 #### pub unsafe fn [take_unchecked_impl](#method.take_unchecked_impl)(
     &self,
     idx: &[ChunkedArray](../prelude/struct.ChunkedArray.html)<[UInt32Type](../prelude/struct.UInt32Type.html)>,
     allow_threads: [bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html),
 ) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#1245)
+[Source](../../src/polars_core/frame/mod.rs.html#1227)
 
 #### pub unsafe fn [take_unchecked_impl](#method.take_unchecked_impl)(
     &self,
@@ -1557,10 +1598,10 @@ The indices must be in-bounds.
 
 The indices must be in-bounds.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#1287)
+## [Source](../../src/polars_core/frame/mod.rs.html#1269)
 #### pub unsafe fn [take_slice_unchecked](#method.take_slice_unchecked)(&self, idx: &[[u32](https://doc.rust-lang.org/nightly/std/primitive.u32.html)]) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#1287)
+[Source](../../src/polars_core/frame/mod.rs.html#1269)
 
 #### pub unsafe fn [take_slice_unchecked](#method.take_slice_unchecked)(&self, idx: &[[u32](https://doc.rust-lang.org/nightly/std/primitive.u32.html)]) -> [DataFrame](../prelude/struct.DataFrame.html)
 
@@ -1568,14 +1609,14 @@ The indices must be in-bounds.
 
 The indices must be in-bounds.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#1293)
+## [Source](../../src/polars_core/frame/mod.rs.html#1275)
 #### pub unsafe fn [take_slice_unchecked_impl](#method.take_slice_unchecked_impl)(
     &self,
     idx: &[[u32](https://doc.rust-lang.org/nightly/std/primitive.u32.html)],
     allow_threads: [bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html),
 ) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#1293)
+[Source](../../src/polars_core/frame/mod.rs.html#1275)
 
 #### pub unsafe fn [take_slice_unchecked_impl](#method.take_slice_unchecked_impl)(
     &self,
@@ -1587,14 +1628,14 @@ The indices must be in-bounds.
 
 The indices must be in-bounds.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#1350)
+## [Source](../../src/polars_core/frame/mod.rs.html#1332)
 #### pub fn [rename](#method.rename)(
     &mut self,
     column: &[str](https://doc.rust-lang.org/nightly/std/primitive.str.html),
     name: [PlSmallStr](../prelude/struct.PlSmallStr.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<&mut [DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1350)
+[Source](../../src/polars_core/frame/mod.rs.html#1332)
 
 #### pub fn [rename](#method.rename)(
     &mut self,
@@ -1602,21 +1643,21 @@ The indices must be in-bounds.
     name: [PlSmallStr](../prelude/struct.PlSmallStr.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<&mut [DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1367-1370)
+[Source](../../src/polars_core/frame/mod.rs.html#1349-1352)
 
 #### pub fn [rename_many](#method.rename_many)<'a>(
     &mut self,
     renames: impl [Iterator](https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html)<Item = (&'a [str](https://doc.rust-lang.org/nightly/std/primitive.str.html), [PlSmallStr](../prelude/struct.PlSmallStr.html))>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<&mut [DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-## [Source](../../src/polars_core/frame/mod.rs.html#1405-1409)
+## [Source](../../src/polars_core/frame/mod.rs.html#1387-1391)
 #### pub fn [sort_in_place](#method.sort_in_place)(
     &mut self,
     by: impl [IntoIterator](https://doc.rust-lang.org/nightly/core/iter/traits/collect/trait.IntoIterator.html)<Item = impl [AsRef](https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html)<[str](https://doc.rust-lang.org/nightly/std/primitive.str.html)>>,
     sort_options: [SortMultipleOptions](../prelude/struct.SortMultipleOptions.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<&mut [DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1405-1409)
+[Source](../../src/polars_core/frame/mod.rs.html#1387-1391)
 
 #### pub fn [sort_in_place](#method.sort_in_place)(
     &mut self,
@@ -1628,10 +1669,10 @@ Sort [`DataFrame`](../prelude/struct.DataFrame.html) in place.
 
 See [`DataFrame::sort`](../prelude/struct.DataFrame.html#method.sort) for more instruction.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#1557)
+## [Source](../../src/polars_core/frame/mod.rs.html#1539)
 #### pub fn [_to_metadata](#method._to_metadata)(&self) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#1557)
+[Source](../../src/polars_core/frame/mod.rs.html#1539)
 
 #### pub fn [_to_metadata](#method._to_metadata)(&self) -> [DataFrame](../prelude/struct.DataFrame.html)
 
@@ -1639,14 +1680,14 @@ Create a `DataFrame` that has fields for all the known runtime metadata for each
 
 This dataframe does not necessarily have a specified schema and may be changed at any point. It is primarily used for debugging.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#1642-1646)
+## [Source](../../src/polars_core/frame/mod.rs.html#1624-1628)
 #### pub fn [sort](#method.sort)(
     &self,
     by: impl [IntoIterator](https://doc.rust-lang.org/nightly/core/iter/traits/collect/trait.IntoIterator.html)<Item = impl [AsRef](https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html)<[str](https://doc.rust-lang.org/nightly/std/primitive.str.html)>>,
     sort_options: [SortMultipleOptions](../prelude/struct.SortMultipleOptions.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1642-1646)
+[Source](../../src/polars_core/frame/mod.rs.html#1624-1628)
 
 #### pub fn [sort](#method.sort)(
     &self,
@@ -1693,14 +1734,14 @@ See [`SortMultipleOptions`](../prelude/struct.SortMultipleOptions.html) for more
 
 Also see [`DataFrame::sort_in_place`](../prelude/struct.DataFrame.html#method.sort_in_place).
 
-## [Source](../../src/polars_core/frame/mod.rs.html#1666)
+## [Source](../../src/polars_core/frame/mod.rs.html#1648)
 #### pub fn [replace](#method.replace)(
     &mut self,
     column: &[str](https://doc.rust-lang.org/nightly/std/primitive.str.html),
     new_col: [Column](../prelude/enum.Column.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<&mut [DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1666)
+[Source](../../src/polars_core/frame/mod.rs.html#1648)
 
 #### pub fn [replace](#method.replace)(
     &mut self,
@@ -1719,14 +1760,14 @@ let s: Column = Column::new("Country".into(), ["USA", "PRC"]);
 assert!(df.replace("Nation", s.clone()).is_err());
 assert!(df.replace("Country", s).is_ok());
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#1684)
+## [Source](../../src/polars_core/frame/mod.rs.html#1666)
 #### pub fn [replace_column](#method.replace_column)(
     &mut self,
     index: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html),
     new_column: [Column](../prelude/enum.Column.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<&mut [DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1684)
+[Source](../../src/polars_core/frame/mod.rs.html#1666)
 
 #### pub fn [replace_column](#method.replace_column)(
     &mut self,
@@ -1747,14 +1788,14 @@ let mut df = DataFrame::new_infer_height(vec![s0, s1])?;
 df.replace_column(1, df.select_at_idx(1).unwrap() + 32);
 # Ok::<(), PolarsError>(())
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#1744-1747)
+## [Source](../../src/polars_core/frame/mod.rs.html#1726-1729)
 #### pub fn [apply](#method.apply)<F, C>(
     &mut self,
     name: &[str](https://doc.rust-lang.org/nightly/std/primitive.str.html),
     f: F,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<&mut [DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1744-1747)
+[Source](../../src/polars_core/frame/mod.rs.html#1726-1729)
 
 #### pub fn [apply](#method.apply)<F, C>(
     &mut self,
@@ -1798,14 +1839,14 @@ Results in:
 | "egg"  | 3     |
 +--------+-------+
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#1784-1787)
+## [Source](../../src/polars_core/frame/mod.rs.html#1766-1769)
 #### pub fn [apply_at_idx](#method.apply_at_idx)<F, C>(
     &mut self,
     idx: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html),
     f: F,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<&mut [DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1784-1787)
+[Source](../../src/polars_core/frame/mod.rs.html#1766-1769)
 
 #### pub fn [apply_at_idx](#method.apply_at_idx)<F, C>(
     &mut self,
@@ -1840,14 +1881,14 @@ Results in:
 | "egg"  | 111   |
 +--------+-------+
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#1864-1867)
+## [Source](../../src/polars_core/frame/mod.rs.html#1836-1839)
 #### pub fn [try_apply_at_idx](#method.try_apply_at_idx)<F, C>(
     &mut self,
     idx: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html),
     f: F,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<&mut [DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1864-1867)
+[Source](../../src/polars_core/frame/mod.rs.html#1836-1839)
 
 #### pub fn [try_apply_at_idx](#method.try_apply_at_idx)<F, C>(
     &mut self,
@@ -1891,14 +1932,14 @@ Results in:
 | "quack-is-modified" | 5      |
 +---------------------+--------+
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#1943-1946)
+## [Source](../../src/polars_core/frame/mod.rs.html#1915-1918)
 #### pub fn [try_apply](#method.try_apply)<F, C>(
     &mut self,
     column: &[str](https://doc.rust-lang.org/nightly/std/primitive.str.html),
     f: F,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<&mut [DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#1943-1946)
+[Source](../../src/polars_core/frame/mod.rs.html#1915-1918)
 
 #### pub fn [try_apply](#method.try_apply)<F, C>(
     &mut self,
@@ -1943,10 +1984,10 @@ Results in:
 | "not_within_bounds" | 5      |
 +---------------------+--------+
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#1982)
+## [Source](../../src/polars_core/frame/mod.rs.html#1954)
 #### pub fn [slice](#method.slice)(&self, offset: [i64](https://doc.rust-lang.org/nightly/std/primitive.i64.html), length: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#1982)
+[Source](../../src/polars_core/frame/mod.rs.html#1954)
 
 #### pub fn [slice](#method.slice)(&self, offset: [i64](https://doc.rust-lang.org/nightly/std/primitive.i64.html), length: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)) -> [DataFrame](../prelude/struct.DataFrame.html)
 
@@ -1977,31 +2018,31 @@ shape: (3, 2)
 | Fig   | Red   |
 +-------+-------+
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#2004)
+## [Source](../../src/polars_core/frame/mod.rs.html#1976)
 #### pub fn [split_at](#method.split_at)(&self, offset: [i64](https://doc.rust-lang.org/nightly/std/primitive.i64.html)) -> ([DataFrame](../prelude/struct.DataFrame.html), [DataFrame](../prelude/struct.DataFrame.html))
 
-[Source](../../src/polars_core/frame/mod.rs.html#2004)
+[Source](../../src/polars_core/frame/mod.rs.html#1976)
 
 #### pub fn [split_at](#method.split_at)(&self, offset: [i64](https://doc.rust-lang.org/nightly/std/primitive.i64.html)) -> ([DataFrame](../prelude/struct.DataFrame.html), [DataFrame](../prelude/struct.DataFrame.html))
 
 Split [`DataFrame`](../prelude/struct.DataFrame.html) at the given `offset`.
 
-[Source](../../src/polars_core/frame/mod.rs.html#2015)
+[Source](../../src/polars_core/frame/mod.rs.html#1987)
 
 #### pub fn [clear](#method.clear)(&self) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#2021)
+[Source](../../src/polars_core/frame/mod.rs.html#1993)
 
 #### pub fn [slice_par](#method.slice_par)(&self, offset: [i64](https://doc.rust-lang.org/nightly/std/primitive.i64.html), length: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#2030)
+[Source](../../src/polars_core/frame/mod.rs.html#2002)
 
 #### pub fn [_slice_and_realloc](#method._slice_and_realloc)(&self, offset: [i64](https://doc.rust-lang.org/nightly/std/primitive.i64.html), length: [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-## [Source](../../src/polars_core/frame/mod.rs.html#2077)
+## [Source](../../src/polars_core/frame/mod.rs.html#2049)
 #### pub fn [head](#method.head)(&self, length: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)>) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#2077)
+[Source](../../src/polars_core/frame/mod.rs.html#2049)
 
 #### pub fn [head](#method.head)(&self, length: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)>) -> [DataFrame](../prelude/struct.DataFrame.html)
 
@@ -2034,10 +2075,10 @@ shape: (3, 4)
 | 3                  | Asia          | Japan         | Tokyo      |
 +--------------------+---------------+---------------+------------+
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#2115)
+## [Source](../../src/polars_core/frame/mod.rs.html#2087)
 #### pub fn [tail](#method.tail)(&self, length: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)>) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#2115)
+[Source](../../src/polars_core/frame/mod.rs.html#2087)
 
 #### pub fn [tail](#method.tail)(&self, length: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)>) -> [DataFrame](../prelude/struct.DataFrame.html)
 
@@ -2067,14 +2108,14 @@ shape: (2, 3)
 | 109         | 0.52               | Turkey  |
 +-------------+--------------------+---------+
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#2131-2135)
+## [Source](../../src/polars_core/frame/mod.rs.html#2103-2107)
 #### pub fn [iter_chunks](#method.iter_chunks)(
     &self,
     compat_level: [CompatLevel](../prelude/struct.CompatLevel.html),
     parallel: [bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html),
 ) -> impl [Iterator](https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html)<Item = RecordBatchT<[Box](https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html)<dyn Array>>>
 
-[Source](../../src/polars_core/frame/mod.rs.html#2131-2135)
+[Source](../../src/polars_core/frame/mod.rs.html#2103-2107)
 
 #### pub fn [iter_chunks](#method.iter_chunks)(
     &self,
@@ -2090,12 +2131,12 @@ Panics if the [`DataFrame`](../prelude/struct.DataFrame.html) that is passed is 
 
 This responsibility is left to the caller as we don’t want to take mutable references here, but we also don’t want to rechunk here, as this operation is costly and would benefit the caller as well.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#2177)
+## [Source](../../src/polars_core/frame/mod.rs.html#2149)
 #### pub fn [iter_chunks_physical](#method.iter_chunks_physical)(
     &self,
 ) -> impl [Iterator](https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html)<Item = RecordBatchT<[Box](https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html)<dyn Array>>>
 
-[Source](../../src/polars_core/frame/mod.rs.html#2177)
+[Source](../../src/polars_core/frame/mod.rs.html#2149)
 
 #### pub fn [iter_chunks_physical](#method.iter_chunks_physical)(
     &self,
@@ -2109,10 +2150,10 @@ Panics if the [`DataFrame`](../prelude/struct.DataFrame.html) that is passed is 
 
 This responsibility is left to the caller as we don’t want to take mutable references here, but we also don’t want to rechunk here, as this operation is costly and would benefit the caller as well.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#2210)
+## [Source](../../src/polars_core/frame/mod.rs.html#2182)
 #### pub fn [shift](#method.shift)(&self, periods: [i64](https://doc.rust-lang.org/nightly/std/primitive.i64.html)) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#2210)
+[Source](../../src/polars_core/frame/mod.rs.html#2182)
 
 #### pub fn [shift](#method.shift)(&self, periods: [i64](https://doc.rust-lang.org/nightly/std/primitive.i64.html)) -> [DataFrame](../prelude/struct.DataFrame.html)
 
@@ -2121,13 +2162,13 @@ with `Nones`.
 
 See the method on [Series](../prelude/trait.SeriesTrait.html#tymethod.shift) for more info on the `shift` operation.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#2223)
+## [Source](../../src/polars_core/frame/mod.rs.html#2195)
 #### pub fn [fill_null](#method.fill_null)(
     &self,
     strategy: [FillNullStrategy](../prelude/enum.FillNullStrategy.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#2223)
+[Source](../../src/polars_core/frame/mod.rs.html#2195)
 
 #### pub fn [fill_null](#method.fill_null)(
     &self,
@@ -2144,32 +2185,32 @@ Replace None values with one of the following strategies:
 
 See the method on [Series](../prelude/struct.Series.html#method.fill_null) for more info on the `fill_null` operation.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#2230-2232)
+## [Source](../../src/polars_core/frame/mod.rs.html#2202-2204)
 #### pub fn [pipe](#method.pipe)<F, B>(self, f: F) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<B, [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#2230-2232)
+[Source](../../src/polars_core/frame/mod.rs.html#2202-2204)
 
 #### pub fn [pipe](#method.pipe)<F, B>(self, f: F) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<B, [PolarsError](../prelude/enum.PolarsError.html)>
 
 Pipe different functions/ closure operations that work on a DataFrame together.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#2238-2240)
+## [Source](../../src/polars_core/frame/mod.rs.html#2210-2212)
 #### pub fn [pipe_mut](#method.pipe_mut)<F, B>(&mut self, f: F) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<B, [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#2238-2240)
+[Source](../../src/polars_core/frame/mod.rs.html#2210-2212)
 
 #### pub fn [pipe_mut](#method.pipe_mut)<F, B>(&mut self, f: F) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<B, [PolarsError](../prelude/enum.PolarsError.html)>
 
 Pipe different functions/ closure operations that work on a DataFrame together.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#2246-2248)
+## [Source](../../src/polars_core/frame/mod.rs.html#2218-2220)
 #### pub fn [pipe_with_args](#method.pipe_with_args)<F, B, Args>(
     self,
     f: F,
     args: Args,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<B, [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/frame/mod.rs.html#2246-2248)
+[Source](../../src/polars_core/frame/mod.rs.html#2218-2220)
 
 #### pub fn [pipe_with_args](#method.pipe_with_args)<F, B, Args>(
     self,
@@ -2179,7 +2220,7 @@ Pipe different functions/ closure operations that work on a DataFrame together.
 
 Pipe different functions/ closure operations that work on a DataFrame together.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#2286-2291)
+## [Source](../../src/polars_core/frame/mod.rs.html#2258-2263)
 #### pub fn [unique_stable](#method.unique_stable)(
     &self,
     subset: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<&[[String](https://doc.rust-lang.org/nightly/alloc/string/struct.String.html)]>,
@@ -2189,7 +2230,7 @@ Pipe different functions/ closure operations that work on a DataFrame together.
 
 **crate feature `algorithm_group_by`** only.
 
-[Source](../../src/polars_core/frame/mod.rs.html#2286-2291)
+[Source](../../src/polars_core/frame/mod.rs.html#2258-2263)
 
 #### pub fn [unique_stable](#method.unique_stable)(
     &self,
@@ -2231,7 +2272,7 @@ Returns
 | 3   | 3   | "c" |
 +-----+-----+-----+
 ```
-## [Source](../../src/polars_core/frame/mod.rs.html#2302-2307)
+## [Source](../../src/polars_core/frame/mod.rs.html#2274-2279)
 #### pub fn [unique](#method.unique)<I, S>(
     &self,
     subset: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<&[[String](https://doc.rust-lang.org/nightly/alloc/string/struct.String.html)]>,
@@ -2241,7 +2282,7 @@ Returns
 
 **crate feature `algorithm_group_by`** only.
 
-[Source](../../src/polars_core/frame/mod.rs.html#2302-2307)
+[Source](../../src/polars_core/frame/mod.rs.html#2274-2279)
 
 #### pub fn [unique](#method.unique)<I, S>(
     &self,
@@ -2255,7 +2296,7 @@ Returns
 `algorithm_group_by`
 Unstable distinct. See [`DataFrame::unique_stable`](../prelude/struct.DataFrame.html#method.unique_stable).
 
-[Source](../../src/polars_core/frame/mod.rs.html#2317-2323)
+[Source](../../src/polars_core/frame/mod.rs.html#2289-2295)
 
 #### pub fn [unique_impl](#method.unique_impl)(
     &self,
@@ -2268,49 +2309,49 @@ Unstable distinct. See [`DataFrame::unique_stable`](../prelude/struct.DataFrame.
 **crate feature**only.
 
 `algorithm_group_by`
-## [Source](../../src/polars_core/frame/mod.rs.html#2408)
+## [Source](../../src/polars_core/frame/mod.rs.html#2380)
 #### pub fn [is_unique](#method.is_unique)(&self) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[ChunkedArray](../prelude/struct.ChunkedArray.html)<[BooleanType](../prelude/struct.BooleanType.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
 
 **crate feature `algorithm_group_by`** only.
 
-[Source](../../src/polars_core/frame/mod.rs.html#2408)
+[Source](../../src/polars_core/frame/mod.rs.html#2380)
 
 #### pub fn [is_unique](#method.is_unique)(&self) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[ChunkedArray](../prelude/struct.ChunkedArray.html)<[BooleanType](../prelude/struct.BooleanType.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
 
 **crate feature**only.
 
 `algorithm_group_by`
-## [Source](../../src/polars_core/frame/mod.rs.html#2433)
+## [Source](../../src/polars_core/frame/mod.rs.html#2405)
 #### pub fn [is_duplicated](#method.is_duplicated)(&self) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[ChunkedArray](../prelude/struct.ChunkedArray.html)<[BooleanType](../prelude/struct.BooleanType.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
 
 **crate feature `algorithm_group_by`** only.
 
-[Source](../../src/polars_core/frame/mod.rs.html#2433)
+[Source](../../src/polars_core/frame/mod.rs.html#2405)
 
 #### pub fn [is_duplicated](#method.is_duplicated)(&self) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[ChunkedArray](../prelude/struct.ChunkedArray.html)<[BooleanType](../prelude/struct.BooleanType.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
 
 **crate feature**only.
 
 `algorithm_group_by`
-## [Source](../../src/polars_core/frame/mod.rs.html#2446)
+## [Source](../../src/polars_core/frame/mod.rs.html#2418)
 #### pub fn [null_count](#method.null_count)(&self) -> [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/frame/mod.rs.html#2446)
+[Source](../../src/polars_core/frame/mod.rs.html#2418)
 
 #### pub fn [null_count](#method.null_count)(&self) -> [DataFrame](../prelude/struct.DataFrame.html)
 
 Create a new [`DataFrame`](../prelude/struct.DataFrame.html) that shows the null counts per column.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#2470)
+## [Source](../../src/polars_core/frame/mod.rs.html#2442)
 #### pub fn [get_supertype](#method.get_supertype)(&self) -> [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataType](../prelude/enum.DataType.html), [PolarsError](../prelude/enum.PolarsError.html)>>
 
-[Source](../../src/polars_core/frame/mod.rs.html#2470)
+[Source](../../src/polars_core/frame/mod.rs.html#2442)
 
 #### pub fn [get_supertype](#method.get_supertype)(&self) -> [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataType](../prelude/enum.DataType.html), [PolarsError](../prelude/enum.PolarsError.html)>>
 
 Get the supertype of the columns in this DataFrame
 
-## [Source](../../src/polars_core/frame/mod.rs.html#2594-2597)
+## [Source](../../src/polars_core/frame/mod.rs.html#2566-2569)
 #### pub fn [partition_by](#method.partition_by)<I, S>(
     &self,
     cols: I,
@@ -2319,7 +2360,7 @@ Get the supertype of the columns in this DataFrame
 
 **crate feature `partition_by`** only.
 
-[Source](../../src/polars_core/frame/mod.rs.html#2594-2597)
+[Source](../../src/polars_core/frame/mod.rs.html#2566-2569)
 
 #### pub fn [partition_by](#method.partition_by)<I, S>(
     &self,
@@ -2332,7 +2373,7 @@ Get the supertype of the columns in this DataFrame
 `partition_by`
 Split into multiple DataFrames partitioned by groups
 
-## [Source](../../src/polars_core/frame/mod.rs.html#2606-2613)
+## [Source](../../src/polars_core/frame/mod.rs.html#2578-2585)
 #### pub fn [partition_by_stable](#method.partition_by_stable)<I, S>(
     &self,
     cols: I,
@@ -2341,7 +2382,7 @@ Split into multiple DataFrames partitioned by groups
 
 **crate feature `partition_by`** only.
 
-[Source](../../src/polars_core/frame/mod.rs.html#2606-2613)
+[Source](../../src/polars_core/frame/mod.rs.html#2578-2585)
 
 #### pub fn [partition_by_stable](#method.partition_by_stable)<I, S>(
     &self,
@@ -2354,7 +2395,7 @@ Split into multiple DataFrames partitioned by groups
 `partition_by`
 Split into multiple DataFrames partitioned by groups Order of the groups are maintained.
 
-## [Source](../../src/polars_core/frame/mod.rs.html#2622-2626)
+## [Source](../../src/polars_core/frame/mod.rs.html#2594-2598)
 #### pub fn [unnest](#method.unnest)(
     &self,
     cols: impl [IntoIterator](https://doc.rust-lang.org/nightly/core/iter/traits/collect/trait.IntoIterator.html)<Item = impl [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[PlSmallStr](../prelude/struct.PlSmallStr.html)>>,
@@ -2363,7 +2404,7 @@ Split into multiple DataFrames partitioned by groups Order of the groups are mai
 
 **crate feature `dtype-struct`** only.
 
-[Source](../../src/polars_core/frame/mod.rs.html#2622-2626)
+[Source](../../src/polars_core/frame/mod.rs.html#2594-2598)
 
 #### pub fn [unnest](#method.unnest)(
     &self,
@@ -2377,7 +2418,7 @@ Split into multiple DataFrames partitioned by groups Order of the groups are mai
 Unnest the given `Struct` columns. This means that the fields of the `Struct` type will be
 inserted as columns.
 
-[Source](../../src/polars_core/frame/mod.rs.html#2671)
+[Source](../../src/polars_core/frame/mod.rs.html#2643)
 
 #### pub fn [append_record_batch](#method.append_record_batch)(
     &mut self,
@@ -2828,24 +2869,24 @@ assert!(df1.equals_missing(&df2));
     args: [JoinArgs](../prelude/struct.JoinArgs.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-## [Source](../../src/polars_ops/series/ops/horizontal.rs.html#33)
+## [Source](../../src/polars_ops/series/ops/horizontal.rs.html#20)
 ### impl [MinMaxHorizontal](../prelude/trait.MinMaxHorizontal.html) for [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_ops/series/ops/horizontal.rs.html#33)
+[Source](../../src/polars_ops/series/ops/horizontal.rs.html#20)
 
 ### impl [MinMaxHorizontal](../prelude/trait.MinMaxHorizontal.html) for [DataFrame](../prelude/struct.DataFrame.html)
 
-## [Source](../../src/polars_ops/series/ops/horizontal.rs.html#34)
+## [Source](../../src/polars_ops/series/ops/horizontal.rs.html#21)
 #### fn [min_horizontal](../prelude/trait.MinMaxHorizontal.html#tymethod.min_horizontal)(&self) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Column](../prelude/enum.Column.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_ops/series/ops/horizontal.rs.html#34)
+[Source](../../src/polars_ops/series/ops/horizontal.rs.html#21)
 
 #### fn [min_horizontal](../prelude/trait.MinMaxHorizontal.html#tymethod.min_horizontal)(&self) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Column](../prelude/enum.Column.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
 
-## [Source](../../src/polars_ops/series/ops/horizontal.rs.html#37)
+## [Source](../../src/polars_ops/series/ops/horizontal.rs.html#24)
 #### fn [max_horizontal](../prelude/trait.MinMaxHorizontal.html#tymethod.max_horizontal)(&self) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Column](../prelude/enum.Column.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_ops/series/ops/horizontal.rs.html#37)
+[Source](../../src/polars_ops/series/ops/horizontal.rs.html#24)
 
 #### fn [max_horizontal](../prelude/trait.MinMaxHorizontal.html#tymethod.max_horizontal)(&self) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Column](../prelude/enum.Column.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
 
@@ -2956,33 +2997,33 @@ assert!(df1.equals_missing(&df2));
 
 ### impl Spillable for [DataFrame](../prelude/struct.DataFrame.html)
 
-## [Source](../../src/polars_ops/series/ops/horizontal.rs.html#56)
+## [Source](../../src/polars_ops/series/ops/horizontal.rs.html#43)
 ### impl [SumMeanHorizontal](../prelude/trait.SumMeanHorizontal.html) for [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_ops/series/ops/horizontal.rs.html#56)
+[Source](../../src/polars_ops/series/ops/horizontal.rs.html#43)
 
 ### impl [SumMeanHorizontal](../prelude/trait.SumMeanHorizontal.html) for [DataFrame](../prelude/struct.DataFrame.html)
 
-## [Source](../../src/polars_ops/series/ops/horizontal.rs.html#57)
+## [Source](../../src/polars_ops/series/ops/horizontal.rs.html#44)
 #### fn [sum_horizontal](../prelude/trait.SumMeanHorizontal.html#tymethod.sum_horizontal)(
     &self,
     null_strategy: [NullStrategy](../prelude/enum.NullStrategy.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Column](../prelude/enum.Column.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_ops/series/ops/horizontal.rs.html#57)
+[Source](../../src/polars_ops/series/ops/horizontal.rs.html#44)
 
 #### fn [sum_horizontal](../prelude/trait.SumMeanHorizontal.html#tymethod.sum_horizontal)(
     &self,
     null_strategy: [NullStrategy](../prelude/enum.NullStrategy.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Column](../prelude/enum.Column.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
 
-## [Source](../../src/polars_ops/series/ops/horizontal.rs.html#60)
+## [Source](../../src/polars_ops/series/ops/horizontal.rs.html#47)
 #### fn [mean_horizontal](../prelude/trait.SumMeanHorizontal.html#tymethod.mean_horizontal)(
     &self,
     null_strategy: [NullStrategy](../prelude/enum.NullStrategy.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Column](../prelude/enum.Column.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_ops/series/ops/horizontal.rs.html#60)
+[Source](../../src/polars_ops/series/ops/horizontal.rs.html#47)
 
 #### fn [mean_horizontal](../prelude/trait.SumMeanHorizontal.html#tymethod.mean_horizontal)(
     &self,

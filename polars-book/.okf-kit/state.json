@@ -2,7 +2,7 @@
   "generator": "okf-kit",
   "okf_version": "0.1",
   "root_url": "https://docs.pola.rs/",
-  "updated_at": "2026-08-10T07:44:31.784970+00:00",
+  "updated_at": "2026-08-17T06:58:25.243312+00:00",
   "config": {
     "max_depth": 3,
     "max_pages": 90,
@@ -46,7 +46,7 @@
       "path": "pages/api/rust/dev/polars/frame/struct.md",
       "url": "https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html",
       "title": "DataFrame in polars::frame - Rust",
-      "hash": "fe043ba634e5436b6cc6acc80284032df103f7b497260f28e292043f1acd4ab5"
+      "hash": "f92e7381736bdd9e80347bd5e7603ab52934a0cf7e317ee359f92fd9ab50431c"
     },
     {
       "path": "pages/api/rust/dev/polars/prelude/struct.md",
@@ -58,7 +58,7 @@
       "path": "pages/api/rust/dev/polars_lazy/frame/struct.md",
       "url": "https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html",
       "title": "LazyFrame in polars_lazy::frame - Rust",
-      "hash": "626db48ecbeacefcf72f35681c680b07f357fb40c2fd3f30b51d1ede032d609a"
+      "hash": "3e67c078132908db777376df525ba72ad6bcfa7dc2b570fcd29b146be1a40854"
     },
     {
       "path": "pages/development/contributing.md",
@@ -1484,9 +1484,9 @@
     ]
   ],
   "last_sync": {
-    "synced_at": "2026-08-10T07:44:31.718443+00:00",
+    "synced_at": "2026-08-17T06:58:25.176589+00:00",
     "added": 0,
-    "changed": 1,
+    "changed": 2,
     "removed": 0,
     "pages": 90
   }
