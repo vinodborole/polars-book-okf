@@ -3,13 +3,13 @@ type: Web Page
 title: LazyCsvReader in polars::prelude - Rust
 description: API documentation for the Rust `LazyCsvReader` struct in crate `polars`.
 resource: https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyCsvReader.html
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-08-24T07:00:57.822031+00:00'
 ---
 
 `pub struct LazyCsvReader { /* private fields */ }`
 **crate features**only.
 
-`lazy` and `csv`
+`csv` and `lazy`
 ## Implementations
 
 ## [Source](../../src/polars_lazy/scan/csv.rs.html#32)
@@ -383,10 +383,12 @@ Important! Run this function latest in the builder!
 
 [Read more](https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone)
 
-## 1.0.0 · [Source](https://doc.rust-lang.org/nightly/src/core/clone.rs.html#245-247)
+## 1.0.0 (const: [unstable](https://github.com/rust-lang/rust/issues/142757)) · [Source](https://doc.rust-lang.org/nightly/src/core/clone.rs.html#245-247)
 #### fn [clone_from](https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from)(&mut self, source: &Self)
 
  
+
+[unstable](https://github.com/rust-lang/rust/issues/142757)) ·
 
 [Source](https://doc.rust-lang.org/nightly/src/core/clone.rs.html#245-247)
 
@@ -484,9 +486,11 @@ be guaranteed.
 
 ## Auto Trait Implementations
 
-### impl [Freeze](https://doc.rust-lang.org/nightly/core/marker/trait.Freeze.html) for [LazyCsvReader](struct.LazyCsvReader.html)
-
 ### impl ![RefUnwindSafe](https://doc.rust-lang.org/nightly/core/panic/unwind_safe/trait.RefUnwindSafe.html) for [LazyCsvReader](struct.LazyCsvReader.html)
+
+### impl ![UnwindSafe](https://doc.rust-lang.org/nightly/core/panic/unwind_safe/trait.UnwindSafe.html) for [LazyCsvReader](struct.LazyCsvReader.html)
+
+### impl [Freeze](https://doc.rust-lang.org/nightly/core/marker/trait.Freeze.html) for [LazyCsvReader](struct.LazyCsvReader.html)
 
 ### impl [Send](https://doc.rust-lang.org/nightly/core/marker/trait.Send.html) for [LazyCsvReader](struct.LazyCsvReader.html)
 
@@ -495,8 +499,6 @@ be guaranteed.
 ### impl [Unpin](https://doc.rust-lang.org/nightly/core/marker/trait.Unpin.html) for [LazyCsvReader](struct.LazyCsvReader.html)
 
 ### impl [UnsafeUnpin](https://doc.rust-lang.org/nightly/core/marker/trait.UnsafeUnpin.html) for [LazyCsvReader](struct.LazyCsvReader.html)
-
-### impl ![UnwindSafe](https://doc.rust-lang.org/nightly/core/panic/unwind_safe/trait.UnwindSafe.html) for [LazyCsvReader](struct.LazyCsvReader.html)
 
 ## Blanket Implementations
 
@@ -520,11 +522,15 @@ be guaranteed.
 
 [Read more](https://doc.rust-lang.org/nightly/core/borrow/trait.BorrowMut.html#tymethod.borrow_mut)
 
-## [Source](https://doc.rust-lang.org/nightly/src/core/clone.rs.html#547)
+### impl<ST, DT> CastableFrom<ST, Initialized, Initialized> for DT
+
+### impl<ST, DT> CastableFrom<ST, Uninit, Uninit> for DT
+
+## [Source](https://doc.rust-lang.org/nightly/src/core/clone.rs.html#648)
 ### impl<T> [CloneToUninit](https://doc.rust-lang.org/nightly/core/clone/trait.CloneToUninit.html) for Twhere
     T: [Clone](https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html),
 
-[Source](https://doc.rust-lang.org/nightly/src/core/clone.rs.html#547)
+[Source](https://doc.rust-lang.org/nightly/src/core/clone.rs.html#648)
 
 ### impl<T> [CloneToUninit](https://doc.rust-lang.org/nightly/core/clone/trait.CloneToUninit.html) for Twhere
     T: [Clone](https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html),
@@ -537,14 +543,9 @@ be guaranteed.
 ### impl<T> Instrument for T
 
 ##
-#### fn [instrument](self, span: Span) -> Instrumented<Self>
+#### fn [instrument](self, span: Span) -> Instrumented<Self> [ⓘ](#)
 
-#### fn [instrument](self, span: Span) -> Instrumented<Self>
-
-##
-#### fn [in_current_span](self) -> Instrumented<Self>
-
-#### fn [in_current_span](self) -> Instrumented<Self>
+#### fn [instrument](self, span: Span) -> Instrumented<Self> [ⓘ](#)
 
 ## [Source](https://docs.rs/either/1/src/either/into_either.rs.html#64)
 ### impl<T> [IntoEither](https://docs.rs/either/1/either/into_either/trait.IntoEither.html) for T
@@ -606,6 +607,10 @@ Converts `self` into a [variant of](https://docs.rs/either/1/either/enum.Either.
 
 [Clone](https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html),
 
+### impl<T> PlanCallbackArgs for T
+
+### impl<T> PlanCallbackOut for T
+
 ##
 ### impl<T> Pointable for T
 
@@ -619,38 +624,28 @@ Converts `self` into a [variant of](https://docs.rs/either/1/either/enum.Either.
     T: ?[Sized](https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html),
 
 [Sized](https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html),
-
-##
-### impl<T> WithSubscriber for T
-
-### impl<T> WithSubscriber for T
-
-##
-#### fn [with_subscriber]<S>(self, subscriber: S) -> WithDispatch<Self>where
-    S: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<Dispatch>,
-
-#### fn [with_subscriber]<S>(self, subscriber: S) -> WithDispatch<Self>where
-    S: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<Dispatch>,
-
-[Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<Dispatch>,
-
-##
-#### fn [with_current_subscriber](self) -> WithDispatch<Self>
-
-#### fn [with_current_subscriber](self) -> WithDispatch<Self>
-
-### impl<ST, DT> CastableFrom<ST, Initialized, Initialized> for DT
-
-### impl<ST, DT> CastableFrom<ST, Uninit, Uninit> for DT
-
-### impl<T> PlanCallbackArgs for T
-
-### impl<T> PlanCallbackOut for T
 
 ### impl<T> Read<Exclusive, BecauseExclusive> for Twhere
     T: ?[Sized](https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html),
 
 [Sized](https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html),
+
+##
+### impl<T> WithSubscriber for T
+
+### impl<T> WithSubscriber for T
+
+##
+#### fn [with_subscriber]<S>(self, subscriber: S) -> WithDispatch<Self> [ⓘ](#)where
+    S: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<Dispatch>,
+
+#### fn [with_subscriber]<S>(self, subscriber: S) -> WithDispatch<Self> [ⓘ](#)where
+    S: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<Dispatch>,
+
+[Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<Dispatch>,
+
+##
+#### fn [with_current_subscriber](self) -> WithDispatch<Self> [ⓘ](#)
 
 # Citations
 

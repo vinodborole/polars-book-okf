@@ -2,7 +2,7 @@
   "generator": "okf-kit",
   "okf_version": "0.1",
   "root_url": "https://docs.pola.rs/",
-  "updated_at": "2026-08-17T06:58:25.243312+00:00",
+  "updated_at": "2026-08-24T07:00:57.893649+00:00",
   "config": {
     "max_depth": 3,
     "max_pages": 90,
@@ -12,6 +12,12 @@
   },
   "page_count": 90,
   "pages": [
+    {
+      "path": "pages/api/python/stable/reference/api/polars.DataFrame.md",
+      "url": "https://docs.pola.rs/api/python/stable/reference/api/polars.DataFrame.write_csv.html",
+      "title": "polars.DataFrame.write_csv — Polars  documentation",
+      "hash": "e4eff6276c18112949e75924cd525bfa4e1dea051efccee8ad417284b379906d"
+    },
     {
       "path": "pages/api/python/stable/reference/api/polars.md",
       "url": "https://docs.pola.rs/api/python/stable/reference/api/polars.scan_csv.html",
@@ -43,22 +49,28 @@
       "hash": "3d69ebb2bb47c921895c79f2954e2cdb6f4271fd97e89a43e9154f2d19c6c95a"
     },
     {
+      "path": "pages/api/rust/dev/polars/frame/home.md",
+      "url": "https://docs.pola.rs/api/rust/dev/polars/frame/index.html",
+      "title": "polars::frame - Rust",
+      "hash": "602093ca2f86d1914ee3802bf2d9906b031f1e62c93f6ee82369c3e15a8928fc"
+    },
+    {
       "path": "pages/api/rust/dev/polars/frame/struct.md",
       "url": "https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html",
       "title": "DataFrame in polars::frame - Rust",
-      "hash": "f92e7381736bdd9e80347bd5e7603ab52934a0cf7e317ee359f92fd9ab50431c"
+      "hash": "1989b0a5078901bfe30efe5726efb3fede9a7a849755afead7770fa536a64ed2"
     },
     {
       "path": "pages/api/rust/dev/polars/prelude/struct.md",
       "url": "https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyCsvReader.html",
       "title": "LazyCsvReader in polars::prelude - Rust",
-      "hash": "d3705d4e78d6636d91d3bc5a44a127957ddeb76a271a67ac821d8b712e9d276d"
+      "hash": "a8c91c8a1a4e7ad5ce1b55f37100f92b657ab43ca38c21cf811510087bdbb996"
     },
     {
       "path": "pages/api/rust/dev/polars_lazy/frame/struct.md",
       "url": "https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html",
       "title": "LazyFrame in polars_lazy::frame - Rust",
-      "hash": "3e67c078132908db777376df525ba72ad6bcfa7dc2b570fcd29b146be1a40854"
+      "hash": "7416858e875a5a859ed86fa97f492c722dcc1b3580a363c178d1c302eed6a457"
     },
     {
       "path": "pages/development/contributing.md",
@@ -203,12 +215,6 @@
       "url": "https://docs.pola.rs/user-guide/expressions/folds",
       "title": "Folds - Polars user guide",
       "hash": "b2d992726ffeba78be26e827056df94dc590fc80c3a5da2f4d6fc64fed7e5d98"
-    },
-    {
-      "path": "pages/user-guide/expressions/lists-and-arrays.md",
-      "url": "https://docs.pola.rs/user-guide/expressions/lists-and-arrays",
-      "title": "Lists and arrays - Polars user guide",
-      "hash": "d1947a16b689dc255c14cadc6bc16384521d28cdefe714cd97fd6e55b095397a"
     },
     {
       "path": "pages/user-guide/expressions/missing-data.md",
@@ -499,12 +505,6 @@
       "hash": "c586a57f646821e2ed550ec553ab63787553a39ef77d49d0cdc5b3bd7ebf0390"
     },
     {
-      "path": "pages/user-guide/transformations/concatenation.md",
-      "url": "https://docs.pola.rs/user-guide/transformations/concatenation",
-      "title": "Concatenation - Polars user guide",
-      "hash": "b317982e401bd298c8d4255e8bbea418aff516fc99165df6cb8df9a90f7b9080"
-    },
-    {
       "path": "pages/user-guide/transformations/joins.md",
       "url": "https://docs.pola.rs/user-guide/transformations/joins",
       "title": "Joins - Polars user guide",
@@ -556,6 +556,10 @@
   "edges": [
     [
       "pages/api/python/stable/reference/dataframe/home.md",
+      "pages/api/python/stable/reference/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/api/python/stable/reference/dataframe/home.md",
       "pages/api/python/stable/reference/api/polars.md"
     ],
     [
@@ -573,6 +577,14 @@
     [
       "pages/api/python/stable/reference/lazyframe/api/polars.LazyFrame.md",
       "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/api/rust/dev/polars/frame/home.md",
+      "pages/api/rust/dev/polars/frame/struct.md"
+    ],
+    [
+      "pages/api/rust/dev/polars/frame/struct.md",
+      "pages/api/rust/dev/polars/frame/home.md"
     ],
     [
       "pages/api/rust/dev/polars/frame/struct.md",
@@ -680,10 +692,6 @@
     ],
     [
       "pages/user-guide/concepts/data-types-and-structures.md",
-      "pages/user-guide/expressions/lists-and-arrays.md"
-    ],
-    [
-      "pages/user-guide/concepts/data-types-and-structures.md",
       "pages/user-guide/expressions/structs.md"
     ],
     [
@@ -788,10 +796,6 @@
     ],
     [
       "pages/user-guide/expressions.md",
-      "pages/user-guide/expressions/lists-and-arrays.md"
-    ],
-    [
-      "pages/user-guide/expressions.md",
       "pages/user-guide/expressions/missing-data.md"
     ],
     [
@@ -888,22 +892,6 @@
     ],
     [
       "pages/user-guide/expressions/folds.md",
-      "pages/user-guide/installation.md"
-    ],
-    [
-      "pages/user-guide/expressions/lists-and-arrays.md",
-      "pages/api/python/stable/reference/dataframe/api/polars.DataFrame.md"
-    ],
-    [
-      "pages/user-guide/expressions/lists-and-arrays.md",
-      "pages/user-guide/expressions/casting.md"
-    ],
-    [
-      "pages/user-guide/expressions/lists-and-arrays.md",
-      "pages/user-guide/expressions/strings.md"
-    ],
-    [
-      "pages/user-guide/expressions/lists-and-arrays.md",
       "pages/user-guide/installation.md"
     ],
     [
@@ -1004,6 +992,10 @@
     ],
     [
       "pages/user-guide/getting-started.md",
+      "pages/api/python/stable/reference/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/getting-started.md",
       "pages/api/python/stable/reference/api/polars.md"
     ],
     [
@@ -1045,10 +1037,6 @@
     [
       "pages/user-guide/getting-started.md",
       "pages/user-guide/io.md"
-    ],
-    [
-      "pages/user-guide/getting-started.md",
-      "pages/user-guide/transformations/concatenation.md"
     ],
     [
       "pages/user-guide/getting-started.md",
@@ -1120,6 +1108,10 @@
     ],
     [
       "pages/user-guide/io/cloud-storage.md",
+      "pages/api/python/stable/reference/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/io/cloud-storage.md",
       "pages/api/python/stable/reference/api/polars.md"
     ],
     [
@@ -1133,6 +1125,10 @@
     [
       "pages/user-guide/io/cloud-storage.md",
       "pages/user-guide/lazy/optimizations.md"
+    ],
+    [
+      "pages/user-guide/io/csv.md",
+      "pages/api/python/stable/reference/api/polars.DataFrame.md"
     ],
     [
       "pages/user-guide/io/csv.md",
@@ -1152,6 +1148,10 @@
     ],
     [
       "pages/user-guide/io/database.md",
+      "pages/api/python/stable/reference/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/io/database.md",
       "pages/api/python/stable/reference/api/polars.md"
     ],
     [
@@ -1160,7 +1160,15 @@
     ],
     [
       "pages/user-guide/io/excel.md",
+      "pages/api/python/stable/reference/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/io/excel.md",
       "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/io/hive.md",
+      "pages/api/python/stable/reference/api/polars.DataFrame.md"
     ],
     [
       "pages/user-guide/io/hive.md",
@@ -1169,6 +1177,10 @@
     [
       "pages/user-guide/io/hugging-face.md",
       "pages/api/python/stable/reference/api/polars.md"
+    ],
+    [
+      "pages/user-guide/io/json.md",
+      "pages/api/python/stable/reference/api/polars.DataFrame.md"
     ],
     [
       "pages/user-guide/io/json.md",
@@ -1184,11 +1196,19 @@
     ],
     [
       "pages/user-guide/io/multiple.md",
+      "pages/api/python/stable/reference/api/polars.DataFrame.md"
+    ],
+    [
+      "pages/user-guide/io/multiple.md",
       "pages/api/python/stable/reference/api/polars.md"
     ],
     [
       "pages/user-guide/io/multiple.md",
       "pages/api/python/stable/reference/lazyframe/api/polars.LazyFrame.md"
+    ],
+    [
+      "pages/user-guide/io/parquet.md",
+      "pages/api/python/stable/reference/api/polars.DataFrame.md"
     ],
     [
       "pages/user-guide/io/parquet.md",
@@ -1344,10 +1364,6 @@
     ],
     [
       "pages/user-guide/transformations.md",
-      "pages/user-guide/transformations/concatenation.md"
-    ],
-    [
-      "pages/user-guide/transformations.md",
       "pages/user-guide/transformations/joins.md"
     ],
     [
@@ -1357,14 +1373,6 @@
     [
       "pages/user-guide/transformations.md",
       "pages/user-guide/transformations/unpivot.md"
-    ],
-    [
-      "pages/user-guide/transformations/concatenation.md",
-      "pages/api/python/stable/reference/api/polars.md"
-    ],
-    [
-      "pages/user-guide/transformations/concatenation.md",
-      "pages/user-guide/transformations/joins.md"
     ],
     [
       "pages/user-guide/transformations/joins.md",
@@ -1484,10 +1492,10 @@
     ]
   ],
   "last_sync": {
-    "synced_at": "2026-08-17T06:58:25.176589+00:00",
-    "added": 0,
-    "changed": 2,
-    "removed": 0,
+    "synced_at": "2026-08-24T07:00:57.829319+00:00",
+    "added": 2,
+    "changed": 3,
+    "removed": 2,
     "pages": 90
   }
 }

@@ -3,7 +3,7 @@ type: Web Page
 title: LazyFrame in polars_lazy::frame - Rust
 description: Lazy abstraction over an eager `DataFrame`.
 resource: https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html
-timestamp: '2026-08-17T06:58:25.170846+00:00'
+timestamp: '2026-08-24T07:00:57.822031+00:00'
 ---
 
 ```
@@ -105,10 +105,10 @@ Returns an `Err` if the logical plan has already encountered an error (i.e., if
 
 **non-WebAssembly**only.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#88-1994)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#88-2004)
 ### impl [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#88-1994)
+[Source](../../src/polars_lazy/frame/mod.rs.html#88-2004)
 
 ### impl [LazyFrame](struct.LazyFrame.html)
 
@@ -881,24 +881,24 @@ with a ordinary group_by on these keys.
 
 Similar to [`group_by`](struct.LazyFrame.html#method.group_by), but order of the DataFrame is maintained.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1217-1224)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1217-1229)
 #### pub fn [anti_join](#method.anti_join)<E: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[Expr](../dsl/enum.Expr.html)>>(
     self,
     other: [LazyFrame](struct.LazyFrame.html),
     left_on: E,
     right_on: E,
-) -> [LazyFrame](struct.LazyFrame.html)
+) -> PolarsResult<[LazyFrame](struct.LazyFrame.html)>
 
 **crate feature `semi_anti_join`** only.
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1217-1224)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1217-1229)
 
 #### pub fn [anti_join](#method.anti_join)<E: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[Expr](../dsl/enum.Expr.html)>>(
     self,
     other: [LazyFrame](struct.LazyFrame.html),
     left_on: E,
     right_on: E,
-) -> [LazyFrame](struct.LazyFrame.html)
+) -> PolarsResult<[LazyFrame](struct.LazyFrame.html)>
 
 **crate feature**only.
 
@@ -919,7 +919,7 @@ fn anti_join_dataframes(ldf: LazyFrame, other: LazyFrame) -> LazyFrame {
         .anti_join(other, col("foo"), col("bar").cast(DataType::String))
 }
 ```
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1228-1235)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1233-1241)
 #### pub fn [cross_join](#method.cross_join)(
     self,
     other: [LazyFrame](struct.LazyFrame.html),
@@ -928,7 +928,7 @@ fn anti_join_dataframes(ldf: LazyFrame, other: LazyFrame) -> LazyFrame {
 
 **crate feature `cross_join`** only.
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1228-1235)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1233-1241)
 
 #### pub fn [cross_join](#method.cross_join)(
     self,
@@ -941,7 +941,7 @@ fn anti_join_dataframes(ldf: LazyFrame, other: LazyFrame) -> LazyFrame {
 `cross_join`
 Creates the Cartesian product from both frames, preserving the order of the left keys.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1253-1260)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1259-1267)
 #### pub fn [left_join](#method.left_join)<E: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[Expr](../dsl/enum.Expr.html)>>(
     self,
     other: [LazyFrame](struct.LazyFrame.html),
@@ -949,7 +949,7 @@ Creates the Cartesian product from both frames, preserving the order of the left
     right_on: E,
 ) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1253-1260)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1259-1267)
 
 #### pub fn [left_join](#method.left_join)<E: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[Expr](../dsl/enum.Expr.html)>>(
     self,
@@ -974,7 +974,7 @@ fn left_join_dataframes(ldf: LazyFrame, other: LazyFrame) -> LazyFrame {
         .left_join(other, col("foo"), col("bar"))
 }
 ```
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1278-1285)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1285-1293)
 #### pub fn [inner_join](#method.inner_join)<E: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[Expr](../dsl/enum.Expr.html)>>(
     self,
     other: [LazyFrame](struct.LazyFrame.html),
@@ -982,7 +982,7 @@ fn left_join_dataframes(ldf: LazyFrame, other: LazyFrame) -> LazyFrame {
     right_on: E,
 ) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1278-1285)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1285-1293)
 
 #### pub fn [inner_join](#method.inner_join)<E: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[Expr](../dsl/enum.Expr.html)>>(
     self,
@@ -1007,7 +1007,7 @@ fn inner_join_dataframes(ldf: LazyFrame, other: LazyFrame) -> LazyFrame {
         .inner_join(other, col("foo"), col("bar").cast(DataType::String))
 }
 ```
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1303-1310)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1311-1319)
 #### pub fn [full_join](#method.full_join)<E: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[Expr](../dsl/enum.Expr.html)>>(
     self,
     other: [LazyFrame](struct.LazyFrame.html),
@@ -1015,7 +1015,7 @@ fn inner_join_dataframes(ldf: LazyFrame, other: LazyFrame) -> LazyFrame {
     right_on: E,
 ) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1303-1310)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1311-1319)
 
 #### pub fn [full_join](#method.full_join)<E: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[Expr](../dsl/enum.Expr.html)>>(
     self,
@@ -1040,7 +1040,7 @@ fn full_join_dataframes(ldf: LazyFrame, other: LazyFrame) -> LazyFrame {
         .full_join(other, col("foo"), col("bar"))
 }
 ```
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1329-1336)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1338-1346)
 #### pub fn [semi_join](#method.semi_join)<E: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[Expr](../dsl/enum.Expr.html)>>(
     self,
     other: [LazyFrame](struct.LazyFrame.html),
@@ -1050,7 +1050,7 @@ fn full_join_dataframes(ldf: LazyFrame, other: LazyFrame) -> LazyFrame {
 
 **crate feature `semi_anti_join`** only.
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1329-1336)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1338-1346)
 
 #### pub fn [semi_join](#method.semi_join)<E: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[Expr](../dsl/enum.Expr.html)>>(
     self,
@@ -1078,16 +1078,16 @@ fn semi_join_dataframes(ldf: LazyFrame, other: LazyFrame) -> LazyFrame {
         .semi_join(other, col("foo"), col("bar").cast(DataType::String))
 }
 ```
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1359-1370)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1369-1380)
 #### pub fn [join](#method.join)<E: [AsRef](https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html)<[[Expr](../dsl/enum.Expr.html)]>>(
     self,
     other: [LazyFrame](struct.LazyFrame.html),
     left_on: E,
     right_on: E,
     args: [JoinArgs](../prelude/struct.JoinArgs.html),
-) -> [LazyFrame](struct.LazyFrame.html)
+) -> PolarsResult<[LazyFrame](struct.LazyFrame.html)>
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1359-1370)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1369-1380)
 
 #### pub fn [join](#method.join)<E: [AsRef](https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html)<[[Expr](../dsl/enum.Expr.html)]>>(
     self,
@@ -1095,7 +1095,7 @@ fn semi_join_dataframes(ldf: LazyFrame, other: LazyFrame) -> LazyFrame {
     left_on: E,
     right_on: E,
     args: [JoinArgs](../prelude/struct.JoinArgs.html),
-) -> [LazyFrame](struct.LazyFrame.html)
+) -> PolarsResult<[LazyFrame](struct.LazyFrame.html)>
 
 Generic function to join two LazyFrames.
 
@@ -1117,10 +1117,10 @@ fn example(ldf: LazyFrame, other: LazyFrame) -> LazyFrame {
         .join(other, [col("foo"), col("bar")], [col("foo"), col("bar")], JoinArgs::new(JoinType::Inner))
 }
 ```
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1419-1421)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1429-1431)
 #### pub fn [join_builder](#method.join_builder)(self) -> [JoinBuilder](struct.JoinBuilder.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1419-1421)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1429-1431)
 
 #### pub fn [join_builder](#method.join_builder)(self) -> [JoinBuilder](struct.JoinBuilder.html)
 
@@ -1130,10 +1130,10 @@ After the `JoinBuilder` has been created and set up, calling
 [`finish()`](struct.JoinBuilder.html#method.finish) on it will give back the `LazyFrame`
 representing the `join` operation.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1426-1433)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1436-1443)
 #### pub fn [gather](#method.gather)(self, idxs: [LazyFrame](struct.LazyFrame.html), null_on_oob: [bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html)) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1426-1433)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1436-1443)
 
 #### pub fn [gather](#method.gather)(self, idxs: [LazyFrame](struct.LazyFrame.html), null_on_oob: [bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html)) -> [LazyFrame](struct.LazyFrame.html)
 
@@ -1141,10 +1141,10 @@ Gathers rows from this DataFrame based on the indices in idxs.
 
 idxs must only have a single column of indices.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1452-1466)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1462-1476)
 #### pub fn [with_column](#method.with_column)(self, expr: [Expr](../dsl/enum.Expr.html)) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1452-1466)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1462-1476)
 
 #### pub fn [with_column](#method.with_column)(self, expr: [Expr](../dsl/enum.Expr.html)) -> [LazyFrame](struct.LazyFrame.html)
 
@@ -1165,10 +1165,10 @@ fn add_column(df: DataFrame) -> LazyFrame {
         )
 }
 ```
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1482-1492)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1492-1502)
 #### pub fn [with_columns](#method.with_columns)<E: [AsRef](https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html)<[[Expr](../dsl/enum.Expr.html)]>>(self, exprs: E) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1482-1492)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1492-1502)
 
 #### pub fn [with_columns](#method.with_columns)<E: [AsRef](https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html)<[[Expr](../dsl/enum.Expr.html)]>>(self, exprs: E) -> [LazyFrame](struct.LazyFrame.html)
 
@@ -1186,16 +1186,16 @@ fn add_columns(df: DataFrame) -> LazyFrame {
          )
 }
 ```
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1495-1505)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1505-1515)
 #### pub fn [with_columns_seq](#method.with_columns_seq)<E: [AsRef](https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html)<[[Expr](../dsl/enum.Expr.html)]>>(self, exprs: E) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1495-1505)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1505-1515)
 
 #### pub fn [with_columns_seq](#method.with_columns_seq)<E: [AsRef](https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html)<[[Expr](../dsl/enum.Expr.html)]>>(self, exprs: E) -> [LazyFrame](struct.LazyFrame.html)
 
 Add or replace multiple columns to a DataFrame, but evaluate them sequentially.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1508-1520)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1518-1530)
 #### pub fn [match_to_schema](#method.match_to_schema)(
     self,
     schema: [SchemaRef](../../polars_core/schema/type.SchemaRef.html),
@@ -1203,7 +1203,7 @@ Add or replace multiple columns to a DataFrame, but evaluate them sequentially.
     extra_columns: [ExtraColumnsPolicy](../dsl/enum.ExtraColumnsPolicy.html),
 ) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1508-1520)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1518-1530)
 
 #### pub fn [match_to_schema](#method.match_to_schema)(
     self,
@@ -1214,14 +1214,14 @@ Add or replace multiple columns to a DataFrame, but evaluate them sequentially.
 
 Match or evolve to a certain schema.
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1522-1532)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1532-1542)
 
 #### pub fn [pipe_with_schema](#method.pipe_with_schema)(
     self,
     callback: [PlanCallback](../prelude/enum.PlanCallback.html)<([Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[DslPlan](../dsl/enum.DslPlan.html)>, [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[SchemaRef](../../polars_core/schema/type.SchemaRef.html)>), [DslPlan](../dsl/enum.DslPlan.html)>,
 ) -> Self
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1534-1548)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1544-1558)
 
 #### pub fn [pipe_with_schemas](#method.pipe_with_schemas)(
     self,
@@ -1229,14 +1229,14 @@ Match or evolve to a certain schema.
     callback: [PlanCallback](../prelude/enum.PlanCallback.html)<([Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[DslPlan](../dsl/enum.DslPlan.html)>, [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[SchemaRef](../../polars_core/schema/type.SchemaRef.html)>), [DslPlan](../dsl/enum.DslPlan.html)>,
 ) -> Self
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1556-1565)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1566-1575)
 
 #### pub fn [with_context](#method.with_context)<C: [AsRef](https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html)<[[LazyFrame](struct.LazyFrame.html)]>>(self, contexts: C) -> [LazyFrame](struct.LazyFrame.html)
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1570-1572)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1580-1582)
 #### pub fn [max](#method.max)(self) -> Self
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1570-1572)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1580-1582)
 
 #### pub fn [max](#method.max)(self) -> Self
 
@@ -1244,10 +1244,10 @@ Aggregate all the columns as their maximum values.
 
 Aggregated columns will have the same names as the original columns.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1577-1579)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1587-1589)
 #### pub fn [min](#method.min)(self) -> Self
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1577-1579)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1587-1589)
 
 #### pub fn [min](#method.min)(self) -> Self
 
@@ -1255,10 +1255,10 @@ Aggregate all the columns as their minimum values.
 
 Aggregated columns will have the same names as the original columns.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1590-1592)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1600-1602)
 #### pub fn [sum](#method.sum)(self) -> Self
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1590-1592)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1600-1602)
 
 #### pub fn [sum](#method.sum)(self) -> Self
 
@@ -1272,10 +1272,10 @@ if running in `debug` mode, overflows will panic, whereas in`release` mode overf
 silently wrap.
 - String columns will sum to None.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1598-1600)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1608-1610)
 #### pub fn [mean](#method.mean)(self) -> Self
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1598-1600)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1608-1610)
 
 #### pub fn [mean](#method.mean)(self) -> Self
 
@@ -1284,10 +1284,10 @@ Aggregate all the columns as their mean values.
 - Boolean and integer columns are converted to `f64` before computing the mean.
 - String columns will have a mean of None.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1607-1609)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1617-1619)
 #### pub fn [median](#method.median)(self) -> Self
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1607-1609)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1617-1619)
 
 #### pub fn [median](#method.median)(self) -> Self
 
@@ -1297,19 +1297,19 @@ Aggregate all the columns as their median values.
 susceptible to overflow before this conversion occurs.
 - String columns will sum to None.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1612-1617)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1622-1627)
 #### pub fn [quantile](#method.quantile)(self, quantile: [Expr](../dsl/enum.Expr.html), method: QuantileMethod) -> Self
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1612-1617)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1622-1627)
 
 #### pub fn [quantile](#method.quantile)(self, quantile: [Expr](../dsl/enum.Expr.html), method: QuantileMethod) -> Self
 
 Aggregate all the columns as their quantile values.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1631-1633)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1641-1643)
 #### pub fn [std](#method.std)(self, ddof: [u8](https://doc.rust-lang.org/nightly/std/primitive.u8.html)) -> Self
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1631-1633)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1641-1643)
 
 #### pub fn [std](#method.std)(self, ddof: [u8](https://doc.rust-lang.org/nightly/std/primitive.u8.html)) -> Self
 
@@ -1327,10 +1327,10 @@ standard deviation per se.
 
 Source: [Numpy](https://numpy.org/doc/stable/reference/generated/numpy.std.html#)
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1644-1646)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1654-1656)
 #### pub fn [var](#method.var)(self, ddof: [u8](https://doc.rust-lang.org/nightly/std/primitive.u8.html)) -> Self
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1644-1646)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1654-1656)
 
 #### pub fn [var](#method.var)(self, ddof: [u8](https://doc.rust-lang.org/nightly/std/primitive.u8.html)) -> Self
 
@@ -1345,32 +1345,32 @@ likelihood estimate of the variance for normally distributed variables.
 
 Source: [Numpy](https://numpy.org/doc/stable/reference/generated/numpy.var.html#)
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1649-1651)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1659-1661)
 #### pub fn [explode](#method.explode)(self, columns: [Selector](../dsl/enum.Selector.html), options: [ExplodeOptions](../../polars_core/chunked_array/ops/struct.ExplodeOptions.html)) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1649-1651)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1659-1661)
 
 #### pub fn [explode](#method.explode)(self, columns: [Selector](../dsl/enum.Selector.html), options: [ExplodeOptions](../../polars_core/chunked_array/ops/struct.ExplodeOptions.html)) -> [LazyFrame](struct.LazyFrame.html)
 
 Apply explode operation. [See eager explode](../../polars_core/frame/dataframe/struct.DataFrame.html#method.explode).
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1669-1671)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1679-1681)
 #### pub fn [null_count](#method.null_count)(self) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1669-1671)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1679-1681)
 
 #### pub fn [null_count](#method.null_count)(self) -> [LazyFrame](struct.LazyFrame.html)
 
 Aggregate all the columns as the sum of their null value count.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1677-1684)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1687-1694)
 #### pub fn [unique_stable](#method.unique_stable)(
     self,
     subset: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Selector](../dsl/enum.Selector.html)>,
     keep_strategy: [UniqueKeepStrategy](../../polars_core/frame/enum.UniqueKeepStrategy.html),
 ) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1677-1684)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1687-1694)
 
 #### pub fn [unique_stable](#method.unique_stable)(
     self,
@@ -1383,7 +1383,7 @@ Drop non-unique rows and maintain the order of kept rows.
 `subset` is an optional `Vec` of column names to consider for uniqueness; if
 `None`, all columns are considered.
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1686-1699)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1696-1709)
 
 #### pub fn [unique_stable_generic](#method.unique_stable_generic)(
     self,
@@ -1391,14 +1391,14 @@ Drop non-unique rows and maintain the order of kept rows.
     keep_strategy: [UniqueKeepStrategy](../../polars_core/frame/enum.UniqueKeepStrategy.html),
 ) -> [LazyFrame](struct.LazyFrame.html)
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1708-1711)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1718-1721)
 #### pub fn [unique](#method.unique)(
     self,
     subset: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Selector](../dsl/enum.Selector.html)>,
     keep_strategy: [UniqueKeepStrategy](../../polars_core/frame/enum.UniqueKeepStrategy.html),
 ) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1708-1711)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1718-1721)
 
 #### pub fn [unique](#method.unique)(
     self,
@@ -1414,7 +1414,7 @@ The order of the kept rows may change; to maintain the original row order, use
 `subset` is an optional `Vec` of column names to consider for uniqueness; if None,
 all columns are considered.
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1713-1726)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1723-1736)
 
 #### pub fn [unique_generic](#method.unique_generic)(
     self,
@@ -1422,10 +1422,10 @@ all columns are considered.
     keep_strategy: [UniqueKeepStrategy](../../polars_core/frame/enum.UniqueKeepStrategy.html),
 ) -> [LazyFrame](struct.LazyFrame.html)
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1732-1736)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1742-1746)
 #### pub fn [drop_nans](#method.drop_nans)(self, subset: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Selector](../dsl/enum.Selector.html)>) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1732-1736)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1742-1746)
 
 #### pub fn [drop_nans](#method.drop_nans)(self, subset: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Selector](../dsl/enum.Selector.html)>) -> [LazyFrame](struct.LazyFrame.html)
 
@@ -1434,10 +1434,10 @@ Drop rows containing one or more NaN values.
 `subset` is an optional `Vec` of column names to consider for NaNs; if None, all
 floating point columns are considered.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1742-1746)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1752-1756)
 #### pub fn [drop_nulls](#method.drop_nulls)(self, subset: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Selector](../dsl/enum.Selector.html)>) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1742-1746)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1752-1756)
 
 #### pub fn [drop_nulls](#method.drop_nulls)(self, subset: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[Selector](../dsl/enum.Selector.html)>) -> [LazyFrame](struct.LazyFrame.html)
 
@@ -1446,10 +1446,10 @@ Drop rows containing one or more None values.
 `subset` is an optional `Vec` of column names to consider for nulls; if None, all
 columns are considered.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1757-1761)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1767-1771)
 #### pub fn [slice](#method.slice)(self, offset: [i64](https://doc.rust-lang.org/nightly/std/primitive.i64.html), len: [IdxSize](../../polars_utils/index/type.IdxSize.html)) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1757-1761)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1767-1771)
 
 #### pub fn [slice](#method.slice)(self, offset: [i64](https://doc.rust-lang.org/nightly/std/primitive.i64.html), len: [IdxSize](../../polars_utils/index/type.IdxSize.html)) -> [LazyFrame](struct.LazyFrame.html)
 
@@ -1463,10 +1463,10 @@ If `offset` and `len` are such that the slice extends beyond the end of the
 DataFrame, the portion between `offset` and the end will be returned. In this
 case, the number of rows in the returned DataFrame will be less than `len`.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1785-1788)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1795-1798)
 #### pub fn [tail](#method.tail)(self, n: [IdxSize](../../polars_utils/index/type.IdxSize.html)) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1785-1788)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1795-1798)
 
 #### pub fn [tail](#method.tail)(self, n: [IdxSize](../../polars_utils/index/type.IdxSize.html)) -> [LazyFrame](struct.LazyFrame.html)
 
@@ -1474,7 +1474,7 @@ Get the last `n` rows.
 
 Equivalent to `self.slice(-(n as i64), n)`.
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1792-1818)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1802-1828)
 
 #### pub fn [pivot](#method.pivot)(
     self,
@@ -1491,12 +1491,12 @@ Equivalent to `self.slice(-(n as i64), n)`.
 **crate feature**only.
 
 `pivot`
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1824-1828)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1834-1838)
 #### pub fn [unpivot](#method.unpivot)(self, args: [UnpivotArgsDSL](../dsl/struct.UnpivotArgsDSL.html)) -> [LazyFrame](struct.LazyFrame.html)
 
 **crate feature `pivot`** only.
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1824-1828)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1834-1838)
 
 #### pub fn [unpivot](#method.unpivot)(self, args: [UnpivotArgsDSL](../dsl/struct.UnpivotArgsDSL.html)) -> [LazyFrame](struct.LazyFrame.html)
 
@@ -1507,7 +1507,7 @@ Unpivot the DataFrame from wide to long format.
 
 See [`UnpivotArgsIR`](../../polars_core/frame/explode/struct.UnpivotArgsIR.html) for information on how to unpivot a DataFrame.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1848-1869)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1858-1879)
 #### pub fn [map](#method.map)<F>(
     self,
     function: F,
@@ -1516,7 +1516,7 @@ See [`UnpivotArgsIR`](../../polars_core/frame/explode/struct.UnpivotArgsIR.html)
     name: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<&'static [str](https://doc.rust-lang.org/nightly/std/primitive.str.html)>,
 ) -> [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1848-1869)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1858-1879)
 
 #### pub fn [map](#method.map)<F>(
     self,
@@ -1539,7 +1539,7 @@ This can blow up in your face if the schema is changed due to the operation. The
 
 You can toggle certain optimizations off.
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1872-1885)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1882-1895)
 
 #### pub fn [map_python](#method.map_python)(
     self,
@@ -1552,11 +1552,11 @@ You can toggle certain optimizations off.
 **crate feature**only.
 
 `python`
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1901-1943)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1911-1953)
 #### pub fn [with_row_index](#method.with_row_index)<S>(self, name: S, offset: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[IdxSize](../../polars_utils/index/type.IdxSize.html)>) -> [LazyFrame](struct.LazyFrame.html)where
     S: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[PlSmallStr](../../polars_utils/pl_str/struct.PlSmallStr.html)>,
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1901-1943)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1911-1953)
 
 #### pub fn [with_row_index](#method.with_row_index)<S>(self, name: S, offset: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[IdxSize](../../polars_utils/index/type.IdxSize.html)>) -> [LazyFrame](struct.LazyFrame.html)where
     S: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[PlSmallStr](../../polars_utils/pl_str/struct.PlSmallStr.html)>,
@@ -1574,12 +1574,12 @@ Add a new column at index 0 that counts the rows.
 
 This can have a negative effect on query performance. This may for instance block predicate pushdown optimization.
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#1953-1958)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#1963-1968)
 #### pub fn [unnest](#method.unnest)(self, cols: [Selector](../dsl/enum.Selector.html), separator: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[PlSmallStr](../../polars_utils/pl_str/struct.PlSmallStr.html)>) -> Self
 
 **crate feature `dtype-struct`** only.
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1953-1958)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1963-1968)
 
 #### pub fn [unnest](#method.unnest)(self, cols: [Selector](../dsl/enum.Selector.html), separator: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[PlSmallStr](../../polars_utils/pl_str/struct.PlSmallStr.html)>) -> Self
 
@@ -1589,7 +1589,7 @@ This can have a negative effect on query performance. This may for instance bloc
 Unnest the given `Struct` columns: the fields of the `Struct` type will be
 inserted as columns.
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#1961-1985)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1971-1995)
 
 #### pub fn [merge_sorted](#method.merge_sorted)<I, S>(
     self,
@@ -1601,7 +1601,7 @@ inserted as columns.
 **crate feature**only.
 
 `merge_sorted`
-[Source](../../src/polars_lazy/frame/mod.rs.html#1987-1993)
+[Source](../../src/polars_lazy/frame/mod.rs.html#1997-2003)
 
 #### pub fn [hint](#method.hint)(self, hint: HintIR) -> PolarsResult<[LazyFrame](struct.LazyFrame.html)>
 
@@ -1745,17 +1745,17 @@ Create a LazyFrame directly from a parquet scan.
 `catalog`
 ## Trait Implementations
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#2010-2018)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#2020-2028)
 ### impl [From](https://doc.rust-lang.org/nightly/core/convert/trait.From.html)<[LazyGroupBy](struct.LazyGroupBy.html)> for [LazyFrame](struct.LazyFrame.html)
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#2010-2018)
+[Source](../../src/polars_lazy/frame/mod.rs.html#2020-2028)
 
 ### impl [From](https://doc.rust-lang.org/nightly/core/convert/trait.From.html)<[LazyGroupBy](struct.LazyGroupBy.html)> for [LazyFrame](struct.LazyFrame.html)
 
-## [Source](../../src/polars_lazy/frame/mod.rs.html#2011-2017)
+## [Source](../../src/polars_lazy/frame/mod.rs.html#2021-2027)
 #### fn [from](https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from)(lgb: [LazyGroupBy](struct.LazyGroupBy.html)) -> Self
 
-[Source](../../src/polars_lazy/frame/mod.rs.html#2011-2017)
+[Source](../../src/polars_lazy/frame/mod.rs.html#2021-2027)
 
 #### fn [from](https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from)(lgb: [LazyGroupBy](struct.LazyGroupBy.html)) -> Self
 
@@ -1765,6 +1765,8 @@ Create a LazyFrame directly from a parquet scan.
 
 ### impl ![RefUnwindSafe](https://doc.rust-lang.org/nightly/core/panic/unwind_safe/trait.RefUnwindSafe.html) for [LazyFrame](struct.LazyFrame.html)
 
+### impl ![UnwindSafe](https://doc.rust-lang.org/nightly/core/panic/unwind_safe/trait.UnwindSafe.html) for [LazyFrame](struct.LazyFrame.html)
+
 ### impl [Send](https://doc.rust-lang.org/nightly/core/marker/trait.Send.html) for [LazyFrame](struct.LazyFrame.html)
 
 ### impl [Sync](https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html) for [LazyFrame](struct.LazyFrame.html)
@@ -1772,8 +1774,6 @@ Create a LazyFrame directly from a parquet scan.
 ### impl [Unpin](https://doc.rust-lang.org/nightly/core/marker/trait.Unpin.html) for [LazyFrame](struct.LazyFrame.html)
 
 ### impl [UnsafeUnpin](https://doc.rust-lang.org/nightly/core/marker/trait.UnsafeUnpin.html) for [LazyFrame](struct.LazyFrame.html)
-
-### impl ![UnwindSafe](https://doc.rust-lang.org/nightly/core/panic/unwind_safe/trait.UnwindSafe.html) for [LazyFrame](struct.LazyFrame.html)
 
 ## Blanket Implementations
 
@@ -1797,11 +1797,15 @@ Create a LazyFrame directly from a parquet scan.
 
 [Read more](https://doc.rust-lang.org/nightly/core/borrow/trait.BorrowMut.html#tymethod.borrow_mut)
 
-## [Source](https://doc.rust-lang.org/nightly/src/core/clone.rs.html#547)
+### impl<ST, DT> CastableFrom<ST, Initialized, Initialized> for DT
+
+### impl<ST, DT> CastableFrom<ST, Uninit, Uninit> for DT
+
+## [Source](https://doc.rust-lang.org/nightly/src/core/clone.rs.html#648)
 ### impl<T> [CloneToUninit](https://doc.rust-lang.org/nightly/core/clone/trait.CloneToUninit.html) for Twhere
     T: [Clone](https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html),
 
-[Source](https://doc.rust-lang.org/nightly/src/core/clone.rs.html#547)
+[Source](https://doc.rust-lang.org/nightly/src/core/clone.rs.html#648)
 
 ### impl<T> [CloneToUninit](https://doc.rust-lang.org/nightly/core/clone/trait.CloneToUninit.html) for Twhere
     T: [Clone](https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html),
@@ -1814,14 +1818,9 @@ Create a LazyFrame directly from a parquet scan.
 ### impl<T> Instrument for T
 
 ##
-#### fn [instrument](self, span: Span) -> Instrumented<Self>
+#### fn [instrument](self, span: Span) -> Instrumented<Self> [ⓘ](#)
 
-#### fn [instrument](self, span: Span) -> Instrumented<Self>
-
-##
-#### fn [in_current_span](self) -> Instrumented<Self>
-
-#### fn [in_current_span](self) -> Instrumented<Self>
+#### fn [instrument](self, span: Span) -> Instrumented<Self> [ⓘ](#)
 
 ## [Source](https://docs.rs/either/1/src/either/into_either.rs.html#64)
 ### impl<T> [IntoEither](https://docs.rs/either/1/either/into_either/trait.IntoEither.html) for T
@@ -1897,29 +1896,6 @@ Converts `self` into a [variant of](https://docs.rs/either/1/either/enum.Either.
 
 [Sized](https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html),
 
-##
-### impl<T> WithSubscriber for T
-
-### impl<T> WithSubscriber for T
-
-##
-#### fn [with_subscriber]<S>(self, subscriber: S) -> WithDispatch<Self>where
-    S: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<Dispatch>,
-
-#### fn [with_subscriber]<S>(self, subscriber: S) -> WithDispatch<Self>where
-    S: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<Dispatch>,
-
-[Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<Dispatch>,
-
-##
-#### fn [with_current_subscriber](self) -> WithDispatch<Self>
-
-#### fn [with_current_subscriber](self) -> WithDispatch<Self>
-
-### impl<ST, DT> CastableFrom<ST, Initialized, Initialized> for DT
-
-### impl<ST, DT> CastableFrom<ST, Uninit, Uninit> for DT
-
 ### impl<T> Read<Exclusive, BecauseExclusive> for Twhere
     T: ?[Sized](https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html),
 
@@ -1929,6 +1905,23 @@ Converts `self` into a [variant of](https://docs.rs/either/1/either/enum.Either.
     T: [Send](https://doc.rust-lang.org/nightly/core/marker/trait.Send.html),
 
 [Send](https://doc.rust-lang.org/nightly/core/marker/trait.Send.html),
+
+##
+### impl<T> WithSubscriber for T
+
+### impl<T> WithSubscriber for T
+
+##
+#### fn [with_subscriber]<S>(self, subscriber: S) -> WithDispatch<Self> [ⓘ](#)where
+    S: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<Dispatch>,
+
+#### fn [with_subscriber]<S>(self, subscriber: S) -> WithDispatch<Self> [ⓘ](#)where
+    S: [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<Dispatch>,
+
+[Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<Dispatch>,
+
+##
+#### fn [with_current_subscriber](self) -> WithDispatch<Self> [ⓘ](#)
 
 # Citations
 

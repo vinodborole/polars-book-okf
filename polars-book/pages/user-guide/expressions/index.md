@@ -6,7 +6,6 @@
 - [Categorical data and enums - Polars user guide](/pages/user-guide/expressions/categorical-data-and-enums.md)
 - [Expression expansion - Polars user guide](/pages/user-guide/expressions/expression-expansion.md)
 - [Folds - Polars user guide](/pages/user-guide/expressions/folds.md)
-- [Lists and arrays - Polars user guide](/pages/user-guide/expressions/lists-and-arrays.md)
 - [Missing data - Polars user guide](/pages/user-guide/expressions/missing-data.md)
 - [Numpy functions - Polars user guide](/pages/user-guide/expressions/numpy-functions.md)
 - [Strings - Polars user guide](/pages/user-guide/expressions/strings.md)
