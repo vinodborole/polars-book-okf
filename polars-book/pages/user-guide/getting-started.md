@@ -2,7 +2,7 @@
 type: Web Page
 title: Getting started - Polars user guide
 resource: https://docs.pola.rs/user-guide/getting-started
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-08-31T12:59:29.541052+00:00'
 ---
 
 # Getting started
@@ -518,7 +518,7 @@ let result = df
         [col("name")],
         [col("name")],
         JoinArgs::new(JoinType::Left),
-    )
+    )?
     .collect()?;
 println!("{result}");
 ```

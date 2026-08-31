@@ -2,7 +2,7 @@
 type: Web Page
 title: Parsing - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/parsing
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-08-31T12:59:29.541052+00:00'
 ---
 
 # Parsing
@@ -38,7 +38,7 @@ let df = CsvReadOptions::default()
     .unwrap()
     .finish()
     .unwrap();
-println!("{}", &df);
+println!("{}", df);
 ```
 ```
 shape: (100, 2)
@@ -89,7 +89,7 @@ let df = df
     .lazy()
     .with_columns([col("Date").str().to_date(StrptimeOptions::default())])
     .collect()?;
-println!("{}", &df);
+println!("{}", df);
 ```
 ```
 shape: (100, 2)
@@ -159,7 +159,7 @@ mixed_parsed = (
 )
 print(mixed_parsed)
 ```
-  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_datetime) ·  [`dt.convert_time_zone`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.convert_time_zone) ·  [Available on feature timezones](/user-guide/installation/#feature-flags) ·  [Available on feature dtype-datetime](/user-guide/installation/#feature-flags)
+  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_datetime) ·  [`dt.convert_time_zone`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.convert_time_zone) ·  [Available on feature dtype-datetime](/user-guide/installation/#feature-flags) ·  [Available on feature timezones](/user-guide/installation/#feature-flags)
 
 ```
 let data = [
@@ -186,7 +186,7 @@ let q = col("date")
             .unwrap(),
     );
 let mixed_parsed = df!("date" => &data)?.lazy().select([q]).collect()?;
-println!("{}", &mixed_parsed);
+println!("{}", mixed_parsed);
 ```
 ```
 shape: (4,)

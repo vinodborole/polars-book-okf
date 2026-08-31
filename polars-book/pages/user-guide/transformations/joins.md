@@ -2,7 +2,7 @@
 type: Web Page
 title: Joins - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/joins
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-08-31T12:59:29.541052+00:00'
 ---
 
 # Joins
@@ -114,7 +114,7 @@ let result = props_groups
         [col("property_name")],
         [col("property_name")],
         JoinArgs::default(),
-    )
+    )?
     .collect()?;
 println!("{result}");
 ```
@@ -218,7 +218,7 @@ let result = props_groups2
         [col("property_name")],
         [col("name").str().to_lowercase()],
         JoinArgs::default(),
-    )
+    )?
     .collect()?;
 println!("{result}");
 ```
@@ -331,7 +331,7 @@ let dfs_match = result.equals_missing(
             [col("property_name")],
             [col("property_name")],
             JoinArgs::new(JoinType::Left),
-        )
+        )?
         .select([
             // Reorder the columns to match the order of `result`.
             col("group"),
@@ -388,7 +388,7 @@ let result = props_groups
         [col("property_name")],
         [col("property_name")],
         JoinArgs::new(JoinType::Full).with_coalesce(JoinCoalesce::CoalesceColumns),
-    )
+    )?
     .collect()?;
 println!("{result}");
 ```
@@ -430,7 +430,7 @@ let result = props_groups
         [col("property_name")],
         [col("property_name")],
         JoinArgs::new(JoinType::Semi),
-    )
+    )?
     .collect()?;
 println!("{result}");
 ```
@@ -467,7 +467,7 @@ let result = props_groups
         [col("property_name")],
         [col("property_name")],
         JoinArgs::new(JoinType::Anti),
-    )
+    )?
     .collect()?;
 println!("{result}");
 ```

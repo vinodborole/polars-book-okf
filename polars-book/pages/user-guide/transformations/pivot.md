@@ -2,7 +2,7 @@
 type: Web Page
 title: Pivots - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/pivot
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-08-31T12:59:29.541052+00:00'
 ---
 
 # Pivots
@@ -69,7 +69,7 @@ let out = df
         PivotColumnNaming::Auto,
     )
     .collect()?;
-println!("{}", &out);
+println!("{}", out);
 ```
 ```
 shape: (3, 6)
@@ -130,7 +130,7 @@ let q2 = q.pivot(
     PivotColumnNaming::Auto,
 );
 let out = q2.collect()?;
-println!("{}", &out);
+println!("{}", out);
 ```
 ```
 shape: (3, 6)
@@ -180,7 +180,7 @@ let q2 = q.pivot(
     PivotColumnNaming::Auto,
 );
 let out = q2.collect()?;
-println!("{}", &out);
+println!("{}", out);
 ```
 ```
 shape: (3, 6)
@@ -189,9 +189,9 @@ shape: (3, 6)
 │ --- ┆ ---  ┆ ---  ┆ ---  ┆ ---  ┆ ---  │
 │ str ┆ i64  ┆ i64  ┆ i64  ┆ i64  ┆ i64  │
 ╞═════╪══════╪══════╪══════╪══════╪══════╡
+│ A   ┆ 1    ┆ 2    ┆ null ┆ null ┆ null │
 │ C   ┆ null ┆ null ┆ null ┆ null ┆ 2    │
 │ B   ┆ null ┆ null ┆ 2    ┆ 4    ┆ null │
-│ A   ┆ 1    ┆ 2    ┆ null ┆ null ┆ null │
 └─────┴──────┴──────┴──────┴──────┴──────┘
 ```
 

@@ -2,7 +2,7 @@
 type: Web Page
 title: Basic operations - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/basic-operations
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-08-31T12:59:29.541052+00:00'
 ---
 
 # Basic operations
@@ -31,7 +31,7 @@ let df = df! (
     "random" => &[0.37454, 0.950714, 0.731994, 0.598658, 0.156019],
     "groups" => &["A", "A", "B", "A", "B"],
 )?;
-println!("{}", &df);
+println!("{}", df);
 ```
 ```
 shape: (5, 4)
@@ -335,9 +335,9 @@ shape: (4, 1)
 │ struct[2]    │
 ╞══════════════╡
 │ {"ham",1}    │
-│ {"spam",2}   │
-│ {"egg",1}    │
 │ {"foo",1}    │
+│ {"egg",1}    │
+│ {"spam",2}   │
 └──────────────┘
 ```
 The function `value_counts` returns the results in

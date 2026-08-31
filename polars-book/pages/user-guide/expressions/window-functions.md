@@ -2,7 +2,7 @@
 type: Web Page
 title: Window functions - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/window-functions
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-08-31T12:59:29.541052+00:00'
 ---
 
 # Window functions
@@ -164,23 +164,23 @@ print(result)
 ```
 ```
 shape: (163, 3)
-┌───────────────────────┬────────┬────────────┐
-│ Name                  ┆ Type 1 ┆ Speed rank │
-│ ---                   ┆ ---    ┆ ---        │
-│ str                   ┆ enum   ┆ u32        │
-╞═══════════════════════╪════════╪════════════╡
-│ Sandshrew             ┆ Ground ┆ 5          │
-│ Sandslash             ┆ Ground ┆ 3          │
-│ Diglett               ┆ Ground ┆ 2          │
-│ Dugtrio               ┆ Ground ┆ 1          │
-│ Cubone                ┆ Ground ┆ 6          │
-│ …                     ┆ …      ┆ …          │
-│ GyaradosMega Gyarados ┆ Water  ┆ 5          │
-│ Lapras                ┆ Water  ┆ 13         │
-│ Vaporeon              ┆ Water  ┆ 11         │
-│ Clefairy              ┆ Fairy  ┆ 2          │
-│ Clefable              ┆ Fairy  ┆ 1          │
-└───────────────────────┴────────┴────────────┘
+┌───────────────────┬────────┬────────────┐
+│ Name              ┆ Type 1 ┆ Speed rank │
+│ ---               ┆ ---    ┆ ---        │
+│ str               ┆ enum   ┆ u32        │
+╞═══════════════════╪════════╪════════════╡
+│ Ekans             ┆ Poison ┆ 8          │
+│ Arbok             ┆ Poison ┆ 3          │
+│ Nidoran♀          ┆ Poison ┆ 10         │
+│ Nidorina          ┆ Poison ┆ 7          │
+│ Nidoqueen         ┆ Poison ┆ 4          │
+│ …                 ┆ …      ┆ …          │
+│ Vaporeon          ┆ Water  ┆ 11         │
+│ Gastly            ┆ Ghost  ┆ 4          │
+│ Haunter           ┆ Ghost  ┆ 3          │
+│ Gengar            ┆ Ghost  ┆ 2          │
+│ GengarMega Gengar ┆ Ghost  ┆ 1          │
+└───────────────────┴────────┴────────────┘
 ```
 This shows that, usually, `group_by` and `over` produce results of different shapes:
 

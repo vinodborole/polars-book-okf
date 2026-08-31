@@ -2,7 +2,7 @@
 type: Web Page
 title: Casting - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/casting
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-08-31T12:59:29.541052+00:00'
 ---
 
 # Casting
@@ -392,7 +392,7 @@ result = df.select(
 )
 print(result)
 ```
-  [`dt.to_string`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.to_string) ·  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_date) ·  [Available on feature temporal](/user-guide/installation/#feature-flags) ·  [Available on feature dtype-date](/user-guide/installation/#feature-flags)
+  [`dt.to_string`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.to_string) ·  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_date) ·  [Available on feature dtype-date](/user-guide/installation/#feature-flags) ·  [Available on feature temporal](/user-guide/installation/#feature-flags)
 
 ```
 let df = df! (

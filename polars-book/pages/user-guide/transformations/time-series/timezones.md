@@ -2,7 +2,7 @@
 type: Web Page
 title: Time zones - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/timezones
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-08-31T12:59:29.541052+00:00'
 ---
 
 # Time zones
@@ -41,7 +41,7 @@ tz_aware = tz_naive.dt.replace_time_zone("UTC").rename("tz_aware")
 time_zones_df = pl.DataFrame([tz_naive, tz_aware])
 print(time_zones_df)
 ```
-  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_datetime) ·  [`dt.replace_time_zone`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.replace_time_zone) ·  [Available on feature timezones](/user-guide/installation/#feature-flags) ·  [Available on feature dtype-datetime](/user-guide/installation/#feature-flags)
+  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_datetime) ·  [`dt.replace_time_zone`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.replace_time_zone) ·  [Available on feature dtype-datetime](/user-guide/installation/#feature-flags) ·  [Available on feature timezones](/user-guide/installation/#feature-flags)
 
 ```
 let ts = ["2021-03-27 03:00", "2021-03-28 03:00"];
@@ -59,7 +59,7 @@ let time_zones_df = DataFrame::new_infer_height(vec![tz_naive])?
         .replace_time_zone(Some(TimeZone::UTC), lit("raise"), NonExistent::Raise)
         .alias("tz_aware")])
     .collect()?;
-println!("{}", &time_zones_df);
+println!("{}", time_zones_df);
 ```
 ```
 shape: (2, 2)
@@ -116,7 +116,7 @@ let time_zones_operations = time_zones_df
             .alias("unset time zone"),
     ])
     .collect()?;
-println!("{}", &time_zones_operations);
+println!("{}", time_zones_operations);
 ```
 ```
 shape: (2, 3)

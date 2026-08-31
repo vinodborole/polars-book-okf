@@ -2,7 +2,7 @@
 type: Web Page
 title: Grouping - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/rolling
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-08-31T12:59:29.541052+00:00'
 ---
 
 # Grouping
@@ -32,7 +32,7 @@ let df = CsvReadOptions::default()
         ["Date"],
         SortMultipleOptions::default().with_maintain_order(true),
     )?;
-println!("{}", &df);
+println!("{}", df);
 ```
 ```
 shape: (100, 2)
@@ -89,7 +89,7 @@ let df_with_year = annual_average_df
     .lazy()
     .with_columns([col("Date").dt().year().alias("year")])
     .collect()?;
-println!("{}", &df_with_year);
+println!("{}", df_with_year);
 ```
 The annual average closing price is then:
 
@@ -268,7 +268,7 @@ let out = df
         .alias("days_in_month"),
     ])
     .collect()?;
-println!("{}", &out);
+println!("{}", out);
 ```
 ```
 shape: (12, 3)
@@ -349,7 +349,7 @@ let df = df!(
     "time" => time,
     "groups"=> ["a", "a", "a", "b", "b", "a", "a"],
 )?;
-println!("{}", &df);
+println!("{}", df);
 ```
 ```
 shape: (7, 2)
@@ -396,7 +396,7 @@ let out = df
     )
     .agg([len()])
     .collect()?;
-println!("{}", &out);
+println!("{}", out);
 ```
 ```
 shape: (6, 5)

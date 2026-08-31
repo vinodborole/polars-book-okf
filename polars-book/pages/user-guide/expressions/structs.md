@@ -2,7 +2,7 @@
 type: Web Page
 title: Structs - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/structs
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-08-31T12:59:29.541052+00:00'
 ---
 
 # Structs
@@ -40,7 +40,7 @@ let ratings = df!(
         "Avg_Rating"=> [4.5, 4.4, 4.6, 4.3, 4.8, 4.7, 4.5, 4.9, 4.7, 4.6],
         "Count"=> [30, 27, 26, 29, 31, 28, 28, 26, 33, 28],
 )?;
-println!("{}", &ratings);
+println!("{}", ratings);
 ```
 ```
 shape: (10, 4)
@@ -157,7 +157,7 @@ let rating_series = df!(
 )?
 .into_struct("ratings".into())
 .into_series();
-println!("{}", &rating_series);
+println!("{}", rating_series);
 ```
 ```
 shape: (2,)

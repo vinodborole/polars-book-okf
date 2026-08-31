@@ -2,7 +2,7 @@
 type: Web Page
 title: Filtering - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/filter
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-08-31T12:59:29.541052+00:00'
 ---
 
 # Filtering
@@ -30,7 +30,7 @@ let df = CsvReadOptions::default()
     .unwrap()
     .finish()
     .unwrap();
-println!("{}", &df);
+println!("{}", df);
 ```
 ```
 shape: (100, 2)
@@ -90,7 +90,7 @@ let filtered_range_df = df
             .and(col("Date").lt(lit(NaiveDate::from_ymd_opt(1995, 11, 1).unwrap()))),
     )
     .collect()?;
-println!("{}", &filtered_range_df);
+println!("{}", filtered_range_df);
 ```
 ```
 shape: (2, 2)
@@ -128,7 +128,7 @@ print(negative_dates_filtered_df)
         .lazy()
         .filter(col("ts").dt().year().lt(-1300))
         .collect()?;
-    println!("{}", &negative_dates_filtered_df);
+    println!("{}", negative_dates_filtered_df);
 ```
 ```
 shape: (1, 2)

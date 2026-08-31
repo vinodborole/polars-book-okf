@@ -2,7 +2,7 @@
 type: Web Page
 title: Expressions and contexts - Polars user guide
 resource: https://docs.pola.rs/user-guide/concepts/expressions-and-contexts
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-08-31T12:59:29.541052+00:00'
 ---
 
 # Expressions and contexts
@@ -269,8 +269,8 @@ shape: (2, 2)
 │ ---    ┆ ---                             │
 │ i32    ┆ list[str]                       │
 ╞════════╪═════════════════════════════════╡
-│ 1980   ┆ ["Ben Brown", "Chloe Cooper", … │
 │ 1990   ┆ ["Alice Archer"]                │
+│ 1980   ┆ ["Ben Brown", "Chloe Cooper", … │
 └────────┴─────────────────────────────────┘
 ```
 After using `group_by` we use `agg` to apply aggregating expressions to the groups. Since in the
@@ -306,8 +306,8 @@ shape: (3, 3)
 │ ---    ┆ ---    ┆ ---                             │
 │ i32    ┆ bool   ┆ list[str]                       │
 ╞════════╪════════╪═════════════════════════════════╡
-│ 1990   ┆ true   ┆ ["Alice Archer"]                │
 │ 1980   ┆ true   ┆ ["Chloe Cooper"]                │
+│ 1990   ┆ true   ┆ ["Alice Archer"]                │
 │ 1980   ┆ false  ┆ ["Ben Brown", "Daniel Donovan"… │
 └────────┴────────┴─────────────────────────────────┘
 ```
@@ -351,9 +351,9 @@ shape: (3, 6)
 │ ---    ┆ ---    ┆ --- ┆ ---     ┆ ---        ┆ ---        │
 │ i32    ┆ bool   ┆ u32 ┆ f64     ┆ f64        ┆ f64        │
 ╞════════╪════════╪═════╪═════════╪════════════╪════════════╡
-│ 1990   ┆ true   ┆ 1   ┆ 1.56    ┆ 57.9       ┆ 1.56       │
-│ 1980   ┆ false  ┆ 2   ┆ 1.77    ┆ 77.8       ┆ 1.76       │
 │ 1980   ┆ true   ┆ 1   ┆ 1.65    ┆ 53.6       ┆ 1.65       │
+│ 1980   ┆ false  ┆ 2   ┆ 1.77    ┆ 77.8       ┆ 1.76       │
+│ 1990   ┆ true   ┆ 1   ┆ 1.56    ┆ 57.9       ┆ 1.56       │
 └────────┴────────┴─────┴─────────┴────────────┴────────────┘
 ```
 See also `group_by_dynamic` and `rolling` for other grouping contexts.

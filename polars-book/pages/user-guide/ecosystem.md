@@ -2,7 +2,7 @@
 type: Web Page
 title: Ecosystem - Polars user guide
 resource: https://docs.pola.rs/user-guide/ecosystem
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-08-31T12:59:29.541052+00:00'
 ---
 
 # Ecosystem
@@ -103,7 +103,7 @@ more details.
 
 [Mage](https://www.mage.ai) is an open-source data pipeline tool for transforming and integrating
 data. Learn about integration between Polars and Mage at
-[docs.mage.ai](https://docs.mage.ai/integrations/polars).
+[docs.mage.ai](https://docs.mage.ai/guides/blocks/polars).
 
 #### marimo
 

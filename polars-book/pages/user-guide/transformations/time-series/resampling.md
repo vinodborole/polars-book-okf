@@ -2,7 +2,7 @@
 type: Web Page
 title: Resampling - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/resampling
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-08-31T12:59:29.541052+00:00'
 ---
 
 # Resampling
@@ -61,7 +61,7 @@ let df = df!(
     "groups" => &["a", "a", "a", "b", "b", "a", "a"],
     "values" => &[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0],
 )?;
-println!("{}", &df);
+println!("{}", df);
 ```
 ```
 shape: (7, 3)
@@ -127,7 +127,7 @@ let out2 = df
     .with_columns([col("values").interpolate(InterpolationMethod::Linear)])
     .collect()?
     .fill_null(FillNullStrategy::Forward(None))?;
-println!("{}", &out2);
+println!("{}", out2);
 ```
 ```
 shape: (13, 3)
