@@ -3,7 +3,7 @@ type: Web Page
 title: DataFrame in polars::frame - Rust
 description: A contiguous growable collection of `Column`s that have the same length.
 resource: https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html
-timestamp: '2026-08-31T12:59:29.541052+00:00'
+timestamp: '2026-09-07T11:52:00.647733+00:00'
 ---
 
 `pub struct DataFrame { /* private fields */ }`
@@ -2434,16 +2434,27 @@ inserted as columns.
 
 [Source](../../src/polars_core/serde/df.rs.html#24)
 
+#### pub fn [serialize_into_json](#method.serialize_into_json)(
+    &self,
+    writer: &mut dyn [Write](https://doc.rust-lang.org/nightly/core/io/write/trait.Write.html),
+) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[()](https://doc.rust-lang.org/nightly/std/primitive.unit.html), [PolarsError](../prelude/enum.PolarsError.html)>
+
+[Source](../../src/polars_core/serde/df.rs.html#28)
+
+#### pub fn [deserialize_from_json](#method.deserialize_from_json)(json: &[[u8](https://doc.rust-lang.org/nightly/std/primitive.u8.html)]) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
+
+[Source](../../src/polars_core/serde/df.rs.html#32)
+
 #### pub fn [serialize_into_writer](#method.serialize_into_writer)(
     &mut self,
     writer: &mut dyn [Write](https://doc.rust-lang.org/nightly/core/io/write/trait.Write.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[()](https://doc.rust-lang.org/nightly/std/primitive.unit.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/serde/df.rs.html#71)
+[Source](../../src/polars_core/serde/df.rs.html#79)
 
 #### pub fn [serialize_to_bytes](#method.serialize_to_bytes)(&mut self) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[u8](https://doc.rust-lang.org/nightly/std/primitive.u8.html)>, [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_core/serde/df.rs.html#78)
+[Source](../../src/polars_core/serde/df.rs.html#86)
 
 #### pub fn [deserialize_from_reader](#method.deserialize_from_reader)<T>(
     reader: [&mut T](https://doc.rust-lang.org/nightly/std/primitive.reference.html),
@@ -2507,14 +2518,14 @@ assert!(df1.equals_missing(&df2));
 
 ### impl [AsofJoin](../prelude/trait.AsofJoin.html) for [DataFrame](../prelude/struct.DataFrame.html)
 
-## [Source](../../src/polars_ops/frame/join/asof/groups.rs.html#646)
+## [Source](../../src/polars_ops/frame/join/asof/groups.rs.html#635)
 ### impl [AsofJoinBy](../prelude/trait.AsofJoinBy.html) for [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_ops/frame/join/asof/groups.rs.html#646)
+[Source](../../src/polars_ops/frame/join/asof/groups.rs.html#635)
 
 ### impl [AsofJoinBy](../prelude/trait.AsofJoinBy.html) for [DataFrame](../prelude/struct.DataFrame.html)
 
-## [Source](../../src/polars_ops/frame/join/asof/groups.rs.html#608-622)
+## [Source](../../src/polars_ops/frame/join/asof/groups.rs.html#597-611)
 #### fn [join_asof_by](../prelude/trait.AsofJoinBy.html#method.join_asof_by)<I, S>(
     &self,
     other: &[DataFrame](../prelude/struct.DataFrame.html),
@@ -2528,7 +2539,7 @@ assert!(df1.equals_missing(&df2));
     check_sortedness: [bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html),
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_ops/frame/join/asof/groups.rs.html#608-622)
+[Source](../../src/polars_ops/frame/join/asof/groups.rs.html#597-611)
 
 #### fn [join_asof_by](../prelude/trait.AsofJoinBy.html#method.join_asof_by)<I, S>(
     &self,
@@ -2621,14 +2632,14 @@ assert!(df1.equals_missing(&df2));
     nulls_last: &[[bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html)],
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-## [Source](../../src/polars_ops/frame/join/mod.rs.html#655)
+## [Source](../../src/polars_ops/frame/join/mod.rs.html#660)
 ### impl [DataFrameJoinOps](../prelude/trait.DataFrameJoinOps.html) for [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_ops/frame/join/mod.rs.html#655)
+[Source](../../src/polars_ops/frame/join/mod.rs.html#660)
 
 ### impl [DataFrameJoinOps](../prelude/trait.DataFrameJoinOps.html) for [DataFrame](../prelude/struct.DataFrame.html)
 
-## [Source](../../src/polars_ops/frame/join/mod.rs.html#90-97)
+## [Source](../../src/polars_ops/frame/join/mod.rs.html#95-102)
 #### fn [join](../prelude/trait.DataFrameJoinOps.html#method.join)(
     &self,
     other: &[DataFrame](../prelude/struct.DataFrame.html),
@@ -2638,7 +2649,7 @@ assert!(df1.equals_missing(&df2));
     options: [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[JoinTypeOptions](../prelude/enum.JoinTypeOptions.html)>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_ops/frame/join/mod.rs.html#90-97)
+[Source](../../src/polars_ops/frame/join/mod.rs.html#95-102)
 
 #### fn [join](../prelude/trait.DataFrameJoinOps.html#method.join)(
     &self,
@@ -2651,7 +2662,7 @@ assert!(df1.equals_missing(&df2));
 
 [Read more](../prelude/trait.DataFrameJoinOps.html#method.join)
 
-## [Source](../../src/polars_ops/frame/join/mod.rs.html#472-477)
+## [Source](../../src/polars_ops/frame/join/mod.rs.html#477-482)
 #### fn [inner_join](../prelude/trait.DataFrameJoinOps.html#method.inner_join)(
     &self,
     other: &[DataFrame](../prelude/struct.DataFrame.html),
@@ -2659,7 +2670,7 @@ assert!(df1.equals_missing(&df2));
     right_on: impl [IntoIterator](https://doc.rust-lang.org/nightly/core/iter/traits/collect/trait.IntoIterator.html)<Item = impl [AsRef](https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html)<[str](https://doc.rust-lang.org/nightly/std/primitive.str.html)>>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_ops/frame/join/mod.rs.html#472-477)
+[Source](../../src/polars_ops/frame/join/mod.rs.html#477-482)
 
 #### fn [inner_join](../prelude/trait.DataFrameJoinOps.html#method.inner_join)(
     &self,
@@ -2670,7 +2681,7 @@ assert!(df1.equals_missing(&df2));
 
 [Read more](../prelude/trait.DataFrameJoinOps.html#method.inner_join)
 
-## [Source](../../src/polars_ops/frame/join/mod.rs.html#522-527)
+## [Source](../../src/polars_ops/frame/join/mod.rs.html#527-532)
 #### fn [left_join](../prelude/trait.DataFrameJoinOps.html#method.left_join)(
     &self,
     other: &[DataFrame](../prelude/struct.DataFrame.html),
@@ -2678,7 +2689,7 @@ assert!(df1.equals_missing(&df2));
     right_on: impl [IntoIterator](https://doc.rust-lang.org/nightly/core/iter/traits/collect/trait.IntoIterator.html)<Item = impl [AsRef](https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html)<[str](https://doc.rust-lang.org/nightly/std/primitive.str.html)>>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_ops/frame/join/mod.rs.html#522-527)
+[Source](../../src/polars_ops/frame/join/mod.rs.html#527-532)
 
 #### fn [left_join](../prelude/trait.DataFrameJoinOps.html#method.left_join)(
     &self,
@@ -2689,7 +2700,7 @@ assert!(df1.equals_missing(&df2));
 
 [Read more](../prelude/trait.DataFrameJoinOps.html#method.left_join)
 
-## [Source](../../src/polars_ops/frame/join/mod.rs.html#547-552)
+## [Source](../../src/polars_ops/frame/join/mod.rs.html#552-557)
 #### fn [full_join](../prelude/trait.DataFrameJoinOps.html#method.full_join)(
     &self,
     other: &[DataFrame](../prelude/struct.DataFrame.html),
@@ -2697,7 +2708,7 @@ assert!(df1.equals_missing(&df2));
     right_on: impl [IntoIterator](https://doc.rust-lang.org/nightly/core/iter/traits/collect/trait.IntoIterator.html)<Item = impl [AsRef](https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html)<[str](https://doc.rust-lang.org/nightly/std/primitive.str.html)>>,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), [PolarsError](../prelude/enum.PolarsError.html)>
 
-[Source](../../src/polars_ops/frame/join/mod.rs.html#547-552)
+[Source](../../src/polars_ops/frame/join/mod.rs.html#552-557)
 
 #### fn [full_join](../prelude/trait.DataFrameJoinOps.html#method.full_join)(
     &self,
@@ -2708,20 +2719,20 @@ assert!(df1.equals_missing(&df2));
 
 [Read more](../prelude/trait.DataFrameJoinOps.html#method.full_join)
 
-## [Source](../../src/polars_core/serde/df.rs.html#171)
+## [Source](../../src/polars_core/serde/df.rs.html#179)
 ### impl<'de> [Deserialize](https://docs.rs/serde_core/1.0.229/serde_core/de/trait.Deserialize.html)<'de> for [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/serde/df.rs.html#171)
+[Source](../../src/polars_core/serde/df.rs.html#179)
 
 ### impl<'de> [Deserialize](https://docs.rs/serde_core/1.0.229/serde_core/de/trait.Deserialize.html)<'de> for [DataFrame](../prelude/struct.DataFrame.html)
 
-## [Source](../../src/polars_core/serde/df.rs.html#172-174)
+## [Source](../../src/polars_core/serde/df.rs.html#180-182)
 #### fn [deserialize](https://docs.rs/serde_core/1.0.229/serde_core/de/trait.Deserialize.html#tymethod.deserialize)<D>(
     deserializer: D,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[DataFrame](../prelude/struct.DataFrame.html), <D as [Deserializer](https://docs.rs/serde_core/1.0.229/serde_core/de/trait.Deserializer.html)<'de>>::[Error](https://docs.rs/serde_core/1.0.229/serde_core/de/trait.Deserializer.html#associatedtype.Error)>where
     D: [Deserializer](https://docs.rs/serde_core/1.0.229/serde_core/de/trait.Deserializer.html)<'de>,
 
-[Source](../../src/polars_core/serde/df.rs.html#172-174)
+[Source](../../src/polars_core/serde/df.rs.html#180-182)
 
 #### fn [deserialize](https://docs.rs/serde_core/1.0.229/serde_core/de/trait.Deserialize.html#tymethod.deserialize)<D>(
     deserializer: D,
@@ -2970,21 +2981,21 @@ assert!(df1.equals_missing(&df2));
 
 [PlSmallStr](../prelude/struct.PlSmallStr.html)>,
 
-## [Source](../../src/polars_core/serde/df.rs.html#155)
+## [Source](../../src/polars_core/serde/df.rs.html#163)
 ### impl [Serialize](https://docs.rs/serde_core/1.0.229/serde_core/ser/trait.Serialize.html) for [DataFrame](../prelude/struct.DataFrame.html)
 
-[Source](../../src/polars_core/serde/df.rs.html#155)
+[Source](../../src/polars_core/serde/df.rs.html#163)
 
 ### impl [Serialize](https://docs.rs/serde_core/1.0.229/serde_core/ser/trait.Serialize.html) for [DataFrame](../prelude/struct.DataFrame.html)
 
-## [Source](../../src/polars_core/serde/df.rs.html#156-158)
+## [Source](../../src/polars_core/serde/df.rs.html#164-166)
 #### fn [serialize](https://docs.rs/serde_core/1.0.229/serde_core/ser/trait.Serialize.html#tymethod.serialize)<S>(
     &self,
     serializer: S,
 ) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<<S as [Serializer](https://docs.rs/serde_core/1.0.229/serde_core/ser/trait.Serializer.html)>::[Ok](https://docs.rs/serde_core/1.0.229/serde_core/ser/trait.Serializer.html#associatedtype.Ok), <S as [Serializer](https://docs.rs/serde_core/1.0.229/serde_core/ser/trait.Serializer.html)>::[Error](https://docs.rs/serde_core/1.0.229/serde_core/ser/trait.Serializer.html#associatedtype.Error)>where
     S: [Serializer](https://docs.rs/serde_core/1.0.229/serde_core/ser/trait.Serializer.html),
 
-[Source](../../src/polars_core/serde/df.rs.html#156-158)
+[Source](../../src/polars_core/serde/df.rs.html#164-166)
 
 #### fn [serialize](https://docs.rs/serde_core/1.0.229/serde_core/ser/trait.Serialize.html#tymethod.serialize)<S>(
     &self,

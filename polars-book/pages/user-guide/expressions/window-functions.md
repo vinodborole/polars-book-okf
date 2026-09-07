@@ -2,7 +2,7 @@
 type: Web Page
 title: Window functions - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/window-functions
-timestamp: '2026-08-31T12:59:29.541052+00:00'
+timestamp: '2026-09-07T11:52:00.647733+00:00'
 ---
 
 # Window functions
@@ -155,7 +155,7 @@ result = (
         pl.col("Speed").rank("dense", descending=True).alias("Speed rank"),
     )
     .select(pl.col("Name"), pl.col("Type 1"), pl.col("Speed rank"))
-    .explode("Name", "Speed rank", empty_as_null=False)
+    .explode("Name", "Speed rank")
 )
 print(result)
 ```
@@ -164,23 +164,23 @@ print(result)
 ```
 ```
 shape: (163, 3)
-┌───────────────────┬────────┬────────────┐
-│ Name              ┆ Type 1 ┆ Speed rank │
-│ ---               ┆ ---    ┆ ---        │
-│ str               ┆ enum   ┆ u32        │
-╞═══════════════════╪════════╪════════════╡
-│ Ekans             ┆ Poison ┆ 8          │
-│ Arbok             ┆ Poison ┆ 3          │
-│ Nidoran♀          ┆ Poison ┆ 10         │
-│ Nidorina          ┆ Poison ┆ 7          │
-│ Nidoqueen         ┆ Poison ┆ 4          │
-│ …                 ┆ …      ┆ …          │
-│ Vaporeon          ┆ Water  ┆ 11         │
-│ Gastly            ┆ Ghost  ┆ 4          │
-│ Haunter           ┆ Ghost  ┆ 3          │
-│ Gengar            ┆ Ghost  ┆ 2          │
-│ GengarMega Gengar ┆ Ghost  ┆ 1          │
-└───────────────────┴────────┴────────────┘
+┌───────────────────────┬────────┬────────────┐
+│ Name                  ┆ Type 1 ┆ Speed rank │
+│ ---                   ┆ ---    ┆ ---        │
+│ str                   ┆ enum   ┆ u32        │
+╞═══════════════════════╪════════╪════════════╡
+│ Pidgey                ┆ Normal ┆ 13         │
+│ Pidgeotto             ┆ Normal ┆ 10         │
+│ Pidgeot               ┆ Normal ┆ 4          │
+│ PidgeotMega Pidgeot   ┆ Normal ┆ 1          │
+│ Rattata               ┆ Normal ┆ 9          │
+│ …                     ┆ …      ┆ …          │
+│ Magikarp              ┆ Water  ┆ 6          │
+│ Gyarados              ┆ Water  ┆ 5          │
+│ GyaradosMega Gyarados ┆ Water  ┆ 5          │
+│ Lapras                ┆ Water  ┆ 13         │
+│ Vaporeon              ┆ Water  ┆ 11         │
+└───────────────────────┴────────┴────────────┘
 ```
 This shows that, usually, `group_by` and `over` produce results of different shapes:
 

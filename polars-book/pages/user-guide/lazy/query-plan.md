@@ -2,7 +2,7 @@
 type: Web Page
 title: Query plan - Polars user guide
 resource: https://docs.pola.rs/user-guide/lazy/query-plan
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-09-07T11:52:00.647733+00:00'
 ---
 
 # Query plan
@@ -67,6 +67,12 @@ Now we visualize the optimized plan with `show_graph`.
 
 ```
 q1.show_graph(plan_stage="ir")
+```
+When using the streaming engine, we can also visualize the physical plan by setting
+`plan_type="streaming"` (the default).
+
+```
+q1.show_graph(plan_stage="physical")
 ```
 We can also print the optimized plan with `explain`
 

@@ -2,7 +2,7 @@
 type: Web Page
 title: Expressions and contexts - Polars user guide
 resource: https://docs.pola.rs/user-guide/concepts/expressions-and-contexts
-timestamp: '2026-08-31T12:59:29.541052+00:00'
+timestamp: '2026-09-07T11:52:00.647733+00:00'
 ---
 
 # Expressions and contexts
@@ -306,8 +306,8 @@ shape: (3, 3)
 │ ---    ┆ ---    ┆ ---                             │
 │ i32    ┆ bool   ┆ list[str]                       │
 ╞════════╪════════╪═════════════════════════════════╡
-│ 1980   ┆ true   ┆ ["Chloe Cooper"]                │
 │ 1990   ┆ true   ┆ ["Alice Archer"]                │
+│ 1980   ┆ true   ┆ ["Chloe Cooper"]                │
 │ 1980   ┆ false  ┆ ["Ben Brown", "Daniel Donovan"… │
 └────────┴────────┴─────────────────────────────────┘
 ```

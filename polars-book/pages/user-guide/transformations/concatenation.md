@@ -2,7 +2,7 @@
 type: Web Page
 title: Concatenation - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/concatenation
-timestamp: '2026-08-31T12:59:29.541052+00:00'
+timestamp: '2026-09-07T11:52:00.647733+00:00'
 ---
 
 # Concatenation
@@ -94,7 +94,6 @@ df_horizontal_concat = pl.concat(
         df_h2,
     ],
     how="horizontal",
-    strict=True,
 )
 print(df_horizontal_concat)
 ```

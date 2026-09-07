@@ -2,7 +2,7 @@
 type: Web Page
 title: Aggregation - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/aggregation
-timestamp: '2026-08-31T12:59:29.541052+00:00'
+timestamp: '2026-09-07T11:52:00.647733+00:00'
 ---
 
 # Aggregation
@@ -255,11 +255,11 @@ shape: (5, 5)
 │ ---   ┆ ---        ┆ ---       ┆ ---    ┆ ---      │
 │ cat   ┆ f64        ┆ f64       ┆ u32    ┆ u32      │
 ╞═══════╪════════════╪═══════════╪════════╪══════════╡
-│ ME    ┆ 184.435244 ┆ 101.5     ┆ 474    ┆ 20       │
-│ TX    ┆ 124.397946 ┆ 82.8      ┆ 1559   ┆ 55       │
-│ MN    ┆ 132.346445 ┆ 88.857143 ┆ 662    ┆ 7        │
-│ MD    ┆ 175.803419 ┆ 94.826087 ┆ 881    ┆ 46       │
-│ OH    ┆ 157.579961 ┆ 95.056604 ┆ 2142   ┆ 53       │
+│ NH    ┆ 193.462791 ┆ 70.363636 ┆ 438    ┆ 11       │
+│ PA    ┆ 167.008592 ┆ 92.636364 ┆ 3205   ┆ 22       │
+│ DE    ┆ 177.45933  ┆ null      ┆ 223    ┆ 0        │
+│ CA    ┆ 115.400464 ┆ 84.409524 ┆ 1725   ┆ 210      │
+│ TN    ┆ 162.299803 ┆ 98.294118 ┆ 1066   ┆ 17       │
 └───────┴────────────┴───────────┴────────┴──────────┘
 ```
 Do the average age values look nonsensical? That's because we are working with historical data that dates back to the 1800s and we are doing our computations assuming everyone represented in the dataset is still alive and kicking.
@@ -316,10 +316,10 @@ shape: (5, 3)
 │ ---   ┆ ---                 ┆ ---   │
 │ cat   ┆ cat                 ┆ u32   │
 ╞═══════╪═════════════════════╪═══════╡
-│ CT    ┆ Pro-Administration  ┆ 5     │
 │ VA    ┆ Anti-Administration ┆ 5     │
-│ PA    ┆ Anti-Administration ┆ 3     │
+│ CT    ┆ Pro-Administration  ┆ 5     │
 │ DE    ┆ Pro-Administration  ┆ 3     │
+│ PA    ┆ Anti-Administration ┆ 3     │
 │ NJ    ┆ Pro-Administration  ┆ 3     │
 └───────┴─────────────────────┴───────┘
 ```
@@ -416,17 +416,17 @@ println!("{df}");
 ```
 ```
 shape: (5, 3)
-┌───────┬─────────────────────┬──────────────────┐
-│ state ┆ youngest            ┆ oldest           │
-│ ---   ┆ ---                 ┆ ---              │
-│ cat   ┆ str                 ┆ str              │
-╞═══════╪═════════════════════╪══════════════════╡
-│ HI    ┆ Tulsi Gabbard       ┆ Robert Wilcox    │
-│ TX    ┆ John Cranford       ┆ Timothy Pilsbury │
-│ VI    ┆ Donna Christensen   ┆ Melvin Evans     │
-│ GU    ┆ Michael San Nicolas ┆ Antonio Won Pat  │
-│ PI    ┆ Carlos Romulo       ┆ Pablo Ocampo     │
-└───────┴─────────────────────┴──────────────────┘
+┌───────┬──────────────────┬──────────────────┐
+│ state ┆ youngest         ┆ oldest           │
+│ ---   ┆ ---              ┆ ---              │
+│ cat   ┆ str              ┆ str              │
+╞═══════╪══════════════════╪══════════════════╡
+│ CT    ┆ Henry Edwards    ┆ Roger Sherman    │
+│ IA    ┆ Bernhart Henn    ┆ Timothy Davis    │
+│ WV    ┆ Edward Rohrbough ┆ Daniel Polsley   │
+│ FL    ┆ Charles Downing  ┆ Joseph White     │
+│ NH    ┆ John Sherburne   ┆ Samuel Livermore │
+└───────┴──────────────────┴──────────────────┘
 ```
 However, if we also want to sort the names alphabetically, we need to perform an extra sort
 operation. Luckily, we can sort in a `group_by` context without changing the sorting of the
@@ -472,17 +472,17 @@ println!("{df}");
 ```
 ```
 shape: (5, 4)
-┌───────┬─────────────────────┬──────────────────┬─────────────────────────┐
-│ state ┆ youngest            ┆ oldest           ┆ alphabetical_first      │
-│ ---   ┆ ---                 ┆ ---              ┆ ---                     │
-│ cat   ┆ str                 ┆ str              ┆ str                     │
-╞═══════╪═════════════════════╪══════════════════╪═════════════════════════╡
-│ GU    ┆ Michael San Nicolas ┆ Antonio Won Pat  ┆ Antonio Won Pat         │
-│ PI    ┆ Carlos Romulo       ┆ Pablo Ocampo     ┆ Benito Legarda Y Tuason │
-│ TX    ┆ John Cranford       ┆ Timothy Pilsbury ┆ Abraham Kazen           │
-│ MD    ┆ Benjamin Contee     ┆ William Smith    ┆ Albert Blakeney         │
-│ KY    ┆ John Edwards        ┆ Matthew Lyon     ┆ Aaron Harding           │
-└───────┴─────────────────────┴──────────────────┴─────────────────────────┘
+┌───────┬─────────────────┬──────────────────┬────────────────────┐
+│ state ┆ youngest        ┆ oldest           ┆ alphabetical_first │
+│ ---   ┆ ---             ┆ ---              ┆ ---                │
+│ cat   ┆ str             ┆ str              ┆ str                │
+╞═══════╪═════════════════╪══════════════════╪════════════════════╡
+│ SC    ┆ Ralph Izard     ┆ Thomas Sumter    ┆ Abraham Nott       │
+│ OK    ┆ Kendra Horn     ┆ David Harvey     ┆ Alice Robertson    │
+│ NH    ┆ John Sherburne  ┆ Samuel Livermore ┆ Aaron Cragin       │
+│ MA    ┆ William Widgery ┆ Artemas Ward     ┆ Aaron Hobart       │
+│ CT    ┆ Henry Edwards   ┆ Roger Sherman    ┆ Abner Sibal        │
+└───────┴─────────────────┴──────────────────┴────────────────────┘
 ```
 We can even sort a column with the order induced by another column, and this also works inside the
 context `group_by`. This modification to the previous query lets us check if the delegate with the

@@ -2,7 +2,7 @@
 type: Web Page
 title: Visualization - Polars user guide
 resource: https://docs.pola.rs/user-guide/misc/visualization
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-09-07T11:52:00.647733+00:00'
 ---
 
 # Visualization
@@ -135,10 +135,9 @@ from plotnine import ggplot, aes, geom_point, labs
 ```
 ## Seaborn
 
-[Seaborn](https://seaborn.pydata.org/) can accept a Polars `DataFrame` by leveraging the
-[dataframe interchange protocol](https://data-apis.org/dataframe-api/), which offers zero-copy
-conversion where possible. Note that the protocol does not support all Polars data types (e.g.
-`List`) so your mileage may vary here.
+[Seaborn](https://seaborn.pydata.org/) accepts Pandas `DataFrame`s. Use `DataFrame.to_pandas()` to
+convert Polars dataframes to Pandas dataframes. Note however, that Pandas dataframes may not support
+all Polars data types.
 
 ```
 import seaborn as sns
@@ -161,9 +160,6 @@ ax.set_ylabel('Sepal Length')
 
 - [Narwhals](https://narwhals-dev.github.io/narwhals/) , since plotly v6.0.0, and therefore running
   execution natively without any conversion overhead.
-- The [dataframe interchange protocol](https://data-apis.org/dataframe-api/) , before plotly v6.0.0,
-  which offers zero-copy conversion where possible. Note that the protocol does not support all
-  Polars data types (e.g.`List` ) so your mileage may vary here.
 
 ```
 import plotly.express as px
