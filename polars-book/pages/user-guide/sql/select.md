@@ -2,7 +2,7 @@
 type: Web Page
 title: SELECT - Polars user guide
 resource: https://docs.pola.rs/user-guide/sql/select
-timestamp: '2026-09-07T11:52:00.647733+00:00'
+timestamp: '2026-09-14T12:06:43.716713+00:00'
 ---
 
 # SELECT
@@ -151,12 +151,12 @@ shape: (6, 4)
 │ ---         ┆ ---         ┆ ---    ┆ ---        │
 │ str         ┆ str         ┆ i64    ┆ i64        │
 ╞═════════════╪═════════════╪════════╪════════════╡
-│ USA         ┆ Houston     ┆ 52000  ┆ 2320000    │
-│ Netherlands ┆ Amsterdam   ┆ 42000  ┆ 900000     │
 │ USA         ┆ New York    ┆ 55000  ┆ 8399000    │
-│ USA         ┆ Chicago     ┆ 48000  ┆ 2705000    │
 │ USA         ┆ Los Angeles ┆ 62000  ┆ 3997000    │
+│ USA         ┆ Chicago     ┆ 48000  ┆ 2705000    │
+│ USA         ┆ Houston     ┆ 52000  ┆ 2320000    │
 │ null        ┆ null        ┆ null   ┆ 1680000    │
+│ Netherlands ┆ Amsterdam   ┆ 42000  ┆ 900000     │
 └─────────────┴─────────────┴────────┴────────────┘
 ```
 ### Functions

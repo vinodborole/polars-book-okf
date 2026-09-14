@@ -2,7 +2,7 @@
 type: Web Page
 title: Google BigQuery - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/bigquery
-timestamp: '2026-09-07T11:52:00.647733+00:00'
+timestamp: '2026-09-14T12:06:43.716713+00:00'
 ---
 
 # Google BigQuery
@@ -16,7 +16,7 @@ $ pip install google-cloud-bigquery
 
 We can load a query into a `DataFrame` like this:
 
-  [`from_arrow`](https://docs.pola.rs/api/python/stable/reference/api/polars.from_arrow.html) ·  [Available on feature pyarrow](/user-guide/installation/#feature-flags) ·  [Available on feature fsspec](/user-guide/installation/#feature-flags)
+  [`from_arrow`](https://docs.pola.rs/api/python/stable/reference/api/polars.from_arrow.html) ·  [Available on feature fsspec](/user-guide/installation/#feature-flags) ·  [Available on feature pyarrow](/user-guide/installation/#feature-flags)
 
 ```
 import polars as pl

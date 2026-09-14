@@ -2,7 +2,7 @@
 type: Web Page
 title: GPU Support [Open Beta] - Polars user guide
 resource: https://docs.pola.rs/user-guide/gpu-support
-timestamp: '2026-09-07T11:52:00.647733+00:00'
+timestamp: '2026-09-14T12:06:43.716713+00:00'
 ---
 
 # GPU Support [Open Beta]
@@ -39,11 +39,6 @@ For example with CUDA 13:
 ```
 pip install polars cudf-polars-cu13
 ```
-`cudf-polars` supports a bounded range of Polars versions. If the Polars version is
-not pinned, the package resolver may select an older compatible Polars release. Pin
-the required Polars version when such fallback is unacceptable; incompatible
-combinations will then fail dependency resolution.
-
 ### Usage
 
 Having built a query using the lazy API [as normal](../lazy/), GPU-enabled execution is

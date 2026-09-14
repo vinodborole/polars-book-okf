@@ -2,7 +2,7 @@
 type: Web Page
 title: Multiple - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/multiple
-timestamp: '2026-09-07T11:52:00.647733+00:00'
+timestamp: '2026-09-14T12:06:43.716713+00:00'
 ---
 
 # Multiple
@@ -51,10 +51,7 @@ To see how this works we can take a look at the query plan. Below we see that al
 separately and concatenated into a single `DataFrame`. Polars will try to parallelize the reading.
 
 ```
-# Show the "ir" query plan
 pl.scan_csv("docs/assets/data/my_many_files_*.csv").show_graph(plan_stage="ir")
-# Show the "physical" query plan
-pl.scan_csv("docs/assets/data/my_many_files_*.csv").show_graph(plan_stage="physical")
 ```
 ## Reading and processing in parallel
 
@@ -79,27 +76,18 @@ print(dataframes)
 │ ---  ┆ --- ┆ --- │
 │ str  ┆ u32 ┆ i64 │
 ╞══════╪═════╪═════╡
-│ null ┆ 1   ┆ 1   │
 │ spam ┆ 1   ┆ 3   │
 │ ham  ┆ 1   ┆ 2   │
+│ null ┆ 1   ┆ 1   │
 └──────┴─────┴─────┘, shape: (3, 3)
 ┌──────┬─────┬─────┐
 │ bar  ┆ len ┆ foo │
 │ ---  ┆ --- ┆ --- │
 │ str  ┆ u32 ┆ i64 │
 ╞══════╪═════╪═════╡
-│ null ┆ 1   ┆ 1   │
 │ ham  ┆ 1   ┆ 2   │
 │ spam ┆ 1   ┆ 3   │
-└──────┴─────┴─────┘, shape: (3, 3)
-┌──────┬─────┬─────┐
-│ bar  ┆ len ┆ foo │
-│ ---  ┆ --- ┆ --- │
-│ str  ┆ u32 ┆ i64 │
-╞══════╪═════╪═════╡
 │ null ┆ 1   ┆ 1   │
-│ ham  ┆ 1   ┆ 2   │
-│ spam ┆ 1   ┆ 3   │
 └──────┴─────┴─────┘, shape: (3, 3)
 ┌──────┬─────┬─────┐
 │ bar  ┆ len ┆ foo │
@@ -118,6 +106,15 @@ print(dataframes)
 │ null ┆ 1   ┆ 1   │
 │ ham  ┆ 1   ┆ 2   │
 │ spam ┆ 1   ┆ 3   │
+└──────┴─────┴─────┘, shape: (3, 3)
+┌──────┬─────┬─────┐
+│ bar  ┆ len ┆ foo │
+│ ---  ┆ --- ┆ --- │
+│ str  ┆ u32 ┆ i64 │
+╞══════╪═════╪═════╡
+│ spam ┆ 1   ┆ 3   │
+│ ham  ┆ 1   ┆ 2   │
+│ null ┆ 1   ┆ 1   │
 └──────┴─────┴─────┘]
 ```
 

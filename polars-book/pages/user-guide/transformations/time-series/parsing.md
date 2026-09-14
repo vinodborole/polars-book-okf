@@ -2,7 +2,7 @@
 type: Web Page
 title: Parsing - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/parsing
-timestamp: '2026-08-31T12:59:29.541052+00:00'
+timestamp: '2026-09-14T12:06:43.716713+00:00'
 ---
 
 # Parsing
@@ -159,7 +159,7 @@ mixed_parsed = (
 )
 print(mixed_parsed)
 ```
-  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_datetime) ·  [`dt.convert_time_zone`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.convert_time_zone) ·  [Available on feature dtype-datetime](/user-guide/installation/#feature-flags) ·  [Available on feature timezones](/user-guide/installation/#feature-flags)
+  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_datetime) ·  [`dt.convert_time_zone`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.convert_time_zone) ·  [Available on feature timezones](/user-guide/installation/#feature-flags) ·  [Available on feature dtype-datetime](/user-guide/installation/#feature-flags)
 
 ```
 let data = [

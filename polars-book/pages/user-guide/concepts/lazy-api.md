@@ -2,7 +2,7 @@
 type: Web Page
 title: Lazy API - Polars user guide
 resource: https://docs.pola.rs/user-guide/concepts/lazy-api
-timestamp: '2026-09-07T11:52:00.647733+00:00'
+timestamp: '2026-09-14T12:06:43.716713+00:00'
 ---
 
 # Lazy API
@@ -17,6 +17,23 @@ df = pl.read_csv("docs/assets/data/iris.csv")
 df_small = df.filter(pl.col("sepal_length") > 5)
 df_agg = df_small.group_by("species").agg(pl.col("sepal_width").mean())
 print(df_agg)
+```
+  [`CsvReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·  [Available on feature csv](/user-guide/installation/#feature-flags)
+
+```
+let df = CsvReadOptions::default()
+    .try_into_reader_with_file_path(Some("docs/assets/data/iris.csv".into()))
+    .unwrap()
+    .finish()
+    .unwrap();
+let mask = df.column("sepal_length")?.f64()?.gt(5.0);
+let df_small = df.filter(&mask)?;
+#[allow(deprecated)]
+let df_agg = df_small
+    .group_by(["species"])?
+    .select(["sepal_width"])
+    .mean()?;
+println!("{df_agg}");
 ```
 In this example we use the eager API to:
 

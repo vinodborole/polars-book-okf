@@ -2,7 +2,7 @@
 type: Web Page
 title: polars.LazyFrame.collect — Polars  documentation
 resource: https://docs.pola.rs/api/python/stable/reference/lazyframe/api/polars.LazyFrame.collect.html
-timestamp: '2026-08-31T12:59:29.541052+00:00'
+timestamp: '2026-09-14T12:06:43.716713+00:00'
 ---
 
 # polars.LazyFrame.collect
@@ -82,7 +82,7 @@ at any point without it being considered a breaking change.
   - Set the size of streaming batches.
  Examples >>> lf = pl.LazyFrame( ... { ... "a": ["a", "b", "a", "b", "b", "c"], ... "b": [1, 2, 3, 4, 5, 6], ... "c": [6, 5, 4, 3, 2, 1], ... } ... ) >>> lf.group_by("a").agg(pl.all().sum()).collect() shape: (3, 3) ┌─────┬─────┬─────┐ │ a ┆ b ┆ c │ │ --- ┆ --- ┆ --- │ │ str ┆ i64 ┆ i64 │ ╞═════╪═════╪═════╡ │ a ┆ 4 ┆ 10 │ │ b ┆ 11 ┆ 10 │ │ c ┆ 6 ┆ 1 │ └─────┴─────┴─────┘ Collect in streaming mode >>> lf.group_by("a").agg(pl.all().sum()).collect( ... engine="streaming" ... ) shape: (3, 3) ┌─────┬─────┬─────┐ │ a ┆ b ┆ c │ │ --- ┆ --- ┆ --- │ │ str ┆ i64 ┆ i64 │ ╞═════╪═════╪═════╡ │ a ┆ 4 ┆ 10 │ │ b ┆ 11 ┆ 10 │ │ c ┆ 6 ┆ 1 │ └─────┴─────┴─────┘ Collect in GPU mode >>> lf.group_by("a").agg(pl.all().sum()).collect(engine="gpu") shape: (3, 3) ┌─────┬─────┬─────┐ │ a ┆ b ┆ c │ │ --- ┆ --- ┆ --- │ │ str ┆ i64 ┆ i64 │ ╞═════╪═════╪═════╡ │ b ┆ 11 ┆ 10 │ │ a ┆ 4 ┆ 10 │ │ c ┆ 6 ┆ 1 │ └─────┴─────┴─────┘ With control over the device used >>> lf.group_by("a").agg(pl.all().sum()).collect( ... engine=pl.GPUEngine(device=1) ... ) shape: (3, 3) ┌─────┬─────┬─────┐ │ a ┆ b ┆ c │ │ --- ┆ --- ┆ --- │ │ str ┆ i64 ┆ i64 │ ╞═════╪═════╪═════╡ │ b ┆ 11 ┆ 10 │ │ a ┆ 4 ┆ 10 │ │ c ┆ 6 ┆ 1 │ └─────┴─────┴─────┘
 
-[\[source\]](https://github.com/pola-rs/polars/blob/py-1.44.1/py-polars/src/../src/polars/lazyframe/frame.py#L2382-L2596)
+[\[source\]](https://github.com/pola-rs/polars/blob/py-1.44.2/py-polars/src/../src/polars/lazyframe/frame.py#L2382-L2596)
 
 # Citations
 

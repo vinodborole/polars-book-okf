@@ -2,7 +2,7 @@
 type: Web Page
 title: Basic operations - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/basic-operations
-timestamp: '2026-08-31T12:59:29.541052+00:00'
+timestamp: '2026-09-14T12:06:43.716713+00:00'
 ---
 
 # Basic operations
@@ -334,8 +334,8 @@ shape: (4, 1)
 │ ---          │
 │ struct[2]    │
 ╞══════════════╡
-│ {"ham",1}    │
 │ {"foo",1}    │
+│ {"ham",1}    │
 │ {"egg",1}    │
 │ {"spam",2}   │
 └──────────────┘

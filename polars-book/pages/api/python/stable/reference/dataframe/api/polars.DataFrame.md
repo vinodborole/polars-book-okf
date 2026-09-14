@@ -2,7 +2,7 @@
 type: Web Page
 title: polars.DataFrame.filter — Polars  documentation
 resource: https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.filter.html
-timestamp: '2026-08-31T12:59:29.541052+00:00'
+timestamp: '2026-09-14T12:06:43.716713+00:00'
 ---
 
 # polars.DataFrame.filter
@@ -23,7 +23,7 @@ False. As a result, these rows will not be retained. Ensure that null values
 are handled appropriately to avoid unexpected behaviour (see examples below).Examples >>> df = pl.DataFrame( ... { ... "foo": [1, 2, 3, None, 4, None, 0], ... "bar": [6, 7, 8, None, None, 9, 0], ... "ham": ["a", "b", "c", None, "d", "e", "f"], ... } ... ) Filter rows matching a condition: >>> df.filter(pl.col("foo") > 1) shape: (3, 3) ┌─────┬──────┬─────┐ │ foo ┆ bar ┆ ham │ │ --- ┆ --- ┆ --- │ │ i64 ┆ i64 ┆ str │ ╞═════╪══════╪═════╡ │ 2 ┆ 7 ┆ b │ │ 3 ┆ 8 ┆ c │ │ 4 ┆ null ┆ d │ └─────┴──────┴─────┘ Filter on multiple conditions, combined with and/or operators: >>> df.filter( ... (pl.col("foo") < 3) & (pl.col("ham") == "a"), ... ) shape: (1, 3) ┌─────┬─────┬─────┐ │ foo ┆ bar ┆ ham │ │ --- ┆ --- ┆ --- │ │ i64 ┆ i64 ┆ str │ ╞═════╪═════╪═════╡ │ 1 ┆ 6 ┆ a │ └─────┴─────┴─────┘ >>> df.filter( ... (pl.col("foo") == 1) | (pl.col("ham") == "c"), ... ) shape: (2, 3) ┌─────┬─────┬─────┐ │ foo ┆ bar ┆ ham │ │ --- ┆ --- ┆ --- │ │ i64 ┆ i64 ┆ str │ ╞═════╪═════╪═════╡ │ 1 ┆ 6 ┆ a │ │ 3 ┆ 8 ┆ c │ └─────┴─────┴─────┘ Provide multiple filters using `*args` syntax:>>> df.filter( ... pl.col("foo") <= 2, ... ~pl.col("ham").is_in(["b", "c"]), ... ) shape: (2, 3) ┌─────┬─────┬─────┐ │ foo ┆ bar ┆ ham │ │ --- ┆ --- ┆ --- │ │ i64 ┆ i64 ┆ str │ ╞═════╪═════╪═════╡ │ 1 ┆ 6 ┆ a │ │ 0 ┆ 0 ┆ f │ └─────┴─────┴─────┘ Provide multiple filters using `**kwargs` syntax:>>> df.filter(foo=2, ham="b") shape: (1, 3) ┌─────┬─────┬─────┐ │ foo ┆ bar ┆ ham │ │ --- ┆ --- ┆ --- │ │ i64 ┆ i64 ┆ str │ ╞═════╪═════╪═════╡ │ 2 ┆ 7 ┆ b │ └─────┴─────┴─────┘ Filter by comparing two columns against each other: >>> df.filter( ... pl.col("foo") == pl.col("bar"), ... ) shape: (1, 3) ┌─────┬─────┬─────┐ │ foo ┆ bar ┆ ham │ │ --- ┆ --- ┆ --- │ │ i64 ┆ i64 ┆ str │ ╞═════╪═════╪═════╡ │ 0 ┆ 0 ┆ f │ └─────┴─────┴─────┘ >>> df.filter( ... pl.col("foo") != pl.col("bar"), ... ) shape: (3, 3) ┌─────┬─────┬─────┐ │ foo ┆ bar ┆ ham │ │ --- ┆ --- ┆ --- │ │ i64 ┆ i64 ┆ str │ ╞═════╪═════╪═════╡ │ 1 ┆ 6 ┆ a │ │ 2 ┆ 7 ┆ b │ │ 3 ┆ 8 ┆ c │ └─────┴─────┴─────┘ Notice how the row with `None` values is filtered out. In order to keep the
 same behavior as pandas, use:>>> df.filter( ... pl.col("foo").ne_missing(pl.col("bar")), ... ) shape: (5, 3) ┌──────┬──────┬─────┐ │ foo ┆ bar ┆ ham │ │ --- ┆ --- ┆ --- │ │ i64 ┆ i64 ┆ str │ ╞══════╪══════╪═════╡ │ 1 ┆ 6 ┆ a │ │ 2 ┆ 7 ┆ b │ │ 3 ┆ 8 ┆ c │ │ 4 ┆ null ┆ d │ │ null ┆ 9 ┆ e │ └──────┴──────┴─────┘
 
-[\[source\]](https://github.com/pola-rs/polars/blob/py-1.44.1/py-polars/src/../src/polars/dataframe/frame.py#L5392-L5564)
+[\[source\]](https://github.com/pola-rs/polars/blob/py-1.44.2/py-polars/src/../src/polars/dataframe/frame.py#L5392-L5564)
 
 # Citations
 

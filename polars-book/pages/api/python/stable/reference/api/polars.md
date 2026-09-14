@@ -2,7 +2,7 @@
 type: Web Page
 title: polars.scan_csv — Polars  documentation
 resource: https://docs.pola.rs/api/python/stable/reference/api/polars.scan_csv.html
-timestamp: '2026-08-31T12:59:29.541052+00:00'
+timestamp: '2026-09-14T12:06:43.716713+00:00'
 ---
 
 # polars.scan_csv
@@ -163,7 +163,7 @@ at any point without it being considered a breaking change.
   - Read a CSV file into a DataFrame.
  Examples >>> import pathlib >>> >>> ( ... pl.scan_csv("my_long_file.csv") # lazy, doesn't do a thing ... .select( ... ["a", "c"] ... ) # select only 2 columns (other columns will not be read) ... .filter( ... pl.col("a") > 10 ... ) # the filter is pushed down the scan, so less data is read into memory ... .head(100) # constrain number of returned results to 100 ... ) We can use `with_column_names` to modify the header before scanning:>>> df = pl.DataFrame( ... {"BrEeZaH": [1, 2, 3, 4], "LaNgUaGe": ["is", "hard", "to", "read"]} ... ) >>> path: pathlib.Path = dirpath / "mydf.csv" >>> df.write_csv(path) >>> pl.scan_csv( ... path, with_column_names=lambda cols: [col.lower() for col in cols] ... ).collect() shape: (4, 2) ┌─────────┬──────────┐ │ breezah ┆ language │ │ --- ┆ --- │ │ i64 ┆ str │ ╞═════════╪══════════╡ │ 1 ┆ is │ │ 2 ┆ hard │ │ 3 ┆ to │ │ 4 ┆ read │ └─────────┴──────────┘ You can also simply replace column names (or provide them if the file has none) by passing a list of new column names to the `new_columns` parameter:>>> df.write_csv(path) >>> pl.scan_csv( ... path, ... new_columns=["idx", "txt"], ... schema_overrides=[pl.UInt16, pl.String], ... ).collect() shape: (4, 2) ┌─────┬──────┐ │ idx ┆ txt │ │ --- ┆ --- │ │ u16 ┆ str │ ╞═════╪══════╡ │ 1 ┆ is │ │ 2 ┆ hard │ │ 3 ┆ to │ │ 4 ┆ read │ └─────┴──────┘
 
-[\[source\]](https://github.com/pola-rs/polars/blob/py-1.44.1/py-polars/src/../src/polars/io/csv/functions.py#L1119-L1513)
+[\[source\]](https://github.com/pola-rs/polars/blob/py-1.44.2/py-polars/src/../src/polars/io/csv/functions.py#L1119-L1513)
 
 # Citations
 

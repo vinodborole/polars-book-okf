@@ -2,7 +2,7 @@
 type: Web Page
 title: Resampling - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/resampling
-timestamp: '2026-08-31T12:59:29.541052+00:00'
+timestamp: '2026-09-14T12:06:43.716713+00:00'
 ---
 
 # Resampling
@@ -38,7 +38,7 @@ df = pl.DataFrame(
 )
 print(df)
 ```
-  [`DataFrame`](https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html) ·  [`datetime_range`](https://docs.rs/polars/latest/polars/prelude/fn.datetime_range.html) ·  [Available on feature dtype-datetime](/user-guide/installation/#feature-flags) ·  [Available on feature lazy](/user-guide/installation/#feature-flags)
+  [`DataFrame`](https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html) ·  [`datetime_range`](https://docs.rs/polars/latest/polars/prelude/fn.datetime_range.html) ·  [Available on feature lazy](/user-guide/installation/#feature-flags) ·  [Available on feature dtype-datetime](/user-guide/installation/#feature-flags)
 
 ```
 let time = polars::time::date_range(

@@ -2,7 +2,7 @@
 type: Web Page
 title: Styling - Polars user guide
 resource: https://docs.pola.rs/user-guide/misc/styling
-timestamp: '2026-09-07T11:52:00.647733+00:00'
+timestamp: '2026-09-14T12:06:43.716713+00:00'
 ---
 
 # Styling
@@ -31,9 +31,9 @@ shape: (3, 3)
 │ ---        ┆ ---          ┆ ---         │
 │ str        ┆ f64          ┆ f64         │
 ╞════════════╪══════════════╪═════════════╡
-│ Virginica  ┆ 5.552        ┆ 2.026       │
 │ Setosa     ┆ 1.462        ┆ 0.246       │
 │ Versicolor ┆ 4.26         ┆ 1.326       │
+│ Virginica  ┆ 5.552        ┆ 2.026       │
 └────────────┴──────────────┴─────────────┘
 ```
 ## Structure: add header title
@@ -45,9 +45,9 @@ df.style.tab_header(title="Iris Data", subtitle="Mean measurement values per spe
 | Mean measurement values per species |  |  | 
 | species | petal_length | petal_width | 
 |---|---|---|
-| Virginica | 5.552 | 2.026 | 
 | Setosa | 1.462 | 0.246 | 
 | Versicolor | 4.26 | 1.326 | 
+| Virginica | 5.552 | 2.026 | 
 
 ## Structure: add row stub
 
@@ -56,9 +56,9 @@ df.style.tab_stub(rowname_col="species")
 ```
 |  | petal_length | petal_width | 
 |---|---|---|
-| Virginica | 5.552 | 2.026 | 
 | Setosa | 1.462 | 0.246 | 
 | Versicolor | 4.26 | 1.326 | 
+| Virginica | 5.552 | 2.026 | 
 
 ## Structure: add column spanner
 
@@ -72,9 +72,9 @@ df.style.tab_stub(rowname_col="species")
 | species | Petal |  | 
 |---|---|---|
 |  | Length | Width | 
-| Virginica | 5.552 | 2.026 | 
 | Setosa | 1.462 | 0.246 | 
 | Versicolor | 4.26 | 1.326 | 
+| Virginica | 5.552 | 2.026 | 
 
 ## Format: limit decimal places
 
@@ -83,9 +83,9 @@ df.style.fmt_number("petal_width", decimals=1)
 ```
 | species | petal_length | petal_width | 
 |---|---|---|
-| Virginica | 5.552 | 2.0 | 
 | Setosa | 1.462 | 0.2 | 
 | Versicolor | 4.26 | 1.3 | 
+| Virginica | 5.552 | 2.0 | 
 
 ## Style: highlight max row
 
@@ -100,9 +100,9 @@ df.style.tab_style(
 ```
 | species | petal_length | petal_width | 
 |---|---|---|
-| Virginica | 5.552 | 2.026 | 
 | Setosa | 1.462 | 0.246 | 
 | Versicolor | 4.26 | 1.326 | 
+| Virginica | 5.552 | 2.026 | 
 
 ## Style: bold species column
 
@@ -115,9 +115,9 @@ df.style.tab_style(
 ```
 | species | petal_length | petal_width | 
 |---|---|---|
-| Virginica | 5.552 | 2.026 | 
 | Setosa | 1.462 | 0.246 | 
 | Versicolor | 4.26 | 1.326 | 
+| Virginica | 5.552 | 2.026 | 
 
 ## Full example
 
@@ -144,9 +144,9 @@ from great_tables import loc, style
 |  | Petal |  | 
 |---|---|---|
 |  | Length | Width | 
-| Virginica | 5.552 | 2.03 | 
 | Setosa | 1.462 | 0.25 | 
-| Versicolor | 4.26 | 1.33 |
+| Versicolor | 4.26 | 1.33 | 
+| Virginica | 5.552 | 2.03 |
 
 # Citations
 

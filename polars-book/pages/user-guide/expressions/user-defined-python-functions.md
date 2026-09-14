@@ -2,7 +2,7 @@
 type: Web Page
 title: User-defined Python functions - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/user-defined-python-functions
-timestamp: '2026-09-07T11:52:00.647733+00:00'
+timestamp: '2026-09-14T12:06:43.716713+00:00'
 ---
 
 # User-defined Python functions
@@ -241,8 +241,8 @@ shape: (2, 2)
 │ ---  ┆ ---           │
 │ str  ┆ list[f64]     │
 ╞══════╪═══════════════╡
-│ a    ┆ [1.5, -1.5]   │
 │ b    ┆ [-11.0, 11.0] │
+│ a    ┆ [1.5, -1.5]   │
 └──────┴───────────────┘
 ```
 ## Missing data is not allowed when calling generalized ufuncs

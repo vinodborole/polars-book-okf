@@ -3,7 +3,7 @@ type: Web Page
 title: LazyCsvReader in polars::prelude - Rust
 description: API documentation for the Rust `LazyCsvReader` struct in crate `polars`.
 resource: https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyCsvReader.html
-timestamp: '2026-08-31T12:59:29.541052+00:00'
+timestamp: '2026-09-14T12:06:43.716713+00:00'
 ---
 
 `pub struct LazyCsvReader { /* private fields */ }`
@@ -410,77 +410,77 @@ Important! Run this function latest in the builder!
 
 ### impl [LazyFileListReader](trait.LazyFileListReader.html) for [LazyCsvReader](struct.LazyCsvReader.html)
 
-## [Source](../../src/polars_lazy/scan/csv.rs.html#460)
+## [Source](../../src/polars_lazy/scan/csv.rs.html#462)
 #### fn [with_rechunk](trait.LazyFileListReader.html#tymethod.with_rechunk)(self, rechunk: [bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html)) -> [LazyCsvReader](struct.LazyCsvReader.html)
 
-[Source](../../src/polars_lazy/scan/csv.rs.html#460)
+[Source](../../src/polars_lazy/scan/csv.rs.html#462)
 
 #### fn [with_rechunk](trait.LazyFileListReader.html#tymethod.with_rechunk)(self, rechunk: [bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html)) -> [LazyCsvReader](struct.LazyCsvReader.html)
 
 Rechunk the memory to contiguous chunks when parsing is done.
 
-## [Source](../../src/polars_lazy/scan/csv.rs.html#467)
+## [Source](../../src/polars_lazy/scan/csv.rs.html#469)
 #### fn [n_rows](trait.LazyFileListReader.html#tymethod.n_rows)(&self) -> [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)>
 
-[Source](../../src/polars_lazy/scan/csv.rs.html#467)
+[Source](../../src/polars_lazy/scan/csv.rs.html#469)
 
 #### fn [n_rows](trait.LazyFileListReader.html#tymethod.n_rows)(&self) -> [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)>
 
 Try to stop parsing when `n` rows are parsed. During multithreaded parsing the upper bound `n` cannot
 be guaranteed.
 
-## [Source](../../src/polars_lazy/scan/csv.rs.html#489)
+## [Source](../../src/polars_lazy/scan/csv.rs.html#491)
 #### fn [cloud_options](trait.LazyFileListReader.html#method.cloud_options)(&self) -> [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<&[CloudOptions](cloud/struct.CloudOptions.html)>
 
-[Source](../../src/polars_lazy/scan/csv.rs.html#489)
+[Source](../../src/polars_lazy/scan/csv.rs.html#491)
 
 #### fn [cloud_options](trait.LazyFileListReader.html#method.cloud_options)(&self) -> [Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<&[CloudOptions](cloud/struct.CloudOptions.html)>
 
 [CloudOptions](cloud/struct.CloudOptions.html) used to list files.
 
-## [Source](../../src/polars_lazy/scan/csv.rs.html#428)
+## [Source](../../src/polars_lazy/scan/csv.rs.html#430)
 #### fn [finish_no_glob](trait.LazyFileListReader.html#tymethod.finish_no_glob)(self) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[LazyFrame](struct.LazyFrame.html), [PolarsError](enum.PolarsError.html)>
 
-[Source](../../src/polars_lazy/scan/csv.rs.html#428)
+[Source](../../src/polars_lazy/scan/csv.rs.html#430)
 
 #### fn [finish_no_glob](trait.LazyFileListReader.html#tymethod.finish_no_glob)(self) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[LazyFrame](struct.LazyFrame.html), [PolarsError](enum.PolarsError.html)>
 
-[Source](../../src/polars_lazy/scan/csv.rs.html#432)
+[Source](../../src/polars_lazy/scan/csv.rs.html#434)
 
 #### fn [glob](trait.LazyFileListReader.html#method.glob)(&self) -> [bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html)
 
-## [Source](../../src/polars_lazy/scan/csv.rs.html#436)
+## [Source](../../src/polars_lazy/scan/csv.rs.html#438)
 #### fn [sources](trait.LazyFileListReader.html#tymethod.sources)(&self) -> &[ScanSources](enum.ScanSources.html)
 
-[Source](../../src/polars_lazy/scan/csv.rs.html#436)
+[Source](../../src/polars_lazy/scan/csv.rs.html#438)
 
 #### fn [sources](trait.LazyFileListReader.html#tymethod.sources)(&self) -> &[ScanSources](enum.ScanSources.html)
 
-## [Source](../../src/polars_lazy/scan/csv.rs.html#440)
+## [Source](../../src/polars_lazy/scan/csv.rs.html#442)
 #### fn [with_sources](trait.LazyFileListReader.html#tymethod.with_sources)(self, sources: [ScanSources](enum.ScanSources.html)) -> [LazyCsvReader](struct.LazyCsvReader.html)
 
-[Source](../../src/polars_lazy/scan/csv.rs.html#440)
+[Source](../../src/polars_lazy/scan/csv.rs.html#442)
 
 #### fn [with_sources](trait.LazyFileListReader.html#tymethod.with_sources)(self, sources: [ScanSources](enum.ScanSources.html)) -> [LazyCsvReader](struct.LazyCsvReader.html)
 
-## [Source](../../src/polars_lazy/scan/csv.rs.html#445)
+## [Source](../../src/polars_lazy/scan/csv.rs.html#447)
 #### fn [with_n_rows](trait.LazyFileListReader.html#tymethod.with_n_rows)(self, n_rows: impl [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)>>) -> [LazyCsvReader](struct.LazyCsvReader.html)
 
-[Source](../../src/polars_lazy/scan/csv.rs.html#445)
+[Source](../../src/polars_lazy/scan/csv.rs.html#447)
 
 #### fn [with_n_rows](trait.LazyFileListReader.html#tymethod.with_n_rows)(self, n_rows: impl [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)>>) -> [LazyCsvReader](struct.LazyCsvReader.html)
 
-## [Source](../../src/polars_lazy/scan/csv.rs.html#450)
+## [Source](../../src/polars_lazy/scan/csv.rs.html#452)
 #### fn [with_row_index](trait.LazyFileListReader.html#tymethod.with_row_index)(self, row_index: impl [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[RowIndex](struct.RowIndex.html)>>) -> [LazyCsvReader](struct.LazyCsvReader.html)
 
-[Source](../../src/polars_lazy/scan/csv.rs.html#450)
+[Source](../../src/polars_lazy/scan/csv.rs.html#452)
 
 #### fn [with_row_index](trait.LazyFileListReader.html#tymethod.with_row_index)(self, row_index: impl [Into](https://doc.rust-lang.org/nightly/core/convert/trait.Into.html)<[Option](https://doc.rust-lang.org/nightly/core/option/enum.Option.html)<[RowIndex](struct.RowIndex.html)>>) -> [LazyCsvReader](struct.LazyCsvReader.html)
 
-## [Source](../../src/polars_lazy/scan/csv.rs.html#476)
+## [Source](../../src/polars_lazy/scan/csv.rs.html#478)
 #### fn [concat_impl](trait.LazyFileListReader.html#method.concat_impl)(&self, lfs: [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[LazyFrame](struct.LazyFrame.html)>) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[LazyFrame](struct.LazyFrame.html), [PolarsError](enum.PolarsError.html)>
 
-[Source](../../src/polars_lazy/scan/csv.rs.html#476)
+[Source](../../src/polars_lazy/scan/csv.rs.html#478)
 
 #### fn [concat_impl](trait.LazyFileListReader.html#method.concat_impl)(&self, lfs: [Vec](https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html)<[LazyFrame](struct.LazyFrame.html)>) -> [Result](https://doc.rust-lang.org/nightly/core/result/enum.Result.html)<[LazyFrame](struct.LazyFrame.html), [PolarsError](enum.PolarsError.html)>
 
