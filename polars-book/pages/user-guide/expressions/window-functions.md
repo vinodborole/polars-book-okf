@@ -2,7 +2,7 @@
 type: Web Page
 title: Window functions - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/window-functions
-timestamp: '2026-09-14T12:06:43.716713+00:00'
+timestamp: '2026-09-21T12:15:53.544991+00:00'
 ---
 
 # Window functions
@@ -155,7 +155,7 @@ result = (
         pl.col("Speed").rank("dense", descending=True).alias("Speed rank"),
     )
     .select(pl.col("Name"), pl.col("Type 1"), pl.col("Speed rank"))
-    .explode("Name", "Speed rank", empty_as_null=False)
+    .explode("Name", "Speed rank")
 )
 print(result)
 ```
@@ -164,23 +164,23 @@ print(result)
 ```
 ```
 shape: (163, 3)
-┌────────────┬──────────┬────────────┐
-│ Name       ┆ Type 1   ┆ Speed rank │
-│ ---        ┆ ---      ┆ ---        │
-│ str        ┆ enum     ┆ u32        │
-╞════════════╪══════════╪════════════╡
-│ Ekans      ┆ Poison   ┆ 8          │
-│ Arbok      ┆ Poison   ┆ 3          │
-│ Nidoran♀   ┆ Poison   ┆ 10         │
-│ Nidorina   ┆ Poison   ┆ 7          │
-│ Nidoqueen  ┆ Poison   ┆ 4          │
-│ …          ┆ …        ┆ …          │
-│ Voltorb    ┆ Electric ┆ 5          │
-│ Electrode  ┆ Electric ┆ 1          │
-│ Electabuzz ┆ Electric ┆ 4          │
-│ Jolteon    ┆ Electric ┆ 2          │
-│ Zapdos     ┆ Electric ┆ 5          │
-└────────────┴──────────┴────────────┘
+┌───────────────────┬────────┬────────────┐
+│ Name              ┆ Type 1 ┆ Speed rank │
+│ ---               ┆ ---    ┆ ---        │
+│ str               ┆ enum   ┆ u32        │
+╞═══════════════════╪════════╪════════════╡
+│ Clefairy          ┆ Fairy  ┆ 2          │
+│ Clefable          ┆ Fairy  ┆ 1          │
+│ Bulbasaur         ┆ Grass  ┆ 6          │
+│ Ivysaur           ┆ Grass  ┆ 3          │
+│ Venusaur          ┆ Grass  ┆ 1          │
+│ …                 ┆ …      ┆ …          │
+│ Haunter           ┆ Ghost  ┆ 3          │
+│ Gengar            ┆ Ghost  ┆ 2          │
+│ GengarMega Gengar ┆ Ghost  ┆ 1          │
+│ Jynx              ┆ Ice    ┆ 1          │
+│ Articuno          ┆ Ice    ┆ 2          │
+└───────────────────┴────────┴────────────┘
 ```
 This shows that, usually, `group_by` and `over` produce results of different shapes:
 

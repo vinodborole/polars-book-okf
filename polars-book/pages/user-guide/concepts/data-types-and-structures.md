@@ -2,7 +2,7 @@
 type: Web Page
 title: Data types and structures - Polars user guide
 resource: https://docs.pola.rs/user-guide/concepts/data-types-and-structures
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-09-21T12:15:53.544991+00:00'
 ---
 
 # Data types and structures
@@ -12,7 +12,7 @@ timestamp: '2026-08-03T09:49:29.273788+00:00'
 Polars supports a variety of data types that fall broadly under the following categories:
 
 - Numeric data types: signed integers, unsigned integers, floating point numbers, and decimals.
-- Nested data types: lists, structs, and arrays.
+- Nested data types: lists, structs, arrays, and maps.
 - Temporal: dates, datetimes, times, and time deltas.
 - Miscellaneous: strings, binary data, Booleans, categoricals, enums, and objects.
 
@@ -332,6 +332,7 @@ Polars always attempts to provide reasonably accurate results for floating point
 | `Categorical` | Efficient encoding of string data where the categories are inferred at runtime. [Learn more about how categoricals and enums differ and how to work with both](../../expressions/categorical-data-and-enums/) . | 
 | `Enum` | Efficient ordered encoding of a set of predetermined string categories. [Learn more about how categoricals and enums differ and how to work with both](../../expressions/categorical-data-and-enums/) . | 
 | `Struct` | Composite product type that can store multiple fields. [Learn more about the data type `Struct` in its dedicated documentation section.](../../expressions/structs/) . | 
+| `Map` | Key-value mapping with a variable number of entries per row. Keys are unique within a row and never null, and entry order is preserved. | 
 | `Null` | Represents null values. |
 
 # Citations

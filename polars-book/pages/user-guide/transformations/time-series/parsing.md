@@ -2,7 +2,7 @@
 type: Web Page
 title: Parsing - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/parsing
-timestamp: '2026-09-14T12:06:43.716713+00:00'
+timestamp: '2026-09-21T12:15:53.544991+00:00'
 ---
 
 # Parsing
@@ -76,7 +76,7 @@ df = pl.read_csv("docs/assets/data/apple_stock.csv", try_parse_dates=False)
 df = df.with_columns(pl.col("Date").str.to_date("%Y-%m-%d"))
 print(df)
 ```
-  [`CsvReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_date) ·  [Available on feature csv](/user-guide/installation/#feature-flags) ·  [Available on feature dtype-date](/user-guide/installation/#feature-flags)
+  [`CsvReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_date) ·  [Available on feature dtype-date](/user-guide/installation/#feature-flags) ·  [Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 let df = CsvReadOptions::default()
@@ -159,7 +159,7 @@ mixed_parsed = (
 )
 print(mixed_parsed)
 ```
-  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_datetime) ·  [`dt.convert_time_zone`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.convert_time_zone) ·  [Available on feature timezones](/user-guide/installation/#feature-flags) ·  [Available on feature dtype-datetime](/user-guide/installation/#feature-flags)
+  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_datetime) ·  [`dt.convert_time_zone`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.convert_time_zone) ·  [Available on feature dtype-datetime](/user-guide/installation/#feature-flags) ·  [Available on feature timezones](/user-guide/installation/#feature-flags)
 
 ```
 let data = [

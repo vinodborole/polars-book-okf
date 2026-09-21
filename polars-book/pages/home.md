@@ -2,7 +2,7 @@
 type: Web Page
 title: Index - Polars user guide
 resource: https://docs.pola.rs/
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-09-21T12:15:53.544991+00:00'
 ---
 
 # Blazingly Fast DataFrame Library
@@ -57,7 +57,7 @@ q = (
 )
 df = q.collect()
 ```
-  [`LazyCsvReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyCsvReader.html) ·  [`filter`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.filter) ·  [`group_by`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by) ·  [`collect`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyFrame.html#method.collect) ·  [Available on feature csv](/user-guide/installation/#feature-flags) ·  [Available on feature streaming](/user-guide/installation/#feature-flags)
+  [`LazyCsvReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyCsvReader.html) ·  [`filter`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.filter) ·  [`group_by`](https://docs.pola.rs/api/rust/dev/polars_lazy/frame/struct.LazyFrame.html#method.group_by) ·  [`collect`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyFrame.html#method.collect) ·  [Available on feature streaming](/user-guide/installation/#feature-flags) ·  [Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 use polars::prelude::*;

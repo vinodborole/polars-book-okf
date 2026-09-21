@@ -2,7 +2,7 @@
 type: Web Page
 title: Expressions and contexts - Polars user guide
 resource: https://docs.pola.rs/user-guide/concepts/expressions-and-contexts
-timestamp: '2026-09-14T12:06:43.716713+00:00'
+timestamp: '2026-09-21T12:15:53.544991+00:00'
 ---
 
 # Expressions and contexts
@@ -269,8 +269,8 @@ shape: (2, 2)
 │ ---    ┆ ---                             │
 │ i32    ┆ list[str]                       │
 ╞════════╪═════════════════════════════════╡
-│ 1990   ┆ ["Alice Archer"]                │
 │ 1980   ┆ ["Ben Brown", "Chloe Cooper", … │
+│ 1990   ┆ ["Alice Archer"]                │
 └────────┴─────────────────────────────────┘
 ```
 After using `group_by` we use `agg` to apply aggregating expressions to the groups. Since in the
@@ -351,9 +351,9 @@ shape: (3, 6)
 │ ---    ┆ ---    ┆ --- ┆ ---     ┆ ---        ┆ ---        │
 │ i32    ┆ bool   ┆ u32 ┆ f64     ┆ f64        ┆ f64        │
 ╞════════╪════════╪═════╪═════════╪════════════╪════════════╡
-│ 1980   ┆ false  ┆ 2   ┆ 1.77    ┆ 77.8       ┆ 1.76       │
-│ 1980   ┆ true   ┆ 1   ┆ 1.65    ┆ 53.6       ┆ 1.65       │
 │ 1990   ┆ true   ┆ 1   ┆ 1.56    ┆ 57.9       ┆ 1.56       │
+│ 1980   ┆ true   ┆ 1   ┆ 1.65    ┆ 53.6       ┆ 1.65       │
+│ 1980   ┆ false  ┆ 2   ┆ 1.77    ┆ 77.8       ┆ 1.76       │
 └────────┴────────┴─────┴─────────┴────────────┴────────────┘
 ```
 See also `group_by_dynamic` and `rolling` for other grouping contexts.

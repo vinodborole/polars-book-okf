@@ -2,7 +2,7 @@
 type: Web Page
 title: Introduction - Polars user guide
 resource: https://docs.pola.rs/user-guide/sql/intro
-timestamp: '2026-09-14T12:06:43.716713+00:00'
+timestamp: '2026-09-21T12:15:53.544991+00:00'
 ---
 
 # Introduction
@@ -66,8 +66,8 @@ Dataframes with:
 
 SQL queries are always executed in lazy mode to take advantage of the full set of query planning optimizations, so we have two options to collect the result:
 
-- Set the parameter `eager_execution` to True in`SQLContext` ; this ensures that Polars
-  automatically collects the LazyFrame results from`execute` calls.
+- Set the parameter `eager` to True in`SQLContext` ; this ensures that Polars automatically collects
+  the LazyFrame results from`execute` calls.
 - Set the parameter `eager` to True when executing a query with`execute` , or explicitly collect the
   result using`collect` .
 
@@ -131,9 +131,9 @@ shape: (5, 4)
 │ ---        ┆ ---          ┆ ---        ┆ ---   │
 │ i64        ┆ str          ┆ str        ┆ i64   │
 ╞════════════╪══════════════╪════════════╪═══════╡
-│ 1          ┆ Product A    ┆ Category 1 ┆ 100   │
 │ 2          ┆ Product B    ┆ Category 1 ┆ 200   │
 │ 3          ┆ Product C    ┆ Category 2 ┆ 150   │
+│ 1          ┆ Product A    ┆ Category 1 ┆ 100   │
 │ 4          ┆ Product D    ┆ Category 2 ┆ 250   │
 │ 5          ┆ Product E    ┆ Category 3 ┆ 300   │
 └────────────┴──────────────┴────────────┴───────┘

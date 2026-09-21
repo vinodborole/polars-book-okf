@@ -2,7 +2,7 @@
 type: Web Page
 title: Cloud storage - Polars user guide
 resource: https://docs.pola.rs/user-guide/io/cloud-storage
-timestamp: '2026-08-31T12:59:29.541052+00:00'
+timestamp: '2026-09-21T12:15:53.544991+00:00'
 ---
 
 # Cloud storage
@@ -28,7 +28,7 @@ import polars as pl
 source = "s3://bucket/*.parquet"
 df = pl.read_parquet(source)
 ```
-  [`ParquetReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.ParquetReader.html) ·  [`CsvReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·  [`IpcReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.IpcReader.html) ·  [Available on feature csv](/user-guide/installation/#feature-flags) ·  [Available on feature parquet](/user-guide/installation/#feature-flags) ·  [Available on feature ipc](/user-guide/installation/#feature-flags)
+  [`ParquetReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.ParquetReader.html) ·  [`CsvReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.CsvReader.html) ·  [`IpcReader`](https://docs.pola.rs/api/rust/dev/polars/prelude/struct.IpcReader.html) ·  [Available on feature ipc](/user-guide/installation/#feature-flags) ·  [Available on feature parquet](/user-guide/installation/#feature-flags) ·  [Available on feature csv](/user-guide/installation/#feature-flags)
 
 ```
 use aws_config::BehaviorVersion;

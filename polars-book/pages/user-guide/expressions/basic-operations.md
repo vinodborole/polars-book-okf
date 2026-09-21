@@ -2,7 +2,7 @@
 type: Web Page
 title: Basic operations - Polars user guide
 resource: https://docs.pola.rs/user-guide/expressions/basic-operations
-timestamp: '2026-09-14T12:06:43.716713+00:00'
+timestamp: '2026-09-21T12:15:53.544991+00:00'
 ---
 
 # Basic operations
@@ -118,7 +118,7 @@ Like with arithmetic operations, Polars supports comparisons via the overloaded 
 ```
 result = df.select(
     (pl.col("nrs") > 1).alias("nrs > 1"),  # .gt
-    (pl.col("nrs") >= 3).alias("nrs >= 3"),  # ge
+    (pl.col("nrs") >= 3).alias("nrs >= 3"),  # .ge
     (pl.col("random") < 0.2).alias("random < .2"),  # .lt
     (pl.col("random") <= 0.5).alias("random <= .5"),  # .le
     (pl.col("nrs") != 1).alias("nrs != 1"),  # .ne
@@ -334,10 +334,10 @@ shape: (4, 1)
 │ ---          │
 │ struct[2]    │
 ╞══════════════╡
-│ {"foo",1}    │
+│ {"spam",2}   │
 │ {"ham",1}    │
 │ {"egg",1}    │
-│ {"spam",2}   │
+│ {"foo",1}    │
 └──────────────┘
 ```
 The function `value_counts` returns the results in

@@ -2,7 +2,7 @@
   "generator": "okf-kit",
   "okf_version": "0.1",
   "root_url": "https://docs.pola.rs/",
-  "updated_at": "2026-09-14T12:06:43.793205+00:00",
+  "updated_at": "2026-09-21T12:15:53.616633+00:00",
   "config": {
     "max_depth": 3,
     "max_pages": 90,
@@ -46,13 +46,7 @@
       "path": "pages/api/rust/dev/polars/frame/struct.md",
       "url": "https://docs.pola.rs/api/rust/dev/polars/frame/struct.DataFrame.html",
       "title": "DataFrame in polars::frame - Rust",
-      "hash": "eb43bfff5b038dd19ef228912f3f289fa8707f3eff3d5bd1835345c2ee32fabb"
-    },
-    {
-      "path": "pages/api/rust/dev/polars/prelude/struct.md",
-      "url": "https://docs.pola.rs/api/rust/dev/polars/prelude/struct.LazyCsvReader.html",
-      "title": "LazyCsvReader in polars::prelude - Rust",
-      "hash": "08ef1109e97ef9e4c2048775a4fdec4634e89120262733e8eb3b9fc467ff3cd7"
+      "hash": "6d6c0eb34378ddd86eecad0064d45253ed231e11b4cbec1ef809c28d8081b35c"
     },
     {
       "path": "pages/development/contributing.md",
@@ -94,7 +88,7 @@
       "path": "pages/home.md",
       "url": "https://docs.pola.rs/",
       "title": "Index - Polars user guide",
-      "hash": "add7a8a5813b5578f818be7c10dded863910377aeedaf09ee1035b82fe4352bf"
+      "hash": "707fd2d65cff97f2b21a4626a2e16e5d0ea8d2eda1c8302c3fd306bc8cceebfa"
     },
     {
       "path": "pages/releases/changelog.md",
@@ -124,7 +118,7 @@
       "path": "pages/releases/upgrade/2.md",
       "url": "https://docs.pola.rs/releases/upgrade/2",
       "title": "Version 2.0-rc - Polars user guide",
-      "hash": "1581c00576824758c27c6143f6d6b013d1a43847f611d846fa17585b454becc7"
+      "hash": "dabdbb8c2ac031dc92e8aa0f55f8ced73e071e34f1aff73ba38efe5eec84aee6"
     },
     {
       "path": "pages/user-guide/concepts.md",
@@ -136,25 +130,25 @@
       "path": "pages/user-guide/concepts/data-types-and-structures.md",
       "url": "https://docs.pola.rs/user-guide/concepts/data-types-and-structures",
       "title": "Data types and structures - Polars user guide",
-      "hash": "f7a915da794472aff66df8c7cf6d8d43e70c23ffd7055ddce770cb9dd3e98f84"
+      "hash": "92157098effb13d3bbf3c5cecc5320844e778092eb31c637cb44a75607e9d3d8"
     },
     {
       "path": "pages/user-guide/concepts/expressions-and-contexts.md",
       "url": "https://docs.pola.rs/user-guide/concepts/expressions-and-contexts",
       "title": "Expressions and contexts - Polars user guide",
-      "hash": "fdce8ffe7377bb2a62005dbc6699500c655f38eab2f401bc07048537e615305b"
+      "hash": "7f35a42b0276e03d2dd3e582c5e530a4c76a2eb55bfeeaba583f7d316e7ab117"
     },
     {
       "path": "pages/user-guide/concepts/lazy-api.md",
       "url": "https://docs.pola.rs/user-guide/concepts/lazy-api",
       "title": "Lazy API - Polars user guide",
-      "hash": "9de676fabfdd3155dff675846d3075e7155d3a32202923cc07a6299161bb6bc1"
+      "hash": "069322cc26f529bee23d9e298b21e6517b5bfbe141682aacb3fbfdc6febf37d3"
     },
     {
       "path": "pages/user-guide/concepts/streaming.md",
       "url": "https://docs.pola.rs/user-guide/concepts/streaming",
       "title": "Streaming - Polars user guide",
-      "hash": "123464c6a966462ee28bad585022af199c7b9b22df48da760d9771d9b92b5078"
+      "hash": "8365bc572c37d4de942c0d9be11335d4344aef44436c897c5d08c12ab7aaf353"
     },
     {
       "path": "pages/user-guide/ecosystem.md",
@@ -172,19 +166,19 @@
       "path": "pages/user-guide/expressions/aggregation.md",
       "url": "https://docs.pola.rs/user-guide/expressions/aggregation",
       "title": "Aggregation - Polars user guide",
-      "hash": "7018142cff05a9097da066f73a8b13434e421dc8b68c715c3ef96bffa13fd418"
+      "hash": "4a6ec5aeb75ef88b2b5b0a42ec30982e7a64ca25e933cba2fec0740742884ec4"
     },
     {
       "path": "pages/user-guide/expressions/basic-operations.md",
       "url": "https://docs.pola.rs/user-guide/expressions/basic-operations",
       "title": "Basic operations - Polars user guide",
-      "hash": "2b5ca762bae483e48689b46686e59f720fef1d01bdc42300f4b2209730a24e54"
+      "hash": "7ea877d8283b72af87e3d312584c6182ecf79f4bf5284fede0f6e137a29a981e"
     },
     {
       "path": "pages/user-guide/expressions/casting.md",
       "url": "https://docs.pola.rs/user-guide/expressions/casting",
       "title": "Casting - Polars user guide",
-      "hash": "de637447933a362d49a2a43833e3666ab2edf115de870488d0f0e5cfa0c77f29"
+      "hash": "a34838318372e55b09cb5c24e6aa09cf4658b30586f5bbf8672fd3191ccb7424"
     },
     {
       "path": "pages/user-guide/expressions/categorical-data-and-enums.md",
@@ -238,13 +232,13 @@
       "path": "pages/user-guide/expressions/user-defined-python-functions.md",
       "url": "https://docs.pola.rs/user-guide/expressions/user-defined-python-functions",
       "title": "User-defined Python functions - Polars user guide",
-      "hash": "d57293d74b7904d3d4b0fc0b8b8e07d8cf0f3a32bb3493cdf02efb7805ad81c5"
+      "hash": "8ba537963e677e4c7e31e68de7fdd4bc993f995d7ae5cd8d4be42963e5df4960"
     },
     {
       "path": "pages/user-guide/expressions/window-functions.md",
       "url": "https://docs.pola.rs/user-guide/expressions/window-functions",
       "title": "Window functions - Polars user guide",
-      "hash": "586caf98ef74d60f230c254f19105aa415db673d0bd0fce92dd752e8e4cadccd"
+      "hash": "f313bac4fef3f65b7bb47920556d3aada2fc79ed1a646ca2957122c43d6eb207"
     },
     {
       "path": "pages/user-guide/getting-started.md",
@@ -256,7 +250,7 @@
       "path": "pages/user-guide/gpu-support.md",
       "url": "https://docs.pola.rs/user-guide/gpu-support",
       "title": "GPU Support [Open Beta] - Polars user guide",
-      "hash": "543ffebb0c10e577f94fec6d91feb581fd6520dbbb09de19a0a6df84fa9adefd"
+      "hash": "72997e9ad65bcb53ac5ddd974c10a618f5142c9396e99e8e8350bfd61b416aa5"
     },
     {
       "path": "pages/user-guide/installation.md",
@@ -280,7 +274,7 @@
       "path": "pages/user-guide/io/cloud-storage.md",
       "url": "https://docs.pola.rs/user-guide/io/cloud-storage",
       "title": "Cloud storage - Polars user guide",
-      "hash": "fd0a8f62db6373321fef907573eca3fa1b2be05aedd395f52df9e02633072679"
+      "hash": "88a317dec7b669191c6a9c1fcd42309d84cb9ea8819b2e80f0c5f3d21a99f6c8"
     },
     {
       "path": "pages/user-guide/io/csv.md",
@@ -322,7 +316,7 @@
       "path": "pages/user-guide/io/multiple.md",
       "url": "https://docs.pola.rs/user-guide/io/multiple",
       "title": "Multiple - Polars user guide",
-      "hash": "8f82b46821b918e9ae1335b4f6a5f3bc3244f23ea5157bae489b5130deb64a42"
+      "hash": "227109e5bc1399fac79cb7c16560bbe424f6ef848f4ea66fb2c5724d7f68d6aa"
     },
     {
       "path": "pages/user-guide/io/parquet.md",
@@ -364,7 +358,7 @@
       "path": "pages/user-guide/lazy/multiplexing.md",
       "url": "https://docs.pola.rs/user-guide/lazy/multiplexing",
       "title": "Multiplexing queries - Polars user guide",
-      "hash": "b96a3ef788ed51bed3dc9dceea262804cf904290667f94c9665e2c2a8446bf89"
+      "hash": "1067f5affa74e6bb5d9af6f6a5f289c4546b2ff81bb8310edae4d7066e21c492"
     },
     {
       "path": "pages/user-guide/lazy/optimizations.md",
@@ -376,7 +370,7 @@
       "path": "pages/user-guide/lazy/query-plan.md",
       "url": "https://docs.pola.rs/user-guide/lazy/query-plan",
       "title": "Query plan - Polars user guide",
-      "hash": "0e6fb4c88ad86ee14e52f0c7d7f5274edb2d05146b6e5e6cdbfa3ce713a974fa"
+      "hash": "16d55ffe0a3af184e3c678de68f4531d48416a1b1cafec007e5c2dafb5b9839f"
     },
     {
       "path": "pages/user-guide/lazy/schemas.md",
@@ -421,6 +415,12 @@
       "hash": "536da255b1251b8d5a11744502b61cebad7a3dafe185867e24a00f4bbc871e08"
     },
     {
+      "path": "pages/user-guide/misc/monitoring.md",
+      "url": "https://docs.pola.rs/user-guide/misc/monitoring",
+      "title": "Query monitoring - Polars user guide",
+      "hash": "5801ee9b75b1355fd10ed32167f72470d60b4516f09e2650c2b04d0b5e2e8ff4"
+    },
+    {
       "path": "pages/user-guide/misc/multiprocessing.md",
       "url": "https://docs.pola.rs/user-guide/misc/multiprocessing",
       "title": "Multiprocessing - Polars user guide",
@@ -436,13 +436,13 @@
       "path": "pages/user-guide/misc/styling.md",
       "url": "https://docs.pola.rs/user-guide/misc/styling",
       "title": "Styling - Polars user guide",
-      "hash": "cbaf8eb42db1591d43ee313e25222c7abc8e56839557b48cbc66ac56ece3b3c6"
+      "hash": "c51f44ed74f72b4aa42fb22897628822e23c0141cd7a8268320822ddb875cf2a"
     },
     {
       "path": "pages/user-guide/misc/visualization.md",
       "url": "https://docs.pola.rs/user-guide/misc/visualization",
       "title": "Visualization - Polars user guide",
-      "hash": "33f459c1cffc89160dac1b3e8854abd0adaf55aa0777450e7f8f9be5e3dd2b14"
+      "hash": "49bb0298a4715e41ca7c4c7794b4b25c63cde77d9574f6a20c65b3075387d559"
     },
     {
       "path": "pages/user-guide/plugins.md",
@@ -460,7 +460,7 @@
       "path": "pages/user-guide/plugins/io_plugins.md",
       "url": "https://docs.pola.rs/user-guide/plugins/io_plugins",
       "title": "IO Plugins - Polars user guide",
-      "hash": "f79ce5e4bc9a1f5faecbe3c55cae62d2a796de9df89b435cd97c532d40e85c85"
+      "hash": "672e9c165ab5540738083d56b710577d09487a7065ddd707ad199eadf4b7d0fc"
     },
     {
       "path": "pages/user-guide/sql/create.md",
@@ -478,13 +478,13 @@
       "path": "pages/user-guide/sql/intro.md",
       "url": "https://docs.pola.rs/user-guide/sql/intro",
       "title": "Introduction - Polars user guide",
-      "hash": "836b936cb44eb30af4fca5ad7175773b31af0fef9cae78ede7896dbbdd6e76e0"
+      "hash": "8ef1bf25b8a8d3eaf226fd2aab9b8ca97aa64eafd17790d98fd2a6ff4eefef60"
     },
     {
       "path": "pages/user-guide/sql/select.md",
       "url": "https://docs.pola.rs/user-guide/sql/select",
       "title": "SELECT - Polars user guide",
-      "hash": "01aca6347f74065338ee4564eb5c5fa5ed283d017df033f4faac2ef3d6d8a7ef"
+      "hash": "0ca64acf2b84a653cd745782255aa88e88cbd4efe4d22e1de790e99201ef1258"
     },
     {
       "path": "pages/user-guide/sql/show.md",
@@ -502,7 +502,7 @@
       "path": "pages/user-guide/transformations/concatenation.md",
       "url": "https://docs.pola.rs/user-guide/transformations/concatenation",
       "title": "Concatenation - Polars user guide",
-      "hash": "48fb34174d00b9eb9de804fee123da4232f80103af3c66812105b499f4213c48"
+      "hash": "21631d95939eeebd1a795b879064b00480c9c2300e07ce3481ce435ce1055d81"
     },
     {
       "path": "pages/user-guide/transformations/joins.md",
@@ -514,7 +514,7 @@
       "path": "pages/user-guide/transformations/pivot.md",
       "url": "https://docs.pola.rs/user-guide/transformations/pivot",
       "title": "Pivots - Polars user guide",
-      "hash": "16faf110b3f1eb16c9b32ebf3775c104fc280b83e50d9b2ca8ddacbd032f1ac0"
+      "hash": "cc969954a9e042e789bc600410f5d3d43269913242e772de1133a968ef17d0a2"
     },
     {
       "path": "pages/user-guide/transformations/time-series/filter.md",
@@ -526,13 +526,13 @@
       "path": "pages/user-guide/transformations/time-series/parsing.md",
       "url": "https://docs.pola.rs/user-guide/transformations/time-series/parsing",
       "title": "Parsing - Polars user guide",
-      "hash": "ead8baaf9f35a4c4123d4fa5596583c33193e5d4d8bfa4e1695b4f5feb7cac41"
+      "hash": "3758bd7ac45d9d3eb3877e91635f4c490b2351b045dc923b5baa1f2397a221da"
     },
     {
       "path": "pages/user-guide/transformations/time-series/resampling.md",
       "url": "https://docs.pola.rs/user-guide/transformations/time-series/resampling",
       "title": "Resampling - Polars user guide",
-      "hash": "875ec48f59e5d863826a272dec7cd477f59f78f23cbb20133c64a7f940b6ca6e"
+      "hash": "634bda64ab0286ae3d1a59cb563c17099c8daaf0257d766923b79333c881a641"
     },
     {
       "path": "pages/user-guide/transformations/time-series/rolling.md",
@@ -544,7 +544,7 @@
       "path": "pages/user-guide/transformations/time-series/timezones.md",
       "url": "https://docs.pola.rs/user-guide/transformations/time-series/timezones",
       "title": "Time zones - Polars user guide",
-      "hash": "591b2a85470d7ae87e02c046d5e1a11f52c4db3531110612bfddf6c5976ab54b"
+      "hash": "2bb3e8c5508cd2a9aba7eab36b0ba3187e68b26474d78e014e50aa9fc8b799ea"
     },
     {
       "path": "pages/user-guide/transformations/unpivot.md",
@@ -573,10 +573,6 @@
     [
       "pages/api/python/stable/reference/lazyframe/api/polars.LazyFrame.md",
       "pages/api/python/stable/reference/api/polars.md"
-    ],
-    [
-      "pages/api/rust/dev/polars/frame/struct.md",
-      "pages/api/rust/dev/polars/prelude/struct.md"
     ],
     [
       "pages/development/contributing.md",
@@ -613,10 +609,6 @@
     [
       "pages/home.md",
       "pages/api/python/stable/reference/lazyframe/api/polars.LazyFrame.md"
-    ],
-    [
-      "pages/home.md",
-      "pages/api/rust/dev/polars/prelude/struct.md"
     ],
     [
       "pages/home.md",
@@ -708,10 +700,6 @@
     ],
     [
       "pages/user-guide/concepts/lazy-api.md",
-      "pages/api/rust/dev/polars/prelude/struct.md"
-    ],
-    [
-      "pages/user-guide/concepts/lazy-api.md",
       "pages/user-guide/concepts/expressions-and-contexts.md"
     ],
     [
@@ -728,11 +716,11 @@
     ],
     [
       "pages/user-guide/concepts/streaming.md",
-      "pages/api/rust/dev/polars/prelude/struct.md"
+      "pages/user-guide/installation.md"
     ],
     [
       "pages/user-guide/concepts/streaming.md",
-      "pages/user-guide/installation.md"
+      "pages/user-guide/misc/monitoring.md"
     ],
     [
       "pages/user-guide/ecosystem.md",
@@ -980,10 +968,6 @@
     ],
     [
       "pages/user-guide/expressions/window-functions.md",
-      "pages/api/rust/dev/polars/prelude/struct.md"
-    ],
-    [
-      "pages/user-guide/expressions/window-functions.md",
       "pages/user-guide/expressions/aggregation.md"
     ],
     [
@@ -1005,10 +989,6 @@
     [
       "pages/user-guide/getting-started.md",
       "pages/api/rust/dev/polars/frame/struct.md"
-    ],
-    [
-      "pages/user-guide/getting-started.md",
-      "pages/api/rust/dev/polars/prelude/struct.md"
     ],
     [
       "pages/user-guide/getting-started.md",
@@ -1108,10 +1088,6 @@
     ],
     [
       "pages/user-guide/io/cloud-storage.md",
-      "pages/api/rust/dev/polars/prelude/struct.md"
-    ],
-    [
-      "pages/user-guide/io/cloud-storage.md",
       "pages/user-guide/installation.md"
     ],
     [
@@ -1121,10 +1097,6 @@
     [
       "pages/user-guide/io/csv.md",
       "pages/api/python/stable/reference/api/polars.md"
-    ],
-    [
-      "pages/user-guide/io/csv.md",
-      "pages/api/rust/dev/polars/prelude/struct.md"
     ],
     [
       "pages/user-guide/io/csv.md",
@@ -1173,10 +1145,6 @@
     [
       "pages/user-guide/io/parquet.md",
       "pages/api/python/stable/reference/api/polars.md"
-    ],
-    [
-      "pages/user-guide/io/parquet.md",
-      "pages/api/rust/dev/polars/prelude/struct.md"
     ],
     [
       "pages/user-guide/io/parquet.md",
@@ -1295,6 +1263,10 @@
       "pages/user-guide/migration/spark.md"
     ],
     [
+      "pages/user-guide/misc/monitoring.md",
+      "pages/home.md"
+    ],
+    [
       "pages/user-guide/misc/multiprocessing.md",
       "pages/user-guide/lazy/optimizations.md"
     ],
@@ -1352,10 +1324,6 @@
     ],
     [
       "pages/user-guide/transformations/joins.md",
-      "pages/api/rust/dev/polars/prelude/struct.md"
-    ],
-    [
-      "pages/user-guide/transformations/joins.md",
       "pages/user-guide/installation.md"
     ],
     [
@@ -1380,19 +1348,11 @@
     ],
     [
       "pages/user-guide/transformations/time-series/filter.md",
-      "pages/api/rust/dev/polars/prelude/struct.md"
-    ],
-    [
-      "pages/user-guide/transformations/time-series/filter.md",
       "pages/user-guide/installation.md"
     ],
     [
       "pages/user-guide/transformations/time-series/parsing.md",
       "pages/api/python/stable/reference/api/polars.md"
-    ],
-    [
-      "pages/user-guide/transformations/time-series/parsing.md",
-      "pages/api/rust/dev/polars/prelude/struct.md"
     ],
     [
       "pages/user-guide/transformations/time-series/parsing.md",
@@ -1456,10 +1416,10 @@
     ]
   ],
   "last_sync": {
-    "synced_at": "2026-09-14T12:06:43.735281+00:00",
-    "added": 0,
-    "changed": 28,
-    "removed": 0,
+    "synced_at": "2026-09-21T12:15:53.562558+00:00",
+    "added": 1,
+    "changed": 27,
+    "removed": 1,
     "pages": 90
   }
 }

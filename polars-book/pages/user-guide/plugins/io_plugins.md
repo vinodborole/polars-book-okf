@@ -2,7 +2,7 @@
 type: Web Page
 title: IO Plugins - Polars user guide
 resource: https://docs.pola.rs/user-guide/plugins/io_plugins
-timestamp: '2026-07-09T12:17:10.704938+00:00'
+timestamp: '2026-09-21T12:15:53.544991+00:00'
 ---
 
 # IO Plugins
@@ -172,6 +172,24 @@ shape: (2, 2)
 │ 9   ┆ 10  │
 └─────┴─────┘
 ```
+## For engine authors: identifying a source
+
+This section is for people writing a Polars execution engine. If you are writing an IO source, you can skip it.
+
+Polars does not call your source directly. It calls a wrapper that deserializes the predicate and forwards the call. Engines may need to identify sources they know about, for example to provide execution context or call additional methods.
+
+To make that possible, the wrapper satisfies the `IOSourceScanFunction` protocol, which exposes the
+registered source:
+
+```
+from polars.io.plugins import IOSourceScanFunction
+# `scan_fn` is the scan function of the `PythonScan` node being executed.
+if isinstance(scan_fn, IOSourceScanFunction):
+    source = scan_fn.io_source  # exactly the object passed to register_io_source
+    if isinstance(source, MyEngineSource):
+        ...
+```
+This is as unstable as the rest of the IO plugin API.
 
 # Citations
 

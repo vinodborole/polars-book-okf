@@ -2,7 +2,7 @@
 type: Web Page
 title: Streaming - Polars user guide
 resource: https://docs.pola.rs/user-guide/concepts/streaming
-timestamp: '2026-08-03T09:49:29.273788+00:00'
+timestamp: '2026-09-21T12:15:53.544991+00:00'
 ---
 
 # Streaming
@@ -51,6 +51,11 @@ q1 = (
     .show_graph(plan_stage="physical", engine="streaming")
 )
 ```
+## Monitoring a streaming query
+
+The streaming engine can report per-node runtime metrics to Polars Cloud, letting you inspect where
+a query spends its time from the dashboard, so that you can uncover bottlenecks and improve its
+performance. See [Query monitoring](../../misc/monitoring/).
 
 # Citations
 

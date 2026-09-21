@@ -2,7 +2,7 @@
 type: Web Page
 title: Time zones - Polars user guide
 resource: https://docs.pola.rs/user-guide/transformations/time-series/timezones
-timestamp: '2026-09-14T12:06:43.716713+00:00'
+timestamp: '2026-09-21T12:15:53.544991+00:00'
 ---
 
 # Time zones
@@ -41,7 +41,7 @@ tz_aware = tz_naive.dt.replace_time_zone("UTC").rename("tz_aware")
 time_zones_df = pl.DataFrame([tz_naive, tz_aware])
 print(time_zones_df)
 ```
-  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_datetime) ·  [`dt.replace_time_zone`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.replace_time_zone) ·  [Available on feature timezones](/user-guide/installation/#feature-flags) ·  [Available on feature dtype-datetime](/user-guide/installation/#feature-flags)
+  [`str.replace_all`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/string/struct.StringNameSpace.html#method.to_datetime) ·  [`dt.replace_time_zone`](https://docs.pola.rs/api/rust/dev/polars_lazy/dsl/dt/struct.DateLikeNameSpace.html#method.replace_time_zone) ·  [Available on feature dtype-datetime](/user-guide/installation/#feature-flags) ·  [Available on feature timezones](/user-guide/installation/#feature-flags)
 
 ```
 let ts = ["2021-03-27 03:00", "2021-03-28 03:00"];
